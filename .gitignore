@@ -1,0 +1,23 @@
+# WordPress core (managed by Docker)
+wp-content/uploads/
+wp-content/upgrade/
+
+# Dependencies
+node_modules/
+
+# Environment / credentials
+.env
+*.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Docker data (lives in /home/patrickgartside/docker/civime-wordpress/)
+# Not in this repo — only theme + plugins are tracked here

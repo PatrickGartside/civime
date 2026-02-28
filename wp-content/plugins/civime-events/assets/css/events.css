@@ -1,0 +1,542 @@
+/* CiviMe Events — Plugin Styles
+ * Depends on: civime theme stylesheet (CSS custom properties, base components)
+ * Also reuses: .guides-filter__pill from civime-guides (loaded independently)
+ * Views: event archive, single event
+ */
+
+/* ============================================================
+   SHARED: EYEBROW
+   ============================================================ */
+
+.events-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-1);
+}
+
+/* ============================================================
+   SHARED: BREADCRUMB
+   ============================================================ */
+
+.events-breadcrumb {
+  margin-bottom: var(--space-4);
+}
+
+.events-breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.events-breadcrumb__list li + li::before {
+  content: "/";
+  margin: 0 var(--space-2);
+  color: var(--color-border);
+}
+
+.events-breadcrumb__list a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.events-breadcrumb__list a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+.events-breadcrumb__list a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+  border-radius: var(--border-radius-sm);
+}
+
+/* ============================================================
+   ARCHIVE: FILTERS CONTAINER
+   ============================================================ */
+
+.events-filters {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.events-filters__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .events-filters__row {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+/* ============================================================
+   ARCHIVE: UPCOMING / PAST TOGGLE
+   ============================================================ */
+
+.events-filters__toggle {
+  display: inline-flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.events-filters__toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  min-height: 44px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface);
+  text-decoration: none;
+  border: none;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast);
+}
+
+.events-filters__toggle-btn + .events-filters__toggle-btn {
+  border-left: 1px solid var(--color-border);
+}
+
+.events-filters__toggle-btn:hover {
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+}
+
+.events-filters__toggle-btn:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+}
+
+.events-filters__toggle-btn--active {
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+.events-filters__toggle-btn--active:hover {
+  color: #fff;
+  background-color: var(--color-primary-hover);
+}
+
+/* ============================================================
+   ARCHIVE: ISLAND DROPDOWN
+   ============================================================ */
+
+.events-filters__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.events-filters__label {
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.events-filters__select {
+  display: block;
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  line-height: var(--line-height-body);
+  min-height: 44px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-3) center;
+  padding-right: var(--space-8);
+}
+
+.events-filters__select:focus {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
+}
+
+@media (min-width: 640px) {
+  .events-filters__select {
+    width: auto;
+    min-width: 180px;
+  }
+}
+
+/* ============================================================
+   ARCHIVE: TYPE FILTER PILLS
+   (Reuses .guides-filter__pill styles — duplicated here
+    so events plugin works independently of guides plugin)
+   ============================================================ */
+
+.events-type-filter {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.events-type-filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pill styles — self-contained for events plugin independence */
+.events-type-filter .guides-filter__pill {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  min-height: 44px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast),
+              border-color var(--transition-fast);
+}
+
+.events-type-filter .guides-filter__pill:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
+}
+
+.events-type-filter .guides-filter__pill:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+}
+
+.events-type-filter .guides-filter__pill--active {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.events-type-filter .guides-filter__pill--active:hover {
+  color: #fff;
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+/* ============================================================
+   ARCHIVE & RELATED: EVENT CARD
+   ============================================================ */
+
+.event-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.event-card__inner {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  height: 100%;
+}
+
+/* ============================================================
+   EVENT CARD: DATE BADGE
+   ============================================================ */
+
+.event-card__date-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  min-width: 56px;
+  padding: var(--space-2);
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius);
+  color: #fff;
+  text-align: center;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.event-card__date-month {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.event-card__date-day {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  font-family: var(--font-heading);
+  line-height: 1.1;
+}
+
+/* ============================================================
+   EVENT CARD: CONTENT
+   ============================================================ */
+
+.event-card__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.event-card__content .card__title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-2);
+}
+
+.event-card__content .card__title a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.event-card__content .card__title a:hover {
+  color: var(--color-primary);
+}
+
+.event-card__content .card__title a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+  border-radius: var(--border-radius-sm);
+}
+
+/* ============================================================
+   EVENT CARD: META
+   ============================================================ */
+
+.event-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-2);
+}
+
+.event-card__meta-item {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ============================================================
+   EVENT CARD: BADGES
+   ============================================================ */
+
+.event-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: auto;
+}
+
+.event-card__island-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background-color: color-mix(in srgb, var(--color-text-secondary) 10%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+  border-radius: 9999px;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.event-card__registration-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-accent);
+  background-color: color-mix(in srgb, var(--color-accent) 10%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--color-accent) 30%, transparent);
+  border-radius: 9999px;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Small screens: stack date badge above content */
+@media (max-width: 479px) {
+  .event-card__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event-card__date-badge {
+    flex-direction: row;
+    width: auto;
+    min-width: auto;
+    gap: var(--space-2);
+    padding: var(--space-1) var(--space-3);
+  }
+
+  .event-card__date-day {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* ============================================================
+   SINGLE: EVENT DETAIL LAYOUT
+   ============================================================ */
+
+.event-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+/* ============================================================
+   SINGLE: INFO CARD
+   ============================================================ */
+
+.event-detail__info-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow);
+}
+
+.event-detail__meta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  .event-detail__meta {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.event-detail__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.event-detail__meta-item dt {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.event-detail__meta-item dd {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.event-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ============================================================
+   SINGLE: RELATED EVENTS
+   ============================================================ */
+
+.event-detail__related {
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+
+.event-detail__related h2 {
+  margin-bottom: var(--space-6);
+}
+
+/* ============================================================
+   SINGLE: CTA
+   ============================================================ */
+
+.event-detail__cta {
+  background-color: color-mix(in srgb, var(--color-accent) 10%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--color-accent) 25%, var(--color-border));
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+}
+
+.event-detail__cta > * + * {
+  margin-top: var(--space-3);
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+
+@media print {
+  .events-filters,
+  .events-type-filter,
+  .event-detail__cta,
+  .event-detail__related,
+  .event-detail__actions,
+  .events-breadcrumb,
+  .event-card__badges {
+    display: none !important;
+  }
+
+  .event-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  .event-detail__info-card {
+    box-shadow: none;
+  }
+
+  .event-card__date-badge {
+    background-color: #333;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

@@ -1,0 +1,293 @@
+/* CiviMe Guides — Plugin Styles
+ * Depends on: civime theme stylesheet (CSS custom properties, base components)
+ * Views: guide archive, single guide
+ */
+
+/* ============================================================
+   SHARED: EYEBROW
+   ============================================================ */
+
+.guides-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-1);
+}
+
+/* ============================================================
+   SHARED: BREADCRUMB
+   ============================================================ */
+
+.guides-breadcrumb {
+  margin-bottom: var(--space-4);
+}
+
+.guides-breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.guides-breadcrumb__list li + li::before {
+  content: "/";
+  margin: 0 var(--space-2);
+  color: var(--color-border);
+}
+
+.guides-breadcrumb__list a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.guides-breadcrumb__list a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+.guides-breadcrumb__list a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+  border-radius: var(--border-radius-sm);
+}
+
+/* ============================================================
+   ARCHIVE: CATEGORY FILTER PILLS
+   ============================================================ */
+
+.guides-filter {
+  margin-bottom: var(--space-8);
+}
+
+.guides-filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.guides-filter__pill {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  min-height: 44px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast),
+              border-color var(--transition-fast);
+}
+
+.guides-filter__pill:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
+}
+
+.guides-filter__pill:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+}
+
+.guides-filter__pill--active {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.guides-filter__pill--active:hover {
+  color: #fff;
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+/* ============================================================
+   ARCHIVE & RELATED: GUIDE CARD OVERRIDES
+   ============================================================ */
+
+.guide-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.guide-card__image {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.guide-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.guide-card:hover .guide-card__image img {
+  transform: scale(1.03);
+}
+
+.guide-card__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--space-4) var(--space-6) var(--space-6);
+}
+
+.guide-card__content .card__title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-2);
+}
+
+.guide-card__content .card__title a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.guide-card__content .card__title a:hover {
+  color: var(--color-primary);
+}
+
+.guide-card__content .card__title a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+  border-radius: var(--border-radius-sm);
+}
+
+.guide-card__content .card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+/* ============================================================
+   GUIDE CARD: READ TIME BADGE
+   ============================================================ */
+
+.guide-card__read-time {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+/* ============================================================
+   GUIDE CARD: READ GUIDE LINK
+   ============================================================ */
+
+.guide-card__link {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  transition: color var(--transition-fast);
+}
+
+.guide-card__link:hover {
+  color: var(--color-primary-hover);
+}
+
+.guide-card__link:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+  border-radius: var(--border-radius-sm);
+}
+
+/* ============================================================
+   SINGLE: GUIDE META
+   ============================================================ */
+
+.guides-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+/* ============================================================
+   SINGLE: FEATURED IMAGE
+   ============================================================ */
+
+.guide-detail__featured-image {
+  margin-bottom: var(--space-8);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.guide-detail__featured-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* ============================================================
+   SINGLE: RELATED GUIDES
+   ============================================================ */
+
+.guide-detail__related {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+
+.guide-detail__related h2 {
+  margin-bottom: var(--space-6);
+}
+
+/* ============================================================
+   SINGLE: CTA
+   ============================================================ */
+
+.guide-detail__cta {
+  background-color: color-mix(in srgb, var(--color-accent) 10%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--color-accent) 25%, var(--color-border));
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  margin-top: var(--space-12);
+}
+
+.guide-detail__cta > * + * {
+  margin-top: var(--space-3);
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+
+@media print {
+  .guides-filter,
+  .guide-detail__cta,
+  .guide-detail__related,
+  .guides-breadcrumb,
+  .guide-card__link {
+    display: none !important;
+  }
+
+  .guide-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
