@@ -70,7 +70,7 @@ get_header();
 						<?php wp_nonce_field( 'civime_subscribe', '_civime_nonce' ); ?>
 
 						<!-- Honeypot -->
-						<div class="subscribe-form__hp" aria-hidden="true">
+						<div class="subscribe-form__hp" aria-hidden="true" inert>
 							<label for="subscribe-website"><?php esc_html_e( 'Website', 'civime-notifications' ); ?></label>
 							<input type="text" name="website" id="subscribe-website" tabindex="-1" autocomplete="off">
 						</div>

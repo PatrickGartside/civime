@@ -79,7 +79,7 @@ get_header();
 
 							<?php if ( has_post_thumbnail() ) : ?>
 								<div class="guide-card__image">
-									<a href="<?php the_permalink(); ?>" tabindex="-1" aria-hidden="true">
+									<a href="<?php the_permalink(); ?>" tabindex="-1">
 										<?php the_post_thumbnail( 'medium_large', [ 'loading' => 'lazy' ] ); ?>
 									</a>
 								</div>

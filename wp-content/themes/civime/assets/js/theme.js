@@ -112,7 +112,7 @@
 
         function openMenu() {
             mobileNav.classList.add( 'is-open' );
-            mobileNav.setAttribute( 'aria-hidden', 'false' );
+            mobileNav.removeAttribute( 'inert' );
             backdrop && backdrop.classList.add( 'is-visible' );
             toggleBtn.setAttribute( 'aria-expanded', 'true' );
             document.body.style.overflow = 'hidden';
@@ -123,7 +123,7 @@
 
         function closeMenu() {
             mobileNav.classList.remove( 'is-open' );
-            mobileNav.setAttribute( 'aria-hidden', 'true' );
+            mobileNav.setAttribute( 'inert', '' );
             backdrop && backdrop.classList.remove( 'is-visible' );
             toggleBtn.setAttribute( 'aria-expanded', 'false' );
             document.body.style.overflow = '';

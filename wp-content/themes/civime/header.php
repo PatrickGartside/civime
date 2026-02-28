@@ -104,7 +104,7 @@
         id="mobile-nav"
         class="mobile-nav"
         aria-label="<?php esc_attr_e( 'Mobile navigation', 'civime' ); ?>"
-        aria-hidden="true"
+        inert
     >
         <div class="mobile-nav__header">
             <span class="site-title" aria-hidden="true"><?php bloginfo( 'name' ); ?></span>
