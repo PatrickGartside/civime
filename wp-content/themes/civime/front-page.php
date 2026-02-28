@@ -30,7 +30,7 @@ $front_page = get_option( 'page_on_front' ) ? get_post( get_option( 'page_on_fro
                     if ( $front_page && ! empty( get_post_meta( $front_page->ID, '_civime_hero_heading', true ) ) ) {
                         echo esc_html( get_post_meta( $front_page->ID, '_civime_hero_heading', true ) );
                     } else {
-                        esc_html_e( 'Civic engagement\nfor every kamaʻāina.', 'civime' );
+                        echo esc_html__( 'Civic engagement', 'civime' ) . '<br>' . esc_html__( 'for every kamaʻāina.', 'civime' );
                     }
                     ?>
                 </h1>
