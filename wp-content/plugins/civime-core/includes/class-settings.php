@@ -26,12 +26,13 @@ class CiviMe_Settings {
 	}
 
 	/**
-	 * Add the settings page under WP Admin > Settings.
+	 * Add the settings page under the top-level CiviMe menu.
 	 */
 	public function register_admin_menu(): void {
-		add_options_page(
+		add_submenu_page(
+			'civime',
 			__( 'CiviMe Settings', 'civime-core' ),
-			__( 'CiviMe', 'civime-core' ),
+			__( 'Settings', 'civime-core' ),
 			'manage_options',
 			self::PAGE_SLUG,
 			[ $this, 'render_settings_page' ]
@@ -46,7 +47,7 @@ class CiviMe_Settings {
 		register_setting( self::OPTION_GROUP, 'civime_api_url', [
 			'type'              => 'string',
 			'sanitize_callback' => [ $this, 'sanitize_url' ],
-			'default'           => 'https://app.access100.app',
+			'default'           => 'https://access100.app',
 		] );
 
 		register_setting( self::OPTION_GROUP, 'civime_api_key', [
@@ -132,9 +133,9 @@ class CiviMe_Settings {
 	// =========================================================================
 
 	public function render_field_api_url(): void {
-		$value = civime_get_option( 'civime_api_url', 'https://app.access100.app' );
+		$value = civime_get_option( 'civime_api_url', 'https://access100.app' );
 		printf(
-			'<input type="url" id="civime_api_url" name="civime_api_url" value="%s" class="regular-text" placeholder="https://app.access100.app">',
+			'<input type="url" id="civime_api_url" name="civime_api_url" value="%s" class="regular-text" placeholder="https://access100.app">',
 			esc_attr( $value )
 		);
 		echo '<p class="description">' . esc_html__( 'The base URL of the Access100 API (no trailing slash).', 'civime-core' ) . '</p>';
@@ -226,7 +227,7 @@ class CiviMe_Settings {
 		wp_redirect( add_query_arg( [
 			'page'           => self::PAGE_SLUG,
 			'civime_cleared' => '1',
-		], admin_url( 'options-general.php' ) ) );
+		], admin_url( 'admin.php' ) ) );
 		exit;
 	}
 

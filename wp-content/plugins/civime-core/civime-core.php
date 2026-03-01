@@ -46,7 +46,9 @@ spl_autoload_register( function ( string $class_name ): void {
 add_action( 'plugins_loaded', 'civime_core_init' );
 
 function civime_core_init(): void {
-	// Settings registers its own hooks internally.
+	// Admin Subscribers registers the top-level CiviMe menu — must come first
+	// so that Settings can attach its submenu page to the parent.
+	new CiviMe_Admin_Subscribers();
 	new CiviMe_Settings();
 }
 
@@ -64,7 +66,7 @@ function civime_api(): CiviMe_API_Client {
 
 	if ( null === $instance ) {
 		$instance = new CiviMe_API_Client(
-			civime_get_option( 'civime_api_url', 'https://app.access100.app' ),
+			civime_get_option( 'civime_api_url', 'https://access100.app' ),
 			civime_get_option( 'civime_api_key', '' ),
 		);
 	}

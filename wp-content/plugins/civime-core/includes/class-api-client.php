@@ -291,6 +291,76 @@ class CiviMe_API_Client {
 	}
 
 	// =========================================================================
+	// Admin
+	// =========================================================================
+
+	/**
+	 * Fetch a paginated list of subscribers (admin only).
+	 *
+	 * Never cached — always returns live data.
+	 *
+	 * @param array{
+	 *   q?: string,
+	 *   status?: string,
+	 *   confirmed?: string,
+	 *   limit?: int,
+	 *   offset?: int,
+	 * } $args
+	 * @return array|WP_Error
+	 */
+	public function get_admin_subscribers( array $args = [] ): array|WP_Error {
+		return $this->request( 'GET', '/api/v1/admin/subscribers', [ 'query' => $args ] );
+	}
+
+	/**
+	 * Create a new subscriber directly (admin only, skips confirmation).
+	 *
+	 * @param array{
+	 *   email: string,
+	 *   channels?: string[],
+	 *   council_ids: int[],
+	 *   frequency?: string,
+	 * } $data
+	 * @return array|WP_Error
+	 */
+	public function create_admin_subscriber( array $data ): array|WP_Error {
+		return $this->request( 'POST', '/api/v1/admin/subscribers', [ 'body' => $data ] );
+	}
+
+	/**
+	 * Update a subscriber's fields (admin only).
+	 *
+	 * @param int   $user_id The user ID to update.
+	 * @param array $data    Fields to update (email, channels, frequency, council_ids).
+	 * @return array|WP_Error
+	 */
+	public function update_admin_subscriber( int $user_id, array $data ): array|WP_Error {
+		return $this->request( 'PATCH', '/api/v1/admin/subscribers/' . $user_id, [ 'body' => $data ] );
+	}
+
+	/**
+	 * Deactivate all subscriptions for a user (admin only).
+	 *
+	 * @param int $user_id The user ID to deactivate.
+	 * @return array|WP_Error
+	 */
+	public function deactivate_admin_subscriber( int $user_id ): array|WP_Error {
+		return $this->request( 'DELETE', '/api/v1/admin/subscribers/' . $user_id );
+	}
+
+	/**
+	 * Permanently delete a user and all their subscriptions (admin only).
+	 *
+	 * @param int $user_id The user ID to delete.
+	 * @return array|WP_Error
+	 */
+	public function delete_admin_subscriber( int $user_id ): array|WP_Error {
+		return $this->request( 'DELETE', '/api/v1/admin/subscribers/' . $user_id, [
+			'query' => [ 'hard' => 'true' ],
+		] );
+	}
+
+	// =========================================================================
 	// Health / Stats
 	// =========================================================================
 
@@ -446,6 +516,7 @@ class CiviMe_API_Client {
 
 		if ( $status_code < 200 || $status_code >= 300 ) {
 			$api_message = $parsed['message']
+				?? $parsed['error']['message']
 				?? ( is_string( $parsed['error'] ?? null ) ? $parsed['error'] : null )
 				?? 'Unknown API error';
 			return new WP_Error(
