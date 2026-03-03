@@ -9,9 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$subscribe = new CiviMe_Notifications_Subscribe();
-$form      = $subscribe->get_form_data();
-$councils  = $subscribe->get_councils();
+$subscribe         = new CiviMe_Notifications_Subscribe();
+$form              = $subscribe->get_form_data();
+$councils          = $subscribe->get_councils();
+$topics            = $subscribe->get_topics();
+$topic_council_map = $subscribe->get_topic_council_map();
 
 get_header();
 ?>
@@ -19,14 +21,14 @@ get_header();
 <main id="main" class="site-main" role="main">
 
 	<header class="page-header">
-		<div class="container container--narrow">
+		<div class="container">
 			<h1 class="page-header__title"><?php esc_html_e( 'Get Notified', 'civime-notifications' ); ?></h1>
 			<p class="page-header__description"><?php esc_html_e( 'Get alerts when councils you follow post new meetings or agendas. Choose your channels, pick your councils, and we\'ll keep you in the loop.', 'civime-notifications' ); ?></p>
 		</div>
 	</header>
 
 	<div class="section">
-		<div class="container container--narrow">
+		<div class="container">
 
 			<?php if ( $subscribe->is_submitted() ) : ?>
 
@@ -151,6 +153,65 @@ get_header();
 						<fieldset class="subscribe-form__group">
 							<legend class="subscribe-form__legend"><?php esc_html_e( 'What do you want to hear about?', 'civime-notifications' ); ?></legend>
 
+							<?php
+							// Build reverse map: council_id → [ topic_slug, … ]
+							$council_topic_slugs = [];
+							foreach ( $topic_council_map as $slug => $ids ) {
+								foreach ( $ids as $cid ) {
+									$council_topic_slugs[ $cid ][] = $slug;
+								}
+							}
+
+							// Local emoji map — matches the meetings list template.
+							$topic_icons = [
+								'environment'    => "\xF0\x9F\x8C\xBF",
+								'housing'        => "\xF0\x9F\x8F\xA0",
+								'education'      => "\xF0\x9F\x93\x9A",
+								'health'         => "\xF0\x9F\x8F\xA5",
+								'transportation' => "\xF0\x9F\x9A\x8C",
+								'public-safety'  => "\xF0\x9F\x9B\xA1\xEF\xB8\x8F",
+								'economy'        => "\xF0\x9F\x92\xBC",
+								'culture'        => "\xF0\x9F\x8E\xAD",
+								'agriculture'    => "\xF0\x9F\x8C\xBE",
+								'energy'         => "\xE2\x9A\xA1",
+								'water'          => "\xF0\x9F\x8C\x8A",
+								'disability'     => "\xE2\x99\xBF",
+								'veterans'       => "\xF0\x9F\x8E\x96\xEF\xB8\x8F",
+								'technology'     => "\xF0\x9F\x92\xBB",
+								'budget'         => "\xF0\x9F\x93\x8A",
+								'governance'     => "\xE2\x9A\x96\xEF\xB8\x8F",
+							];
+							?>
+
+							<?php if ( ! empty( $topics ) ) : ?>
+								<div class="meetings-topic-picker" role="group" aria-label="<?php esc_attr_e( 'Filter councils by topic', 'civime-notifications' ); ?>">
+									<p class="meetings-topic-picker__heading"><?php esc_html_e( 'What matters to you?', 'civime-notifications' ); ?></p>
+									<div class="meetings-topic-picker__grid">
+										<?php foreach ( $topics as $topic ) :
+											$slug = $topic['slug'] ?? '';
+											$icon = $topic_icons[ $slug ] ?? '';
+											?>
+											<button
+												type="button"
+												class="meetings-topic-chip"
+												data-topic-slug="<?php echo esc_attr( $slug ); ?>"
+												aria-pressed="false"
+												aria-label="<?php echo esc_attr( $topic['name'] ?? '' ); ?>"
+											>
+												<?php if ( '' !== $icon ) : ?>
+													<span class="meetings-topic-chip__icon" aria-hidden="true"><?php echo esc_html( $icon ); ?></span>
+												<?php endif; ?>
+												<span class="meetings-topic-chip__name"><?php echo esc_html( $topic['name'] ?? '' ); ?></span>
+											</button>
+										<?php endforeach; ?>
+									</div>
+									<div class="meetings-topic-picker__status" hidden>
+										<span class="meetings-topic-picker__count"></span>
+										<button type="button" class="meetings-topic-picker__clear"><?php esc_html_e( 'Clear all', 'civime-notifications' ); ?></button>
+									</div>
+								</div>
+							<?php endif; ?>
+
 							<div class="council-picker">
 								<label for="council-picker-search" class="screen-reader-text">
 									<?php esc_html_e( 'Search councils', 'civime-notifications' ); ?>
@@ -168,8 +229,11 @@ get_header();
 										<p class="council-picker__empty"><?php esc_html_e( 'No councils available.', 'civime-notifications' ); ?></p>
 									<?php else : ?>
 										<?php foreach ( $councils as $council ) : ?>
-											<?php $council_id = absint( $council['id'] ); ?>
-											<label class="council-picker__item" data-council-name="<?php echo esc_attr( strtolower( $council['name'] ) ); ?>">
+											<?php
+											$council_id     = absint( $council['id'] );
+											$council_topics = $council_topic_slugs[ $council_id ] ?? [];
+											?>
+											<label class="council-picker__item" data-council-name="<?php echo esc_attr( strtolower( $council['name'] ) ); ?>" data-council-topics="<?php echo esc_attr( implode( ',', $council_topics ) ); ?>">
 												<input
 													type="checkbox"
 													name="council_ids[]"

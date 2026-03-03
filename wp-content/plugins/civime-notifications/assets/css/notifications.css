@@ -422,6 +422,355 @@
 }
 
 /* ============================================================
+   TOPIC PICKER (subscribe form council filter)
+   Mirrors meetings plugin chip styles using shared class names.
+   ============================================================ */
+
+.subscribe-form .meetings-topic-picker {
+  text-align: center;
+  padding: 0 0 var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.subscribe-form .meetings-topic-picker__heading {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--space-3);
+}
+
+.subscribe-form .meetings-topic-picker__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.subscribe-form .meetings-topic-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 9999px;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+  min-height: 44px;
+}
+
+.subscribe-form .meetings-topic-chip:hover {
+  border-color: var(--color-primary);
+  background-color: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.subscribe-form .meetings-topic-chip--active {
+  border-color: var(--color-primary);
+  background-color: color-mix(in srgb, var(--color-primary) 12%, var(--color-surface));
+  color: var(--color-primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.subscribe-form .meetings-topic-chip--active:hover {
+  background-color: color-mix(in srgb, var(--color-primary) 18%, var(--color-surface));
+}
+
+.subscribe-form .meetings-topic-chip:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+  border-radius: 9999px;
+}
+
+.subscribe-form .meetings-topic-chip__icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.subscribe-form .meetings-topic-chip__name {
+  white-space: nowrap;
+}
+
+.subscribe-form .meetings-topic-picker__status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.subscribe-form .meetings-topic-picker__status[hidden] {
+  display: none;
+}
+
+.subscribe-form .meetings-topic-picker__count {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.subscribe-form .meetings-topic-picker__clear {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.subscribe-form .meetings-topic-picker__clear:hover {
+  color: var(--color-primary);
+}
+
+.subscribe-form .meetings-topic-picker__clear:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+  border-radius: var(--border-radius-sm);
+}
+
+/* ============================================================
+   NOTIFY MODAL
+   ============================================================ */
+
+.notify-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.notify-modal[hidden] {
+  display: none !important;
+}
+
+.notify-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.notify-modal__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  max-height: calc(100vh - var(--space-8));
+  overflow-y: auto;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg, 0 10px 25px rgba(0, 0, 0, 0.15));
+}
+
+.notify-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.notify-modal__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.notify-modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-text-secondary);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.notify-modal__close:hover {
+  color: var(--color-text);
+  background-color: color-mix(in srgb, var(--color-text) 8%, transparent);
+}
+
+.notify-modal__close:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+}
+
+.notify-modal__body {
+  padding: var(--space-6);
+}
+
+/* Meeting info banner */
+.notify-modal__meeting-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-4);
+  border-left: 4px solid var(--color-primary);
+  background-color: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  margin-bottom: var(--space-5);
+}
+
+.notify-modal__council-name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+.notify-modal__meeting-date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Form */
+.notify-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.notify-modal__form[hidden] {
+  display: none;
+}
+
+.notify-modal__hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.notify-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.notify-modal__label {
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.notify-modal__input {
+  display: block;
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  line-height: var(--line-height-body);
+  min-height: 44px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.notify-modal__input:focus {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
+}
+
+.notify-modal__field-error {
+  font-size: var(--font-size-sm);
+  color: var(--color-error, #c0392b);
+  margin: 0;
+}
+
+.notify-modal__field-error[hidden] {
+  display: none;
+}
+
+.notify-modal__submit {
+  width: 100%;
+  min-height: 44px;
+}
+
+.notify-modal__hint {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+/* Success / Error states */
+.notify-modal__success[hidden],
+.notify-modal__error[hidden] {
+  display: none;
+}
+
+.notify-modal__success,
+.notify-modal__error {
+  margin-bottom: var(--space-2);
+}
+
+/* "or" divider */
+.notify-modal__divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.notify-modal__divider::before,
+.notify-modal__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+/* Subscribe link */
+.notify-modal__subscribe {
+  display: block;
+  width: 100%;
+  text-align: center;
+  min-height: 44px;
+}
+
+.notify-modal__subscribe-hint {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin: var(--space-2) 0 0;
+}
+
+/* ============================================================
    PRINT STYLES
    ============================================================ */
 
@@ -429,7 +778,8 @@
   .subscribe-form,
   .manage-form,
   .manage-form__unsubscribe,
-  .notif-status__actions {
+  .notif-status__actions,
+  .notify-modal {
     display: none !important;
   }
 }

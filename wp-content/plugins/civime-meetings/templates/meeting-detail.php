@@ -159,7 +159,13 @@ get_header();
 						</a>
 						<?php endif; ?>
 
-						<a href="<?php echo esc_url( add_query_arg( 'council_id', absint( $m['council_id'] ), home_url( '/meetings/subscribe/' ) ) ); ?>" class="btn btn--small btn--primary">
+						<a href="<?php echo esc_url( add_query_arg( 'council_id', absint( $m['council_id'] ), home_url( '/meetings/subscribe/' ) ) ); ?>"
+							class="btn btn--small btn--primary js-open-notify-modal"
+							data-council-id="<?php echo absint( $m['council_id'] ); ?>"
+							data-council-name="<?php echo esc_attr( $m['council_name'] ); ?>"
+							data-meeting-id="<?php echo esc_attr( $detail->get_state_id() ); ?>"
+							data-meeting-date="<?php echo esc_attr( $date_formatted . ( $time_formatted ? ' · ' . $time_formatted : '' ) ); ?>"
+							data-subscribe-url="<?php echo esc_url( add_query_arg( 'council_id', absint( $m['council_id'] ), home_url( '/meetings/subscribe/' ) ) ); ?>">
 							<?php esc_html_e( 'Get Notified', 'civime-meetings' ); ?>
 						</a>
 
@@ -295,7 +301,13 @@ get_header();
 						);
 						?>
 					</p>
-					<a href="<?php echo esc_url( add_query_arg( 'council_id', absint( $m['council_id'] ), home_url( '/meetings/subscribe/' ) ) ); ?>" class="btn btn--primary">
+					<a href="<?php echo esc_url( add_query_arg( 'council_id', absint( $m['council_id'] ), home_url( '/meetings/subscribe/' ) ) ); ?>"
+						class="btn btn--primary js-open-notify-modal"
+						data-council-id="<?php echo absint( $m['council_id'] ); ?>"
+						data-council-name="<?php echo esc_attr( $m['council_name'] ); ?>"
+						data-meeting-id="<?php echo esc_attr( $detail->get_state_id() ); ?>"
+						data-meeting-date="<?php echo esc_attr( $date_formatted . ( $time_formatted ? ' · ' . $time_formatted : '' ) ); ?>"
+						data-subscribe-url="<?php echo esc_url( add_query_arg( 'council_id', absint( $m['council_id'] ), home_url( '/meetings/subscribe/' ) ) ); ?>">
 						<?php esc_html_e( 'Get Notified', 'civime-meetings' ); ?>
 					</a>
 				</aside>

@@ -116,4 +116,92 @@ class CiviMe_Guides_Seeder {
 			WP_CLI::log( "{$created} guide(s) created." );
 		}
 	}
+
+	/**
+	 * Sync existing guide content from source HTML files.
+	 *
+	 * Updates post_content for guides that already exist. Does not create new guides.
+	 * Run via WP-CLI: wp eval 'CiviMe_Guides_Seeder::sync();'
+	 */
+	public static function sync(): void {
+		$guides = [
+			[
+				'title' => 'How to Testify at a Hawaii Public Hearing',
+				'slug'  => 'how-to-testify',
+				'file'  => 'how-to-testify.html',
+			],
+			[
+				'title' => 'Letter Writing Kit',
+				'slug'  => 'letter-writing-kit',
+				'file'  => 'letter-writing-kit.html',
+			],
+			[
+				'title' => 'Getting Started with Civic Engagement',
+				'slug'  => 'getting-started',
+				'file'  => 'getting-started.html',
+			],
+			[
+				'title' => 'Voting in Hawaii',
+				'slug'  => 'voting-in-hawaii',
+				'file'  => 'voting-in-hawaii.html',
+			],
+			[
+				'title' => 'Attending a Government Meeting',
+				'slug'  => 'attending-a-meeting',
+				'file'  => 'attending-a-meeting.html',
+			],
+		];
+
+		$content_dir = WP_CONTENT_DIR . '/page-content/';
+		$updated     = 0;
+
+		foreach ( $guides as $guide ) {
+			$existing = get_page_by_path( $guide['slug'], OBJECT, 'civime_guide' );
+			if ( ! $existing ) {
+				if ( defined( 'WP_CLI' ) ) {
+					WP_CLI::log( "Skipped: {$guide['title']} (not found — run seed() first)" );
+				}
+				continue;
+			}
+
+			$file_path = $content_dir . $guide['file'];
+			if ( ! file_exists( $file_path ) ) {
+				if ( defined( 'WP_CLI' ) ) {
+					WP_CLI::warning( "File not found: {$file_path}" );
+				}
+				continue;
+			}
+
+			$new_content = file_get_contents( $file_path );
+			$old_content = $existing->post_content;
+
+			if ( trim( $new_content ) === trim( $old_content ) ) {
+				if ( defined( 'WP_CLI' ) ) {
+					WP_CLI::log( "No changes: {$guide['title']}" );
+				}
+				continue;
+			}
+
+			$result = wp_update_post( [
+				'ID'           => $existing->ID,
+				'post_content' => $new_content,
+			], true );
+
+			if ( is_wp_error( $result ) ) {
+				if ( defined( 'WP_CLI' ) ) {
+					WP_CLI::error( "Failed to update {$guide['title']}: {$result->get_error_message()}", false );
+				}
+				continue;
+			}
+
+			$updated++;
+			if ( defined( 'WP_CLI' ) ) {
+				WP_CLI::success( "Updated: {$guide['title']} (ID: {$existing->ID})" );
+			}
+		}
+
+		if ( defined( 'WP_CLI' ) ) {
+			WP_CLI::log( "{$updated} guide(s) updated." );
+		}
+	}
 }

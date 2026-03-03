@@ -11,7 +11,7 @@ How to verify the full civi.me + Access100 API integration locally before deploy
 **Access100 API** (port 8082):
 ```bash
 cd ~/dev/Access100/app\ website
-cp .env.example .env          # Fill in DB creds, SendGrid key, Twilio SID/token, Claude key
+cp .env.example .env          # Fill in DB creds, Google OAuth creds, Twilio SID/token, Claude key
 docker compose up -d
 ```
 
@@ -149,7 +149,7 @@ SELECT * FROM subscription_councils ORDER BY subscription_id DESC LIMIT 5;
 **Trigger**: After Flow 4, the API sends a confirmation email/SMS.
 
 **Email confirmation**:
-- [ ] Check the SendGrid activity log (or local mailcatcher) for the confirmation email
+- [ ] Check the Google Workspace sent mail (or local mailcatcher) for the confirmation email
 - [ ] Email contains a link like `https://access100.app/api/v1/subscriptions/confirm?token=...`
 - [ ] For local testing, change the domain to `http://localhost:8082/api/v1/subscriptions/confirm?token=...`
 - [ ] Clicking the link sets `confirmed_email = 1` in the users table
@@ -237,7 +237,7 @@ docker exec -it access100-app php /var/www/html/api/cron/notify.php --dry-run
   ```sql
   SELECT * FROM notification_log ORDER BY id DESC LIMIT 5;
   ```
-- [ ] Email received (check SendGrid activity or mailcatcher)
+- [ ] Email received (check Google Workspace sent mail or mailcatcher)
 - [ ] Email contains correct meeting title, date, time, location
 - [ ] Email "View details" link points to `civi.me/meetings/TEST-002`
 - [ ] Email unsubscribe link works
@@ -385,7 +385,7 @@ done
 | 404 on `/meetings/` | Rewrite rules not flushed | `wp rewrite flush` or re-activate plugins |
 | Fields missing on cards (no council name) | Data mapper not applied | Verify `class-data-mapper.php` exists and is autoloaded |
 | Subscribe form 500 error | API subscriptions endpoint issue | Check API container logs: `docker logs access100-app` |
-| Confirmation email not received | SendGrid not configured | Check `.env` for `SENDGRID_API_KEY`, check SendGrid dashboard |
+| Confirmation email not received | Google OAuth not configured | Check `.env` for Google OAuth credentials, check Google Workspace admin |
 | Cron finds no changes | `scraper_state` has recent timestamp | Reset: `UPDATE scraper_state SET last_run = '2000-01-01'` |
 | Dark mode colors wrong | Hard-coded color in template | All colors should use `var(--color-*)` custom properties |
 

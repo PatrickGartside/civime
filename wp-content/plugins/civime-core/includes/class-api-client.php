@@ -14,8 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 class CiviMe_API_Client {
 
 	private const CACHE_PREFIX    = 'civime_cache_';
-	private const DEFAULT_TTL     = 300;
+	private const DEFAULT_TTL     = 900;
 	private const REQUEST_TIMEOUT = 15;
+	private const RATE_LIMIT_TTL  = 60;
 
 	private string $api_base_url;
 	private string $api_key;
@@ -234,6 +235,28 @@ class CiviMe_API_Client {
 		return $this->request( 'POST', '/api/v1/subscriptions', [ 'body' => $data ] );
 	}
 
+	// =========================================================================
+	// Reminders
+	// =========================================================================
+
+	/**
+	 * Create a one-time meeting reminder.
+	 *
+	 * Automatically injects `source=civime` into every creation payload.
+	 *
+	 * @param array{
+	 *   email: string,
+	 *   meeting_state_id: string,
+	 *   source?: string,
+	 * } $data
+	 * @return array|WP_Error
+	 */
+	public function create_reminder( array $data ): array|WP_Error {
+		$data['source'] = 'civime';
+
+		return $this->request( 'POST', '/api/v1/reminders', [ 'body' => $data ] );
+	}
+
 	/**
 	 * Fetch an existing subscription.
 	 *
@@ -430,8 +453,10 @@ class CiviMe_API_Client {
 	/**
 	 * Wrap a GET request with WordPress transient caching.
 	 *
-	 * Errors are never stored in the cache so a transient failure does not
-	 * persist beyond the current request.
+	 * Successful responses are cached for the configured TTL.
+	 * Rate-limited (429) responses trigger a circuit breaker that prevents
+	 * further requests for RATE_LIMIT_TTL seconds, breaking the death spiral
+	 * where uncacheable 429 errors cause infinite cache misses.
 	 *
 	 * @param string   $endpoint Relative API path.
 	 * @param array    $args     Query-string parameters.
@@ -439,13 +464,34 @@ class CiviMe_API_Client {
 	 * @return array|WP_Error
 	 */
 	private function cached_get( string $endpoint, array $args = [], ?int $ttl = null ): array|WP_Error {
+		// Circuit breaker: if the API recently returned 429, skip the request
+		// entirely and return a synthetic error until the breaker expires.
+		$breaker_key = self::CACHE_PREFIX . 'rate_limited';
+		if ( false !== get_transient( $breaker_key ) ) {
+			return new WP_Error(
+				'civime_api_rate_limited',
+				'API rate limit active. Requests paused temporarily.'
+			);
+		}
+
 		$caching_enabled = (bool) civime_get_option( 'civime_cache_enabled', true );
 
 		if ( ! $caching_enabled ) {
 			return $this->request( 'GET', $endpoint, [ 'query' => $args ] );
 		}
 
-		$cache_key = self::CACHE_PREFIX . md5( $endpoint . serialize( $args ) );
+		// Normalize args for a stable cache key: sort keys and sort any
+		// comma-separated values (e.g., topics=culture,energy vs energy,culture).
+		$normalized = $args;
+		ksort( $normalized );
+		foreach ( $normalized as $key => $value ) {
+			if ( is_string( $value ) && str_contains( $value, ',' ) ) {
+				$parts = explode( ',', $value );
+				sort( $parts );
+				$normalized[ $key ] = implode( ',', $parts );
+			}
+		}
+		$cache_key = self::CACHE_PREFIX . md5( $endpoint . serialize( $normalized ) );
 		$cached    = get_transient( $cache_key );
 
 		if ( false !== $cached ) {
@@ -515,6 +561,14 @@ class CiviMe_API_Client {
 		}
 
 		if ( $status_code < 200 || $status_code >= 300 ) {
+			// On 429, set a circuit breaker so subsequent requests are skipped
+			// for RATE_LIMIT_TTL seconds. Respects the Retry-After header if present.
+			if ( 429 === $status_code ) {
+				$retry_after = (int) wp_remote_retrieve_header( $http_response, 'retry-after' );
+				$breaker_ttl = max( self::RATE_LIMIT_TTL, $retry_after );
+				set_transient( self::CACHE_PREFIX . 'rate_limited', true, $breaker_ttl );
+			}
+
 			$api_message = $parsed['message']
 				?? $parsed['error']['message']
 				?? ( is_string( $parsed['error'] ?? null ) ? $parsed['error'] : null )

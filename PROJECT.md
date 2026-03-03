@@ -447,7 +447,7 @@ github.com/civime/
 | Architecture | Docker WordPress (civi.me) + Access100 REST API backend |
 | Access100 role | Data pipeline + API + notification delivery engine |
 | Hosting | Home server (Docker), will migrate as needed |
-| Email delivery | SendGrid — `alert@civi.me` and `alert@access100.app` |
+| Email delivery | Google Workspace (Gmail API via OAuth) — `email@access100.org` |
 | Political stance | Strictly neutral — not partisan, not advocacy |
 | Contact list | Opt-in only, always (double opt-in confirmation) |
 | Open source | Yes, public on GitHub from day one |

@@ -31,6 +31,7 @@ class CiviMe_Page_Sync {
 			'contact'            => [ 'file' => 'contact.html' ],
 			'get-involved'       => [ 'file' => 'get-involved.html' ],
 			'privacy-policy'     => [ 'file' => 'privacy-policy.html' ],
+			'your-right-to-know' => [ 'file' => 'your-right-to-know.html' ],
 		];
 	}
 

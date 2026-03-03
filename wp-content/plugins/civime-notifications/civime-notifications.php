@@ -47,6 +47,8 @@ function civime_notifications_init(): void {
 	}
 
 	new CiviMe_Notifications_Router();
+	new CiviMe_Notifications_Reminder();
+	new CiviMe_Notifications_Modal();
 	require_once CIVIME_NOTIFICATIONS_PATH . 'includes/shortcodes.php';
 }
 
@@ -59,10 +61,14 @@ register_deactivation_hook( __FILE__, function (): void {
 } );
 
 add_action( 'wp_enqueue_scripts', function (): void {
-	if ( ! get_query_var( 'civime_notif_route' ) ) {
+	$is_notif_route   = (bool) get_query_var( 'civime_notif_route' );
+	$is_meeting_detail = 'meeting-detail' === get_query_var( 'civime_route' );
+
+	if ( ! $is_notif_route && ! $is_meeting_detail ) {
 		return;
 	}
 
+	// Shared CSS — needed by both notification pages and the modal.
 	wp_enqueue_style(
 		'civime-notifications-css',
 		CIVIME_NOTIFICATIONS_URL . 'assets/css/notifications.css',
@@ -70,14 +76,36 @@ add_action( 'wp_enqueue_scripts', function (): void {
 		CIVIME_NOTIFICATIONS_VERSION
 	);
 
-	wp_enqueue_script(
-		'civime-notifications-js',
-		CIVIME_NOTIFICATIONS_URL . 'assets/js/notifications.js',
-		[],
-		CIVIME_NOTIFICATIONS_VERSION,
-		[
-			'strategy'  => 'defer',
-			'in_footer' => true,
-		]
-	);
+	// Subscribe/manage page JS.
+	if ( $is_notif_route ) {
+		wp_enqueue_script(
+			'civime-notifications-js',
+			CIVIME_NOTIFICATIONS_URL . 'assets/js/notifications.js',
+			[],
+			CIVIME_NOTIFICATIONS_VERSION,
+			[
+				'strategy'  => 'defer',
+				'in_footer' => true,
+			]
+		);
+	}
+
+	// Meeting detail page: notify modal JS + AJAX config.
+	if ( $is_meeting_detail ) {
+		wp_enqueue_script(
+			'civime-notify-modal-js',
+			CIVIME_NOTIFICATIONS_URL . 'assets/js/notify-modal.js',
+			[],
+			CIVIME_NOTIFICATIONS_VERSION,
+			[
+				'strategy'  => 'defer',
+				'in_footer' => true,
+			]
+		);
+
+		wp_localize_script( 'civime-notify-modal-js', 'civimeModal', [
+			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+			'nonce'   => wp_create_nonce( 'civime_reminder' ),
+		] );
+	}
 } );

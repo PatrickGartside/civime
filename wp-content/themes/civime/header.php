@@ -37,20 +37,6 @@
                     </a>
                 <?php endif; ?>
 
-                <!-- Desktop primary navigation -->
-                <nav class="primary-nav" aria-label="<?php esc_attr_e( 'Primary navigation', 'civime' ); ?>">
-                    <?php
-                    wp_nav_menu( array(
-                        'theme_location' => 'primary',
-                        'menu_class'     => 'primary-nav__list',
-                        'container'      => false,
-                        'walker'         => new CiviMe_Nav_Walker(),
-                        'fallback_cb'    => 'civime_fallback_primary_nav',
-                        'depth'          => 1,
-                    ) );
-                    ?>
-                </nav>
-
                 <!-- Header actions: dark mode toggle + mobile menu trigger -->
                 <div class="header-actions">
 
@@ -93,6 +79,22 @@
                     </button>
 
                 </div>
+            </div>
+        </div>
+        <div class="site-nav-row">
+            <div class="container">
+                <nav class="primary-nav" aria-label="<?php esc_attr_e( 'Primary navigation', 'civime' ); ?>">
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'primary',
+                        'menu_class'     => 'primary-nav__list',
+                        'container'      => false,
+                        'walker'         => new CiviMe_Nav_Walker(),
+                        'fallback_cb'    => 'civime_fallback_primary_nav',
+                        'depth'          => 1,
+                    ) );
+                    ?>
+                </nav>
             </div>
         </div>
     </header>

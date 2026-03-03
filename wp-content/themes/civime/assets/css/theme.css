@@ -297,7 +297,7 @@ a:hover {
 
 /* Section spacing */
 .section {
-    padding-block: var(--space-12);
+    padding-block: var(--space-6);
 }
 
 @media (min-width: 768px) {
@@ -306,7 +306,7 @@ a:hover {
     }
 
     .section {
-        padding-block: var(--space-16);
+        padding-block: var(--space-8);
     }
 }
 
@@ -316,7 +316,7 @@ a:hover {
     }
 
     .section {
-        padding-block: var(--space-24);
+        padding-block: var(--space-12);
     }
 }
 
@@ -516,18 +516,21 @@ p:last-child {
     position: sticky;
     top: 0;
     z-index: 100;
-    height: var(--nav-height);
     background: var(--color-surface);
     border-block-end: 1px solid var(--color-border);
     box-shadow: var(--shadow-sm);
     transition: background-color var(--transition), border-color var(--transition);
 }
 
+.admin-bar .site-header {
+    top: var(--wp-admin--admin-bar--height, 32px);
+}
+
 .site-header__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
+    height: var(--nav-height);
     gap: var(--space-4);
 }
 
@@ -558,6 +561,7 @@ p:last-child {
 .site-title {
     font-family: var(--font-heading);
     font-size: 4rem;
+    padding-block: 5px;
     font-weight: 700;
     color: var(--color-primary);
     line-height: 1;
@@ -576,17 +580,27 @@ p:last-child {
     }
 }
 
-/* Primary navigation */
-.primary-nav {
+/* Nav row — second row of site header */
+.site-nav-row {
     display: none;
-    align-items: center;
-    gap: var(--space-1);
+    border-block-start: 1px solid var(--color-border);
 }
 
 @media (min-width: 768px) {
-    .primary-nav {
-        display: flex;
+    .site-nav-row {
+        display: block;
     }
+}
+
+.site-nav-row .primary-nav__list {
+    padding-block: var(--space-2) var(--space-4);
+}
+
+/* Primary navigation */
+.primary-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
 }
 
 .primary-nav__list {
@@ -918,7 +932,7 @@ p:last-child {
 @media (min-width: 1024px) {
     .hero__inner {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 7fr 3fr;
         gap: var(--space-12);
         align-items: center;
     }

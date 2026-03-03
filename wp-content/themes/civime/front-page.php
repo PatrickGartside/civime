@@ -30,7 +30,7 @@ $front_page = get_option( 'page_on_front' ) ? get_post( get_option( 'page_on_fro
                     if ( $front_page && ! empty( get_post_meta( $front_page->ID, '_civime_hero_heading', true ) ) ) {
                         echo esc_html( get_post_meta( $front_page->ID, '_civime_hero_heading', true ) );
                     } else {
-                        echo esc_html__( 'Civic engagement', 'civime' ) . '<br>' . esc_html__( 'for every kamaʻāina.', 'civime' );
+                        echo esc_html__( 'Civic Engagement Tools', 'civime' ) . '<br>' . esc_html__( 'for the People of Hawaii', 'civime' );
                     }
                     ?>
                 </h1>
@@ -60,42 +60,97 @@ $front_page = get_option( 'page_on_front' ) ? get_post( get_option( 'page_on_fro
 
             <div class="hero__illustration" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" fill="none">
-                    <!-- Capitol / civic building silhouette -->
-                    <rect x="120" y="160" width="160" height="120" rx="4" fill="rgba(255,255,255,0.12)"/>
-                    <rect x="140" y="180" width="24" height="40" rx="2" fill="rgba(255,255,255,0.18)"/>
-                    <rect x="188" y="180" width="24" height="40" rx="2" fill="rgba(255,255,255,0.18)"/>
-                    <rect x="236" y="180" width="24" height="40" rx="2" fill="rgba(255,255,255,0.18)"/>
-                    <rect x="140" y="240" width="24" height="40" rx="2" fill="rgba(255,255,255,0.18)"/>
-                    <rect x="188" y="240" width="24" height="40" rx="2" fill="rgba(255,255,255,0.18)"/>
-                    <rect x="236" y="240" width="24" height="40" rx="2" fill="rgba(255,255,255,0.18)"/>
-                    <!-- Dome -->
-                    <path d="M160 160 Q200 80 240 160" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.20)" stroke-width="2"/>
-                    <rect x="190" y="100" width="20" height="60" rx="4" fill="rgba(255,255,255,0.15)"/>
-                    <circle cx="200" cy="92" r="12" fill="rgba(255,255,255,0.20)"/>
-                    <!-- Pillars -->
-                    <rect x="130" y="148" width="8" height="132" rx="2" fill="rgba(255,255,255,0.20)"/>
-                    <rect x="160" y="148" width="8" height="132" rx="2" fill="rgba(255,255,255,0.15)"/>
-                    <rect x="232" y="148" width="8" height="132" rx="2" fill="rgba(255,255,255,0.15)"/>
-                    <rect x="262" y="148" width="8" height="132" rx="2" fill="rgba(255,255,255,0.20)"/>
-                    <!-- Pediment -->
-                    <polygon points="120,160 200,120 280,160" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
-                    <!-- Steps -->
-                    <rect x="100" y="280" width="200" height="8" rx="2" fill="rgba(255,255,255,0.10)"/>
-                    <rect x="90" y="288" width="220" height="8" rx="2" fill="rgba(255,255,255,0.08)"/>
-                    <rect x="80" y="296" width="240" height="8" rx="2" fill="rgba(255,255,255,0.06)"/>
+                    <!-- Hawaii State Capitol Building (from front elevation) -->
+
+                    <!-- Reflecting pool -->
+                    <rect x="42" y="290" width="316" height="14" rx="3" fill="rgba(255,255,255,0.05)"/>
+                    <line x1="55" y1="296" x2="95" y2="296" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+                    <line x1="305" y1="298" x2="345" y2="298" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+
+                    <!-- Stepped plaza -->
+                    <rect x="72" y="272" width="256" height="5" rx="1" fill="rgba(255,255,255,0.09)"/>
+                    <rect x="62" y="277" width="276" height="5" rx="1" fill="rgba(255,255,255,0.07)"/>
+                    <rect x="52" y="282" width="296" height="8" rx="1" fill="rgba(255,255,255,0.05)"/>
+
+                    <!-- Main building body -->
+                    <rect x="78" y="152" width="244" height="122" rx="1" fill="rgba(255,255,255,0.10)"/>
+
+                    <!-- Flat overhanging roof/canopy -->
+                    <rect x="64" y="144" width="272" height="10" rx="1" fill="rgba(255,255,255,0.16)"/>
+                    <line x1="64" y1="154" x2="336" y2="154" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+
+                    <!-- Raised center section (crater/clerestory) -->
+                    <rect x="164" y="132" width="72" height="12" rx="1" fill="rgba(255,255,255,0.08)"/>
+                    <line x1="164" y1="132" x2="236" y2="132" stroke="rgba(255,255,255,0.10)" stroke-width="0.8"/>
+
+                    <!-- Vertical louver/screen band -->
+                    <g stroke="rgba(255,255,255,0.09)" stroke-width="1">
+                        <line x1="86" y1="155" x2="86" y2="172"/><line x1="92" y1="155" x2="92" y2="172"/>
+                        <line x1="98" y1="155" x2="98" y2="172"/><line x1="104" y1="155" x2="104" y2="172"/>
+                        <line x1="110" y1="155" x2="110" y2="172"/><line x1="116" y1="155" x2="116" y2="172"/>
+                        <line x1="122" y1="155" x2="122" y2="172"/><line x1="128" y1="155" x2="128" y2="172"/>
+                        <line x1="134" y1="155" x2="134" y2="172"/><line x1="140" y1="155" x2="140" y2="172"/>
+                        <line x1="146" y1="155" x2="146" y2="172"/><line x1="152" y1="155" x2="152" y2="172"/>
+                        <line x1="158" y1="155" x2="158" y2="172"/><line x1="164" y1="155" x2="164" y2="172"/>
+                        <line x1="170" y1="155" x2="170" y2="172"/><line x1="176" y1="155" x2="176" y2="172"/>
+                        <line x1="182" y1="155" x2="182" y2="172"/><line x1="188" y1="155" x2="188" y2="172"/>
+                        <line x1="194" y1="155" x2="194" y2="172"/><line x1="200" y1="155" x2="200" y2="172"/>
+                        <line x1="206" y1="155" x2="206" y2="172"/><line x1="212" y1="155" x2="212" y2="172"/>
+                        <line x1="218" y1="155" x2="218" y2="172"/><line x1="224" y1="155" x2="224" y2="172"/>
+                        <line x1="230" y1="155" x2="230" y2="172"/><line x1="236" y1="155" x2="236" y2="172"/>
+                        <line x1="242" y1="155" x2="242" y2="172"/><line x1="248" y1="155" x2="248" y2="172"/>
+                        <line x1="254" y1="155" x2="254" y2="172"/><line x1="260" y1="155" x2="260" y2="172"/>
+                        <line x1="266" y1="155" x2="266" y2="172"/><line x1="272" y1="155" x2="272" y2="172"/>
+                        <line x1="278" y1="155" x2="278" y2="172"/><line x1="284" y1="155" x2="284" y2="172"/>
+                        <line x1="290" y1="155" x2="290" y2="172"/><line x1="296" y1="155" x2="296" y2="172"/>
+                        <line x1="302" y1="155" x2="302" y2="172"/><line x1="308" y1="155" x2="308" y2="172"/>
+                        <line x1="314" y1="155" x2="314" y2="172"/>
+                    </g>
+
+                    <!-- Arched colonnade (defining feature) -->
+                    <g stroke="rgba(255,255,255,0.18)" stroke-width="1.5" fill="none">
+                        <!-- Left 4 arches -->
+                        <path d="M80 274 L80 200 C80 178 105 178 105 200 L105 274"/>
+                        <path d="M109 274 L109 200 C109 178 134 178 134 200 L134 274"/>
+                        <path d="M138 274 L138 200 C138 178 163 178 163 200 L163 274"/>
+                        <path d="M167 274 L167 200 C167 178 190 178 190 200 L190 274"/>
+                        <!-- Center entrance (wider arch) -->
+                        <path d="M194 274 L194 196 C194 174 206 174 206 196 L206 274"/>
+                        <!-- Right 4 arches -->
+                        <path d="M210 274 L210 200 C210 178 233 178 233 200 L233 274"/>
+                        <path d="M237 274 L237 200 C237 178 262 178 262 200 L262 274"/>
+                        <path d="M266 274 L266 200 C266 178 291 178 291 200 L291 274"/>
+                        <path d="M295 274 L295 200 C295 178 320 178 320 200 L320 274"/>
+                    </g>
+
+                    <!-- Interior floor line visible through arches -->
+                    <line x1="82" y1="242" x2="318" y2="242" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+
                     <!-- People silhouettes -->
-                    <circle cx="100" cy="262" r="8" fill="rgba(255,255,255,0.18)"/>
-                    <rect x="94" y="270" width="12" height="16" rx="4" fill="rgba(255,255,255,0.14)"/>
-                    <circle cx="310" cy="258" r="9" fill="rgba(255,255,255,0.16)"/>
-                    <rect x="303" y="267" width="14" height="18" rx="5" fill="rgba(255,255,255,0.12)"/>
-                    <circle cx="340" cy="264" r="7" fill="rgba(255,255,255,0.14)"/>
-                    <rect x="335" y="271" width="10" height="14" rx="4" fill="rgba(255,255,255,0.10)"/>
-                    <!-- Palm tree accent -->
-                    <rect x="52" y="230" width="6" height="76" rx="3" fill="rgba(255,255,255,0.12)"/>
-                    <path d="M55 230 Q30 200 15 210" stroke="rgba(255,255,255,0.16)" stroke-width="3" fill="none" stroke-linecap="round"/>
-                    <path d="M55 230 Q40 195 25 198" stroke="rgba(255,255,255,0.14)" stroke-width="3" fill="none" stroke-linecap="round"/>
-                    <path d="M55 230 Q70 195 85 200" stroke="rgba(255,255,255,0.16)" stroke-width="3" fill="none" stroke-linecap="round"/>
-                    <path d="M55 230 Q75 205 90 215" stroke="rgba(255,255,255,0.12)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <circle cx="58" cy="262" r="7" fill="rgba(255,255,255,0.14)"/>
+                    <rect x="53" y="269" width="10" height="13" rx="3" fill="rgba(255,255,255,0.10)"/>
+                    <circle cx="342" cy="258" r="8" fill="rgba(255,255,255,0.12)"/>
+                    <rect x="336" y="266" width="12" height="16" rx="4" fill="rgba(255,255,255,0.08)"/>
+                    <circle cx="365" cy="264" r="6" fill="rgba(255,255,255,0.10)"/>
+                    <rect x="361" y="270" width="8" height="12" rx="3" fill="rgba(255,255,255,0.06)"/>
+
+                    <!-- Flagpole -->
+                    <line x1="330" y1="142" x2="330" y2="272" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+                    <rect x="331" y="148" width="10" height="7" rx="0.5" fill="rgba(255,255,255,0.12)"/>
+
+                    <!-- Left palm tree -->
+                    <rect x="40" y="200" width="5" height="78" rx="2.5" fill="rgba(255,255,255,0.10)"/>
+                    <path d="M42 200 Q26 174 16 182" stroke="rgba(255,255,255,0.12)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M42 200 Q32 170 22 173" stroke="rgba(255,255,255,0.10)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M42 200 Q58 172 68 177" stroke="rgba(255,255,255,0.12)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M42 200 Q62 182 72 190" stroke="rgba(255,255,255,0.08)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+                    <!-- Right palm tree -->
+                    <rect x="354" y="210" width="4" height="64" rx="2" fill="rgba(255,255,255,0.08)"/>
+                    <path d="M356 210 Q342 188 334 194" stroke="rgba(255,255,255,0.10)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <path d="M356 210 Q348 184 340 187" stroke="rgba(255,255,255,0.08)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <path d="M356 210 Q368 186 376 191" stroke="rgba(255,255,255,0.10)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <path d="M356 210 Q370 196 378 202" stroke="rgba(255,255,255,0.07)" stroke-width="2" fill="none" stroke-linecap="round"/>
                 </svg>
             </div>
 

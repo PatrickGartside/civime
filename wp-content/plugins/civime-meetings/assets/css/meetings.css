@@ -22,7 +22,6 @@
 .page-header__description {
   font-size: var(--font-size-lg);
   color: var(--color-text-secondary);
-  max-width: 640px;
   margin-top: var(--space-2);
   line-height: var(--line-height-body);
 }

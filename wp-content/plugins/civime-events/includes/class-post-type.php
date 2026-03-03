@@ -19,8 +19,8 @@ class CiviMe_Events_Post_Type {
 	}
 
 	public function register(): void {
-		$this->register_post_type();
 		$this->register_taxonomy();
+		$this->register_post_type();
 	}
 
 	private function register_post_type(): void {

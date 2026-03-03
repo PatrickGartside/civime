@@ -16,6 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 class CiviMe_Notifications_Subscribe {
 
 	private array|WP_Error $councils = [];
+	private array $topics            = [];
+	private array $topic_council_map = [];
 	private array $errors            = [];
 	private array $form_data         = [];
 	private bool $submitted          = false;
@@ -39,6 +41,7 @@ class CiviMe_Notifications_Subscribe {
 
 		$this->set_defaults();
 		$this->fetch_councils();
+		$this->fetch_topics();
 	}
 
 	/**
@@ -200,6 +203,36 @@ class CiviMe_Notifications_Subscribe {
 	}
 
 	/**
+	 * Fetch topics and build a map of topic_slug → council IDs.
+	 *
+	 * Each topic is fetched individually to get its associated councils array.
+	 * The resulting map lets the template attach topic metadata to council items
+	 * so the JS can filter the council picker by topic.
+	 */
+	private function fetch_topics(): void {
+		$response = civime_api()->get_topics();
+
+		if ( is_wp_error( $response ) ) {
+			return;
+		}
+
+		$this->topics = $response['data'] ?? [];
+
+		foreach ( $this->topics as $topic ) {
+			$slug           = $topic['slug'] ?? '';
+			$topic_response = civime_api()->get_topic( $slug );
+
+			if ( is_wp_error( $topic_response ) ) {
+				continue;
+			}
+
+			$councils   = $topic_response['councils'] ?? [];
+			$council_ids = array_map( fn( array $c ) => (int) ( $c['id'] ?? 0 ), $councils );
+			$this->topic_council_map[ $slug ] = array_values( array_filter( $council_ids ) );
+		}
+	}
+
+	/**
 	 * Normalize a US phone number to E.164 format (+1XXXXXXXXXX).
 	 *
 	 * Accepts common formats: (808) 555-1234, 808-555-1234, 8085551234, +18085551234.
@@ -258,5 +291,19 @@ class CiviMe_Notifications_Subscribe {
 	 */
 	public function is_channel_selected( string $channel ): bool {
 		return in_array( $channel, $this->form_data['channels'] ?? [], true );
+	}
+
+	/**
+	 * Return all topics for the topic picker chips.
+	 */
+	public function get_topics(): array {
+		return $this->topics;
+	}
+
+	/**
+	 * Return the topic→council_ids map for client-side filtering.
+	 */
+	public function get_topic_council_map(): array {
+		return $this->topic_council_map;
 	}
 }

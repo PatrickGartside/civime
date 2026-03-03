@@ -21,7 +21,7 @@ get_header();
 <main id="main" class="site-main" role="main">
 
 	<nav class="guides-breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'civime-guides' ); ?>">
-		<div class="container container--narrow">
+		<div class="container">
 			<ol class="guides-breadcrumb__list">
 				<li><a href="<?php echo esc_url( get_post_type_archive_link( 'civime_guide' ) ); ?>"><?php esc_html_e( 'Guides', 'civime-guides' ); ?></a></li>
 				<?php if ( $primary_cat ) : ?>
@@ -33,7 +33,7 @@ get_header();
 	</nav>
 
 	<header class="page-header">
-		<div class="container container--narrow">
+		<div class="container">
 			<?php if ( $primary_cat ) : ?>
 				<p class="guides-eyebrow"><?php echo esc_html( $primary_cat->name ); ?></p>
 			<?php endif; ?>
@@ -53,7 +53,7 @@ get_header();
 	</header>
 
 	<div class="section">
-		<div class="container container--narrow">
+		<div class="container">
 
 			<article <?php post_class( 'guide-detail' ); ?>>
 
