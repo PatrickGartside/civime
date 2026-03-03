@@ -43,6 +43,7 @@ class CiviMe_Notifications_Router {
 
 		$route_template_map = [
 			'subscribe'    => CIVIME_NOTIFICATIONS_PATH . 'templates/subscribe.php',
+			'notify'       => CIVIME_NOTIFICATIONS_PATH . 'templates/notify.php',
 			'manage'       => CIVIME_NOTIFICATIONS_PATH . 'templates/manage.php',
 			'confirmed'    => CIVIME_NOTIFICATIONS_PATH . 'templates/confirmed.php',
 			'unsubscribed' => CIVIME_NOTIFICATIONS_PATH . 'templates/unsubscribed.php',
@@ -71,6 +72,7 @@ class CiviMe_Notifications_Router {
 
 		$titles = [
 			'subscribe'    => __( 'Get Notified', 'civime-notifications' ),
+			'notify'       => __( 'Get Notified', 'civime-notifications' ),
 			'manage'       => __( 'Manage Notifications', 'civime-notifications' ),
 			'confirmed'    => __( 'Subscription Confirmed', 'civime-notifications' ),
 			'unsubscribed' => __( 'Unsubscribed', 'civime-notifications' ),
@@ -94,6 +96,7 @@ class CiviMe_Notifications_Router {
 
 		$route_class_map = [
 			'subscribe'    => 'civime-subscribe',
+			'notify'       => 'civime-notify',
 			'manage'       => 'civime-manage',
 			'confirmed'    => 'civime-confirmed',
 			'unsubscribed' => 'civime-unsubscribed',

@@ -147,25 +147,20 @@ get_header();
 
 					<div class="meeting-detail__actions">
 
-						<?php if ( $detail->get_ics_url() ) : ?>
-						<a href="<?php echo esc_url( $detail->get_ics_url() ); ?>" class="btn btn--small">
-							<?php esc_html_e( 'Add to Calendar', 'civime-meetings' ); ?>
-						</a>
-						<?php endif; ?>
-
 						<?php if ( ! empty( $m['notice_url'] ) ) : ?>
 						<a href="<?php echo esc_url( $m['notice_url'] ); ?>" class="btn btn--small btn--ghost" target="_blank" rel="noopener noreferrer">
-							<?php esc_html_e( 'Official Notice', 'civime-meetings' ); ?>
+							<?php esc_html_e( 'View Official Notice', 'civime-meetings' ); ?>
 						</a>
 						<?php endif; ?>
 
-						<a href="<?php echo esc_url( add_query_arg( 'council_id', absint( $m['council_id'] ), home_url( '/meetings/subscribe/' ) ) ); ?>"
-							class="btn btn--small btn--primary js-open-notify-modal"
-							data-council-id="<?php echo absint( $m['council_id'] ); ?>"
-							data-council-name="<?php echo esc_attr( $m['council_name'] ); ?>"
-							data-meeting-id="<?php echo esc_attr( $detail->get_state_id() ); ?>"
-							data-meeting-date="<?php echo esc_attr( $date_formatted . ( $time_formatted ? ' · ' . $time_formatted : '' ) ); ?>"
-							data-subscribe-url="<?php echo esc_url( add_query_arg( 'council_id', absint( $m['council_id'] ), home_url( '/meetings/subscribe/' ) ) ); ?>">
+						<?php if ( $detail->get_ics_url() ) : ?>
+						<a href="<?php echo esc_url( $detail->get_ics_url() ); ?>" class="btn btn--small">
+							<?php esc_html_e( 'Add to My Calendar', 'civime-meetings' ); ?>
+						</a>
+						<?php endif; ?>
+
+						<a href="<?php echo esc_url( home_url( '/meetings/' . rawurlencode( $detail->get_state_id() ) . '/notify/' ) ); ?>"
+							class="btn btn--small btn--primary">
 							<?php esc_html_e( 'Get Notified', 'civime-meetings' ); ?>
 						</a>
 
@@ -244,74 +239,7 @@ get_header();
 				</section>
 				<?php endif; ?>
 
-				<?php if ( ! empty( $m['agenda_text'] ) ) : ?>
-				<section class="meeting-detail__agenda" aria-labelledby="agenda-heading">
-					<h2 id="agenda-heading"><?php esc_html_e( 'Agenda', 'civime-meetings' ); ?></h2>
-					<div class="meeting-detail__agenda-content prose">
-						<?php
-						// Escape the plain-text agenda before wpautop so any HTML characters
-						// in scraped government text are rendered as visible characters, not tags.
-						echo wp_kses_post( wpautop( esc_html( $m['agenda_text'] ) ) );
-						?>
-					</div>
-					<?php if ( ! empty( $m['agenda_url'] ) ) : ?>
-					<p>
-						<a href="<?php echo esc_url( $m['agenda_url'] ); ?>" class="btn btn--small btn--ghost" target="_blank" rel="noopener noreferrer">
-							<?php esc_html_e( 'Download Full Agenda (PDF)', 'civime-meetings' ); ?>
-						</a>
-					</p>
-					<?php endif; ?>
-				</section>
-
-				<?php elseif ( ! empty( $m['agenda_url'] ) ) : ?>
-				<section class="meeting-detail__agenda" aria-labelledby="agenda-heading">
-					<h2 id="agenda-heading"><?php esc_html_e( 'Agenda', 'civime-meetings' ); ?></h2>
-					<p><?php esc_html_e( 'The agenda is available as a PDF document.', 'civime-meetings' ); ?></p>
-					<p>
-						<a href="<?php echo esc_url( $m['agenda_url'] ); ?>" class="btn btn--small btn--ghost" target="_blank" rel="noopener noreferrer">
-							<?php esc_html_e( 'Download Agenda (PDF)', 'civime-meetings' ); ?>
-						</a>
-					</p>
-				</section>
-				<?php endif; ?>
-
-				<?php if ( ! empty( $m['attachments'] ) && is_array( $m['attachments'] ) ) : ?>
-				<section class="meeting-detail__attachments" aria-labelledby="attachments-heading">
-					<h2 id="attachments-heading"><?php esc_html_e( 'Documents', 'civime-meetings' ); ?></h2>
-					<ul class="meeting-detail__attachment-list">
-						<?php foreach ( $m['attachments'] as $attachment ) : ?>
-						<li>
-							<a href="<?php echo esc_url( $attachment['url'] ); ?>" target="_blank" rel="noopener noreferrer">
-								<?php echo esc_html( $attachment['name'] ); ?>
-							</a>
-						</li>
-						<?php endforeach; ?>
-					</ul>
-				</section>
-				<?php endif; ?>
-
-				<aside class="meeting-detail__cta">
-					<h2><?php esc_html_e( 'Stay Informed', 'civime-meetings' ); ?></h2>
-					<p>
-						<?php
-						printf(
-							/* translators: %s: council name */
-							esc_html__( 'Get notified when %s posts new meetings or agendas.', 'civime-meetings' ),
-							esc_html( $m['council_name'] )
-						);
-						?>
-					</p>
-					<a href="<?php echo esc_url( add_query_arg( 'council_id', absint( $m['council_id'] ), home_url( '/meetings/subscribe/' ) ) ); ?>"
-						class="btn btn--primary js-open-notify-modal"
-						data-council-id="<?php echo absint( $m['council_id'] ); ?>"
-						data-council-name="<?php echo esc_attr( $m['council_name'] ); ?>"
-						data-meeting-id="<?php echo esc_attr( $detail->get_state_id() ); ?>"
-						data-meeting-date="<?php echo esc_attr( $date_formatted . ( $time_formatted ? ' · ' . $time_formatted : '' ) ); ?>"
-						data-subscribe-url="<?php echo esc_url( add_query_arg( 'council_id', absint( $m['council_id'] ), home_url( '/meetings/subscribe/' ) ) ); ?>">
-						<?php esc_html_e( 'Get Notified', 'civime-meetings' ); ?>
-					</a>
-				</aside>
-
+	
 			</div>
 		</div>
 	</div>

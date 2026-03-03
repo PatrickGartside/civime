@@ -36,6 +36,7 @@ class CiviMe_Meetings_Router {
 		add_rewrite_rule( '^councils/([^/]+)/?$', 'index.php?civime_route=council-profile&civime_council_slug=$matches[1]', 'top' );
 		add_rewrite_rule( '^councils/?$', 'index.php?civime_route=councils-list', 'top' );
 		add_rewrite_rule( '^meetings/subscribe/?$', 'index.php?civime_notif_route=subscribe', 'top' );
+		add_rewrite_rule( '^meetings/([^/]+)/notify/?$', 'index.php?civime_notif_route=notify&civime_meeting_id=$matches[1]', 'top' );
 		add_rewrite_rule( '^meetings/([^/]+)/ics/?$', 'index.php?civime_route=meeting-ics&civime_meeting_id=$matches[1]', 'top' );
 		add_rewrite_rule( '^meetings/([^/]+)/?$', 'index.php?civime_route=meeting-detail&civime_meeting_id=$matches[1]', 'top' );
 		add_rewrite_rule( '^meetings/?$', 'index.php?civime_route=meetings-list', 'top' );
