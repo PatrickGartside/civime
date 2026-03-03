@@ -36,13 +36,13 @@ get_header();
 <?php if ( $notify->is_not_found() ) : ?>
 
 	<header class="page-header">
-		<div class="container container--narrow">
+		<div class="container">
 			<h1 class="page-header__title"><?php esc_html_e( 'Meeting Not Found', 'civime-notifications' ); ?></h1>
 		</div>
 	</header>
 
 	<div class="section">
-		<div class="container container--narrow">
+		<div class="container">
 			<div class="notif-notice notif-notice--warning" role="alert">
 				<p><?php esc_html_e( "We couldn't find this meeting. It may have been cancelled or the link may be incorrect.", 'civime-notifications' ); ?></p>
 				<p><a href="<?php echo esc_url( home_url( '/meetings/' ) ); ?>" class="btn btn--primary"><?php esc_html_e( 'Browse All Meetings', 'civime-notifications' ); ?></a></p>
@@ -53,13 +53,13 @@ get_header();
 <?php elseif ( $notify->has_error() ) : ?>
 
 	<header class="page-header">
-		<div class="container container--narrow">
+		<div class="container">
 			<h1 class="page-header__title"><?php esc_html_e( 'Get Notified', 'civime-notifications' ); ?></h1>
 		</div>
 	</header>
 
 	<div class="section">
-		<div class="container container--narrow">
+		<div class="container">
 			<div class="notif-notice notif-notice--warning" role="alert">
 				<p><strong><?php esc_html_e( 'Meeting data is temporarily unavailable.', 'civime-notifications' ); ?></strong></p>
 				<p><?php esc_html_e( "We're having trouble loading meeting details. Please try again in a moment.", 'civime-notifications' ); ?></p>
@@ -71,30 +71,38 @@ get_header();
 <?php else : ?>
 
 	<nav class="meeting-breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'civime-notifications' ); ?>">
-		<div class="container container--narrow">
+		<div class="container">
 			<ol class="meeting-breadcrumb__list">
 				<li><a href="<?php echo esc_url( home_url( '/meetings/' ) ); ?>"><?php esc_html_e( 'Meetings', 'civime-notifications' ); ?></a></li>
-				<li><a href="<?php echo esc_url( home_url( '/meetings/' . rawurlencode( $notify->get_state_id() ) . '/' ) ); ?>"><?php echo esc_html( $m['council_name'] ?? '' ); ?></a></li>
+				<?php if ( ! empty( $m['council_name'] ) ) : ?>
+					<li><a href="<?php echo esc_url( home_url( '/meetings/' . rawurlencode( $notify->get_state_id() ) . '/' ) ); ?>"><?php echo esc_html( $m['council_name'] ); ?></a></li>
+				<?php endif; ?>
 				<li aria-current="page"><?php esc_html_e( 'Get Notified', 'civime-notifications' ); ?></li>
 			</ol>
 		</div>
 	</nav>
 
 	<header class="page-header">
-		<div class="container container--narrow">
+		<div class="container">
 			<h1 class="page-header__title"><?php esc_html_e( 'Get Notified', 'civime-notifications' ); ?></h1>
 		</div>
 	</header>
 
 	<div class="section">
-		<div class="container container--narrow">
+		<div class="container">
 			<div class="notify-page">
 
+				<?php if ( ! empty( $m['council_name'] ) || $notify->get_formatted_date() ) : ?>
 				<!-- Meeting context -->
 				<div class="notify-page__meeting-info">
-					<span class="notify-page__council-name"><?php echo esc_html( $m['council_name'] ?? '' ); ?></span>
-					<span class="notify-page__meeting-date"><?php echo esc_html( $notify->get_formatted_date() ); ?></span>
+					<?php if ( ! empty( $m['council_name'] ) ) : ?>
+						<span class="notify-page__council-name"><?php echo esc_html( $m['council_name'] ); ?></span>
+					<?php endif; ?>
+					<?php if ( $notify->get_formatted_date() ) : ?>
+						<span class="notify-page__meeting-date"><?php echo esc_html( $notify->get_formatted_date() ); ?></span>
+					<?php endif; ?>
 				</div>
+				<?php endif; ?>
 
 				<?php if ( $notify->is_submitted() ) : ?>
 
@@ -188,11 +196,15 @@ get_header();
 					<div class="notify-page__subscribe">
 						<h3>
 							<?php
-							printf(
-								/* translators: %s: council name */
-								esc_html__( 'Subscribe to %s', 'civime-notifications' ),
-								esc_html( $m['council_name'] ?? '' )
-							);
+							if ( ! empty( $m['council_name'] ) ) {
+								printf(
+									/* translators: %s: council name */
+									esc_html__( 'Subscribe to %s', 'civime-notifications' ),
+									esc_html( $m['council_name'] )
+								);
+							} else {
+								esc_html_e( 'Subscribe to This Council', 'civime-notifications' );
+							}
 							?>
 						</h3>
 						<p><?php esc_html_e( 'Get ongoing alerts for all future meetings from this council.', 'civime-notifications' ); ?></p>
