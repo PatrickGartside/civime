@@ -1,0 +1,123 @@
+/**
+ * Language Switcher Styles
+ *
+ * Uses existing CSS custom properties from the civime theme.
+ */
+
+/* Base switcher layout */
+.lang-switcher {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-1, 0.25rem);
+	position: relative;
+}
+
+.lang-switcher__label {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	color: var(--text-muted, #6b7280);
+}
+
+.lang-switcher__icon {
+	width: 1rem;
+	height: 1rem;
+	flex-shrink: 0;
+}
+
+.lang-switcher__select {
+	font-family: inherit;
+	font-size: var(--text-sm, 0.875rem);
+	color: var(--text-body, #1f2937);
+	background-color: var(--surface-base, #fff);
+	border: 1px solid var(--border, #d1d5db);
+	border-radius: var(--radius-sm, 0.25rem);
+	padding: var(--space-1, 0.25rem) var(--space-6, 1.5rem) var(--space-1, 0.25rem) var(--space-2, 0.5rem);
+	min-height: 2.75rem; /* 44px WCAG touch target */
+	cursor: pointer;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' fill='none' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 0.5rem center;
+}
+
+.lang-switcher__select:hover {
+	border-color: var(--border-hover, #9ca3af);
+}
+
+.lang-switcher__select:focus {
+	outline: 2px solid var(--focus-ring, #3b82f6);
+	outline-offset: 2px;
+	border-color: var(--focus-ring, #3b82f6);
+}
+
+/* Noscript fallback button */
+.lang-switcher__submit {
+	font-family: inherit;
+	font-size: var(--text-sm, 0.875rem);
+	padding: var(--space-1, 0.25rem) var(--space-3, 0.75rem);
+	min-height: 2.75rem;
+	border: 1px solid var(--border, #d1d5db);
+	border-radius: var(--radius-sm, 0.25rem);
+	background: var(--surface-base, #fff);
+	color: var(--text-body, #1f2937);
+	cursor: pointer;
+}
+
+.lang-switcher__submit:hover {
+	background: var(--surface-hover, #f3f4f6);
+}
+
+/* Header placement */
+.lang-switcher--header {
+	margin-right: var(--space-1, 0.25rem);
+}
+
+.lang-switcher--header .lang-switcher__select {
+	max-width: 8rem;
+}
+
+/* Footer placement */
+.lang-switcher--footer {
+	margin-top: var(--space-4, 1rem);
+	margin-bottom: var(--space-4, 1rem);
+}
+
+/* Mobile nav placement */
+.lang-switcher--mobile {
+	padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+	border-top: 1px solid var(--border, #d1d5db);
+	width: 100%;
+}
+
+.lang-switcher--mobile .lang-switcher__select {
+	flex: 1;
+}
+
+/* English-only content notice */
+.i18n-content-notice {
+	font-size: var(--text-sm, 0.875rem);
+	color: var(--text-muted, #6b7280);
+	font-style: italic;
+	padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
+	border-left: 3px solid var(--border, #d1d5db);
+	margin-bottom: var(--space-4, 1rem);
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+	.lang-switcher__select {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' fill='none' stroke='%239ca3af' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	}
+}
+
+[data-theme="dark"] .lang-switcher__select {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' fill='none' stroke='%239ca3af' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* Print: hide switcher */
+@media print {
+	.lang-switcher {
+		display: none;
+	}
+}

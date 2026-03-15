@@ -1,0 +1,669 @@
+# Tagalog translation for the CiviMe Meetings plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Meetings 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-meetings\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Tagalog <hello@civi.me>\n"
+"Language: tl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-meetings\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+#: civime-meetings.php
+msgid "CiviMe Meetings"
+msgstr "CiviMe Meetings"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-meetings.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-meetings.php
+msgid "Meeting calendar, detail pages, and council browser — powered by the Access100 API."
+msgstr "Kalendaryo ng miting, mga pahina ng detalye, at browser ng konseho — pinapagana ng Access100 API."
+
+#. Author of the plugin
+#: civime-meetings.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-meetings.php:45
+msgid "CiviMe Meetings requires the CiviMe Core plugin to be installed and activated."
+msgstr "Kailangan ng CiviMe Meetings na naka-install at naka-activate ang CiviMe Core plugin."
+
+#: includes/class-councils-list.php:89
+msgid "Council data is temporarily unavailable. Please check back soon."
+msgstr "Pansamantalang hindi available ang datos ng konseho. Pakibalik na lang sa lalong madaling panahon."
+
+#: includes/class-detail.php:39
+msgid "No meeting ID provided."
+msgstr "Walang ibinigay na ID ng miting."
+
+#: includes/class-detail.php:106
+#: includes/class-list.php:246
+msgid "Meeting data is temporarily unavailable. Please check back soon."
+msgstr "Pansamantalang hindi available ang datos ng miting. Pakibalik na lang sa lalong madaling panahon."
+
+#: includes/class-detail.php:119
+#: includes/class-detail.php:126
+#: includes/class-router.php:83
+#: templates/meeting-detail.php:53
+#: templates/meeting-detail.php:99
+msgid "Meeting Detail"
+msgstr "Detalye ng Miting"
+
+#: includes/class-list.php:326
+#, php-format
+msgid "Council: %s"
+msgstr "Konseho: %s"
+
+#: includes/class-list.php:327
+#, php-format
+msgid "Council #%d"
+msgstr "Konseho #%d"
+
+#: includes/class-list.php:339
+#: templates/councils-list.php:51
+#: templates/meetings-list.php:343
+msgid "State"
+msgstr "Estado"
+
+#: includes/class-list.php:340
+#: templates/councils-list.php:52
+#: templates/meetings-list.php:344
+msgid "Honolulu"
+msgstr "Honolulu"
+
+#: includes/class-list.php:341
+#: templates/councils-list.php:53
+#: templates/meetings-list.php:345
+msgid "Maui"
+msgstr "Maui"
+
+#: includes/class-list.php:355
+#, php-format
+msgid "From: %s"
+msgstr "Mula: %s"
+
+#: includes/class-list.php:362
+#, php-format
+msgid "To: %s"
+msgstr "Hanggang: %s"
+
+#: includes/class-list.php:393
+#: templates/meeting-detail.php:76
+#: templates/meetings-list.php:62
+msgid "State of Hawaii"
+msgstr "Estado ng Hawaii"
+
+#: includes/class-list.php:394
+#: templates/meeting-detail.php:77
+#: templates/meetings-list.php:63
+msgid "Honolulu Neighborhood Board"
+msgstr "Honolulu Neighborhood Board"
+
+#: includes/class-list.php:395
+#: templates/meeting-detail.php:78
+#: templates/meetings-list.php:64
+msgid "Honolulu County Committee"
+msgstr "Honolulu County Committee"
+
+#: includes/class-list.php:396
+#: templates/meeting-detail.php:79
+#: templates/meetings-list.php:65
+msgid "Maui County Committee"
+msgstr "Maui County Committee"
+
+#: includes/class-router.php:82
+#: templates/meeting-detail.php:97
+#: templates/meetings-list.php:40
+msgid "Meetings"
+msgstr "Mga Miting"
+
+#: includes/class-router.php:84
+#: templates/council-profile.php:96
+#: templates/meetings-list.php:301
+msgid "Councils"
+msgstr "Mga Konseho"
+
+#: includes/class-router.php:85
+msgid "Council Profile"
+msgstr "Profile ng Konseho"
+
+#: templates/council-profile.php:74
+msgid "Council Not Found"
+msgstr "Hindi Nahanap ang Konseho"
+
+#: templates/council-profile.php:80
+msgid "This council could not be found."
+msgstr "Hindi mahanap ang konseho na ito."
+
+#: templates/council-profile.php:83
+msgid "Browse all councils"
+msgstr "Tingnan ang lahat ng konseho"
+
+#: templates/council-profile.php:94
+#: templates/meeting-detail.php:94
+msgid "Breadcrumb"
+msgstr "Breadcrumb"
+
+#: templates/council-profile.php:128
+msgid "What This Board Does"
+msgstr "Ano ang Ginagawa ng Board na Ito"
+
+#: templates/council-profile.php:139
+msgid "Why You Should Care"
+msgstr "Bakit Dapat Kang Magmalasakit"
+
+#: templates/council-profile.php:150
+msgid "Legal Authority"
+msgstr "Legal na Awtoridad"
+
+#. translators: %d: number of board members
+#: templates/council-profile.php:179
+#, php-format
+msgid "Board Members (%d)"
+msgstr "Mga Miyembro ng Board (%d)"
+
+#. translators: %s: term end date
+#: templates/council-profile.php:201
+#, php-format
+msgid "Term ends %s"
+msgstr "Nagtatapos ang termino sa %s"
+
+#: templates/council-profile.php:216
+msgid "Upcoming Meetings"
+msgstr "Mga Paparating na Miting"
+
+#: templates/council-profile.php:251
+msgid "Details"
+msgstr "Mga Detalye"
+
+#: templates/council-profile.php:259
+msgid "View all meetings for this council"
+msgstr "Tingnan ang lahat ng miting para sa konseho na ito"
+
+#: templates/council-profile.php:268
+msgid "How to Participate"
+msgstr "Paano Lumahok"
+
+#: templates/council-profile.php:277
+msgid "Submit Written Testimony:"
+msgstr "Magsumite ng Nakasulat na Patotoo:"
+
+#: templates/council-profile.php:298
+msgid "At a Glance"
+msgstr "Sa Isang Tingin"
+
+#: templates/council-profile.php:302
+msgid "Type"
+msgstr "Uri"
+
+#: templates/council-profile.php:307
+msgid "Jurisdiction"
+msgstr "Hurisdiksyon"
+
+#: templates/council-profile.php:312
+msgid "Members"
+msgstr "Mga Miyembro"
+
+#: templates/council-profile.php:317
+msgid "Appointed By"
+msgstr "Hinirang ng"
+
+#: templates/council-profile.php:322
+msgid "Term Length"
+msgstr "Haba ng Termino"
+
+#: templates/council-profile.php:327
+msgid "Meets"
+msgstr "Nagtitipon"
+
+#: templates/council-profile.php:332
+#: templates/meeting-detail.php:140
+msgid "Location"
+msgstr "Lokasyon"
+
+#: templates/council-profile.php:337
+#: templates/meeting-detail.php:152
+msgid "Virtual"
+msgstr "Virtual"
+
+#: templates/council-profile.php:338
+msgid "Yes, virtual attendance available"
+msgstr "Oo, available ang virtual na pagdalo"
+
+#: templates/council-profile.php:345
+msgid "Official Website"
+msgstr "Opisyal na Website"
+
+#: templates/council-profile.php:352
+msgid "Contact"
+msgstr "Makipag-ugnayan"
+
+#. translators: %d: number of open seats
+#: templates/council-profile.php:377
+#, php-format
+msgid "%d Open Seat"
+msgid_plural "%d Open Seats"
+msgstr[0] "%d Bakanteng Puwesto"
+msgstr[1] "%d Bakanteng Puwesto"
+
+#. translators: %s: application deadline date
+#: templates/council-profile.php:392
+#, php-format
+msgid "Deadline: %s"
+msgstr "Deadline: %s"
+
+#: templates/council-profile.php:401
+msgid "Apply"
+msgstr "Mag-apply"
+
+#: templates/council-profile.php:412
+#: templates/councils-list.php:149
+#: templates/meeting-detail.php:187
+msgid "Get Notified"
+msgstr "Maabisuhan"
+
+#: templates/council-profile.php:413
+msgid "Sign up to receive alerts when this council schedules new meetings."
+msgstr "Mag-sign up para makatanggap ng mga abiso kapag nag-iskedyul ng bagong miting ang konseho na ito."
+
+#: templates/council-profile.php:415
+msgid "Set Up Alerts"
+msgstr "I-set Up ang mga Abiso"
+
+#: templates/councils-list.php:22
+msgid "Councils & Boards"
+msgstr "Mga Konseho at Board"
+
+#: templates/councils-list.php:23
+msgid "Browse government councils, boards, and commissions across Hawaii. Select a council to see its upcoming meetings."
+msgstr "Tingnan ang mga konseho, board, at komisyon ng gobyerno sa buong Hawaii. Pumili ng konseho para makita ang mga paparating nitong miting."
+
+#: templates/councils-list.php:30
+msgid "Filter councils"
+msgstr "I-filter ang mga konseho"
+
+#: templates/councils-list.php:34
+#: templates/councils-list.php:60
+#: templates/meetings-list.php:255
+msgid "Search"
+msgstr "Maghanap"
+
+#: templates/councils-list.php:41
+msgid "Search councils…"
+msgstr "Maghanap ng mga konseho…"
+
+#: templates/councils-list.php:47
+#: templates/meetings-list.php:339
+msgid "County"
+msgstr "County"
+
+#: templates/councils-list.php:50
+msgid "All"
+msgstr "Lahat"
+
+#: templates/councils-list.php:64
+#: templates/meetings-list.php:391
+msgid "Clear"
+msgstr "I-clear"
+
+#: templates/councils-list.php:74
+msgid "Council data is temporarily unavailable."
+msgstr "Pansamantalang hindi available ang datos ng konseho."
+
+#: templates/councils-list.php:75
+msgid "We're working on connecting to the database. Check back soon."
+msgstr "Nagtatrabaho kami para kumonekta sa database. Bumalik ka sa lalong madaling panahon."
+
+#: templates/councils-list.php:81
+msgid "No councils found matching your search."
+msgstr "Walang nahanap na konseho na tumutugma sa iyong paghahanap."
+
+#: templates/councils-list.php:84
+msgid "View all councils"
+msgstr "Tingnan ang lahat ng konseho"
+
+#. translators: %d: number of councils
+#: templates/councils-list.php:95
+#, php-format
+msgid "%d councils found"
+msgstr "Nahanap ang %d konseho"
+
+#. translators: %d: number of upcoming meetings
+#: templates/councils-list.php:125
+#, php-format
+msgid "%d upcoming meeting"
+msgid_plural "%d upcoming meetings"
+msgstr[0] "%d paparating na miting"
+msgstr[1] "%d paparating na miting"
+
+#. translators: %s: formatted date
+#: templates/councils-list.php:136
+#, php-format
+msgid "Next: %s"
+msgstr "Susunod: %s"
+
+#: templates/councils-list.php:146
+msgid "View Meetings"
+msgstr "Tingnan ang mga Miting"
+
+#: templates/meeting-detail.php:36
+msgid "Meeting Not Found"
+msgstr "Hindi Nahanap ang Miting"
+
+#: templates/meeting-detail.php:43
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "Hindi namin mahanap ang miting na ito. Maaaring nakansela na ito o maling link ang ginamit."
+
+#: templates/meeting-detail.php:44
+msgid "Browse All Meetings"
+msgstr "Tingnan ang Lahat ng Miting"
+
+#: templates/meeting-detail.php:60
+#: templates/meetings-list.php:402
+msgid "Meeting data is temporarily unavailable."
+msgstr "Pansamantalang hindi available ang datos ng miting."
+
+#: templates/meeting-detail.php:61
+msgid "We're working on connecting to the meeting database. Check back soon."
+msgstr "Nagtatrabaho kami para kumonekta sa database ng miting. Bumalik ka sa lalong madaling panahon."
+
+#: templates/meeting-detail.php:62
+msgid "Back to meetings"
+msgstr "Bumalik sa mga miting"
+
+#: templates/meeting-detail.php:107
+msgid "Meeting"
+msgstr "Miting"
+
+#: templates/meeting-detail.php:117
+msgid "Meeting information is displayed in English."
+msgstr "Ang impormasyon ng miting ay ipinapakita sa Ingles."
+
+#: templates/meeting-detail.php:126
+msgid "Date"
+msgstr "Petsa"
+
+#: templates/meeting-detail.php:133
+msgid "Time"
+msgstr "Oras"
+
+#: templates/meeting-detail.php:155
+msgid "Join Online"
+msgstr "Sumali Online"
+
+#: templates/meeting-detail.php:175
+msgid "View Official Notice"
+msgstr "Tingnan ang Opisyal na Abiso"
+
+#: templates/meeting-detail.php:181
+msgid "Add to My Calendar"
+msgstr "Idagdag sa Aking Kalendaryo"
+
+#: templates/meeting-detail.php:194
+msgid "Share with a Friend"
+msgstr "Ibahagi sa Isang Kaibigan"
+
+#: templates/meeting-detail.php:255
+msgid "What This Meeting Is About"
+msgstr "Tungkol Saan ang Miting na Ito"
+
+#: templates/meeting-detail.php:260
+msgid "This summary was generated by AI to help you understand the agenda. Always refer to the official documents for complete information."
+msgstr "Ang buod na ito ay ginawa ng AI para tulungan kang maunawaan ang agenda. Palaging sumangguni sa mga opisyal na dokumento para sa kumpletong impormasyon."
+
+#: templates/meeting-detail.php:276
+msgid "Remind Me About This Meeting"
+msgstr "Ipaalala sa Akin ang Miting na Ito"
+
+#: templates/meeting-detail.php:289
+#: templates/meeting-detail.php:357
+msgid "Website"
+msgstr "Website"
+
+#: templates/meeting-detail.php:294
+#: templates/meeting-detail.php:298
+#: templates/meeting-detail.php:366
+msgid "Email Address"
+msgstr "Email Address"
+
+#: templates/meeting-detail.php:310
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "Magpapadala kami ng confirmation email, pagkatapos ay isang paalala sa umaga ng miting."
+
+#: templates/meeting-detail.php:317
+msgid "Remind Me"
+msgstr "Ipaalala sa Akin"
+
+#. translators: %s: link to privacy policy
+#: templates/meeting-detail.php:325
+#: templates/meeting-detail.php:426
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "Hindi namin ibinabahagi ang iyong impormasyon. Tingnan ang aming %s."
+
+#: templates/meeting-detail.php:326
+#: templates/meeting-detail.php:427
+msgid "privacy policy"
+msgstr "patakaran sa privacy"
+
+#: templates/meeting-detail.php:335
+msgid "Subscribe to This Council"
+msgstr "Mag-subscribe sa Konseho na Ito"
+
+#: templates/meeting-detail.php:362
+msgid "Contact Information"
+msgstr "Impormasyon sa Pakikipag-ugnayan"
+
+#: templates/meeting-detail.php:381
+msgid "Phone Number"
+msgstr "Numero ng Telepono"
+
+#: templates/meeting-detail.php:392
+msgid "Optional. US numbers only."
+msgstr "Opsyonal. Mga numerong US lamang."
+
+#: templates/meeting-detail.php:398
+msgid "Notification Frequency"
+msgstr "Dalas ng Abiso"
+
+#: templates/meeting-detail.php:403
+msgid "When new meetings are posted"
+msgstr "Kapag may na-post na bagong miting"
+
+#: templates/meeting-detail.php:407
+msgid "Daily digest"
+msgstr "Araw-araw na digest"
+
+#: templates/meeting-detail.php:411
+msgid "Weekly digest"
+msgstr "Lingguhang digest"
+
+#: templates/meeting-detail.php:418
+msgid "Subscribe"
+msgstr "Mag-subscribe"
+
+#: templates/meetings-list.php:41
+msgid "Browse upcoming government meetings across Hawaii. Filter by topic, council, date, or keyword."
+msgstr "Tingnan ang mga paparating na miting ng gobyerno sa buong Hawaii. I-filter ayon sa paksa, konseho, petsa, o keyword."
+
+#: templates/meetings-list.php:50
+#, php-format
+msgid "%d filter active"
+msgid_plural "%d filters active"
+msgstr[0] "%d filter ang aktibo"
+msgstr[1] "%d filter ang aktibo"
+
+#: templates/meetings-list.php:54
+msgid "Filters"
+msgstr "Mga Filter"
+
+#: templates/meetings-list.php:89
+msgid "Filter by source"
+msgstr "I-filter ayon sa pinagmulan"
+
+#: templates/meetings-list.php:90
+msgid "Filter by Source"
+msgstr "I-filter ayon sa Pinagmulan"
+
+#: templates/meetings-list.php:133
+#, php-format
+msgid "%d source selected"
+msgid_plural "%d sources selected"
+msgstr[0] "%d pinagmulan ang napili"
+msgstr[1] "%d pinagmulan ang napili"
+
+#: templates/meetings-list.php:152
+#: templates/meetings-list.php:232
+msgid "Clear all"
+msgstr "I-clear lahat"
+
+#: templates/meetings-list.php:163
+msgid "Filter by topic"
+msgstr "I-filter ayon sa paksa"
+
+#: templates/meetings-list.php:164
+msgid "What matters to you?"
+msgstr "Ano ang mahalaga sa iyo?"
+
+#: templates/meetings-list.php:213
+#, php-format
+msgid "%d topic selected"
+msgid_plural "%d topics selected"
+msgstr[0] "%d paksang napili"
+msgstr[1] "%d paksang napili"
+
+#: templates/meetings-list.php:249
+msgid "Filter meetings"
+msgstr "I-filter ang mga miting"
+
+#: templates/meetings-list.php:262
+msgid "Search meetings…"
+msgstr "Maghanap ng mga miting…"
+
+#: templates/meetings-list.php:264
+msgid "Search meetings by keyword"
+msgstr "Maghanap ng mga miting ayon sa keyword"
+
+#: templates/meetings-list.php:270
+msgid "Council"
+msgstr "Konseho"
+
+#: templates/meetings-list.php:282
+msgid "Search councils by name"
+msgstr "Maghanap ng mga konseho ayon sa pangalan"
+
+#: templates/meetings-list.php:283
+#: templates/meetings-list.php:305
+msgid "All Councils"
+msgstr "Lahat ng Konseho"
+
+#: templates/meetings-list.php:311
+msgid "Other"
+msgstr "Iba pa"
+
+#: templates/meetings-list.php:342
+msgid "All Counties"
+msgstr "Lahat ng County"
+
+#: templates/meetings-list.php:353
+msgid "From"
+msgstr "Mula"
+
+#: templates/meetings-list.php:366
+msgid "To"
+msgstr "Hanggang"
+
+#: templates/meetings-list.php:387
+msgid "Filter"
+msgstr "I-filter"
+
+#. translators: %s: link to about page
+#: templates/meetings-list.php:407
+#, php-format
+msgid "We're working on connecting to the meeting database. Check back soon, or browse our %s to learn more about Civi.Me."
+msgstr "Nagtatrabaho kami para kumonekta sa database ng miting. Bumalik ka sa lalong madaling panahon, o tingnan ang aming %s para matuto pa tungkol sa Civi.Me."
+
+#: templates/meetings-list.php:408
+msgid "about page"
+msgstr "pahina ng tungkol sa amin"
+
+#: templates/meetings-list.php:417
+msgid "No meetings found matching your filters."
+msgstr "Walang nahanap na miting na tumutugma sa iyong mga filter."
+
+#: templates/meetings-list.php:420
+msgid "View all upcoming meetings"
+msgstr "Tingnan ang lahat ng paparating na miting"
+
+#. translators: 1: first item number, 2: last item number, 3: total count
+#: templates/meetings-list.php:436
+#, php-format
+msgid "Showing %1$d–%2$d of %3$d meetings"
+msgstr "Ipinapakita ang %1$d–%2$d ng %3$d miting"
+
+#: templates/meetings-list.php:485
+msgid "Time:"
+msgstr "Oras:"
+
+#: templates/meetings-list.php:492
+msgid "Location:"
+msgstr "Lokasyon:"
+
+#: templates/meetings-list.php:498
+msgid "AI-generated summary available"
+msgstr "Available ang buod na ginawa ng AI"
+
+#: templates/meetings-list.php:499
+msgid "AI Summary"
+msgstr "Buod ng AI"
+
+#: templates/meetings-list.php:510
+msgid "View Details"
+msgstr "Tingnan ang Mga Detalye"
+
+#. translators: %s: council name
+#: templates/meetings-list.php:514
+#, php-format
+msgid "for %s"
+msgstr "para sa %s"
+
+#: templates/meetings-list.php:537
+msgid "Meeting pages"
+msgstr "Mga pahina ng miting"
+
+#: templates/meetings-list.php:562
+msgid "Previous"
+msgstr "Nakaraan"
+
+#: templates/meetings-list.php:578
+msgid "Page 1"
+msgstr "Pahina 1"
+
+#: templates/meetings-list.php:592
+#, php-format
+msgid "Page %d, current page"
+msgstr "Pahina %d, kasalukuyang pahina"
+
+#: templates/meetings-list.php:600
+#: templates/meetings-list.php:616
+#, php-format
+msgid "Page %d"
+msgstr "Pahina %d"
+
+#: templates/meetings-list.php:630
+msgid "Next"
+msgstr "Susunod"

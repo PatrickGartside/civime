@@ -1,0 +1,523 @@
+# Simplified Chinese translation for the CiviMe theme.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/civime\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: 简体中文 <hello@civi.me>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:14+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "CiviMe"
+msgstr "CiviMe"
+
+#. Theme URI of the theme
+#. Author URI of the theme
+#: style.css
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the theme
+#: style.css
+msgid "Custom theme for Civi.Me — Hawaii civic engagement platform. Mobile-first, WCAG 2.1 AA compliant, light/dark mode."
+msgstr "Civi.Me 自定义主题 — Hawaii 公民参与平台。移动优先，符合 WCAG 2.1 AA 标准，支持亮色/暗色模式。"
+
+#. Author of the theme
+#: style.css
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: 404.php:19
+msgid "Page not found"
+msgstr "页面未找到"
+
+#: 404.php:23
+msgid "The page you're looking for doesn't exist or has been moved. Try searching below, or head back home."
+msgstr "您查找的页面不存在或已被移动。请在下方搜索，或返回首页。"
+
+#: 404.php:34
+msgid "Go back home"
+msgstr "返回首页"
+
+#: footer.php:11
+msgid "Civic engagement for Hawaii"
+msgstr "Hawaii 公民参与平台"
+
+#: footer.php:16
+msgid "Footer navigation"
+msgstr "页脚导航"
+
+#. translators: %s: site name
+#: footer.php:42
+#, php-format
+msgid "%s &mdash; Civic engagement for Hawaii"
+msgstr "%s &mdash; Hawaii 公民参与平台"
+
+#: footer.php:52
+msgid "Privacy Policy"
+msgstr "隐私政策"
+
+#: footer.php:63
+msgid "Open source on GitHub (opens in new tab)"
+msgstr "在 GitHub 上查看开源代码（在新标签页中打开）"
+
+#: footer.php:68
+msgid "Open source"
+msgstr "开源"
+
+#: front-page.php:26
+msgid "Built for Hawaii"
+msgstr "专为 Hawaii 打造"
+
+#: front-page.php:33
+msgid "Civic Engagement Tools"
+msgstr "公民参与工具"
+
+#: front-page.php:33
+msgid "for the People of Hawaii"
+msgstr "为 Hawaii 居民服务"
+
+#: front-page.php:43
+msgid "Government information shouldn't require a law degree to navigate. Civi.Me makes it simple to stay informed, show up, and have your voice heard — in plain language, for free."
+msgstr "了解政府信息不需要法律学位。Civi.Me 让您轻松获取资讯、参与活动、表达意见——用简单易懂的语言，完全免费。"
+
+#: front-page.php:53
+msgid "What matters to you?"
+msgstr "您关心什么？"
+
+#: front-page.php:56
+msgid "Browse meetings"
+msgstr "浏览会议"
+
+#: front-page.php:167
+msgid "The challenge"
+msgstr "面临的挑战"
+
+#: front-page.php:169
+msgid "Civic participation should be accessible for all residents"
+msgstr "公民参与应对所有居民开放"
+
+#: front-page.php:172
+msgid "People want to be engaged, but the barriers make it feel impossible. We're removing them."
+msgstr "居民希望参与，但障碍让这感觉遥不可及。我们正在消除这些障碍。"
+
+#: front-page.php:190
+msgid "Buried information"
+msgstr "隐藏的信息"
+
+#: front-page.php:191
+msgid "Meeting agendas are buried in PDFs across dozens of county and state websites with no consistent format."
+msgstr "会议议程散落在数十个县市和州政府网站的 PDF 文件中，格式各不相同。"
+
+#: front-page.php:203
+msgid "No timely alerts"
+msgstr "缺乏及时通知"
+
+#: front-page.php:204
+msgid "Residents find out about decisions that affect their neighborhoods after the fact — if at all."
+msgstr "居民往往在影响社区的决定已经做出后才得知——甚至根本不知道。"
+
+#: front-page.php:219
+msgid "Bureaucratic language"
+msgstr "官僚式语言"
+
+#: front-page.php:220
+msgid "Government documents are written for lawyers, not residents. Plain-language summaries are rare."
+msgstr "政府文件是为律师而写的，而非普通居民。通俗语言摘要极为罕见。"
+
+#: front-page.php:234
+msgid "Who are my representatives?"
+msgstr "我的代表是谁？"
+
+#: front-page.php:235
+msgid "Most residents can't name their city council member, let alone their neighborhood board chair."
+msgstr "大多数居民说不出自己的市议会成员，更别提社区委员会主席了。"
+
+#: front-page.php:254
+msgid "Start here"
+msgstr "从这里开始"
+
+#: front-page.php:256
+msgid "Tell us what matters to you"
+msgstr "告诉我们您关心什么"
+
+#: front-page.php:259
+msgid "Pick the topics you care about — environment, housing, education, health — and we'll show you the government meetings and councils that handle those issues."
+msgstr "选择您关心的话题——环境、住房、教育、健康——我们将为您展示负责这些议题的政府会议和委员会。"
+
+#: front-page.php:270
+msgid "Environment & Land"
+msgstr "环境与土地"
+
+#: front-page.php:270
+msgid "Leaf"
+msgstr "树叶"
+
+#: front-page.php:271
+msgid "Housing & Development"
+msgstr "住房与开发"
+
+#: front-page.php:271
+msgid "House"
+msgstr "房屋"
+
+#: front-page.php:272
+msgid "Education"
+msgstr "教育"
+
+#: front-page.php:272
+msgid "Books"
+msgstr "书籍"
+
+#: front-page.php:273
+msgid "Health & Wellness"
+msgstr "健康与福祉"
+
+#: front-page.php:273
+msgid "Hospital"
+msgstr "医院"
+
+#: front-page.php:274
+msgid "Transportation"
+msgstr "交通"
+
+#: front-page.php:274
+msgid "Bus"
+msgstr "公共汽车"
+
+#: front-page.php:275
+msgid "Public Safety"
+msgstr "公共安全"
+
+#: front-page.php:275
+msgid "Shield"
+msgstr "盾牌"
+
+#: front-page.php:276
+msgid "Economy & Labor"
+msgstr "经济与劳工"
+
+#: front-page.php:276
+msgid "Briefcase"
+msgstr "公文包"
+
+#: front-page.php:277
+msgid "Culture & Arts"
+msgstr "文化与艺术"
+
+#: front-page.php:277
+msgid "Performing arts"
+msgstr "表演艺术"
+
+#: front-page.php:278
+msgid "Agriculture & Food"
+msgstr "农业与食品"
+
+#: front-page.php:278
+msgid "Sheaf of rice"
+msgstr "稻穗"
+
+#: front-page.php:279
+msgid "Energy & Utilities"
+msgstr "能源与公用事业"
+
+#: front-page.php:279
+msgid "Lightning bolt"
+msgstr "闪电"
+
+#: front-page.php:280
+msgid "Water & Ocean"
+msgstr "水资源与海洋"
+
+#: front-page.php:280
+msgid "Ocean wave"
+msgstr "海浪"
+
+#: front-page.php:281
+msgid "Disability & Access"
+msgstr "残障与无障碍"
+
+#: front-page.php:281
+msgid "Wheelchair symbol"
+msgstr "轮椅标志"
+
+#: front-page.php:282
+msgid "Veterans & Military"
+msgstr "退伍军人与军事"
+
+#: front-page.php:282
+msgid "Military medal"
+msgstr "军功勋章"
+
+#: front-page.php:283
+msgid "Technology & Innovation"
+msgstr "科技与创新"
+
+#: front-page.php:283
+msgid "Laptop"
+msgstr "笔记本电脑"
+
+#: front-page.php:284
+msgid "Budget & Finance"
+msgstr "预算与财政"
+
+#: front-page.php:284
+msgid "Bar chart"
+msgstr "条形图"
+
+#: front-page.php:285
+msgid "Governance & Ethics"
+msgstr "治理与道德"
+
+#: front-page.php:285
+msgid "Balance scale"
+msgstr "天平"
+
+#: front-page.php:302
+msgid "Pick Your Topics"
+msgstr "选择您的话题"
+
+#: front-page.php:305
+msgid "Pick the topics you care about and we'll show you the meetings that matter."
+msgstr "选择您关心的话题，我们将为您展示相关会议。"
+
+#: front-page.php:320
+msgid "Civic tools"
+msgstr "公民工具"
+
+#: front-page.php:322
+msgid "What you can do on Civi.Me"
+msgstr "您可以在 Civi.Me 上做什么"
+
+#: front-page.php:363
+#: front-page.php:403
+#: front-page.php:443
+#: front-page.php:487
+msgid "Live"
+msgstr "上线"
+
+#: front-page.php:365
+msgid "Browse Meetings"
+msgstr "浏览会议"
+
+#: front-page.php:368
+msgid "All public meetings — boards, commissions, and councils — in one calendar. Filter by topic, council, or date. AI-generated summaries explain what's on the agenda."
+msgstr "所有公开会议——董事会、委员会和议会——汇聚在一个日历中。按话题、委员会或日期筛选。AI 生成的摘要解释议程内容。"
+
+#: front-page.php:405
+msgid "Council Profiles"
+msgstr "委员会简介"
+
+#: front-page.php:408
+msgid "Learn what each board and commission actually does — in plain language. See who sits on the board, upcoming meetings, open seats, and how to participate."
+msgstr "了解每个董事会和委员会的实际职能——用通俗易懂的语言。查看委员会成员、即将召开的会议、空缺席位以及如何参与。"
+
+#: front-page.php:445
+msgid "Get Alerts"
+msgstr "获取通知"
+
+#: front-page.php:448
+msgid "Subscribe to topics or specific councils. Get email alerts when meetings are scheduled — before it's too late to participate."
+msgstr "订阅话题或特定委员会。会议安排后立即收到电子邮件通知——在错过参与机会之前。"
+
+#: front-page.php:489
+msgid "Guides & Compliance"
+msgstr "指南与合规"
+
+#: front-page.php:492
+msgid "Step-by-step civic action guides plus compliance tools for agencies — Sunshine Law, public records, accessibility, and public participation best practices."
+msgstr "分步骤的公民行动指南，以及机构合规工具——阳光法、公共记录、无障碍访问和公众参与最佳实践。"
+
+#: front-page.php:511
+msgid "What we believe"
+msgstr "我们的理念"
+
+#: front-page.php:513
+msgid "Information access is a community right"
+msgstr "获取信息是社区居民的权利"
+
+#: front-page.php:516
+msgid "Every resident deserves to know what decisions are being made that affect their community — in language they can understand, at a time when they can still participate."
+msgstr "每位居民都有权了解影响其社区的决策——用他们能理解的语言，在他们还能参与的时候。"
+
+#: front-page.php:534
+msgid "Strictly nonpartisan"
+msgstr "严格保持无党派立场"
+
+#: front-page.php:535
+msgid "Civi.Me does not endorse candidates, parties, or positions on any issue. We present facts: what a bill does, who submitted it, when the hearing is. We provide tools and templates — never talking points."
+msgstr "Civi.Me 不支持任何候选人、政党或对任何议题的立场。我们只呈现事实：法案的内容、提交者是谁、听证会时间。我们提供工具和模板——绝不提供宣传口号。"
+
+#: front-page.php:549
+msgid "Everyone is included — no exceptions"
+msgstr "人人参与——无一例外"
+
+#: front-page.php:550
+msgid "We use \"residents\" — not \"citizens.\" We support all 15 languages recognized by Hawaii's Office of Language Access. We build for mobile and include a phone line for people who don't have a smartphone at all."
+msgstr "我们使用“居民”而非“公民”。我们支持 Hawaii 语言服务办公室认可的全部 15 种语言。我们为移动端而建，并为没有智能手机的人提供电话服务。"
+
+#: front-page.php:561
+msgid "Cultural respect is not optional"
+msgstr "文化尊重不是可选项"
+
+#: front-page.php:562
+msgid "Native Hawaiian sovereignty is a living issue, not history. We frame civic participation as community engagement — not blind deference to government structures."
+msgstr "夏威夷原住民的主权是一个现实议题，而非历史。我们将公民参与定义为社区融入——而非对政府机构的盲目服从。"
+
+#: front-page.php:573
+msgid "Open source and community-built"
+msgstr "开源且由社区共建"
+
+#: front-page.php:574
+msgid "Civi.Me's code is public on GitHub from day one. Civic infrastructure should be open to inspection, contribution, and community ownership. If we ever make a decision you disagree with, you can see exactly why — and you can help us do better."
+msgstr "Civi.Me 的代码从第一天起就在 GitHub 上公开。公民基础设施应该对审查、贡献和社区所有权保持开放。如果我们做出您不认同的决定，您可以清楚地看到原因——也可以帮助我们做得更好。"
+
+#: front-page.php:589
+msgid "Join us"
+msgstr "加入我们"
+
+#: front-page.php:591
+msgid "Help build civic infrastructure for Hawaii"
+msgstr "帮助构建 Hawaii 的公民基础设施"
+
+#: front-page.php:594
+msgid "Civi.Me is open source and community-driven. Whether you're a developer, a civic advocate, or just someone who cares — there's a place for you."
+msgstr "Civi.Me 是开源的，由社区驱动。无论您是开发者、公民倡导者，还是只是一位关心公共事务的人——这里都有您的位置。"
+
+#: front-page.php:607
+msgid "View on GitHub"
+msgstr "在 GitHub 上查看"
+
+#: front-page.php:610
+msgid "Get in touch"
+msgstr "联系我们"
+
+#: functions.php:48
+msgid "Ocean Blue"
+msgstr "海洋蓝"
+
+#: functions.php:53
+msgid "Reef Teal"
+msgstr "珊瑚礁青"
+
+#: functions.php:58
+msgid "Sunset Orange"
+msgstr "落日橙"
+
+#: functions.php:63
+msgid "Near White"
+msgstr "近白色"
+
+#: functions.php:68
+msgid "Near Black"
+msgstr "近黑色"
+
+#: functions.php:79
+msgid "Primary Menu"
+msgstr "主菜单"
+
+#: functions.php:80
+msgid "Footer Menu"
+msgstr "页脚菜单"
+
+#: functions.php:279
+#: functions.php:313
+msgid "Topics"
+msgstr "话题"
+
+#: functions.php:280
+#: functions.php:314
+msgid "Meetings"
+msgstr "会议"
+
+#: functions.php:281
+#: functions.php:315
+msgid "Councils"
+msgstr "委员会"
+
+#: functions.php:282
+#: functions.php:316
+msgid "Guides"
+msgstr "指南"
+
+#: functions.php:283
+#: functions.php:317
+msgid "Alerts"
+msgstr "通知"
+
+#: header.php:15
+msgid "Skip to main content"
+msgstr "跳转到主要内容"
+
+#: header.php:23
+msgid "Home"
+msgstr "首页"
+
+#: header.php:50
+msgid "Switch to dark mode"
+msgstr "切换到暗色模式"
+
+#: header.php:76
+msgid "Open navigation menu"
+msgstr "打开导航菜单"
+
+#: header.php:90
+msgid "Primary navigation"
+msgstr "主导航"
+
+#: header.php:112
+msgid "Mobile navigation"
+msgstr "移动端导航"
+
+#: header.php:120
+msgid "Close navigation menu"
+msgstr "关闭导航菜单"
+
+#: index.php:16
+msgid "Latest Posts"
+msgstr "最新文章"
+
+#: index.php:66
+msgid "Previous"
+msgstr "上一页"
+
+#: index.php:67
+msgid "Next"
+msgstr "下一页"
+
+#: index.php:75
+msgid "No posts found."
+msgstr "未找到文章。"
+
+#. Template Name of the theme
+msgid "Compliance Hub"
+msgstr "合规中心"
+
+#: page-compliance-hub.php:103
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] "%d 分钟阅读"
+
+#: page-compliance-hub.php:109
+msgid "Read Guide"
+msgstr "阅读指南"
+
+#: page-compliance-hub.php:124
+msgid "Compliance guides are coming soon. Check back shortly."
+msgstr "合规指南即将上线，请稍后再来查看。"
+
+#: page.php:24
+msgid "Page"
+msgstr "页面"

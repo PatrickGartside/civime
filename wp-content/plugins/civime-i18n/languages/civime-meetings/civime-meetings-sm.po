@@ -1,0 +1,665 @@
+# Samoan translation for the CiviMe Meetings plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Meetings 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-meetings\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Gagana Sāmoa <hello@civi.me>\n"
+"Language: sm\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-meetings\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-meetings.php
+msgid "CiviMe Meetings"
+msgstr "CiviMe Fonotaga"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-meetings.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-meetings.php
+msgid "Meeting calendar, detail pages, and council browser — powered by the Access100 API."
+msgstr "Kalena fonotaga, itulau faʻamatalaga, ma sailiga fono — e malosiina e le Access100 API."
+
+#. Author of the plugin
+#: civime-meetings.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-meetings.php:45
+msgid "CiviMe Meetings requires the CiviMe Core plugin to be installed and activated."
+msgstr "E manaʻomia e CiviMe Fonotaga le faʻapipiʻiina ma faʻagaoioia o le CiviMe Core plugin."
+
+#: includes/class-councils-list.php:89
+msgid "Council data is temporarily unavailable. Please check back soon."
+msgstr "E le avanoa faʻamatalaga fono i le taimi nei. Faʻamolemole toe sau i se taimi."
+
+#: includes/class-detail.php:39
+msgid "No meeting ID provided."
+msgstr "Leai se ID fonotaga na tuʻuina atu."
+
+#: includes/class-detail.php:106
+#: includes/class-list.php:246
+msgid "Meeting data is temporarily unavailable. Please check back soon."
+msgstr "E le avanoa faʻamatalaga fonotaga i le taimi nei. Faʻamolemole toe sau i se taimi."
+
+#: includes/class-detail.php:119
+#: includes/class-detail.php:126
+#: includes/class-router.php:83
+#: templates/meeting-detail.php:53
+#: templates/meeting-detail.php:99
+msgid "Meeting Detail"
+msgstr "Faʻamatalaga Fonotaga"
+
+#: includes/class-list.php:326
+#, php-format
+msgid "Council: %s"
+msgstr "Fono: %s"
+
+#: includes/class-list.php:327
+#, php-format
+msgid "Council #%d"
+msgstr "Fono #%d"
+
+#: includes/class-list.php:339
+#: templates/councils-list.php:51
+#: templates/meetings-list.php:343
+msgid "State"
+msgstr "Setete"
+
+#: includes/class-list.php:340
+#: templates/councils-list.php:52
+#: templates/meetings-list.php:344
+msgid "Honolulu"
+msgstr "Honolulu"
+
+#: includes/class-list.php:341
+#: templates/councils-list.php:53
+#: templates/meetings-list.php:345
+msgid "Maui"
+msgstr "Maui"
+
+#: includes/class-list.php:355
+#, php-format
+msgid "From: %s"
+msgstr "Mai: %s"
+
+#: includes/class-list.php:362
+#, php-format
+msgid "To: %s"
+msgstr "I: %s"
+
+#: includes/class-list.php:393
+#: templates/meeting-detail.php:76
+#: templates/meetings-list.php:62
+msgid "State of Hawaii"
+msgstr "Setete o Hawaiʻi"
+
+#: includes/class-list.php:394
+#: templates/meeting-detail.php:77
+#: templates/meetings-list.php:63
+msgid "Honolulu Neighborhood Board"
+msgstr "Poloaiga Itumalo Honolulu"
+
+#: includes/class-list.php:395
+#: templates/meeting-detail.php:78
+#: templates/meetings-list.php:64
+msgid "Honolulu County Committee"
+msgstr "Komiti Itumalo Honolulu"
+
+#: includes/class-list.php:396
+#: templates/meeting-detail.php:79
+#: templates/meetings-list.php:65
+msgid "Maui County Committee"
+msgstr "Komiti Itumalo Maui"
+
+#: includes/class-router.php:82
+#: templates/meeting-detail.php:97
+#: templates/meetings-list.php:40
+msgid "Meetings"
+msgstr "Fonotaga"
+
+#: includes/class-router.php:84
+#: templates/council-profile.php:96
+#: templates/meetings-list.php:301
+msgid "Councils"
+msgstr "Fono"
+
+#: includes/class-router.php:85
+msgid "Council Profile"
+msgstr "Faʻamatalaga Fono"
+
+#: templates/council-profile.php:74
+msgid "Council Not Found"
+msgstr "E leʻi Maua le Fono"
+
+#: templates/council-profile.php:80
+msgid "This council could not be found."
+msgstr "E leʻi maua le fono lenei."
+
+#: templates/council-profile.php:83
+msgid "Browse all councils"
+msgstr "Suesue fono uma"
+
+#: templates/council-profile.php:94
+#: templates/meeting-detail.php:94
+msgid "Breadcrumb"
+msgstr "Ala faʻatonuga"
+
+#: templates/council-profile.php:128
+msgid "What This Board Does"
+msgstr "Le Mea e Faia e le Poloaiga Lenei"
+
+#: templates/council-profile.php:139
+msgid "Why You Should Care"
+msgstr "Aisea e Tatau ai ona e Popole"
+
+#: templates/council-profile.php:150
+msgid "Legal Authority"
+msgstr "Pulega Faaletulafono"
+
+#. translators: %d: number of board members
+#: templates/council-profile.php:179
+#, php-format
+msgid "Board Members (%d)"
+msgstr "Sui o le Poloaiga (%d)"
+
+#. translators: %s: term end date
+#: templates/council-profile.php:201
+#, php-format
+msgid "Term ends %s"
+msgstr "E muta le nofoaga i le %s"
+
+#: templates/council-profile.php:216
+msgid "Upcoming Meetings"
+msgstr "Fonotaga o loʻo Sau"
+
+#: templates/council-profile.php:251
+msgid "Details"
+msgstr "Faʻamatalaga"
+
+#: templates/council-profile.php:259
+msgid "View all meetings for this council"
+msgstr "Vaai fonotaga uma mo le fono lenei"
+
+#: templates/council-profile.php:268
+msgid "How to Participate"
+msgstr "Le Auala e Auai Ai"
+
+#: templates/council-profile.php:277
+msgid "Submit Written Testimony:"
+msgstr "Tuʻuina Atu Molimau Tusitusia:"
+
+#: templates/council-profile.php:298
+msgid "At a Glance"
+msgstr "Se Tino Vaai"
+
+#: templates/council-profile.php:302
+msgid "Type"
+msgstr "Ituaiga"
+
+#: templates/council-profile.php:307
+msgid "Jurisdiction"
+msgstr "Pulega"
+
+#: templates/council-profile.php:312
+msgid "Members"
+msgstr "Sui"
+
+#: templates/council-profile.php:317
+msgid "Appointed By"
+msgstr "Tofia e"
+
+#: templates/council-profile.php:322
+msgid "Term Length"
+msgstr "Umi o le Nofoaga"
+
+#: templates/council-profile.php:327
+msgid "Meets"
+msgstr "Fono"
+
+#: templates/council-profile.php:332
+#: templates/meeting-detail.php:140
+msgid "Location"
+msgstr "Nofoaga"
+
+#: templates/council-profile.php:337
+#: templates/meeting-detail.php:152
+msgid "Virtual"
+msgstr "Faitalia"
+
+#: templates/council-profile.php:338
+msgid "Yes, virtual attendance available"
+msgstr "Ioe, e avanoa le auai faitalia"
+
+#: templates/council-profile.php:345
+msgid "Official Website"
+msgstr "Itulau Taaloga Aloaia"
+
+#: templates/council-profile.php:352
+msgid "Contact"
+msgstr "Faʻafesoʻotaʻi"
+
+#. translators: %d: number of open seats
+#: templates/council-profile.php:377
+#, php-format
+msgid "%d Open Seat"
+msgid_plural "%d Open Seats"
+msgstr[0] "%d Nofoa Tatala"
+
+#. translators: %s: application deadline date
+#: templates/council-profile.php:392
+#, php-format
+msgid "Deadline: %s"
+msgstr "Aso Gata: %s"
+
+#: templates/council-profile.php:401
+msgid "Apply"
+msgstr "Talosaga"
+
+#: templates/council-profile.php:412
+#: templates/councils-list.php:149
+#: templates/meeting-detail.php:187
+msgid "Get Notified"
+msgstr "Maua Faʻasilasilaga"
+
+#: templates/council-profile.php:413
+msgid "Sign up to receive alerts when this council schedules new meetings."
+msgstr "Saini e maua laʻasaga pe a faatulagaina fonotaga fou e le fono lenei."
+
+#: templates/council-profile.php:415
+msgid "Set Up Alerts"
+msgstr "Faʻatulagaina Laʻasaga"
+
+#: templates/councils-list.php:22
+msgid "Councils & Boards"
+msgstr "Fono ma Poloaiga"
+
+#: templates/councils-list.php:23
+msgid "Browse government councils, boards, and commissions across Hawaii. Select a council to see its upcoming meetings."
+msgstr "Suesue fono o le malo, poloaiga, ma komisiona i Hawaiʻi. Filifili se fono e vaai i fonotaga o loʻo sau."
+
+#: templates/councils-list.php:30
+msgid "Filter councils"
+msgstr "Fasi fono"
+
+#: templates/councils-list.php:34
+#: templates/councils-list.php:60
+#: templates/meetings-list.php:255
+msgid "Search"
+msgstr "Saili"
+
+#: templates/councils-list.php:41
+msgid "Search councils…"
+msgstr "Saili fono…"
+
+#: templates/councils-list.php:47
+#: templates/meetings-list.php:339
+msgid "County"
+msgstr "Itumalo"
+
+#: templates/councils-list.php:50
+msgid "All"
+msgstr "Uma"
+
+#: templates/councils-list.php:64
+#: templates/meetings-list.php:391
+msgid "Clear"
+msgstr "Faʻamāsani"
+
+#: templates/councils-list.php:74
+msgid "Council data is temporarily unavailable."
+msgstr "E le avanoa faʻamatalaga fono i le taimi nei."
+
+#: templates/councils-list.php:75
+msgid "We're working on connecting to the database. Check back soon."
+msgstr "O loʻo tatou galue e fesootai ma le faamaumauga. Toe sau i se taimi."
+
+#: templates/councils-list.php:81
+msgid "No councils found matching your search."
+msgstr "Leai ni fono na maua e fetaui ma lau sailiga."
+
+#: templates/councils-list.php:84
+msgid "View all councils"
+msgstr "Vaai fono uma"
+
+#. translators: %d: number of councils
+#: templates/councils-list.php:95
+#, php-format
+msgid "%d councils found"
+msgstr "%d fono na maua"
+
+#. translators: %d: number of upcoming meetings
+#: templates/councils-list.php:125
+#, php-format
+msgid "%d upcoming meeting"
+msgid_plural "%d upcoming meetings"
+msgstr[0] "%d fonotaga o loʻo sau"
+
+#. translators: %s: formatted date
+#: templates/councils-list.php:136
+#, php-format
+msgid "Next: %s"
+msgstr "Sosoo ai: %s"
+
+#: templates/councils-list.php:146
+msgid "View Meetings"
+msgstr "Vaai Fonotaga"
+
+#: templates/meeting-detail.php:36
+msgid "Meeting Not Found"
+msgstr "E leʻi Maua le Fonotaga"
+
+#: templates/meeting-detail.php:43
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "E leʻi maua e i matou le fonotaga lenei. Atonu ua faaleaogaina pe e sese le sootaga."
+
+#: templates/meeting-detail.php:44
+msgid "Browse All Meetings"
+msgstr "Suesue Fonotaga Uma"
+
+#: templates/meeting-detail.php:60
+#: templates/meetings-list.php:402
+msgid "Meeting data is temporarily unavailable."
+msgstr "E le avanoa faʻamatalaga fonotaga i le taimi nei."
+
+#: templates/meeting-detail.php:61
+msgid "We're working on connecting to the meeting database. Check back soon."
+msgstr "O loʻo tatou galue e fesootai ma le faamaumauga o fonotaga. Toe sau i se taimi."
+
+#: templates/meeting-detail.php:62
+msgid "Back to meetings"
+msgstr "Foʻi i fonotaga"
+
+#: templates/meeting-detail.php:107
+msgid "Meeting"
+msgstr "Fonotaga"
+
+#: templates/meeting-detail.php:117
+msgid "Meeting information is displayed in English."
+msgstr "O faʻamatalaga fonotaga o loʻo faʻaalia i le gagana Peretania."
+
+#: templates/meeting-detail.php:126
+msgid "Date"
+msgstr "Aso"
+
+#: templates/meeting-detail.php:133
+msgid "Time"
+msgstr "Taimi"
+
+#: templates/meeting-detail.php:155
+msgid "Join Online"
+msgstr "Auai i Luga o Initaneti"
+
+#: templates/meeting-detail.php:175
+msgid "View Official Notice"
+msgstr "Vaai Faʻasilasilaga Aloaia"
+
+#: templates/meeting-detail.php:181
+msgid "Add to My Calendar"
+msgstr "Faʻaopoopo i Loʻu Kalena"
+
+#: templates/meeting-detail.php:187
+#: templates/meeting-detail.php:194
+msgid "Share with a Friend"
+msgstr "Faasoasoa ma se Uo"
+
+#: templates/meeting-detail.php:255
+msgid "What This Meeting Is About"
+msgstr "O le Mea e Uiga ai le Fonotaga Lenei"
+
+#: templates/meeting-detail.php:260
+msgid "This summary was generated by AI to help you understand the agenda. Always refer to the official documents for complete information."
+msgstr "O le aotelega lenei na faʻatupu e AI e fesoasoani ai ia te oe e malamalama ai i le polokalame. Faʻamolemole taʻiala i faʻamaoniga aloaia mo faʻamatalaga atoatoa."
+
+#: templates/meeting-detail.php:276
+msgid "Remind Me About This Meeting"
+msgstr "Faʻamanatu Mai ia Te Au Lenei Fonotaga"
+
+#: templates/meeting-detail.php:289
+#: templates/meeting-detail.php:357
+msgid "Website"
+msgstr "Itulau Taaloga"
+
+#: templates/meeting-detail.php:294
+#: templates/meeting-detail.php:298
+#: templates/meeting-detail.php:366
+msgid "Email Address"
+msgstr "Tuatusi Imeli"
+
+#: templates/meeting-detail.php:310
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "O le a tatou auina atu se imeli faʻamaonia, ona maua ai lea se faʻamanatu i le taeao o le fonotaga."
+
+#: templates/meeting-detail.php:317
+msgid "Remind Me"
+msgstr "Faʻamanatu Mai"
+
+#. translators: %s: link to privacy policy
+#: templates/meeting-detail.php:325
+#: templates/meeting-detail.php:426
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "E le faasoa lava e i matou lou faʻamatalaga. Vaai i lo matou %s."
+
+#: templates/meeting-detail.php:326
+#: templates/meeting-detail.php:427
+msgid "privacy policy"
+msgstr "faiga faʻatumaoti"
+
+#: templates/meeting-detail.php:335
+msgid "Subscribe to This Council"
+msgstr "Saini i le Fono Lenei"
+
+#: templates/meeting-detail.php:362
+msgid "Contact Information"
+msgstr "Faʻamatalaga Fesoʻotaʻiga"
+
+#: templates/meeting-detail.php:381
+msgid "Phone Number"
+msgstr "Numera Telefoni"
+
+#: templates/meeting-detail.php:392
+msgid "Optional. US numbers only."
+msgstr "Faʻaogā. Numera US naʻo."
+
+#: templates/meeting-detail.php:398
+msgid "Notification Frequency"
+msgstr "Fa'aopuopuga Faʻasilasilaga"
+
+#: templates/meeting-detail.php:403
+msgid "When new meetings are posted"
+msgstr "Pe a tuʻuina atu fonotaga fou"
+
+#: templates/meeting-detail.php:407
+msgid "Daily digest"
+msgstr "Aotelega i aso taʻitasi"
+
+#: templates/meeting-detail.php:411
+msgid "Weekly digest"
+msgstr "Aotelega i vaiaso taʻitasi"
+
+#: templates/meeting-detail.php:418
+msgid "Subscribe"
+msgstr "Saini"
+
+#: templates/meetings-list.php:41
+msgid "Browse upcoming government meetings across Hawaii. Filter by topic, council, date, or keyword."
+msgstr "Suesue fonotaga o le malo o loʻo sau i Hawaiʻi. Fasi i autu, fono, aso, poʻo upu autu."
+
+#: templates/meetings-list.php:50
+#, php-format
+msgid "%d filter active"
+msgid_plural "%d filters active"
+msgstr[0] "%d fasi aʻoaʻo"
+
+#: templates/meetings-list.php:54
+msgid "Filters"
+msgstr "Faʻasisi"
+
+#: templates/meetings-list.php:89
+msgid "Filter by source"
+msgstr "Fasi i puna"
+
+#: templates/meetings-list.php:90
+msgid "Filter by Source"
+msgstr "Fasi i Puna"
+
+#: templates/meetings-list.php:133
+#, php-format
+msgid "%d source selected"
+msgid_plural "%d sources selected"
+msgstr[0] "%d puna filifilia"
+
+#: templates/meetings-list.php:152
+#: templates/meetings-list.php:232
+msgid "Clear all"
+msgstr "Faʻamāsani uma"
+
+#: templates/meetings-list.php:163
+msgid "Filter by topic"
+msgstr "Fasi i autu"
+
+#: templates/meetings-list.php:164
+msgid "What matters to you?"
+msgstr "O le a le mea tāua iā te oe?"
+
+#: templates/meetings-list.php:213
+#, php-format
+msgid "%d topic selected"
+msgid_plural "%d topics selected"
+msgstr[0] "%d autu filifilia"
+
+#: templates/meetings-list.php:249
+msgid "Filter meetings"
+msgstr "Fasi fonotaga"
+
+#: templates/meetings-list.php:262
+msgid "Search meetings…"
+msgstr "Saili fonotaga…"
+
+#: templates/meetings-list.php:264
+msgid "Search meetings by keyword"
+msgstr "Saili fonotaga i upu autu"
+
+#: templates/meetings-list.php:270
+msgid "Council"
+msgstr "Fono"
+
+#: templates/meetings-list.php:282
+msgid "Search councils by name"
+msgstr "Saili fono i igoa"
+
+#: templates/meetings-list.php:283
+#: templates/meetings-list.php:305
+msgid "All Councils"
+msgstr "Fono Uma"
+
+#: templates/meetings-list.php:311
+msgid "Other"
+msgstr "Isi"
+
+#: templates/meetings-list.php:342
+msgid "All Counties"
+msgstr "Itumalo Uma"
+
+#: templates/meetings-list.php:353
+msgid "From"
+msgstr "Mai"
+
+#: templates/meetings-list.php:366
+msgid "To"
+msgstr "I"
+
+#: templates/meetings-list.php:387
+msgid "Filter"
+msgstr "Fasi"
+
+#. translators: %s: link to about page
+#: templates/meetings-list.php:407
+#, php-format
+msgid "We're working on connecting to the meeting database. Check back soon, or browse our %s to learn more about Civi.Me."
+msgstr "O loʻo tatou galue e fesootai ma le faamaumauga o fonotaga. Toe sau i se taimi, pe suesue lo matou %s e aʻo sili atu i Civi.Me."
+
+#: templates/meetings-list.php:408
+msgid "about page"
+msgstr "itulau faʻamatalaga"
+
+#: templates/meetings-list.php:417
+msgid "No meetings found matching your filters."
+msgstr "Leai ni fonotaga na maua e fetaui ma au faʻasisi."
+
+#: templates/meetings-list.php:420
+msgid "View all upcoming meetings"
+msgstr "Vaai fonotaga uma o loʻo sau"
+
+#. translators: 1: first item number, 2: last item number, 3: total count
+#: templates/meetings-list.php:436
+#, php-format
+msgid "Showing %1$d–%2$d of %3$d meetings"
+msgstr "O loʻo faʻaalia %1$d–%2$d o %3$d fonotaga"
+
+#: templates/meetings-list.php:485
+msgid "Time:"
+msgstr "Taimi:"
+
+#: templates/meetings-list.php:492
+msgid "Location:"
+msgstr "Nofoaga:"
+
+#: templates/meetings-list.php:498
+msgid "AI-generated summary available"
+msgstr "O loʻo avanoa aotelega faʻatupu-AI"
+
+#: templates/meetings-list.php:499
+msgid "AI Summary"
+msgstr "Aotelega AI"
+
+#: templates/meetings-list.php:510
+msgid "View Details"
+msgstr "Vaai Faʻamatalaga"
+
+#. translators: %s: council name
+#: templates/meetings-list.php:514
+#, php-format
+msgid "for %s"
+msgstr "mo %s"
+
+#: templates/meetings-list.php:537
+msgid "Meeting pages"
+msgstr "Itulau fonotaga"
+
+#: templates/meetings-list.php:562
+msgid "Previous"
+msgstr "Muamua"
+
+#: templates/meetings-list.php:578
+msgid "Page 1"
+msgstr "Itulau 1"
+
+#: templates/meetings-list.php:592
+#, php-format
+msgid "Page %d, current page"
+msgstr "Itulau %d, itulau o loʻo i ai"
+
+#: templates/meetings-list.php:600
+#: templates/meetings-list.php:616
+#, php-format
+msgid "Page %d"
+msgstr "Itulau %d"
+
+#: templates/meetings-list.php:630
+msgid "Next"
+msgstr "Sosoo ai"

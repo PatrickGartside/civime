@@ -1,0 +1,469 @@
+# Japanese translation for the CiviMe Notifications plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Notifications 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-notifications\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: 日本語 <hello@civi.me>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-notifications\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-notifications.php
+msgid "CiviMe Notifications"
+msgstr "CiviMe Notifications"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-notifications.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-notifications.php
+msgid "Subscription UI and preference management for Civi.Me meeting notifications."
+msgstr "Civi.Me の会議通知の購読UIと設定管理。"
+
+#. Author of the plugin
+#: civime-notifications.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-notifications.php:45
+msgid "CiviMe Notifications requires the CiviMe Core plugin to be installed and activated."
+msgstr "CiviMe Notifications を使用するには、CiviMe Core プラグインをインストールして有効化する必要があります。"
+
+#: includes/class-manage.php:37
+msgid "This link appears to be incomplete. Please use the manage link from your notification email."
+msgstr "このリンクは不完全なようです。通知メールに記載されている管理リンクをご使用ください。"
+
+#: includes/class-manage.php:45
+msgid "Your preferences have been updated."
+msgstr "設定が更新されました。"
+
+#: includes/class-manage.php:62
+#: includes/class-notify.php:74
+#: includes/class-notify.php:150
+#: includes/class-subscribe.php:74
+msgid "Security check failed. Please try again."
+msgstr "セキュリティチェックに失敗しました。もう一度お試しください。"
+
+#: includes/class-manage.php:85
+#: includes/class-notify.php:107
+#: includes/class-notify.php:218
+#: includes/class-subscribe.php:157
+msgid "Something went wrong. Please try again in a moment."
+msgstr "問題が発生しました。しばらくしてからもう一度お試しください。"
+
+#: includes/class-manage.php:115
+msgid "Please select at least one notification channel."
+msgstr "少なくとも1つの通知チャネルを選択してください。"
+
+#: includes/class-manage.php:121
+msgid "Please select a notification frequency."
+msgstr "通知頻度を選択してください。"
+
+#: includes/class-manage.php:127
+#: includes/class-subscribe.php:126
+msgid "Please select at least one council to follow."
+msgstr "フォローする審議会を少なくとも1つ選択してください。"
+
+#: includes/class-manage.php:145
+msgid "Something went wrong updating your preferences. Please try again."
+msgstr "設定の更新中に問題が発生しました。もう一度お試しください。"
+
+#: includes/class-manage.php:158
+msgid "Preferences updated, but council list could not be saved. Please try again."
+msgstr "設定は更新されましたが、審議会リストを保存できませんでした。もう一度お試しください。"
+
+#: includes/class-manage.php:222
+msgid "We could not load your subscription. The link may have expired or be incorrect. Please use the manage link from your most recent notification email."
+msgstr "購読情報を読み込めませんでした。リンクの有効期限が切れているか、正しくない可能性があります。最新の通知メールに記載されている管理リンクをご使用ください。"
+
+#: includes/class-notify.php:92
+#: includes/class-notify.php:172
+#: includes/class-subscribe.php:118
+msgid "Please enter a valid email address."
+msgstr "有効なメールアドレスを入力してください。"
+
+#: includes/class-notify.php:176
+#: includes/class-subscribe.php:122
+msgid "Please enter a valid US phone number (10 digits)."
+msgstr "有効な米国の電話番号（10桁）を入力してください。"
+
+#: includes/class-notify.php:180
+#: includes/class-subscribe.php:130
+msgid "Please select how often you want to be notified."
+msgstr "通知を受け取る頻度を選択してください。"
+
+#: includes/class-notify.php:193
+msgid "Could not determine the council for this meeting. Please try again."
+msgstr "この会議の審議会を特定できませんでした。もう一度お試しください。"
+
+#: includes/class-notify.php:364
+#, php-format
+msgid "Get Notified — %s"
+msgstr "通知を受け取る — %s"
+
+#: includes/class-notify.php:367
+#: includes/class-router.php:74
+#: includes/class-router.php:75
+#: includes/shortcodes.php:33
+#: templates/notify.php:57
+#: templates/notify.php:80
+#: templates/notify.php:87
+#: templates/subscribe.php:43
+msgid "Get Notified"
+msgstr "通知を受け取る"
+
+#: includes/class-router.php:76
+#: templates/manage.php:23
+msgid "Manage Notifications"
+msgstr "通知を管理する"
+
+#: includes/class-router.php:77
+#: templates/confirmed.php:22
+msgid "Subscription Confirmed"
+msgstr "購読が確認されました"
+
+#: includes/class-router.php:78
+#: templates/unsubscribed.php:22
+msgid "Unsubscribed"
+msgstr "購読解除済み"
+
+#: includes/class-subscribe.php:114
+msgid "Please select at least one notification channel (email or text message)."
+msgstr "少なくとも1つの通知チャネル（メールまたはテキストメッセージ）を選択してください。"
+
+#: includes/shortcodes.php:34
+msgid "Get alerts when new meetings or agendas are posted for the councils you care about."
+msgstr "フォローしている審議会に新しい会議や議題が投稿されたときに通知を受け取れます。"
+
+#: includes/shortcodes.php:35
+#: templates/notify.php:316
+#: templates/subscribe.php:340
+msgid "Subscribe"
+msgstr "購読する"
+
+#: templates/confirmed.php:30
+msgid "You're all set!"
+msgstr "設定完了です！"
+
+#: templates/confirmed.php:31
+msgid "Your subscription is confirmed. You'll receive notifications when new meetings are posted for the councils you follow."
+msgstr "購読が確認されました。フォローしている審議会に新しい会議が投稿されると通知を受け取れます。"
+
+#: templates/confirmed.php:32
+msgid "You can manage your preferences or unsubscribe at any time using the link in any notification email."
+msgstr "通知メールに記載されているリンクから、いつでも設定の変更や購読解除ができます。"
+
+#: templates/confirmed.php:35
+#: templates/notify.php:105
+#: templates/notify.php:120
+#: templates/subscribe.php:60
+#: templates/unsubscribed.php:37
+msgid "Browse Meetings"
+msgstr "会議を閲覧する"
+
+#: templates/confirmed.php:38
+msgid "Explore Councils"
+msgstr "審議会を探す"
+
+#: templates/manage.php:36
+msgid "Browse meetings"
+msgstr "会議を閲覧する"
+
+#: templates/manage.php:65
+msgid "Your Contact Info"
+msgstr "連絡先情報"
+
+#: templates/manage.php:69
+#: templates/manage.php:95
+#: templates/subscribe.php:123
+msgid "Email"
+msgstr "メール"
+
+#: templates/manage.php:75
+msgid "Phone"
+msgstr "電話"
+
+#: templates/manage.php:85
+msgid "Notification Channels"
+msgstr "通知チャネル"
+
+#: templates/manage.php:105
+#: templates/subscribe.php:134
+msgid "Text Message"
+msgstr "テキストメッセージ"
+
+#: templates/manage.php:112
+#: templates/notify.php:296
+msgid "Notification Frequency"
+msgstr "通知頻度"
+
+#: templates/manage.php:116
+#: templates/notify.php:301
+#: templates/subscribe.php:315
+msgid "When new meetings are posted"
+msgstr "新しい会議が投稿されたとき"
+
+#: templates/manage.php:120
+#: templates/notify.php:305
+#: templates/subscribe.php:324
+msgid "Daily digest"
+msgstr "毎日のダイジェスト"
+
+#: templates/manage.php:124
+#: templates/notify.php:309
+#: templates/subscribe.php:333
+msgid "Weekly digest"
+msgstr "毎週のダイジェスト"
+
+#: templates/manage.php:131
+msgid "Councils You Follow"
+msgstr "フォローしている審議会"
+
+#: templates/manage.php:135
+#: templates/subscribe.php:262
+msgid "Search councils"
+msgstr "審議会を検索"
+
+#: templates/manage.php:141
+#: templates/subscribe.php:268
+msgid "Search councils…"
+msgstr "審議会を検索…"
+
+#: templates/manage.php:145
+#: templates/subscribe.php:272
+msgid "Councils"
+msgstr "審議会"
+
+#: templates/manage.php:170
+msgid "Save Preferences"
+msgstr "設定を保存する"
+
+#: templates/manage.php:177
+msgid "Unsubscribe"
+msgstr "購読解除"
+
+#: templates/manage.php:178
+msgid "You can unsubscribe from all notifications at any time. This will permanently remove your subscription."
+msgstr "いつでもすべての通知の購読を解除できます。これにより購読が完全に削除されます。"
+
+#: templates/manage.php:189
+msgid "Are you sure you want to unsubscribe? You will stop receiving all notifications."
+msgstr "本当に購読解除しますか？すべての通知の受信が停止されます。"
+
+#: templates/manage.php:191
+msgid "Unsubscribe from All Notifications"
+msgstr "すべての通知の購読を解除する"
+
+#: templates/notify.php:40
+msgid "Meeting Not Found"
+msgstr "会議が見つかりません"
+
+#: templates/notify.php:47
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "この会議が見つかりませんでした。中止になったか、リンクが正しくない可能性があります。"
+
+#: templates/notify.php:48
+msgid "Browse All Meetings"
+msgstr "すべての会議を閲覧する"
+
+#: templates/notify.php:64
+msgid "Meeting data is temporarily unavailable."
+msgstr "会議のデータは一時的に利用できません。"
+
+#: templates/notify.php:65
+msgid "We're having trouble loading meeting details. Please try again in a moment."
+msgstr "会議の詳細を読み込めませんでした。しばらくしてからもう一度お試しください。"
+
+#: templates/notify.php:66
+msgid "Back to meetings"
+msgstr "会議一覧に戻る"
+
+#: templates/notify.php:73
+msgid "Breadcrumb"
+msgstr "パンくずリスト"
+
+#: templates/notify.php:76
+msgid "Meetings"
+msgstr "会議"
+
+#: templates/notify.php:98
+#: templates/notify.php:113
+#: templates/subscribe.php:55
+msgid "Check Your Inbox"
+msgstr "受信トレイを確認してください"
+
+#: templates/notify.php:99
+msgid "We've sent a confirmation email. Click the link to activate your reminder — we'll email you the morning of the meeting."
+msgstr "確認メールをお送りしました。リンクをクリックしてリマインダーを有効化してください — 会議当日の朝にメールをお送りします。"
+
+#: templates/notify.php:102
+#: templates/notify.php:117
+msgid "Back to Meeting"
+msgstr "会議に戻る"
+
+#: templates/notify.php:114
+msgid "We've sent a confirmation email. Click the link to activate your subscription and start receiving meeting alerts."
+msgstr "確認メールをお送りしました。リンクをクリックして購読を有効化し、会議の通知を受け取り始めてください。"
+
+#: templates/notify.php:131
+msgid "Remind Me About This Meeting"
+msgstr "この会議のリマインダーを設定する"
+
+#: templates/notify.php:152
+#: templates/notify.php:233
+#: templates/subscribe.php:74
+msgid "Please fix the following:"
+msgstr "以下の項目を修正してください："
+
+#: templates/notify.php:172
+#: templates/notify.php:253
+#: templates/subscribe.php:106
+msgid "Website"
+msgstr "ウェブサイト"
+
+#: templates/notify.php:177
+#: templates/notify.php:181
+#: templates/notify.php:262
+#: templates/subscribe.php:146
+msgid "Email Address"
+msgstr "メールアドレス"
+
+#: templates/notify.php:194
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "確認メールをお送りし、会議当日の朝にリマインダーをお送りします。"
+
+#: templates/notify.php:201
+msgid "Remind Me"
+msgstr "リマインドする"
+
+#. translators: %s: link to privacy policy
+#: templates/notify.php:209
+#: templates/notify.php:324
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "お客様の情報を第三者に提供することはありません。%s をご覧ください。"
+
+#: templates/notify.php:210
+#: templates/notify.php:325
+#: templates/subscribe.php:349
+msgid "privacy policy"
+msgstr "プライバシーポリシー"
+
+#: templates/notify.php:220
+msgid "Subscribe to This Council"
+msgstr "この審議会を購読する"
+
+#: templates/notify.php:258
+msgid "Contact Information"
+msgstr "連絡先情報"
+
+#: templates/notify.php:278
+#: templates/subscribe.php:166
+msgid "Phone Number"
+msgstr "電話番号"
+
+#: templates/notify.php:290
+msgid "Optional. US numbers only."
+msgstr "任意。米国の電話番号のみ。"
+
+#. translators: %s: council name
+#: templates/subscribe.php:24
+#: templates/subscribe.php:39
+#, php-format
+msgid "Subscribe to %s"
+msgstr "%s を購読する"
+
+#: templates/subscribe.php:41
+msgid "Get notified when this council posts new meetings or agendas."
+msgstr "この審議会が新しい会議や議題を投稿したときに通知を受け取れます。"
+
+#: templates/subscribe.php:44
+msgid "Get alerts when councils you follow post new meetings or agendas. Choose your channels, pick your councils, and we'll keep you in the loop."
+msgstr "フォローしている審議会が新しい会議や議題を投稿したときに通知を受け取れます。チャネルを選び、審議会を選ぶと、最新情報をお届けします。"
+
+#: templates/subscribe.php:56
+msgid "We've sent a confirmation message to verify your contact info. Please click the link in your email (or reply YES to the text) to activate your subscription."
+msgstr "連絡先情報を確認するための確認メッセージをお送りしました。メールのリンクをクリック（またはテキストに YES と返信）して購読を有効化してください。"
+
+#: templates/subscribe.php:57
+msgid "If you don't see it within a few minutes, check your spam folder."
+msgstr "数分以内に届かない場合は、スパムフォルダをご確認ください。"
+
+#: templates/subscribe.php:64
+msgid "Follow More Councils"
+msgstr "さらに審議会をフォローする"
+
+#: templates/subscribe.php:85
+msgid "Council data is temporarily unavailable."
+msgstr "審議会のデータは一時的に利用できません。"
+
+#: templates/subscribe.php:86
+msgid "We're having trouble loading the council list. Please try again in a moment."
+msgstr "審議会リストを読み込めませんでした。しばらくしてからもう一度お試しください。"
+
+#: templates/subscribe.php:112
+msgid "How should we reach you?"
+msgstr "どのように連絡を取りますか？"
+
+#: templates/subscribe.php:178
+msgid "US numbers only. Standard messaging rates may apply."
+msgstr "米国の電話番号のみ。標準のメッセージ料金が適用される場合があります。"
+
+#: templates/subscribe.php:184
+msgid "What do you want to hear about?"
+msgstr "何について知りたいですか？"
+
+#: templates/subscribe.php:196
+msgid "Want to follow more councils?"
+msgstr "さらに審議会をフォローしますか？"
+
+#: templates/subscribe.php:232
+msgid "Filter councils by topic"
+msgstr "トピックで審議会を絞り込む"
+
+#: templates/subscribe.php:233
+msgid "What matters to you?"
+msgstr "あなたが関心を持つことは何ですか？"
+
+#: templates/subscribe.php:255
+msgid "Clear all"
+msgstr "すべてクリア"
+
+#: templates/subscribe.php:274
+msgid "No councils available."
+msgstr "利用可能な審議会がありません。"
+
+#: templates/subscribe.php:306
+msgid "How often?"
+msgstr "どのくらいの頻度で？"
+
+#. translators: %s: link to privacy policy
+#: templates/subscribe.php:348
+#, php-format
+msgid "We never share your info. Unsubscribe anytime. See our %s."
+msgstr "お客様の情報を第三者に提供することはありません。いつでも購読解除できます。%s をご覧ください。"
+
+#: templates/unsubscribed.php:30
+msgid "You've been unsubscribed"
+msgstr "購読解除されました"
+
+#: templates/unsubscribed.php:31
+msgid "You won't receive any more meeting notifications from us. If you change your mind, you can subscribe again at any time."
+msgstr "今後、会議の通知はお送りしません。気が変わった場合は、いつでも再度購読できます。"
+
+#: templates/unsubscribed.php:34
+msgid "Subscribe Again"
+msgstr "再度購読する"

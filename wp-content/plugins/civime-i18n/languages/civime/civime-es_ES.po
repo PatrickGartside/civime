@@ -1,0 +1,524 @@
+# Spanish (Latin American) translation for the CiviMe theme.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/civime\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Español <hello@civi.me>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:14+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "CiviMe"
+msgstr "CiviMe"
+
+#. Theme URI of the theme
+#. Author URI of the theme
+#: style.css
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the theme
+#: style.css
+msgid "Custom theme for Civi.Me — Hawaii civic engagement platform. Mobile-first, WCAG 2.1 AA compliant, light/dark mode."
+msgstr "Tema personalizado para Civi.Me — plataforma de participación cívica de Hawaii. Diseño mobile-first, cumple WCAG 2.1 AA, modo claro/oscuro."
+
+#. Author of the theme
+#: style.css
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: 404.php:19
+msgid "Page not found"
+msgstr "Página no encontrada"
+
+#: 404.php:23
+msgid "The page you're looking for doesn't exist or has been moved. Try searching below, or head back home."
+msgstr "La página que buscas no existe o fue movida. Intenta buscar abajo, o regresa al inicio."
+
+#: 404.php:34
+msgid "Go back home"
+msgstr "Volver al inicio"
+
+#: footer.php:11
+msgid "Civic engagement for Hawaii"
+msgstr "Participación cívica para Hawaii"
+
+#: footer.php:16
+msgid "Footer navigation"
+msgstr "Navegación del pie de página"
+
+#. translators: %s: site name
+#: footer.php:42
+#, php-format
+msgid "%s &mdash; Civic engagement for Hawaii"
+msgstr "%s &mdash; Participación cívica para Hawaii"
+
+#: footer.php:52
+msgid "Privacy Policy"
+msgstr "Política de privacidad"
+
+#: footer.php:63
+msgid "Open source on GitHub (opens in new tab)"
+msgstr "Código abierto en GitHub (se abre en una nueva pestaña)"
+
+#: footer.php:68
+msgid "Open source"
+msgstr "Código abierto"
+
+#: front-page.php:26
+msgid "Built for Hawaii"
+msgstr "Hecho para Hawaii"
+
+#: front-page.php:33
+msgid "Civic Engagement Tools"
+msgstr "Herramientas de participación cívica"
+
+#: front-page.php:33
+msgid "for the People of Hawaii"
+msgstr "para la gente de Hawaii"
+
+#: front-page.php:43
+msgid "Government information shouldn't require a law degree to navigate. Civi.Me makes it simple to stay informed, show up, and have your voice heard — in plain language, for free."
+msgstr "La información del gobierno no debería requerir un título de abogado. Civi.Me lo hace fácil para que te mantengas informado, participes y hagas escuchar tu voz — en lenguaje sencillo, gratis."
+
+#: front-page.php:53
+msgid "What matters to you?"
+msgstr "¿Qué te importa a ti?"
+
+#: front-page.php:56
+msgid "Browse meetings"
+msgstr "Ver reuniones"
+
+#: front-page.php:167
+msgid "The challenge"
+msgstr "El problema"
+
+#: front-page.php:169
+msgid "Civic participation should be accessible for all residents"
+msgstr "La participación cívica debe ser accesible para todos los residentes"
+
+#: front-page.php:172
+msgid "People want to be engaged, but the barriers make it feel impossible. We're removing them."
+msgstr "La gente quiere participar, pero las barreras hacen que parezca imposible. Nosotros las estamos eliminando."
+
+#: front-page.php:190
+msgid "Buried information"
+msgstr "Información enterrada"
+
+#: front-page.php:191
+msgid "Meeting agendas are buried in PDFs across dozens of county and state websites with no consistent format."
+msgstr "Las agendas de reuniones están enterradas en PDFs distribuidos en decenas de sitios web del condado y el estado, sin un formato consistente."
+
+#: front-page.php:203
+msgid "No timely alerts"
+msgstr "Sin avisos oportunos"
+
+#: front-page.php:204
+msgid "Residents find out about decisions that affect their neighborhoods after the fact — if at all."
+msgstr "Los residentes se enteran de las decisiones que afectan sus vecindarios después de que ocurren — si es que se enteran."
+
+#: front-page.php:219
+msgid "Bureaucratic language"
+msgstr "Lenguaje burocrático"
+
+#: front-page.php:220
+msgid "Government documents are written for lawyers, not residents. Plain-language summaries are rare."
+msgstr "Los documentos del gobierno están escritos para abogados, no para residentes. Los resúmenes en lenguaje sencillo son raros."
+
+#: front-page.php:234
+msgid "Who are my representatives?"
+msgstr "¿Quiénes son mis representantes?"
+
+#: front-page.php:235
+msgid "Most residents can't name their city council member, let alone their neighborhood board chair."
+msgstr "La mayoría de los residentes no sabe el nombre de su concejal, mucho menos el del presidente de su junta de vecinos."
+
+#: front-page.php:254
+msgid "Start here"
+msgstr "Empieza aquí"
+
+#: front-page.php:256
+msgid "Tell us what matters to you"
+msgstr "Dinos qué te importa"
+
+#: front-page.php:259
+msgid "Pick the topics you care about — environment, housing, education, health — and we'll show you the government meetings and councils that handle those issues."
+msgstr "Elige los temas que te importan — medio ambiente, vivienda, educación, salud — y te mostraremos las reuniones gubernamentales y los consejos que tratan esos asuntos."
+
+#: front-page.php:270
+msgid "Environment & Land"
+msgstr "Medio ambiente y tierra"
+
+#: front-page.php:270
+msgid "Leaf"
+msgstr "Hoja"
+
+#: front-page.php:271
+msgid "Housing & Development"
+msgstr "Vivienda y desarrollo"
+
+#: front-page.php:271
+msgid "House"
+msgstr "Casa"
+
+#: front-page.php:272
+msgid "Education"
+msgstr "Educación"
+
+#: front-page.php:272
+msgid "Books"
+msgstr "Libros"
+
+#: front-page.php:273
+msgid "Health & Wellness"
+msgstr "Salud y bienestar"
+
+#: front-page.php:273
+msgid "Hospital"
+msgstr "Hospital"
+
+#: front-page.php:274
+msgid "Transportation"
+msgstr "Transporte"
+
+#: front-page.php:274
+msgid "Bus"
+msgstr "Autobús"
+
+#: front-page.php:275
+msgid "Public Safety"
+msgstr "Seguridad pública"
+
+#: front-page.php:275
+msgid "Shield"
+msgstr "Escudo"
+
+#: front-page.php:276
+msgid "Economy & Labor"
+msgstr "Economía y trabajo"
+
+#: front-page.php:276
+msgid "Briefcase"
+msgstr "Maletín"
+
+#: front-page.php:277
+msgid "Culture & Arts"
+msgstr "Cultura y artes"
+
+#: front-page.php:277
+msgid "Performing arts"
+msgstr "Artes escénicas"
+
+#: front-page.php:278
+msgid "Agriculture & Food"
+msgstr "Agricultura y alimentación"
+
+#: front-page.php:278
+msgid "Sheaf of rice"
+msgstr "Gavilla de arroz"
+
+#: front-page.php:279
+msgid "Energy & Utilities"
+msgstr "Energía y servicios públicos"
+
+#: front-page.php:279
+msgid "Lightning bolt"
+msgstr "Rayo"
+
+#: front-page.php:280
+msgid "Water & Ocean"
+msgstr "Agua y océano"
+
+#: front-page.php:280
+msgid "Ocean wave"
+msgstr "Ola del océano"
+
+#: front-page.php:281
+msgid "Disability & Access"
+msgstr "Discapacidad y accesibilidad"
+
+#: front-page.php:281
+msgid "Wheelchair symbol"
+msgstr "Símbolo de silla de ruedas"
+
+#: front-page.php:282
+msgid "Veterans & Military"
+msgstr "Veteranos y militares"
+
+#: front-page.php:282
+msgid "Military medal"
+msgstr "Medalla militar"
+
+#: front-page.php:283
+msgid "Technology & Innovation"
+msgstr "Tecnología e innovación"
+
+#: front-page.php:283
+msgid "Laptop"
+msgstr "Computadora portátil"
+
+#: front-page.php:284
+msgid "Budget & Finance"
+msgstr "Presupuesto y finanzas"
+
+#: front-page.php:284
+msgid "Bar chart"
+msgstr "Gráfico de barras"
+
+#: front-page.php:285
+msgid "Governance & Ethics"
+msgstr "Gobernanza y ética"
+
+#: front-page.php:285
+msgid "Balance scale"
+msgstr "Balanza"
+
+#: front-page.php:302
+msgid "Pick Your Topics"
+msgstr "Elige tus temas"
+
+#: front-page.php:305
+msgid "Pick the topics you care about and we'll show you the meetings that matter."
+msgstr "Elige los temas que te importan y te mostraremos las reuniones que más te afectan."
+
+#: front-page.php:320
+msgid "Civic tools"
+msgstr "Herramientas cívicas"
+
+#: front-page.php:322
+msgid "What you can do on Civi.Me"
+msgstr "Qué puedes hacer en Civi.Me"
+
+#: front-page.php:363
+#: front-page.php:403
+#: front-page.php:443
+#: front-page.php:487
+msgid "Live"
+msgstr "En vivo"
+
+#: front-page.php:365
+msgid "Browse Meetings"
+msgstr "Ver reuniones"
+
+#: front-page.php:368
+msgid "All public meetings — boards, commissions, and councils — in one calendar. Filter by topic, council, or date. AI-generated summaries explain what's on the agenda."
+msgstr "Todas las reuniones públicas — juntas, comisiones y consejos — en un solo calendario. Filtra por tema, consejo o fecha. Los resúmenes generados por IA explican qué hay en la agenda."
+
+#: front-page.php:405
+msgid "Council Profiles"
+msgstr "Perfiles de consejos"
+
+#: front-page.php:408
+msgid "Learn what each board and commission actually does — in plain language. See who sits on the board, upcoming meetings, open seats, and how to participate."
+msgstr "Aprende qué hace realmente cada junta y comisión — en lenguaje sencillo. Ve quiénes forman parte, las próximas reuniones, los asientos disponibles y cómo participar."
+
+#: front-page.php:445
+msgid "Get Alerts"
+msgstr "Recibe alertas"
+
+#: front-page.php:448
+msgid "Subscribe to topics or specific councils. Get email alerts when meetings are scheduled — before it's too late to participate."
+msgstr "Suscríbete a temas o consejos específicos. Recibe alertas por correo cuando se programen reuniones — antes de que sea demasiado tarde para participar."
+
+#: front-page.php:489
+msgid "Guides & Compliance"
+msgstr "Guías y cumplimiento"
+
+#: front-page.php:492
+msgid "Step-by-step civic action guides plus compliance tools for agencies — Sunshine Law, public records, accessibility, and public participation best practices."
+msgstr "Guías paso a paso de acción cívica, más herramientas de cumplimiento para agencias — Ley del Sol, registros públicos, accesibilidad y mejores prácticas de participación pública."
+
+#: front-page.php:511
+msgid "What we believe"
+msgstr "Lo que creemos"
+
+#: front-page.php:513
+msgid "Information access is a community right"
+msgstr "El acceso a la información es un derecho de la comunidad"
+
+#: front-page.php:516
+msgid "Every resident deserves to know what decisions are being made that affect their community — in language they can understand, at a time when they can still participate."
+msgstr "Cada residente merece saber qué decisiones se están tomando que afectan a su comunidad — en un idioma que pueda entender, en un momento en que todavía puede participar."
+
+#: front-page.php:534
+msgid "Strictly nonpartisan"
+msgstr "Estrictamente no partidista"
+
+#: front-page.php:535
+msgid "Civi.Me does not endorse candidates, parties, or positions on any issue. We present facts: what a bill does, who submitted it, when the hearing is. We provide tools and templates — never talking points."
+msgstr "Civi.Me no apoya candidatos, partidos ni posiciones sobre ningún tema. Presentamos hechos: qué hace un proyecto de ley, quién lo presentó, cuándo es la audiencia. Proporcionamos herramientas y plantillas — nunca puntos de conversación."
+
+#: front-page.php:549
+msgid "Everyone is included — no exceptions"
+msgstr "Todos están incluidos — sin excepciones"
+
+#: front-page.php:550
+msgid "We use \"residents\" — not \"citizens.\" We support all 15 languages recognized by Hawaii's Office of Language Access. We build for mobile and include a phone line for people who don't have a smartphone at all."
+msgstr "Usamos \"residentes\" — no \"ciudadanos\". Apoyamos los 15 idiomas reconocidos por la Oficina de Acceso al Idioma de Hawaii. Construimos para móviles e incluimos una línea telefónica para personas que no tienen smartphone."
+
+#: front-page.php:561
+msgid "Cultural respect is not optional"
+msgstr "El respeto cultural no es opcional"
+
+#: front-page.php:562
+msgid "Native Hawaiian sovereignty is a living issue, not history. We frame civic participation as community engagement — not blind deference to government structures."
+msgstr "La soberanía nativa hawaiana es un tema vigente, no historia. Entendemos la participación cívica como un compromiso comunitario — no como una deferencia ciega a las estructuras gubernamentales."
+
+#: front-page.php:573
+msgid "Open source and community-built"
+msgstr "Código abierto y construido por la comunidad"
+
+#: front-page.php:574
+msgid "Civi.Me's code is public on GitHub from day one. Civic infrastructure should be open to inspection, contribution, and community ownership. If we ever make a decision you disagree with, you can see exactly why — and you can help us do better."
+msgstr "El código de Civi.Me es público en GitHub desde el primer día. La infraestructura cívica debe estar abierta a la revisión, la contribución y la propiedad comunitaria. Si alguna vez tomamos una decisión con la que no estás de acuerdo, puedes ver exactamente por qué — y puedes ayudarnos a hacerlo mejor."
+
+#: front-page.php:589
+msgid "Join us"
+msgstr "Únete a nosotros"
+
+#: front-page.php:591
+msgid "Help build civic infrastructure for Hawaii"
+msgstr "Ayuda a construir infraestructura cívica para Hawaii"
+
+#: front-page.php:594
+msgid "Civi.Me is open source and community-driven. Whether you're a developer, a civic advocate, or just someone who cares — there's a place for you."
+msgstr "Civi.Me es de código abierto y orientado a la comunidad. Ya seas desarrollador, activista cívico o simplemente alguien que le importa — hay un lugar para ti."
+
+#: front-page.php:607
+msgid "View on GitHub"
+msgstr "Ver en GitHub"
+
+#: front-page.php:610
+msgid "Get in touch"
+msgstr "Contáctanos"
+
+#: functions.php:48
+msgid "Ocean Blue"
+msgstr "Azul océano"
+
+#: functions.php:53
+msgid "Reef Teal"
+msgstr "Verde arrecife"
+
+#: functions.php:58
+msgid "Sunset Orange"
+msgstr "Naranja atardecer"
+
+#: functions.php:63
+msgid "Near White"
+msgstr "Casi blanco"
+
+#: functions.php:68
+msgid "Near Black"
+msgstr "Casi negro"
+
+#: functions.php:79
+msgid "Primary Menu"
+msgstr "Menú principal"
+
+#: functions.php:80
+msgid "Footer Menu"
+msgstr "Menú del pie de página"
+
+#: functions.php:279
+#: functions.php:313
+msgid "Topics"
+msgstr "Temas"
+
+#: functions.php:280
+#: functions.php:314
+msgid "Meetings"
+msgstr "Reuniones"
+
+#: functions.php:281
+#: functions.php:315
+msgid "Councils"
+msgstr "Consejos"
+
+#: functions.php:282
+#: functions.php:316
+msgid "Guides"
+msgstr "Guías"
+
+#: functions.php:283
+#: functions.php:317
+msgid "Alerts"
+msgstr "Alertas"
+
+#: header.php:15
+msgid "Skip to main content"
+msgstr "Ir al contenido principal"
+
+#: header.php:23
+msgid "Home"
+msgstr "Inicio"
+
+#: header.php:50
+msgid "Switch to dark mode"
+msgstr "Cambiar a modo oscuro"
+
+#: header.php:76
+msgid "Open navigation menu"
+msgstr "Abrir menú de navegación"
+
+#: header.php:90
+msgid "Primary navigation"
+msgstr "Navegación principal"
+
+#: header.php:112
+msgid "Mobile navigation"
+msgstr "Navegación móvil"
+
+#: header.php:120
+msgid "Close navigation menu"
+msgstr "Cerrar menú de navegación"
+
+#: index.php:16
+msgid "Latest Posts"
+msgstr "Publicaciones recientes"
+
+#: index.php:66
+msgid "Previous"
+msgstr "Anterior"
+
+#: index.php:67
+msgid "Next"
+msgstr "Siguiente"
+
+#: index.php:75
+msgid "No posts found."
+msgstr "No se encontraron publicaciones."
+
+#. Template Name of the theme
+msgid "Compliance Hub"
+msgstr "Centro de cumplimiento"
+
+#: page-compliance-hub.php:103
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] "%d min de lectura"
+msgstr[1] "%d min de lectura"
+
+#: page-compliance-hub.php:109
+msgid "Read Guide"
+msgstr "Leer guía"
+
+#: page-compliance-hub.php:124
+msgid "Compliance guides are coming soon. Check back shortly."
+msgstr "Las guías de cumplimiento estarán disponibles pronto. Vuelve en breve."
+
+#: page.php:24
+msgid "Page"
+msgstr "Página"

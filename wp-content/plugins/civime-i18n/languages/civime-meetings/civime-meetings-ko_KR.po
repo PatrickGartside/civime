@@ -1,0 +1,664 @@
+# Korean translation for the CiviMe Meetings plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Meetings 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-meetings\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: 한국어 <hello@civi.me>\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-meetings\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-meetings.php
+msgid "CiviMe Meetings"
+msgstr "CiviMe Meetings"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-meetings.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-meetings.php
+msgid "Meeting calendar, detail pages, and council browser — powered by the Access100 API."
+msgstr "회의 캘린더, 상세 페이지, 위원회 탐색 — Access100 API 기반."
+
+#. Author of the plugin
+#: civime-meetings.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-meetings.php:45
+msgid "CiviMe Meetings requires the CiviMe Core plugin to be installed and activated."
+msgstr "CiviMe Meetings를 사용하려면 CiviMe Core 플러그인이 설치되고 활성화되어 있어야 합니다."
+
+#: includes/class-councils-list.php:89
+msgid "Council data is temporarily unavailable. Please check back soon."
+msgstr "위원회 데이터를 일시적으로 사용할 수 없습니다. 잠시 후 다시 확인해 주세요."
+
+#: includes/class-detail.php:39
+msgid "No meeting ID provided."
+msgstr "회의 ID가 제공되지 않았습니다."
+
+#: includes/class-detail.php:106
+#: includes/class-list.php:246
+msgid "Meeting data is temporarily unavailable. Please check back soon."
+msgstr "회의 데이터를 일시적으로 사용할 수 없습니다. 잠시 후 다시 확인해 주세요."
+
+#: includes/class-detail.php:119
+#: includes/class-detail.php:126
+#: includes/class-router.php:83
+#: templates/meeting-detail.php:53
+#: templates/meeting-detail.php:99
+msgid "Meeting Detail"
+msgstr "회의 상세 정보"
+
+#: includes/class-list.php:326
+#, php-format
+msgid "Council: %s"
+msgstr "위원회: %s"
+
+#: includes/class-list.php:327
+#, php-format
+msgid "Council #%d"
+msgstr "위원회 #%d"
+
+#: includes/class-list.php:339
+#: templates/councils-list.php:51
+#: templates/meetings-list.php:343
+msgid "State"
+msgstr "주"
+
+#: includes/class-list.php:340
+#: templates/councils-list.php:52
+#: templates/meetings-list.php:344
+msgid "Honolulu"
+msgstr "Honolulu"
+
+#: includes/class-list.php:341
+#: templates/councils-list.php:53
+#: templates/meetings-list.php:345
+msgid "Maui"
+msgstr "Maui"
+
+#: includes/class-list.php:355
+#, php-format
+msgid "From: %s"
+msgstr "시작: %s"
+
+#: includes/class-list.php:362
+#, php-format
+msgid "To: %s"
+msgstr "종료: %s"
+
+#: includes/class-list.php:393
+#: templates/meeting-detail.php:76
+#: templates/meetings-list.php:62
+msgid "State of Hawaii"
+msgstr "Hawaii 주"
+
+#: includes/class-list.php:394
+#: templates/meeting-detail.php:77
+#: templates/meetings-list.php:63
+msgid "Honolulu Neighborhood Board"
+msgstr "Honolulu 지역 위원회"
+
+#: includes/class-list.php:395
+#: templates/meeting-detail.php:78
+#: templates/meetings-list.php:64
+msgid "Honolulu County Committee"
+msgstr "Honolulu 카운티 위원회"
+
+#: includes/class-list.php:396
+#: templates/meeting-detail.php:79
+#: templates/meetings-list.php:65
+msgid "Maui County Committee"
+msgstr "Maui 카운티 위원회"
+
+#: includes/class-router.php:82
+#: templates/meeting-detail.php:97
+#: templates/meetings-list.php:40
+msgid "Meetings"
+msgstr "회의"
+
+#: includes/class-router.php:84
+#: templates/council-profile.php:96
+#: templates/meetings-list.php:301
+msgid "Councils"
+msgstr "위원회"
+
+#: includes/class-router.php:85
+msgid "Council Profile"
+msgstr "위원회 프로필"
+
+#: templates/council-profile.php:74
+msgid "Council Not Found"
+msgstr "위원회를 찾을 수 없습니다"
+
+#: templates/council-profile.php:80
+msgid "This council could not be found."
+msgstr "해당 위원회를 찾을 수 없습니다."
+
+#: templates/council-profile.php:83
+msgid "Browse all councils"
+msgstr "모든 위원회 둘러보기"
+
+#: templates/council-profile.php:94
+#: templates/meeting-detail.php:94
+msgid "Breadcrumb"
+msgstr "탐색 경로"
+
+#: templates/council-profile.php:128
+msgid "What This Board Does"
+msgstr "이 위원회의 역할"
+
+#: templates/council-profile.php:139
+msgid "Why You Should Care"
+msgstr "왜 관심을 가져야 하는가"
+
+#: templates/council-profile.php:150
+msgid "Legal Authority"
+msgstr "법적 권한"
+
+#. translators: %d: number of board members
+#: templates/council-profile.php:179
+#, php-format
+msgid "Board Members (%d)"
+msgstr "위원 (%d명)"
+
+#. translators: %s: term end date
+#: templates/council-profile.php:201
+#, php-format
+msgid "Term ends %s"
+msgstr "임기 종료: %s"
+
+#: templates/council-profile.php:216
+msgid "Upcoming Meetings"
+msgstr "예정된 회의"
+
+#: templates/council-profile.php:251
+msgid "Details"
+msgstr "상세 정보"
+
+#: templates/council-profile.php:259
+msgid "View all meetings for this council"
+msgstr "이 위원회의 모든 회의 보기"
+
+#: templates/council-profile.php:268
+msgid "How to Participate"
+msgstr "참여 방법"
+
+#: templates/council-profile.php:277
+msgid "Submit Written Testimony:"
+msgstr "서면 의견 제출:"
+
+#: templates/council-profile.php:298
+msgid "At a Glance"
+msgstr "한눈에 보기"
+
+#: templates/council-profile.php:302
+msgid "Type"
+msgstr "유형"
+
+#: templates/council-profile.php:307
+msgid "Jurisdiction"
+msgstr "관할 구역"
+
+#: templates/council-profile.php:312
+msgid "Members"
+msgstr "위원"
+
+#: templates/council-profile.php:317
+msgid "Appointed By"
+msgstr "임명 주체"
+
+#: templates/council-profile.php:322
+msgid "Term Length"
+msgstr "임기 기간"
+
+#: templates/council-profile.php:327
+msgid "Meets"
+msgstr "회의 주기"
+
+#: templates/council-profile.php:332
+#: templates/meeting-detail.php:140
+msgid "Location"
+msgstr "장소"
+
+#: templates/council-profile.php:337
+#: templates/meeting-detail.php:152
+msgid "Virtual"
+msgstr "온라인"
+
+#: templates/council-profile.php:338
+msgid "Yes, virtual attendance available"
+msgstr "예, 온라인 참석 가능"
+
+#: templates/council-profile.php:345
+msgid "Official Website"
+msgstr "공식 웹사이트"
+
+#: templates/council-profile.php:352
+msgid "Contact"
+msgstr "연락처"
+
+#. translators: %d: number of open seats
+#: templates/council-profile.php:377
+#, php-format
+msgid "%d Open Seat"
+msgid_plural "%d Open Seats"
+msgstr[0] "공석 %d개"
+
+#. translators: %s: application deadline date
+#: templates/council-profile.php:392
+#, php-format
+msgid "Deadline: %s"
+msgstr "신청 마감: %s"
+
+#: templates/council-profile.php:401
+msgid "Apply"
+msgstr "신청하기"
+
+#: templates/council-profile.php:412
+#: templates/councils-list.php:149
+#: templates/meeting-detail.php:187
+msgid "Get Notified"
+msgstr "알림 받기"
+
+#: templates/council-profile.php:413
+msgid "Sign up to receive alerts when this council schedules new meetings."
+msgstr "이 위원회가 새로운 회의를 예정할 때 알림을 받도록 등록하세요."
+
+#: templates/council-profile.php:415
+msgid "Set Up Alerts"
+msgstr "알림 설정하기"
+
+#: templates/councils-list.php:22
+msgid "Councils & Boards"
+msgstr "위원회 및 이사회"
+
+#: templates/councils-list.php:23
+msgid "Browse government councils, boards, and commissions across Hawaii. Select a council to see its upcoming meetings."
+msgstr "Hawaii 전역의 정부 위원회, 이사회, 위원단을 둘러보세요. 위원회를 선택하면 예정된 회의를 확인할 수 있습니다."
+
+#: templates/councils-list.php:30
+msgid "Filter councils"
+msgstr "위원회 필터링"
+
+#: templates/councils-list.php:34
+#: templates/councils-list.php:60
+#: templates/meetings-list.php:255
+msgid "Search"
+msgstr "검색"
+
+#: templates/councils-list.php:41
+msgid "Search councils…"
+msgstr "위원회 검색…"
+
+#: templates/councils-list.php:47
+#: templates/meetings-list.php:339
+msgid "County"
+msgstr "카운티"
+
+#: templates/councils-list.php:50
+msgid "All"
+msgstr "전체"
+
+#: templates/councils-list.php:64
+#: templates/meetings-list.php:391
+msgid "Clear"
+msgstr "초기화"
+
+#: templates/councils-list.php:74
+msgid "Council data is temporarily unavailable."
+msgstr "위원회 데이터를 일시적으로 사용할 수 없습니다."
+
+#: templates/councils-list.php:75
+msgid "We're working on connecting to the database. Check back soon."
+msgstr "데이터베이스 연결 작업 중입니다. 잠시 후 다시 확인해 주세요."
+
+#: templates/councils-list.php:81
+msgid "No councils found matching your search."
+msgstr "검색 조건에 맞는 위원회가 없습니다."
+
+#: templates/councils-list.php:84
+msgid "View all councils"
+msgstr "모든 위원회 보기"
+
+#. translators: %d: number of councils
+#: templates/councils-list.php:95
+#, php-format
+msgid "%d councils found"
+msgstr "위원회 %d개 검색됨"
+
+#. translators: %d: number of upcoming meetings
+#: templates/councils-list.php:125
+#, php-format
+msgid "%d upcoming meeting"
+msgid_plural "%d upcoming meetings"
+msgstr[0] "예정된 회의 %d개"
+
+#. translators: %s: formatted date
+#: templates/councils-list.php:136
+#, php-format
+msgid "Next: %s"
+msgstr "다음 회의: %s"
+
+#: templates/councils-list.php:146
+msgid "View Meetings"
+msgstr "회의 보기"
+
+#: templates/meeting-detail.php:36
+msgid "Meeting Not Found"
+msgstr "회의를 찾을 수 없습니다"
+
+#: templates/meeting-detail.php:43
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "해당 회의를 찾을 수 없습니다. 취소되었거나 링크가 잘못되었을 수 있습니다."
+
+#: templates/meeting-detail.php:44
+msgid "Browse All Meetings"
+msgstr "모든 회의 둘러보기"
+
+#: templates/meeting-detail.php:60
+#: templates/meetings-list.php:402
+msgid "Meeting data is temporarily unavailable."
+msgstr "회의 데이터를 일시적으로 사용할 수 없습니다."
+
+#: templates/meeting-detail.php:61
+msgid "We're working on connecting to the meeting database. Check back soon."
+msgstr "회의 데이터베이스 연결 작업 중입니다. 잠시 후 다시 확인해 주세요."
+
+#: templates/meeting-detail.php:62
+msgid "Back to meetings"
+msgstr "회의 목록으로 돌아가기"
+
+#: templates/meeting-detail.php:107
+msgid "Meeting"
+msgstr "회의"
+
+#: templates/meeting-detail.php:117
+msgid "Meeting information is displayed in English."
+msgstr "회의 정보는 영어로 표시됩니다."
+
+#: templates/meeting-detail.php:126
+msgid "Date"
+msgstr "날짜"
+
+#: templates/meeting-detail.php:133
+msgid "Time"
+msgstr "시간"
+
+#: templates/meeting-detail.php:155
+msgid "Join Online"
+msgstr "온라인으로 참여하기"
+
+#: templates/meeting-detail.php:175
+msgid "View Official Notice"
+msgstr "공식 공고 보기"
+
+#: templates/meeting-detail.php:181
+msgid "Add to My Calendar"
+msgstr "내 캘린더에 추가"
+
+#: templates/meeting-detail.php:194
+msgid "Share with a Friend"
+msgstr "친구에게 공유하기"
+
+#: templates/meeting-detail.php:255
+msgid "What This Meeting Is About"
+msgstr "이 회의의 안건"
+
+#: templates/meeting-detail.php:260
+msgid "This summary was generated by AI to help you understand the agenda. Always refer to the official documents for complete information."
+msgstr "이 요약은 안건 이해를 돕기 위해 AI가 생성한 것입니다. 전체 정보는 반드시 공식 문서를 참조하세요."
+
+#: templates/meeting-detail.php:276
+msgid "Remind Me About This Meeting"
+msgstr "이 회의 알림 받기"
+
+#: templates/meeting-detail.php:289
+#: templates/meeting-detail.php:357
+msgid "Website"
+msgstr "웹사이트"
+
+#: templates/meeting-detail.php:294
+#: templates/meeting-detail.php:298
+#: templates/meeting-detail.php:366
+msgid "Email Address"
+msgstr "이메일 주소"
+
+#: templates/meeting-detail.php:310
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "확인 이메일을 보내드리고, 회의 당일 아침에 알림을 보내드립니다."
+
+#: templates/meeting-detail.php:317
+msgid "Remind Me"
+msgstr "알림 받기"
+
+#. translators: %s: link to privacy policy
+#: templates/meeting-detail.php:325
+#: templates/meeting-detail.php:426
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "개인 정보는 절대 공유하지 않습니다. %s을(를) 확인하세요."
+
+#: templates/meeting-detail.php:326
+#: templates/meeting-detail.php:427
+msgid "privacy policy"
+msgstr "개인정보 처리방침"
+
+#: templates/meeting-detail.php:335
+msgid "Subscribe to This Council"
+msgstr "이 위원회 구독하기"
+
+#: templates/meeting-detail.php:362
+msgid "Contact Information"
+msgstr "연락처 정보"
+
+#: templates/meeting-detail.php:381
+msgid "Phone Number"
+msgstr "전화번호"
+
+#: templates/meeting-detail.php:392
+msgid "Optional. US numbers only."
+msgstr "선택 사항. 미국 번호만 가능합니다."
+
+#: templates/meeting-detail.php:398
+msgid "Notification Frequency"
+msgstr "알림 빈도"
+
+#: templates/meeting-detail.php:403
+msgid "When new meetings are posted"
+msgstr "새 회의가 게시될 때"
+
+#: templates/meeting-detail.php:407
+msgid "Daily digest"
+msgstr "매일 요약"
+
+#: templates/meeting-detail.php:411
+msgid "Weekly digest"
+msgstr "매주 요약"
+
+#: templates/meeting-detail.php:418
+msgid "Subscribe"
+msgstr "구독하기"
+
+#: templates/meetings-list.php:41
+msgid "Browse upcoming government meetings across Hawaii. Filter by topic, council, date, or keyword."
+msgstr "Hawaii 전역의 예정된 정부 회의를 둘러보세요. 주제, 위원회, 날짜, 키워드로 필터링할 수 있습니다."
+
+#: templates/meetings-list.php:50
+#, php-format
+msgid "%d filter active"
+msgid_plural "%d filters active"
+msgstr[0] "필터 %d개 활성"
+
+#: templates/meetings-list.php:54
+msgid "Filters"
+msgstr "필터"
+
+#: templates/meetings-list.php:89
+msgid "Filter by source"
+msgstr "출처별 필터링"
+
+#: templates/meetings-list.php:90
+msgid "Filter by Source"
+msgstr "출처별 필터링"
+
+#: templates/meetings-list.php:133
+#, php-format
+msgid "%d source selected"
+msgid_plural "%d sources selected"
+msgstr[0] "출처 %d개 선택됨"
+
+#: templates/meetings-list.php:152
+#: templates/meetings-list.php:232
+msgid "Clear all"
+msgstr "모두 초기화"
+
+#: templates/meetings-list.php:163
+msgid "Filter by topic"
+msgstr "주제별 필터링"
+
+#: templates/meetings-list.php:164
+msgid "What matters to you?"
+msgstr "무엇이 중요하신가요?"
+
+#: templates/meetings-list.php:213
+#, php-format
+msgid "%d topic selected"
+msgid_plural "%d topics selected"
+msgstr[0] "주제 %d개 선택됨"
+
+#: templates/meetings-list.php:249
+msgid "Filter meetings"
+msgstr "회의 필터링"
+
+#: templates/meetings-list.php:262
+msgid "Search meetings…"
+msgstr "회의 검색…"
+
+#: templates/meetings-list.php:264
+msgid "Search meetings by keyword"
+msgstr "키워드로 회의 검색"
+
+#: templates/meetings-list.php:270
+msgid "Council"
+msgstr "위원회"
+
+#: templates/meetings-list.php:282
+msgid "Search councils by name"
+msgstr "이름으로 위원회 검색"
+
+#: templates/meetings-list.php:283
+#: templates/meetings-list.php:305
+msgid "All Councils"
+msgstr "모든 위원회"
+
+#: templates/meetings-list.php:311
+msgid "Other"
+msgstr "기타"
+
+#: templates/meetings-list.php:342
+msgid "All Counties"
+msgstr "모든 카운티"
+
+#: templates/meetings-list.php:353
+msgid "From"
+msgstr "시작일"
+
+#: templates/meetings-list.php:366
+msgid "To"
+msgstr "종료일"
+
+#: templates/meetings-list.php:387
+msgid "Filter"
+msgstr "필터 적용"
+
+#. translators: %s: link to about page
+#: templates/meetings-list.php:407
+#, php-format
+msgid "We're working on connecting to the meeting database. Check back soon, or browse our %s to learn more about Civi.Me."
+msgstr "회의 데이터베이스 연결 작업 중입니다. 잠시 후 다시 확인하시거나, %s을(를) 방문하여 Civi.Me에 대해 더 알아보세요."
+
+#: templates/meetings-list.php:408
+msgid "about page"
+msgstr "소개 페이지"
+
+#: templates/meetings-list.php:417
+msgid "No meetings found matching your filters."
+msgstr "필터 조건에 맞는 회의가 없습니다."
+
+#: templates/meetings-list.php:420
+msgid "View all upcoming meetings"
+msgstr "예정된 모든 회의 보기"
+
+#. translators: 1: first item number, 2: last item number, 3: total count
+#: templates/meetings-list.php:436
+#, php-format
+msgid "Showing %1$d–%2$d of %3$d meetings"
+msgstr "전체 %3$d개 회의 중 %1$d–%2$d번째 표시"
+
+#: templates/meetings-list.php:485
+msgid "Time:"
+msgstr "시간:"
+
+#: templates/meetings-list.php:492
+msgid "Location:"
+msgstr "장소:"
+
+#: templates/meetings-list.php:498
+msgid "AI-generated summary available"
+msgstr "AI 생성 요약 제공"
+
+#: templates/meetings-list.php:499
+msgid "AI Summary"
+msgstr "AI 요약"
+
+#: templates/meetings-list.php:510
+msgid "View Details"
+msgstr "상세 보기"
+
+#. translators: %s: council name
+#: templates/meetings-list.php:514
+#, php-format
+msgid "for %s"
+msgstr "%s 관련"
+
+#: templates/meetings-list.php:537
+msgid "Meeting pages"
+msgstr "회의 페이지"
+
+#: templates/meetings-list.php:562
+msgid "Previous"
+msgstr "이전"
+
+#: templates/meetings-list.php:578
+msgid "Page 1"
+msgstr "1페이지"
+
+#: templates/meetings-list.php:592
+#, php-format
+msgid "Page %d, current page"
+msgstr "%d페이지, 현재 페이지"
+
+#: templates/meetings-list.php:600
+#: templates/meetings-list.php:616
+#, php-format
+msgid "Page %d"
+msgstr "%d페이지"
+
+#: templates/meetings-list.php:630
+msgid "Next"
+msgstr "다음"

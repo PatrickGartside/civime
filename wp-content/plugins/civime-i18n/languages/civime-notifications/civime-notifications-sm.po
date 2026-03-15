@@ -1,0 +1,469 @@
+# Samoan translation for the CiviMe Notifications plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Notifications 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-notifications\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Gagana Sāmoa <hello@civi.me>\n"
+"Language: sm\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-notifications\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-notifications.php
+msgid "CiviMe Notifications"
+msgstr "CiviMe Faʻasilasilaga"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-notifications.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-notifications.php
+msgid "Subscription UI and preference management for Civi.Me meeting notifications."
+msgstr "Faiga saini ma pulega faʻaoga mo faʻasilasilaga fonotaga Civi.Me."
+
+#. Author of the plugin
+#: civime-notifications.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-notifications.php:45
+msgid "CiviMe Notifications requires the CiviMe Core plugin to be installed and activated."
+msgstr "E manaʻomia e CiviMe Faʻasilasilaga le faʻapipiʻiina ma faʻagaoioia o le CiviMe Core plugin."
+
+#: includes/class-manage.php:37
+msgid "This link appears to be incomplete. Please use the manage link from your notification email."
+msgstr "E foliga mai e le atoatoa le sootaga lenei. Faʻamolemole faʻaaoga le sootaga pule mai lau imeli faʻasilasilaga."
+
+#: includes/class-manage.php:45
+msgid "Your preferences have been updated."
+msgstr "Ua faʻafoʻi lou faʻaoga."
+
+#: includes/class-manage.php:62
+#: includes/class-notify.php:74
+#: includes/class-notify.php:150
+#: includes/class-subscribe.php:74
+msgid "Security check failed. Please try again."
+msgstr "Ua le ausia le siaki saogalemu. Faʻamolemole taumafai toe."
+
+#: includes/class-manage.php:85
+#: includes/class-notify.php:107
+#: includes/class-notify.php:218
+#: includes/class-subscribe.php:157
+msgid "Something went wrong. Please try again in a moment."
+msgstr "Sa iai se mea na sese. Faʻamolemole taumafai toe i se taimi."
+
+#: includes/class-manage.php:115
+msgid "Please select at least one notification channel."
+msgstr "Faʻamolemole filifili le itiiti ifo ma se ala faʻasilasilaga e tasi."
+
+#: includes/class-manage.php:121
+msgid "Please select a notification frequency."
+msgstr "Faʻamolemole filifili le faʻaopuopuga o faʻasilasilaga."
+
+#: includes/class-manage.php:127
+#: includes/class-subscribe.php:126
+msgid "Please select at least one council to follow."
+msgstr "Faʻamolemole filifili le itiiti ifo ma se fono e tasi e mulimuli i ai."
+
+#: includes/class-manage.php:145
+msgid "Something went wrong updating your preferences. Please try again."
+msgstr "Sa iai se mea na sese i le faʻafoʻiina o lou faʻaoga. Faʻamolemole taumafai toe."
+
+#: includes/class-manage.php:158
+msgid "Preferences updated, but council list could not be saved. Please try again."
+msgstr "Ua faʻafoʻi lou faʻaoga, ae na le mafai ona faʻasao le lisi fono. Faʻamolemole taumafai toe."
+
+#: includes/class-manage.php:222
+msgid "We could not load your subscription. The link may have expired or be incorrect. Please use the manage link from your most recent notification email."
+msgstr "E le mafai ona tatou utia lou saini. Atonu ua mae'a le taimi o le sootaga pe sese. Faʻamolemole faʻaaoga le sootaga pule mai lou imeli faʻasilasilaga lata mai."
+
+#: includes/class-notify.php:92
+#: includes/class-notify.php:172
+#: includes/class-subscribe.php:118
+msgid "Please enter a valid email address."
+msgstr "Faʻamolemole taulaʻi i se tuatusi imeli aoga."
+
+#: includes/class-notify.php:176
+#: includes/class-subscribe.php:122
+msgid "Please enter a valid US phone number (10 digits)."
+msgstr "Faʻamolemole taulaʻi i se numera telefoni US aoga (numera e 10)."
+
+#: includes/class-notify.php:180
+#: includes/class-subscribe.php:130
+msgid "Please select how often you want to be notified."
+msgstr "Faʻamolemole filifili le tele o taimi e te manaʻo ai e faʻasilasilaga."
+
+#: includes/class-notify.php:193
+msgid "Could not determine the council for this meeting. Please try again."
+msgstr "E le mafai ona iloa le fono mo le fonotaga lenei. Faʻamolemole taumafai toe."
+
+#: includes/class-notify.php:364
+#, php-format
+msgid "Get Notified — %s"
+msgstr "Maua Faʻasilasilaga — %s"
+
+#: includes/class-notify.php:367
+#: includes/class-router.php:74
+#: includes/class-router.php:75
+#: includes/shortcodes.php:33
+#: templates/notify.php:57
+#: templates/notify.php:80
+#: templates/notify.php:87
+#: templates/subscribe.php:43
+msgid "Get Notified"
+msgstr "Maua Faʻasilasilaga"
+
+#: includes/class-router.php:76
+#: templates/manage.php:23
+msgid "Manage Notifications"
+msgstr "Pulega Faʻasilasilaga"
+
+#: includes/class-router.php:77
+#: templates/confirmed.php:22
+msgid "Subscription Confirmed"
+msgstr "Ua Faʻamaonia le Saini"
+
+#: includes/class-router.php:78
+#: templates/unsubscribed.php:22
+msgid "Unsubscribed"
+msgstr "Ua Soloia le Saini"
+
+#: includes/class-subscribe.php:114
+msgid "Please select at least one notification channel (email or text message)."
+msgstr "Faʻamolemole filifili le itiiti ifo ma se ala faʻasilasilaga e tasi (imeli poʻo fe'au tusitusi)."
+
+#: includes/shortcodes.php:34
+msgid "Get alerts when new meetings or agendas are posted for the councils you care about."
+msgstr "Maua laʻasaga pe a tuʻuina atu fonotaga fou pe polokalame mo fono e te fiafia i ai."
+
+#: includes/shortcodes.php:35
+#: templates/notify.php:316
+#: templates/subscribe.php:340
+msgid "Subscribe"
+msgstr "Saini"
+
+#: templates/confirmed.php:30
+msgid "You're all set!"
+msgstr "Ua uma ona seti!"
+
+#: templates/confirmed.php:31
+msgid "Your subscription is confirmed. You'll receive notifications when new meetings are posted for the councils you follow."
+msgstr "Ua faʻamaonia lou saini. O le a e maua faʻasilasilaga pe a tuʻuina atu fonotaga fou mo fono e te mulimuli i ai."
+
+#: templates/confirmed.php:32
+msgid "You can manage your preferences or unsubscribe at any time using the link in any notification email."
+msgstr "E mafai ona e pule lou faʻaoga pe soloi au saini i soʻo se taimi e faʻaaoga ai le sootaga i soʻo se imeli faʻasilasilaga."
+
+#: templates/confirmed.php:35
+#: templates/notify.php:105
+#: templates/notify.php:120
+#: templates/subscribe.php:60
+#: templates/unsubscribed.php:37
+msgid "Browse Meetings"
+msgstr "Suesue Fonotaga"
+
+#: templates/confirmed.php:38
+msgid "Explore Councils"
+msgstr "Suʻesuʻe Fono"
+
+#: templates/manage.php:36
+msgid "Browse meetings"
+msgstr "Suesue fonotaga"
+
+#: templates/manage.php:65
+msgid "Your Contact Info"
+msgstr "Ou Faʻamatalaga Fesoʻotaʻiga"
+
+#: templates/manage.php:69
+#: templates/manage.php:95
+#: templates/subscribe.php:123
+msgid "Email"
+msgstr "Imeli"
+
+#: templates/manage.php:75
+msgid "Phone"
+msgstr "Telefoni"
+
+#: templates/manage.php:85
+msgid "Notification Channels"
+msgstr "Ala Faʻasilasilaga"
+
+#: templates/manage.php:105
+#: templates/subscribe.php:134
+msgid "Text Message"
+msgstr "Fe'au Tusitusi"
+
+#: templates/manage.php:112
+#: templates/notify.php:296
+msgid "Notification Frequency"
+msgstr "Fa'aopuopuga Faʻasilasilaga"
+
+#: templates/manage.php:116
+#: templates/notify.php:301
+#: templates/subscribe.php:315
+msgid "When new meetings are posted"
+msgstr "Pe a tuʻuina atu fonotaga fou"
+
+#: templates/manage.php:120
+#: templates/notify.php:305
+#: templates/subscribe.php:324
+msgid "Daily digest"
+msgstr "Aotelega i aso taʻitasi"
+
+#: templates/manage.php:124
+#: templates/notify.php:309
+#: templates/subscribe.php:333
+msgid "Weekly digest"
+msgstr "Aotelega i vaiaso taʻitasi"
+
+#: templates/manage.php:131
+msgid "Councils You Follow"
+msgstr "Fono e Te Mulimuli i Ai"
+
+#: templates/manage.php:135
+#: templates/subscribe.php:262
+msgid "Search councils"
+msgstr "Saili fono"
+
+#: templates/manage.php:141
+#: templates/subscribe.php:268
+msgid "Search councils…"
+msgstr "Saili fono…"
+
+#: templates/manage.php:145
+#: templates/subscribe.php:272
+msgid "Councils"
+msgstr "Fono"
+
+#: templates/manage.php:170
+msgid "Save Preferences"
+msgstr "Faʻasao Faʻaoga"
+
+#: templates/manage.php:177
+msgid "Unsubscribe"
+msgstr "Soloi Saini"
+
+#: templates/manage.php:178
+msgid "You can unsubscribe from all notifications at any time. This will permanently remove your subscription."
+msgstr "E mafai ona e soloi mai faʻasilasilaga uma i soʻo se taimi. O le a faʻaumatia faʻaletausaga lou saini."
+
+#: templates/manage.php:189
+msgid "Are you sure you want to unsubscribe? You will stop receiving all notifications."
+msgstr "E te mautinoa e te manaʻo e soloi? O le a taofi le mauaina o faʻasilasilaga uma."
+
+#: templates/manage.php:191
+msgid "Unsubscribe from All Notifications"
+msgstr "Soloi mai Faʻasilasilaga Uma"
+
+#: templates/notify.php:40
+msgid "Meeting Not Found"
+msgstr "E leʻi Maua le Fonotaga"
+
+#: templates/notify.php:47
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "E leʻi maua e i matou le fonotaga lenei. Atonu ua faaleaogaina pe e sese le sootaga."
+
+#: templates/notify.php:48
+msgid "Browse All Meetings"
+msgstr "Suesue Fonotaga Uma"
+
+#: templates/notify.php:64
+msgid "Meeting data is temporarily unavailable."
+msgstr "E le avanoa faʻamatalaga fonotaga i le taimi nei."
+
+#: templates/notify.php:65
+msgid "We're having trouble loading meeting details. Please try again in a moment."
+msgstr "O loʻo i ai faʻafitauli i le utia o faʻamatalaga fonotaga. Faʻamolemole taumafai toe i se taimi."
+
+#: templates/notify.php:66
+msgid "Back to meetings"
+msgstr "Foʻi i fonotaga"
+
+#: templates/notify.php:73
+msgid "Breadcrumb"
+msgstr "Ala faʻatonuga"
+
+#: templates/notify.php:76
+msgid "Meetings"
+msgstr "Fonotaga"
+
+#: templates/notify.php:98
+#: templates/notify.php:113
+#: templates/subscribe.php:55
+msgid "Check Your Inbox"
+msgstr "Siaki Lau Pusa Imeli"
+
+#: templates/notify.php:99
+msgid "We've sent a confirmation email. Click the link to activate your reminder — we'll email you the morning of the meeting."
+msgstr "Ua tatou auina atu se imeli faʻamaonia. Kiliki le sootaga e faʻagaoioia lou faʻamanatu — o le a tatou imelii oe i le taeao o le fonotaga."
+
+#: templates/notify.php:102
+#: templates/notify.php:117
+msgid "Back to Meeting"
+msgstr "Foʻi i le Fonotaga"
+
+#: templates/notify.php:114
+msgid "We've sent a confirmation email. Click the link to activate your subscription and start receiving meeting alerts."
+msgstr "Ua tatou auina atu se imeli faʻamaonia. Kiliki le sootaga e faʻagaoioia lou saini ma amata mauaina laʻasaga fonotaga."
+
+#: templates/notify.php:131
+msgid "Remind Me About This Meeting"
+msgstr "Faʻamanatu Mai ia Te Au Lenei Fonotaga"
+
+#: templates/notify.php:152
+#: templates/notify.php:233
+#: templates/subscribe.php:74
+msgid "Please fix the following:"
+msgstr "Faʻamolemole faʻasao mea nei:"
+
+#: templates/notify.php:172
+#: templates/notify.php:253
+#: templates/subscribe.php:106
+msgid "Website"
+msgstr "Itulau Taaloga"
+
+#: templates/notify.php:177
+#: templates/notify.php:181
+#: templates/notify.php:262
+#: templates/subscribe.php:146
+msgid "Email Address"
+msgstr "Tuatusi Imeli"
+
+#: templates/notify.php:194
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "O le a tatou auina atu se imeli faʻamaonia, ona maua ai lea se faʻamanatu i le taeao o le fonotaga."
+
+#: templates/notify.php:201
+msgid "Remind Me"
+msgstr "Faʻamanatu Mai"
+
+#. translators: %s: link to privacy policy
+#: templates/notify.php:209
+#: templates/notify.php:324
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "E le faasoa lava e i matou lou faʻamatalaga. Vaai i lo matou %s."
+
+#: templates/notify.php:210
+#: templates/notify.php:325
+#: templates/subscribe.php:349
+msgid "privacy policy"
+msgstr "faiga faʻatumaoti"
+
+#: templates/notify.php:220
+msgid "Subscribe to This Council"
+msgstr "Saini i le Fono Lenei"
+
+#: templates/notify.php:258
+msgid "Contact Information"
+msgstr "Faʻamatalaga Fesoʻotaʻiga"
+
+#: templates/notify.php:278
+#: templates/subscribe.php:166
+msgid "Phone Number"
+msgstr "Numera Telefoni"
+
+#: templates/notify.php:290
+msgid "Optional. US numbers only."
+msgstr "Faʻaogā. Numera US naʻo."
+
+#. translators: %s: council name
+#: templates/subscribe.php:24
+#: templates/subscribe.php:39
+#, php-format
+msgid "Subscribe to %s"
+msgstr "Saini i %s"
+
+#: templates/subscribe.php:41
+msgid "Get notified when this council posts new meetings or agendas."
+msgstr "Maua faʻasilasilaga pe a tuʻuina atu fonotaga fou pe polokalame e le fono lenei."
+
+#: templates/subscribe.php:44
+msgid "Get alerts when councils you follow post new meetings or agendas. Choose your channels, pick your councils, and we'll keep you in the loop."
+msgstr "Maua laʻasaga pe a tuʻuina atu fonotaga fou pe polokalame e fono e te mulimuli i ai. Filifili ou ala, filifili ou fono, ma o le a tatou taofia oe i totonu."
+
+#: templates/subscribe.php:56
+msgid "We've sent a confirmation message to verify your contact info. Please click the link in your email (or reply YES to the text) to activate your subscription."
+msgstr "Ua tatou auina atu se fe'au faʻamaonia e faʻamaonia ai ou faʻamatalaga fesoʻotaʻiga. Faʻamolemole kiliki le sootaga i lou imeli (poʻo tali YES i le fe'au tusitusi) e faʻagaoioia ai lou saini."
+
+#: templates/subscribe.php:57
+msgid "If you don't see it within a few minutes, check your spam folder."
+msgstr "Afai e te le vaai i ai i totonu o ni minute e ni ai, siaki lau fasi spam."
+
+#: templates/subscribe.php:64
+msgid "Follow More Councils"
+msgstr "Mulimuli i Fono Sili Atu"
+
+#: templates/subscribe.php:85
+msgid "Council data is temporarily unavailable."
+msgstr "E le avanoa faʻamatalaga fono i le taimi nei."
+
+#: templates/subscribe.php:86
+msgid "We're having trouble loading the council list. Please try again in a moment."
+msgstr "O loʻo i ai faʻafitauli i le utia o le lisi fono. Faʻamolemole taumafai toe i se taimi."
+
+#: templates/subscribe.php:112
+msgid "How should we reach you?"
+msgstr "E faapefea ona tatou fesootai atu ia te oe?"
+
+#: templates/subscribe.php:178
+msgid "US numbers only. Standard messaging rates may apply."
+msgstr "Numera US naʻo. E ono faʻaaogā faʻatulagaina fe'au masani."
+
+#: templates/subscribe.php:184
+msgid "What do you want to hear about?"
+msgstr "O le a le mea e te manaʻo e faalogoina?"
+
+#: templates/subscribe.php:196
+msgid "Want to follow more councils?"
+msgstr "E te manaʻo e mulimuli i fono sili atu?"
+
+#: templates/subscribe.php:232
+msgid "Filter councils by topic"
+msgstr "Fasi fono i autu"
+
+#: templates/subscribe.php:233
+msgid "What matters to you?"
+msgstr "O le a le mea tāua iā te oe?"
+
+#: templates/subscribe.php:255
+msgid "Clear all"
+msgstr "Faʻamāsani uma"
+
+#: templates/subscribe.php:274
+msgid "No councils available."
+msgstr "Leai ni fono avanoa."
+
+#: templates/subscribe.php:306
+msgid "How often?"
+msgstr "E fia taimi?"
+
+#. translators: %s: link to privacy policy
+#: templates/subscribe.php:348
+#, php-format
+msgid "We never share your info. Unsubscribe anytime. See our %s."
+msgstr "E le faasoa lava e i matou lou faʻamatalaga. Soloi saini i soʻo se taimi. Vaai i lo matou %s."
+
+#: templates/unsubscribed.php:30
+msgid "You've been unsubscribed"
+msgstr "Ua Soloia Lou Saini"
+
+#: templates/unsubscribed.php:31
+msgid "You won't receive any more meeting notifications from us. If you change your mind, you can subscribe again at any time."
+msgstr "E te le toe maua ni faʻasilasilaga fonotaga mai ia i matou. Afai e te suia lou mafaufau, e mafai ona e toe saini i soʻo se taimi."
+
+#: templates/unsubscribed.php:34
+msgid "Subscribe Again"
+msgstr "Toe Saini"

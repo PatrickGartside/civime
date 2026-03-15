@@ -1,0 +1,195 @@
+# Japanese translation for the CiviMe Guides plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Guides 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-guides\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: 日本語 <hello@civi.me>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-guides\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-guides.php
+msgid "CiviMe Guides"
+msgstr "CiviMe Guides"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-guides.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-guides.php
+msgid "How-to guides for civic engagement — testimony, letter writing, advocacy, and more."
+msgstr "市民参加のためのハウツーガイド — 証言、手紙の書き方、アドボカシーなど。"
+
+#. Author of the plugin
+#: civime-guides.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: includes/class-post-type.php:27
+#: includes/class-post-type.php:39
+#: templates/archive-guide.php:24
+#: templates/single-guide.php:26
+msgid "Guides"
+msgstr "ガイド"
+
+#: includes/class-post-type.php:28
+msgid "Guide"
+msgstr "ガイド"
+
+#: includes/class-post-type.php:29
+#: includes/class-post-type.php:30
+msgid "Add New Guide"
+msgstr "新しいガイドを追加"
+
+#: includes/class-post-type.php:31
+msgid "Edit Guide"
+msgstr "ガイドを編集"
+
+#: includes/class-post-type.php:32
+msgid "New Guide"
+msgstr "新しいガイド"
+
+#: includes/class-post-type.php:33
+msgid "View Guide"
+msgstr "ガイドを見る"
+
+#: includes/class-post-type.php:34
+msgid "Search Guides"
+msgstr "ガイドを検索"
+
+#: includes/class-post-type.php:35
+msgid "No guides found."
+msgstr "ガイドが見つかりません。"
+
+#: includes/class-post-type.php:36
+msgid "No guides found in Trash."
+msgstr "ゴミ箱にガイドが見つかりません。"
+
+#: includes/class-post-type.php:37
+msgid "All Guides"
+msgstr "すべてのガイド"
+
+#: includes/class-post-type.php:38
+msgid "Guide Archives"
+msgstr "ガイドアーカイブ"
+
+#: includes/class-post-type.php:56
+msgid "Guide Categories"
+msgstr "ガイドカテゴリー"
+
+#: includes/class-post-type.php:57
+msgid "Guide Category"
+msgstr "ガイドカテゴリー"
+
+#: includes/class-post-type.php:58
+msgid "Search Categories"
+msgstr "カテゴリーを検索"
+
+#: includes/class-post-type.php:59
+msgid "All Categories"
+msgstr "すべてのカテゴリー"
+
+#: includes/class-post-type.php:60
+msgid "Parent Category"
+msgstr "親カテゴリー"
+
+#: includes/class-post-type.php:61
+msgid "Edit Category"
+msgstr "カテゴリーを編集"
+
+#: includes/class-post-type.php:62
+msgid "Update Category"
+msgstr "カテゴリーを更新"
+
+#: includes/class-post-type.php:63
+msgid "Add New Category"
+msgstr "新しいカテゴリーを追加"
+
+#: includes/class-post-type.php:64
+msgid "New Category Name"
+msgstr "新しいカテゴリー名"
+
+#: includes/class-post-type.php:65
+msgid "Categories"
+msgstr "カテゴリー"
+
+#: templates/archive-guide.php:30
+msgid "Civic Action Guides"
+msgstr "市民活動ガイド"
+
+#: templates/archive-guide.php:31
+msgid "Step-by-step guides to help you engage with government in Hawaii — from testifying to writing letters to elected officials."
+msgstr "Hawaii で行政に参加するためのステップバイステップガイド — 証言から選出された議員への手紙の書き方まで。"
+
+#: templates/archive-guide.php:40
+msgid "Filter guides by category"
+msgstr "カテゴリーでガイドを絞り込む"
+
+#: templates/archive-guide.php:48
+msgid "All"
+msgstr "すべて"
+
+#. translators: %d: number of minutes
+#: templates/archive-guide.php:107
+#: templates/single-guide.php:46
+#: templates/single-guide.php:95
+#: templates/single-guide.php:115
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] "%d 分で読めます"
+
+#: templates/archive-guide.php:113
+#: templates/single-guide.php:101
+#: templates/single-guide.php:121
+msgid "Read Guide"
+msgstr "ガイドを読む"
+
+#: templates/archive-guide.php:129
+msgid "Previous"
+msgstr "前へ"
+
+#: templates/archive-guide.php:130
+msgid "Next"
+msgstr "次へ"
+
+#: templates/archive-guide.php:137
+msgid "No guides found. Check back soon — we're adding new civic action guides regularly."
+msgstr "ガイドが見つかりません。定期的に新しい市民活動ガイドを追加していますので、またご確認ください。"
+
+#: templates/archive-guide.php:141
+msgid "View all guides"
+msgstr "すべてのガイドを見る"
+
+#: templates/single-guide.php:23
+msgid "Breadcrumb"
+msgstr "パンくずリスト"
+
+#: templates/single-guide.php:75
+msgid "Related Guides"
+msgstr "関連ガイド"
+
+#: templates/single-guide.php:135
+msgid "Get Involved"
+msgstr "参加しましょう"
+
+#: templates/single-guide.php:136
+msgid "Ready to take action? Browse upcoming government meetings and make your voice heard."
+msgstr "行動する準備はできましたか？今後の行政会議を閲覧して、あなたの声を届けましょう。"
+
+#: templates/single-guide.php:138
+msgid "Browse Meetings"
+msgstr "会議を閲覧する"

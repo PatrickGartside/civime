@@ -1,0 +1,469 @@
+# Thai translation for the CiviMe Notifications plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Notifications 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-notifications\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Thai <hello@civi.me>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-notifications\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-notifications.php
+msgid "CiviMe Notifications"
+msgstr "CiviMe Notifications"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-notifications.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-notifications.php
+msgid "Subscription UI and preference management for Civi.Me meeting notifications."
+msgstr "ส่วนติดต่อผู้ใช้สำหรับการสมัครรับข้อมูลและการจัดการการตั้งค่าการแจ้งเตือนการประชุมของ Civi.Me"
+
+#. Author of the plugin
+#: civime-notifications.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-notifications.php:45
+msgid "CiviMe Notifications requires the CiviMe Core plugin to be installed and activated."
+msgstr "CiviMe Notifications จำเป็นต้องติดตั้งและเปิดใช้งานปลั๊กอิน CiviMe Core"
+
+#: includes/class-manage.php:37
+msgid "This link appears to be incomplete. Please use the manage link from your notification email."
+msgstr "ลิงก์นี้ดูเหมือนไม่สมบูรณ์ กรุณาใช้ลิงก์จัดการจากอีเมลแจ้งเตือนของคุณ"
+
+#: includes/class-manage.php:45
+msgid "Your preferences have been updated."
+msgstr "อัปเดตการตั้งค่าของคุณแล้ว"
+
+#: includes/class-manage.php:62
+#: includes/class-notify.php:74
+#: includes/class-notify.php:150
+#: includes/class-subscribe.php:74
+msgid "Security check failed. Please try again."
+msgstr "การตรวจสอบความปลอดภัยล้มเหลว กรุณาลองใหม่อีกครั้ง"
+
+#: includes/class-manage.php:85
+#: includes/class-notify.php:107
+#: includes/class-notify.php:218
+#: includes/class-subscribe.php:157
+msgid "Something went wrong. Please try again in a moment."
+msgstr "เกิดข้อผิดพลาดบางอย่าง กรุณาลองใหม่อีกสักครู่"
+
+#: includes/class-manage.php:115
+msgid "Please select at least one notification channel."
+msgstr "กรุณาเลือกช่องทางการแจ้งเตือนอย่างน้อยหนึ่งช่องทาง"
+
+#: includes/class-manage.php:121
+msgid "Please select a notification frequency."
+msgstr "กรุณาเลือกความถี่การแจ้งเตือน"
+
+#: includes/class-manage.php:127
+#: includes/class-subscribe.php:126
+msgid "Please select at least one council to follow."
+msgstr "กรุณาเลือกสภาอย่างน้อยหนึ่งแห่งเพื่อติดตาม"
+
+#: includes/class-manage.php:145
+msgid "Something went wrong updating your preferences. Please try again."
+msgstr "เกิดข้อผิดพลาดในการอัปเดตการตั้งค่าของคุณ กรุณาลองใหม่อีกครั้ง"
+
+#: includes/class-manage.php:158
+msgid "Preferences updated, but council list could not be saved. Please try again."
+msgstr "อัปเดตการตั้งค่าแล้ว แต่ไม่สามารถบันทึกรายการสภาได้ กรุณาลองใหม่อีกครั้ง"
+
+#: includes/class-manage.php:222
+msgid "We could not load your subscription. The link may have expired or be incorrect. Please use the manage link from your most recent notification email."
+msgstr "เราไม่สามารถโหลดการสมัครรับข้อมูลของคุณได้ ลิงก์อาจหมดอายุหรือไม่ถูกต้อง กรุณาใช้ลิงก์จัดการจากอีเมลแจ้งเตือนล่าสุดของคุณ"
+
+#: includes/class-notify.php:92
+#: includes/class-notify.php:172
+#: includes/class-subscribe.php:118
+msgid "Please enter a valid email address."
+msgstr "กรุณาใส่ที่อยู่อีเมลที่ถูกต้อง"
+
+#: includes/class-notify.php:176
+#: includes/class-subscribe.php:122
+msgid "Please enter a valid US phone number (10 digits)."
+msgstr "กรุณาใส่หมายเลขโทรศัพท์ US ที่ถูกต้อง (10 หลัก)"
+
+#: includes/class-notify.php:180
+#: includes/class-subscribe.php:130
+msgid "Please select how often you want to be notified."
+msgstr "กรุณาเลือกความถี่ที่ต้องการรับการแจ้งเตือน"
+
+#: includes/class-notify.php:193
+msgid "Could not determine the council for this meeting. Please try again."
+msgstr "ไม่สามารถระบุสภาสำหรับการประชุมนี้ได้ กรุณาลองใหม่อีกครั้ง"
+
+#: includes/class-notify.php:364
+#, php-format
+msgid "Get Notified — %s"
+msgstr "รับการแจ้งเตือน — %s"
+
+#: includes/class-notify.php:367
+#: includes/class-router.php:74
+#: includes/class-router.php:75
+#: includes/shortcodes.php:33
+#: templates/notify.php:57
+#: templates/notify.php:80
+#: templates/notify.php:87
+#: templates/subscribe.php:43
+msgid "Get Notified"
+msgstr "รับการแจ้งเตือน"
+
+#: includes/class-router.php:76
+#: templates/manage.php:23
+msgid "Manage Notifications"
+msgstr "จัดการการแจ้งเตือน"
+
+#: includes/class-router.php:77
+#: templates/confirmed.php:22
+msgid "Subscription Confirmed"
+msgstr "ยืนยันการสมัครรับข้อมูลแล้ว"
+
+#: includes/class-router.php:78
+#: templates/unsubscribed.php:22
+msgid "Unsubscribed"
+msgstr "ยกเลิกการสมัครแล้ว"
+
+#: includes/class-subscribe.php:114
+msgid "Please select at least one notification channel (email or text message)."
+msgstr "กรุณาเลือกช่องทางการแจ้งเตือนอย่างน้อยหนึ่งช่องทาง (อีเมลหรือข้อความ)"
+
+#: includes/shortcodes.php:34
+msgid "Get alerts when new meetings or agendas are posted for the councils you care about."
+msgstr "รับการแจ้งเตือนเมื่อมีการประชุมหรือวาระใหม่สำหรับสภาที่คุณสนใจ"
+
+#: includes/shortcodes.php:35
+#: templates/notify.php:316
+#: templates/subscribe.php:340
+msgid "Subscribe"
+msgstr "สมัครรับข้อมูล"
+
+#: templates/confirmed.php:30
+msgid "You're all set!"
+msgstr "พร้อมแล้ว!"
+
+#: templates/confirmed.php:31
+msgid "Your subscription is confirmed. You'll receive notifications when new meetings are posted for the councils you follow."
+msgstr "การสมัครรับข้อมูลของคุณได้รับการยืนยันแล้ว คุณจะได้รับการแจ้งเตือนเมื่อมีการประชุมใหม่สำหรับสภาที่คุณติดตาม"
+
+#: templates/confirmed.php:32
+msgid "You can manage your preferences or unsubscribe at any time using the link in any notification email."
+msgstr "คุณสามารถจัดการการตั้งค่าหรือยกเลิกการสมัครได้ตลอดเวลาโดยใช้ลิงก์ในอีเมลแจ้งเตือนใดก็ได้"
+
+#: templates/confirmed.php:35
+#: templates/notify.php:105
+#: templates/notify.php:120
+#: templates/subscribe.php:60
+#: templates/unsubscribed.php:37
+msgid "Browse Meetings"
+msgstr "ดูการประชุม"
+
+#: templates/confirmed.php:38
+msgid "Explore Councils"
+msgstr "สำรวจสภา"
+
+#: templates/manage.php:36
+msgid "Browse meetings"
+msgstr "ดูการประชุม"
+
+#: templates/manage.php:65
+msgid "Your Contact Info"
+msgstr "ข้อมูลติดต่อของคุณ"
+
+#: templates/manage.php:69
+#: templates/manage.php:95
+#: templates/subscribe.php:123
+msgid "Email"
+msgstr "อีเมล"
+
+#: templates/manage.php:75
+msgid "Phone"
+msgstr "โทรศัพท์"
+
+#: templates/manage.php:85
+msgid "Notification Channels"
+msgstr "ช่องทางการแจ้งเตือน"
+
+#: templates/manage.php:105
+#: templates/subscribe.php:134
+msgid "Text Message"
+msgstr "ข้อความ"
+
+#: templates/manage.php:112
+#: templates/notify.php:296
+msgid "Notification Frequency"
+msgstr "ความถี่การแจ้งเตือน"
+
+#: templates/manage.php:116
+#: templates/notify.php:301
+#: templates/subscribe.php:315
+msgid "When new meetings are posted"
+msgstr "เมื่อมีการประชุมใหม่"
+
+#: templates/manage.php:120
+#: templates/notify.php:305
+#: templates/subscribe.php:324
+msgid "Daily digest"
+msgstr "สรุปรายวัน"
+
+#: templates/manage.php:124
+#: templates/notify.php:309
+#: templates/subscribe.php:333
+msgid "Weekly digest"
+msgstr "สรุปรายสัปดาห์"
+
+#: templates/manage.php:131
+msgid "Councils You Follow"
+msgstr "สภาที่คุณติดตาม"
+
+#: templates/manage.php:135
+#: templates/subscribe.php:262
+msgid "Search councils"
+msgstr "ค้นหาสภา"
+
+#: templates/manage.php:141
+#: templates/subscribe.php:268
+msgid "Search councils…"
+msgstr "ค้นหาสภา…"
+
+#: templates/manage.php:145
+#: templates/subscribe.php:272
+msgid "Councils"
+msgstr "สภา"
+
+#: templates/manage.php:170
+msgid "Save Preferences"
+msgstr "บันทึกการตั้งค่า"
+
+#: templates/manage.php:177
+msgid "Unsubscribe"
+msgstr "ยกเลิกการสมัคร"
+
+#: templates/manage.php:178
+msgid "You can unsubscribe from all notifications at any time. This will permanently remove your subscription."
+msgstr "คุณสามารถยกเลิกการสมัครรับการแจ้งเตือนทั้งหมดได้ตลอดเวลา การดำเนินการนี้จะลบการสมัครของคุณอย่างถาวร"
+
+#: templates/manage.php:189
+msgid "Are you sure you want to unsubscribe? You will stop receiving all notifications."
+msgstr "คุณแน่ใจหรือไม่ที่ต้องการยกเลิกการสมัคร? คุณจะหยุดรับการแจ้งเตือนทั้งหมด"
+
+#: templates/manage.php:191
+msgid "Unsubscribe from All Notifications"
+msgstr "ยกเลิกการสมัครรับการแจ้งเตือนทั้งหมด"
+
+#: templates/notify.php:40
+msgid "Meeting Not Found"
+msgstr "ไม่พบการประชุม"
+
+#: templates/notify.php:47
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "เราไม่พบการประชุมนี้ อาจถูกยกเลิกหรือลิงก์อาจไม่ถูกต้อง"
+
+#: templates/notify.php:48
+msgid "Browse All Meetings"
+msgstr "ดูการประชุมทั้งหมด"
+
+#: templates/notify.php:64
+msgid "Meeting data is temporarily unavailable."
+msgstr "ข้อมูลการประชุมไม่พร้อมใช้งานชั่วคราว"
+
+#: templates/notify.php:65
+msgid "We're having trouble loading meeting details. Please try again in a moment."
+msgstr "เราพบปัญหาในการโหลดรายละเอียดการประชุม กรุณาลองใหม่อีกสักครู่"
+
+#: templates/notify.php:66
+msgid "Back to meetings"
+msgstr "กลับไปยังการประชุม"
+
+#: templates/notify.php:73
+msgid "Breadcrumb"
+msgstr "เส้นทางนำทาง"
+
+#: templates/notify.php:76
+msgid "Meetings"
+msgstr "การประชุม"
+
+#: templates/notify.php:98
+#: templates/notify.php:113
+#: templates/subscribe.php:55
+msgid "Check Your Inbox"
+msgstr "ตรวจสอบกล่องจดหมายของคุณ"
+
+#: templates/notify.php:99
+msgid "We've sent a confirmation email. Click the link to activate your reminder — we'll email you the morning of the meeting."
+msgstr "เราได้ส่งอีเมลยืนยันแล้ว คลิกลิงก์เพื่อเปิดใช้งานการแจ้งเตือนของคุณ — เราจะส่งอีเมลถึงคุณในเช้าวันประชุม"
+
+#: templates/notify.php:102
+#: templates/notify.php:117
+msgid "Back to Meeting"
+msgstr "กลับไปยังการประชุม"
+
+#: templates/notify.php:114
+msgid "We've sent a confirmation email. Click the link to activate your subscription and start receiving meeting alerts."
+msgstr "เราได้ส่งอีเมลยืนยันแล้ว คลิกลิงก์เพื่อเปิดใช้งานการสมัครและเริ่มรับการแจ้งเตือนการประชุม"
+
+#: templates/notify.php:131
+msgid "Remind Me About This Meeting"
+msgstr "แจ้งเตือนฉันเกี่ยวกับการประชุมนี้"
+
+#: templates/notify.php:152
+#: templates/notify.php:233
+#: templates/subscribe.php:74
+msgid "Please fix the following:"
+msgstr "กรุณาแก้ไขสิ่งต่อไปนี้:"
+
+#: templates/notify.php:172
+#: templates/notify.php:253
+#: templates/subscribe.php:106
+msgid "Website"
+msgstr "เว็บไซต์"
+
+#: templates/notify.php:177
+#: templates/notify.php:181
+#: templates/notify.php:262
+#: templates/subscribe.php:146
+msgid "Email Address"
+msgstr "ที่อยู่อีเมล"
+
+#: templates/notify.php:194
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "เราจะส่งอีเมลยืนยัน จากนั้นส่งการแจ้งเตือนในเช้าวันประชุม"
+
+#: templates/notify.php:201
+msgid "Remind Me"
+msgstr "แจ้งเตือนฉัน"
+
+#. translators: %s: link to privacy policy
+#: templates/notify.php:209
+#: templates/notify.php:324
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "เราไม่เคยแชร์ข้อมูลของคุณ ดู%sของเรา"
+
+#: templates/notify.php:210
+#: templates/notify.php:325
+#: templates/subscribe.php:349
+msgid "privacy policy"
+msgstr "นโยบายความเป็นส่วนตัว"
+
+#: templates/notify.php:220
+msgid "Subscribe to This Council"
+msgstr "สมัครรับข้อมูลสภานี้"
+
+#: templates/notify.php:258
+msgid "Contact Information"
+msgstr "ข้อมูลติดต่อ"
+
+#: templates/notify.php:278
+#: templates/subscribe.php:166
+msgid "Phone Number"
+msgstr "หมายเลขโทรศัพท์"
+
+#: templates/notify.php:290
+msgid "Optional. US numbers only."
+msgstr "ไม่บังคับ เฉพาะหมายเลข US เท่านั้น"
+
+#. translators: %s: council name
+#: templates/subscribe.php:24
+#: templates/subscribe.php:39
+#, php-format
+msgid "Subscribe to %s"
+msgstr "สมัครรับข้อมูล %s"
+
+#: templates/subscribe.php:41
+msgid "Get notified when this council posts new meetings or agendas."
+msgstr "รับการแจ้งเตือนเมื่อสภานี้โพสต์การประชุมหรือวาระใหม่"
+
+#: templates/subscribe.php:44
+msgid "Get alerts when councils you follow post new meetings or agendas. Choose your channels, pick your councils, and we'll keep you in the loop."
+msgstr "รับการแจ้งเตือนเมื่อสภาที่คุณติดตามโพสต์การประชุมหรือวาระใหม่ เลือกช่องทางของคุณ เลือกสภา แล้วเราจะแจ้งให้คุณทราบ"
+
+#: templates/subscribe.php:56
+msgid "We've sent a confirmation message to verify your contact info. Please click the link in your email (or reply YES to the text) to activate your subscription."
+msgstr "เราได้ส่งข้อความยืนยันเพื่อตรวจสอบข้อมูลติดต่อของคุณแล้ว กรุณาคลิกลิงก์ในอีเมลของคุณ (หรือตอบกลับ YES ในข้อความ) เพื่อเปิดใช้งานการสมัคร"
+
+#: templates/subscribe.php:57
+msgid "If you don't see it within a few minutes, check your spam folder."
+msgstr "หากคุณไม่เห็นภายในสองสามนาที ให้ตรวจสอบโฟลเดอร์สแปมของคุณ"
+
+#: templates/subscribe.php:64
+msgid "Follow More Councils"
+msgstr "ติดตามสภาเพิ่มเติม"
+
+#: templates/subscribe.php:85
+msgid "Council data is temporarily unavailable."
+msgstr "ข้อมูลสภาไม่พร้อมใช้งานชั่วคราว"
+
+#: templates/subscribe.php:86
+msgid "We're having trouble loading the council list. Please try again in a moment."
+msgstr "เราพบปัญหาในการโหลดรายการสภา กรุณาลองใหม่อีกสักครู่"
+
+#: templates/subscribe.php:112
+msgid "How should we reach you?"
+msgstr "เราควรติดต่อคุณอย่างไร?"
+
+#: templates/subscribe.php:178
+msgid "US numbers only. Standard messaging rates may apply."
+msgstr "เฉพาะหมายเลข US เท่านั้น อาจมีค่าบริการข้อความตามมาตรฐาน"
+
+#: templates/subscribe.php:184
+msgid "What do you want to hear about?"
+msgstr "คุณต้องการรับข้อมูลเกี่ยวกับอะไร?"
+
+#: templates/subscribe.php:196
+msgid "Want to follow more councils?"
+msgstr "ต้องการติดตามสภาเพิ่มเติมหรือไม่?"
+
+#: templates/subscribe.php:232
+msgid "Filter councils by topic"
+msgstr "กรองสภาตามหัวข้อ"
+
+#: templates/subscribe.php:233
+msgid "What matters to you?"
+msgstr "คุณสนใจเรื่องอะไร?"
+
+#: templates/subscribe.php:255
+msgid "Clear all"
+msgstr "ล้างทั้งหมด"
+
+#: templates/subscribe.php:274
+msgid "No councils available."
+msgstr "ไม่มีสภาที่พร้อมใช้งาน"
+
+#: templates/subscribe.php:306
+msgid "How often?"
+msgstr "บ่อยแค่ไหน?"
+
+#. translators: %s: link to privacy policy
+#: templates/subscribe.php:348
+#, php-format
+msgid "We never share your info. Unsubscribe anytime. See our %s."
+msgstr "เราไม่เคยแชร์ข้อมูลของคุณ ยกเลิกการสมัครได้ตลอดเวลา ดู%sของเรา"
+
+#: templates/unsubscribed.php:30
+msgid "You've been unsubscribed"
+msgstr "คุณได้ยกเลิกการสมัครแล้ว"
+
+#: templates/unsubscribed.php:31
+msgid "You won't receive any more meeting notifications from us. If you change your mind, you can subscribe again at any time."
+msgstr "คุณจะไม่ได้รับการแจ้งเตือนการประชุมจากเราอีกต่อไป หากคุณเปลี่ยนใจ คุณสามารถสมัครใหม่ได้ตลอดเวลา"
+
+#: templates/unsubscribed.php:34
+msgid "Subscribe Again"
+msgstr "สมัครใหม่"

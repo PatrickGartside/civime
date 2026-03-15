@@ -1,0 +1,196 @@
+# Tagalog translation for the CiviMe Guides plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Guides 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-guides\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Tagalog <hello@civi.me>\n"
+"Language: tl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-guides\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+#: civime-guides.php
+msgid "CiviMe Guides"
+msgstr "CiviMe Guides"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-guides.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-guides.php
+msgid "How-to guides for civic engagement — testimony, letter writing, advocacy, and more."
+msgstr "Mga gabay kung paano lumahok sa sibiko — patotoo, pagsulat ng liham, pagtataguyod, at higit pa."
+
+#. Author of the plugin
+#: civime-guides.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: includes/class-post-type.php:27
+#: includes/class-post-type.php:39
+#: templates/archive-guide.php:24
+#: templates/single-guide.php:26
+msgid "Guides"
+msgstr "Mga Gabay"
+
+#: includes/class-post-type.php:28
+msgid "Guide"
+msgstr "Gabay"
+
+#: includes/class-post-type.php:29
+#: includes/class-post-type.php:30
+msgid "Add New Guide"
+msgstr "Magdagdag ng Bagong Gabay"
+
+#: includes/class-post-type.php:31
+msgid "Edit Guide"
+msgstr "I-edit ang Gabay"
+
+#: includes/class-post-type.php:32
+msgid "New Guide"
+msgstr "Bagong Gabay"
+
+#: includes/class-post-type.php:33
+msgid "View Guide"
+msgstr "Tingnan ang Gabay"
+
+#: includes/class-post-type.php:34
+msgid "Search Guides"
+msgstr "Maghanap ng mga Gabay"
+
+#: includes/class-post-type.php:35
+msgid "No guides found."
+msgstr "Walang nahanap na gabay."
+
+#: includes/class-post-type.php:36
+msgid "No guides found in Trash."
+msgstr "Walang nahanap na gabay sa Trash."
+
+#: includes/class-post-type.php:37
+msgid "All Guides"
+msgstr "Lahat ng Gabay"
+
+#: includes/class-post-type.php:38
+msgid "Guide Archives"
+msgstr "Mga Archive ng Gabay"
+
+#: includes/class-post-type.php:56
+msgid "Guide Categories"
+msgstr "Mga Kategorya ng Gabay"
+
+#: includes/class-post-type.php:57
+msgid "Guide Category"
+msgstr "Kategorya ng Gabay"
+
+#: includes/class-post-type.php:58
+msgid "Search Categories"
+msgstr "Maghanap ng mga Kategorya"
+
+#: includes/class-post-type.php:59
+msgid "All Categories"
+msgstr "Lahat ng Kategorya"
+
+#: includes/class-post-type.php:60
+msgid "Parent Category"
+msgstr "Parent na Kategorya"
+
+#: includes/class-post-type.php:61
+msgid "Edit Category"
+msgstr "I-edit ang Kategorya"
+
+#: includes/class-post-type.php:62
+msgid "Update Category"
+msgstr "I-update ang Kategorya"
+
+#: includes/class-post-type.php:63
+msgid "Add New Category"
+msgstr "Magdagdag ng Bagong Kategorya"
+
+#: includes/class-post-type.php:64
+msgid "New Category Name"
+msgstr "Pangalan ng Bagong Kategorya"
+
+#: includes/class-post-type.php:65
+msgid "Categories"
+msgstr "Mga Kategorya"
+
+#: templates/archive-guide.php:30
+msgid "Civic Action Guides"
+msgstr "Mga Gabay sa Sibilikong Pagkilos"
+
+#: templates/archive-guide.php:31
+msgid "Step-by-step guides to help you engage with government in Hawaii — from testifying to writing letters to elected officials."
+msgstr "Mga sunud-sunod na gabay para tulungan kang makiisa sa gobyerno sa Hawaii — mula sa pagbibigay ng patotoo hanggang sa pagsulat ng liham sa mga halal na opisyal."
+
+#: templates/archive-guide.php:40
+msgid "Filter guides by category"
+msgstr "I-filter ang mga gabay ayon sa kategorya"
+
+#: templates/archive-guide.php:48
+msgid "All"
+msgstr "Lahat"
+
+#. translators: %d: number of minutes
+#: templates/archive-guide.php:107
+#: templates/single-guide.php:46
+#: templates/single-guide.php:95
+#: templates/single-guide.php:115
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] "%d min na pagbabasa"
+msgstr[1] "%d min na pagbabasa"
+
+#: templates/archive-guide.php:113
+#: templates/single-guide.php:101
+#: templates/single-guide.php:121
+msgid "Read Guide"
+msgstr "Basahin ang Gabay"
+
+#: templates/archive-guide.php:129
+msgid "Previous"
+msgstr "Nakaraan"
+
+#: templates/archive-guide.php:130
+msgid "Next"
+msgstr "Susunod"
+
+#: templates/archive-guide.php:137
+msgid "No guides found. Check back soon — we're adding new civic action guides regularly."
+msgstr "Walang nahanap na gabay. Bumalik ka sa lalong madaling panahon — regular kaming nagdadagdag ng mga bagong gabay sa sibilikong pagkilos."
+
+#: templates/archive-guide.php:141
+msgid "View all guides"
+msgstr "Tingnan ang lahat ng gabay"
+
+#: templates/single-guide.php:23
+msgid "Breadcrumb"
+msgstr "Breadcrumb"
+
+#: templates/single-guide.php:75
+msgid "Related Guides"
+msgstr "Mga Kaugnay na Gabay"
+
+#: templates/single-guide.php:135
+msgid "Get Involved"
+msgstr "Lumahok"
+
+#: templates/single-guide.php:136
+msgid "Ready to take action? Browse upcoming government meetings and make your voice heard."
+msgstr "Handa ka nang kumilos? Tingnan ang mga paparating na miting ng gobyerno at ipaabot ang iyong boses."
+
+#: templates/single-guide.php:138
+msgid "Browse Meetings"
+msgstr "Tingnan ang mga Miting"

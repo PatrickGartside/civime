@@ -1,0 +1,195 @@
+# Traditional Chinese (Taiwan) translation for the CiviMe Guides plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Guides 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-guides\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: 繁體中文 <hello@civi.me>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-guides\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-guides.php
+msgid "CiviMe Guides"
+msgstr "CiviMe 指南"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-guides.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-guides.php
+msgid "How-to guides for civic engagement — testimony, letter writing, advocacy, and more."
+msgstr "公民參與實用指南——證詞、撰寫信件、倡議及更多內容。"
+
+#. Author of the plugin
+#: civime-guides.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: includes/class-post-type.php:27
+#: includes/class-post-type.php:39
+#: templates/archive-guide.php:24
+#: templates/single-guide.php:26
+msgid "Guides"
+msgstr "指南"
+
+#: includes/class-post-type.php:28
+msgid "Guide"
+msgstr "指南"
+
+#: includes/class-post-type.php:29
+#: includes/class-post-type.php:30
+msgid "Add New Guide"
+msgstr "新增指南"
+
+#: includes/class-post-type.php:31
+msgid "Edit Guide"
+msgstr "編輯指南"
+
+#: includes/class-post-type.php:32
+msgid "New Guide"
+msgstr "新指南"
+
+#: includes/class-post-type.php:33
+msgid "View Guide"
+msgstr "查看指南"
+
+#: includes/class-post-type.php:34
+msgid "Search Guides"
+msgstr "搜尋指南"
+
+#: includes/class-post-type.php:35
+msgid "No guides found."
+msgstr "找不到指南。"
+
+#: includes/class-post-type.php:36
+msgid "No guides found in Trash."
+msgstr "垃圾桶中找不到指南。"
+
+#: includes/class-post-type.php:37
+msgid "All Guides"
+msgstr "所有指南"
+
+#: includes/class-post-type.php:38
+msgid "Guide Archives"
+msgstr "指南封存"
+
+#: includes/class-post-type.php:56
+msgid "Guide Categories"
+msgstr "指南分類"
+
+#: includes/class-post-type.php:57
+msgid "Guide Category"
+msgstr "指南分類"
+
+#: includes/class-post-type.php:58
+msgid "Search Categories"
+msgstr "搜尋分類"
+
+#: includes/class-post-type.php:59
+msgid "All Categories"
+msgstr "所有分類"
+
+#: includes/class-post-type.php:60
+msgid "Parent Category"
+msgstr "上層分類"
+
+#: includes/class-post-type.php:61
+msgid "Edit Category"
+msgstr "編輯分類"
+
+#: includes/class-post-type.php:62
+msgid "Update Category"
+msgstr "更新分類"
+
+#: includes/class-post-type.php:63
+msgid "Add New Category"
+msgstr "新增分類"
+
+#: includes/class-post-type.php:64
+msgid "New Category Name"
+msgstr "新分類名稱"
+
+#: includes/class-post-type.php:65
+msgid "Categories"
+msgstr "分類"
+
+#: templates/archive-guide.php:30
+msgid "Civic Action Guides"
+msgstr "公民行動指南"
+
+#: templates/archive-guide.php:31
+msgid "Step-by-step guides to help you engage with government in Hawaii — from testifying to writing letters to elected officials."
+msgstr "逐步指南，協助您在 Hawaii 與政府互動——從出席作證到撰寫信件給民選官員。"
+
+#: templates/archive-guide.php:40
+msgid "Filter guides by category"
+msgstr "依分類篩選指南"
+
+#: templates/archive-guide.php:48
+msgid "All"
+msgstr "全部"
+
+#. translators: %d: number of minutes
+#: templates/archive-guide.php:107
+#: templates/single-guide.php:46
+#: templates/single-guide.php:95
+#: templates/single-guide.php:115
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] "%d 分鐘閱讀"
+
+#: templates/archive-guide.php:113
+#: templates/single-guide.php:101
+#: templates/single-guide.php:121
+msgid "Read Guide"
+msgstr "閱讀指南"
+
+#: templates/archive-guide.php:129
+msgid "Previous"
+msgstr "上一頁"
+
+#: templates/archive-guide.php:130
+msgid "Next"
+msgstr "下一頁"
+
+#: templates/archive-guide.php:137
+msgid "No guides found. Check back soon — we're adding new civic action guides regularly."
+msgstr "找不到指南。請稍後再試——我們定期新增公民行動指南。"
+
+#: templates/archive-guide.php:141
+msgid "View all guides"
+msgstr "查看所有指南"
+
+#: templates/single-guide.php:23
+msgid "Breadcrumb"
+msgstr "導覽路徑"
+
+#: templates/single-guide.php:75
+msgid "Related Guides"
+msgstr "相關指南"
+
+#: templates/single-guide.php:135
+msgid "Get Involved"
+msgstr "積極參與"
+
+#: templates/single-guide.php:136
+msgid "Ready to take action? Browse upcoming government meetings and make your voice heard."
+msgstr "準備好採取行動了嗎？瀏覽即將舉行的政府會議，讓您的聲音被聽見。"
+
+#: templates/single-guide.php:138
+msgid "Browse Meetings"
+msgstr "瀏覽會議"

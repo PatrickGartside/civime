@@ -1,0 +1,469 @@
+# Simplified Chinese translation for the CiviMe Notifications plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Notifications 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-notifications\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: 简体中文 <hello@civi.me>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-notifications\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-notifications.php
+msgid "CiviMe Notifications"
+msgstr "CiviMe 通知"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-notifications.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-notifications.php
+msgid "Subscription UI and preference management for Civi.Me meeting notifications."
+msgstr "Civi.Me 会议通知的订阅界面与偏好管理。"
+
+#. Author of the plugin
+#: civime-notifications.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-notifications.php:45
+msgid "CiviMe Notifications requires the CiviMe Core plugin to be installed and activated."
+msgstr "CiviMe 通知插件需要安装并激活 CiviMe Core 插件。"
+
+#: includes/class-manage.php:37
+msgid "This link appears to be incomplete. Please use the manage link from your notification email."
+msgstr "此链接似乎不完整，请使用通知邮件中的管理链接。"
+
+#: includes/class-manage.php:45
+msgid "Your preferences have been updated."
+msgstr "您的偏好设置已更新。"
+
+#: includes/class-manage.php:62
+#: includes/class-notify.php:74
+#: includes/class-notify.php:150
+#: includes/class-subscribe.php:74
+msgid "Security check failed. Please try again."
+msgstr "安全验证失败，请重试。"
+
+#: includes/class-manage.php:85
+#: includes/class-notify.php:107
+#: includes/class-notify.php:218
+#: includes/class-subscribe.php:157
+msgid "Something went wrong. Please try again in a moment."
+msgstr "出现了错误，请稍后重试。"
+
+#: includes/class-manage.php:115
+msgid "Please select at least one notification channel."
+msgstr "请至少选择一种通知方式。"
+
+#: includes/class-manage.php:121
+msgid "Please select a notification frequency."
+msgstr "请选择通知频率。"
+
+#: includes/class-manage.php:127
+#: includes/class-subscribe.php:126
+msgid "Please select at least one council to follow."
+msgstr "请至少选择一个要关注的委员会。"
+
+#: includes/class-manage.php:145
+msgid "Something went wrong updating your preferences. Please try again."
+msgstr "更新偏好设置时出现错误，请重试。"
+
+#: includes/class-manage.php:158
+msgid "Preferences updated, but council list could not be saved. Please try again."
+msgstr "偏好设置已更新，但委员会列表保存失败，请重试。"
+
+#: includes/class-manage.php:222
+msgid "We could not load your subscription. The link may have expired or be incorrect. Please use the manage link from your most recent notification email."
+msgstr "无法加载您的订阅信息，链接可能已过期或不正确。请使用最近一封通知邮件中的管理链接。"
+
+#: includes/class-notify.php:92
+#: includes/class-notify.php:172
+#: includes/class-subscribe.php:118
+msgid "Please enter a valid email address."
+msgstr "请输入有效的电子邮件地址。"
+
+#: includes/class-notify.php:176
+#: includes/class-subscribe.php:122
+msgid "Please enter a valid US phone number (10 digits)."
+msgstr "请输入有效的美国电话号码（10 位数字）。"
+
+#: includes/class-notify.php:180
+#: includes/class-subscribe.php:130
+msgid "Please select how often you want to be notified."
+msgstr "请选择您希望接收通知的频率。"
+
+#: includes/class-notify.php:193
+msgid "Could not determine the council for this meeting. Please try again."
+msgstr "无法确定此会议对应的委员会，请重试。"
+
+#: includes/class-notify.php:364
+#, php-format
+msgid "Get Notified — %s"
+msgstr "获取通知 — %s"
+
+#: includes/class-notify.php:367
+#: includes/class-router.php:74
+#: includes/class-router.php:75
+#: includes/shortcodes.php:33
+#: templates/notify.php:57
+#: templates/notify.php:80
+#: templates/notify.php:87
+#: templates/subscribe.php:43
+msgid "Get Notified"
+msgstr "获取通知"
+
+#: includes/class-router.php:76
+#: templates/manage.php:23
+msgid "Manage Notifications"
+msgstr "管理通知"
+
+#: includes/class-router.php:77
+#: templates/confirmed.php:22
+msgid "Subscription Confirmed"
+msgstr "订阅已确认"
+
+#: includes/class-router.php:78
+#: templates/unsubscribed.php:22
+msgid "Unsubscribed"
+msgstr "已取消订阅"
+
+#: includes/class-subscribe.php:114
+msgid "Please select at least one notification channel (email or text message)."
+msgstr "请至少选择一种通知方式（电子邮件或短信）。"
+
+#: includes/shortcodes.php:34
+msgid "Get alerts when new meetings or agendas are posted for the councils you care about."
+msgstr "当您关注的委员会发布新会议或议程时，即时收到通知。"
+
+#: includes/shortcodes.php:35
+#: templates/notify.php:316
+#: templates/subscribe.php:340
+msgid "Subscribe"
+msgstr "订阅"
+
+#: templates/confirmed.php:30
+msgid "You're all set!"
+msgstr "设置完成！"
+
+#: templates/confirmed.php:31
+msgid "Your subscription is confirmed. You'll receive notifications when new meetings are posted for the councils you follow."
+msgstr "您的订阅已确认。当您关注的委员会发布新会议时，您将收到通知。"
+
+#: templates/confirmed.php:32
+msgid "You can manage your preferences or unsubscribe at any time using the link in any notification email."
+msgstr "您可以随时使用通知邮件中的链接管理偏好设置或取消订阅。"
+
+#: templates/confirmed.php:35
+#: templates/notify.php:105
+#: templates/notify.php:120
+#: templates/subscribe.php:60
+#: templates/unsubscribed.php:37
+msgid "Browse Meetings"
+msgstr "浏览会议"
+
+#: templates/confirmed.php:38
+msgid "Explore Councils"
+msgstr "探索委员会"
+
+#: templates/manage.php:36
+msgid "Browse meetings"
+msgstr "浏览会议"
+
+#: templates/manage.php:65
+msgid "Your Contact Info"
+msgstr "您的联系方式"
+
+#: templates/manage.php:69
+#: templates/manage.php:95
+#: templates/subscribe.php:123
+msgid "Email"
+msgstr "电子邮件"
+
+#: templates/manage.php:75
+msgid "Phone"
+msgstr "电话"
+
+#: templates/manage.php:85
+msgid "Notification Channels"
+msgstr "通知方式"
+
+#: templates/manage.php:105
+#: templates/subscribe.php:134
+msgid "Text Message"
+msgstr "短信"
+
+#: templates/manage.php:112
+#: templates/notify.php:296
+msgid "Notification Frequency"
+msgstr "通知频率"
+
+#: templates/manage.php:116
+#: templates/notify.php:301
+#: templates/subscribe.php:315
+msgid "When new meetings are posted"
+msgstr "有新会议发布时"
+
+#: templates/manage.php:120
+#: templates/notify.php:305
+#: templates/subscribe.php:324
+msgid "Daily digest"
+msgstr "每日摘要"
+
+#: templates/manage.php:124
+#: templates/notify.php:309
+#: templates/subscribe.php:333
+msgid "Weekly digest"
+msgstr "每周摘要"
+
+#: templates/manage.php:131
+msgid "Councils You Follow"
+msgstr "您关注的委员会"
+
+#: templates/manage.php:135
+#: templates/subscribe.php:262
+msgid "Search councils"
+msgstr "搜索委员会"
+
+#: templates/manage.php:141
+#: templates/subscribe.php:268
+msgid "Search councils…"
+msgstr "搜索委员会…"
+
+#: templates/manage.php:145
+#: templates/subscribe.php:272
+msgid "Councils"
+msgstr "委员会"
+
+#: templates/manage.php:170
+msgid "Save Preferences"
+msgstr "保存偏好设置"
+
+#: templates/manage.php:177
+msgid "Unsubscribe"
+msgstr "取消订阅"
+
+#: templates/manage.php:178
+msgid "You can unsubscribe from all notifications at any time. This will permanently remove your subscription."
+msgstr "您可以随时取消所有通知订阅。此操作将永久删除您的订阅记录。"
+
+#: templates/manage.php:189
+msgid "Are you sure you want to unsubscribe? You will stop receiving all notifications."
+msgstr "确定要取消订阅吗？您将停止接收所有通知。"
+
+#: templates/manage.php:191
+msgid "Unsubscribe from All Notifications"
+msgstr "取消所有通知订阅"
+
+#: templates/notify.php:40
+msgid "Meeting Not Found"
+msgstr "未找到会议"
+
+#: templates/notify.php:47
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "未能找到该会议，可能已被取消或链接有误。"
+
+#: templates/notify.php:48
+msgid "Browse All Meetings"
+msgstr "浏览所有会议"
+
+#: templates/notify.php:64
+msgid "Meeting data is temporarily unavailable."
+msgstr "会议数据暂时无法访问。"
+
+#: templates/notify.php:65
+msgid "We're having trouble loading meeting details. Please try again in a moment."
+msgstr "加载会议详情时遇到问题，请稍后重试。"
+
+#: templates/notify.php:66
+msgid "Back to meetings"
+msgstr "返回会议列表"
+
+#: templates/notify.php:73
+msgid "Breadcrumb"
+msgstr "面包屑导航"
+
+#: templates/notify.php:76
+msgid "Meetings"
+msgstr "会议"
+
+#: templates/notify.php:98
+#: templates/notify.php:113
+#: templates/subscribe.php:55
+msgid "Check Your Inbox"
+msgstr "请查看您的收件箱"
+
+#: templates/notify.php:99
+msgid "We've sent a confirmation email. Click the link to activate your reminder — we'll email you the morning of the meeting."
+msgstr "我们已发送确认邮件，请点击链接激活您的提醒——我们将在会议当天早上发送邮件提醒您。"
+
+#: templates/notify.php:102
+#: templates/notify.php:117
+msgid "Back to Meeting"
+msgstr "返回会议"
+
+#: templates/notify.php:114
+msgid "We've sent a confirmation email. Click the link to activate your subscription and start receiving meeting alerts."
+msgstr "我们已发送确认邮件，请点击链接激活您的订阅并开始接收会议通知。"
+
+#: templates/notify.php:131
+msgid "Remind Me About This Meeting"
+msgstr "提醒我参加此会议"
+
+#: templates/notify.php:152
+#: templates/notify.php:233
+#: templates/subscribe.php:74
+msgid "Please fix the following:"
+msgstr "请修正以下问题："
+
+#: templates/notify.php:172
+#: templates/notify.php:253
+#: templates/subscribe.php:106
+msgid "Website"
+msgstr "网站"
+
+#: templates/notify.php:177
+#: templates/notify.php:181
+#: templates/notify.php:262
+#: templates/subscribe.php:146
+msgid "Email Address"
+msgstr "电子邮件地址"
+
+#: templates/notify.php:194
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "我们将发送确认邮件，并在会议当天早上发送提醒。"
+
+#: templates/notify.php:201
+msgid "Remind Me"
+msgstr "提醒我"
+
+#. translators: %s: link to privacy policy
+#: templates/notify.php:209
+#: templates/notify.php:324
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "我们绝不分享您的信息。请查看我们的%s。"
+
+#: templates/notify.php:210
+#: templates/notify.php:325
+#: templates/subscribe.php:349
+msgid "privacy policy"
+msgstr "隐私政策"
+
+#: templates/notify.php:220
+msgid "Subscribe to This Council"
+msgstr "订阅此委员会"
+
+#: templates/notify.php:258
+msgid "Contact Information"
+msgstr "联系信息"
+
+#: templates/notify.php:278
+#: templates/subscribe.php:166
+msgid "Phone Number"
+msgstr "电话号码"
+
+#: templates/notify.php:290
+msgid "Optional. US numbers only."
+msgstr "可选。仅限美国电话号码。"
+
+#. translators: %s: council name
+#: templates/subscribe.php:24
+#: templates/subscribe.php:39
+#, php-format
+msgid "Subscribe to %s"
+msgstr "订阅 %s"
+
+#: templates/subscribe.php:41
+msgid "Get notified when this council posts new meetings or agendas."
+msgstr "当此委员会发布新会议或议程时，即时收到通知。"
+
+#: templates/subscribe.php:44
+msgid "Get alerts when councils you follow post new meetings or agendas. Choose your channels, pick your councils, and we'll keep you in the loop."
+msgstr "当您关注的委员会发布新会议或议程时，即时收到通知。选择通知方式，挑选关注的委员会，我们会及时告知您最新动态。"
+
+#: templates/subscribe.php:56
+msgid "We've sent a confirmation message to verify your contact info. Please click the link in your email (or reply YES to the text) to activate your subscription."
+msgstr "我们已发送确认消息以验证您的联系方式。请点击邮件中的链接（或回复短信中的 YES）以激活您的订阅。"
+
+#: templates/subscribe.php:57
+msgid "If you don't see it within a few minutes, check your spam folder."
+msgstr "如果几分钟内未收到，请检查垃圾邮件文件夹。"
+
+#: templates/subscribe.php:64
+msgid "Follow More Councils"
+msgstr "关注更多委员会"
+
+#: templates/subscribe.php:85
+msgid "Council data is temporarily unavailable."
+msgstr "委员会数据暂时无法访问。"
+
+#: templates/subscribe.php:86
+msgid "We're having trouble loading the council list. Please try again in a moment."
+msgstr "加载委员会列表时遇到问题，请稍后重试。"
+
+#: templates/subscribe.php:112
+msgid "How should we reach you?"
+msgstr "我们应该通过哪种方式联系您？"
+
+#: templates/subscribe.php:178
+msgid "US numbers only. Standard messaging rates may apply."
+msgstr "仅限美国电话号码。可能产生标准短信费用。"
+
+#: templates/subscribe.php:184
+msgid "What do you want to hear about?"
+msgstr "您想了解哪些内容？"
+
+#: templates/subscribe.php:196
+msgid "Want to follow more councils?"
+msgstr "想关注更多委员会吗？"
+
+#: templates/subscribe.php:232
+msgid "Filter councils by topic"
+msgstr "按话题筛选委员会"
+
+#: templates/subscribe.php:233
+msgid "What matters to you?"
+msgstr "您关心什么？"
+
+#: templates/subscribe.php:255
+msgid "Clear all"
+msgstr "清除所有"
+
+#: templates/subscribe.php:274
+msgid "No councils available."
+msgstr "暂无可用委员会。"
+
+#: templates/subscribe.php:306
+msgid "How often?"
+msgstr "多久一次？"
+
+#. translators: %s: link to privacy policy
+#: templates/subscribe.php:348
+#, php-format
+msgid "We never share your info. Unsubscribe anytime. See our %s."
+msgstr "我们绝不分享您的信息。随时可以取消订阅。请查看我们的%s。"
+
+#: templates/unsubscribed.php:30
+msgid "You've been unsubscribed"
+msgstr "您已取消订阅"
+
+#: templates/unsubscribed.php:31
+msgid "You won't receive any more meeting notifications from us. If you change your mind, you can subscribe again at any time."
+msgstr "您将不再收到我们的会议通知。如果您改变主意，可以随时重新订阅。"
+
+#: templates/unsubscribed.php:34
+msgid "Subscribe Again"
+msgstr "重新订阅"

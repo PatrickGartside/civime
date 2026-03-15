@@ -1,0 +1,469 @@
+# Ilocano translation for the CiviMe Notifications plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Notifications 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-notifications\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Ilokano <hello@civi.me>\n"
+"Language: ilo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-notifications\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+#: civime-notifications.php
+msgid "CiviMe Notifications"
+msgstr "CiviMe Notifications"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-notifications.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-notifications.php
+msgid "Subscription UI and preference management for Civi.Me meeting notifications."
+msgstr "UI ti subscription ken pamamahala ti kagustuhan para iti mga notipikasion ti miting ti Civi.Me."
+
+#. Author of the plugin
+#: civime-notifications.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-notifications.php:45
+msgid "CiviMe Notifications requires the CiviMe Core plugin to be installed and activated."
+msgstr "Ti CiviMe Notifications masapul nga naka-install ken na-aktibo ti CiviMe Core plugin."
+
+#: includes/class-manage.php:37
+msgid "This link appears to be incomplete. Please use the manage link from your notification email."
+msgstr "Ti link nga daytoy mukhang saan kumpleto. Gamitenmo ti manage link manipud iti email a notipikasionmo."
+
+#: includes/class-manage.php:45
+msgid "Your preferences have been updated."
+msgstr "Na-update ti kagustuhan mo."
+
+#: includes/class-manage.php:62
+#: includes/class-notify.php:74
+#: includes/class-notify.php:150
+#: includes/class-subscribe.php:74
+msgid "Security check failed. Please try again."
+msgstr "Nabigla ti security check. Subukan ket manen."
+
+#: includes/class-manage.php:85
+#: includes/class-notify.php:107
+#: includes/class-notify.php:218
+#: includes/class-subscribe.php:157
+msgid "Something went wrong. Please try again in a moment."
+msgstr "Adda napasamak nga dakes. Subukan ket manen iti bassit."
+
+#: includes/class-manage.php:115
+msgid "Please select at least one notification channel."
+msgstr "Mangilaganmo ti kalpas maysa nga channel ti notipikasion."
+
+#: includes/class-manage.php:121
+msgid "Please select a notification frequency."
+msgstr "Mangilaganmo ti dakkel ti notipikasion."
+
+#: includes/class-manage.php:127
+#: includes/class-subscribe.php:126
+msgid "Please select at least one council to follow."
+msgstr "Mangilaganmo ti kalpas maysa nga konseho nga susuoten."
+
+#: includes/class-manage.php:145
+msgid "Something went wrong updating your preferences. Please try again."
+msgstr "Adda napasamak nga dakes iti pag-update ti kagustuhan mo. Subukan ket manen."
+
+#: includes/class-manage.php:158
+msgid "Preferences updated, but council list could not be saved. Please try again."
+msgstr "Na-update ti kagustuhan, ngem saan a naiyalbo ti listaan ti konseho. Subukan ket manen."
+
+#: includes/class-manage.php:222
+msgid "We could not load your subscription. The link may have expired or be incorrect. Please use the manage link from your most recent notification email."
+msgstr "Dimi naidar ti subscription mo. Mabalin nga nalugot ti link wenno saan nga umiso. Gamitenmo ti manage link manipud iti pinakabaro nga email a notipikasionmo."
+
+#: includes/class-notify.php:92
+#: includes/class-notify.php:172
+#: includes/class-subscribe.php:118
+msgid "Please enter a valid email address."
+msgstr "Isuratta ti umiso nga email address."
+
+#: includes/class-notify.php:176
+#: includes/class-subscribe.php:122
+msgid "Please enter a valid US phone number (10 digits)."
+msgstr "Isuratta ti umiso nga US nga numero ti telepono (10 numero)."
+
+#: includes/class-notify.php:180
+#: includes/class-subscribe.php:130
+msgid "Please select how often you want to be notified."
+msgstr "Mangilaganmo no kasano kadakkel mo nga kayatmo nga manotipikaran."
+
+#: includes/class-notify.php:193
+msgid "Could not determine the council for this meeting. Please try again."
+msgstr "Dimi natukoy ti konseho para iti miting nga daytoy. Subukan ket manen."
+
+#: includes/class-notify.php:364
+#, php-format
+msgid "Get Notified — %s"
+msgstr "Dawaten ti Notipikasion — %s"
+
+#: includes/class-notify.php:367
+#: includes/class-router.php:74
+#: includes/class-router.php:75
+#: includes/shortcodes.php:33
+#: templates/notify.php:57
+#: templates/notify.php:80
+#: templates/notify.php:87
+#: templates/subscribe.php:43
+msgid "Get Notified"
+msgstr "Dawaten ti Notipikasion"
+
+#: includes/class-router.php:76
+#: templates/manage.php:23
+msgid "Manage Notifications"
+msgstr "Pangasiwaen Dagiti Notipikasion"
+
+#: includes/class-router.php:77
+#: templates/confirmed.php:22
+msgid "Subscription Confirmed"
+msgstr "Na-kumpirma ti Subscription"
+
+#: includes/class-router.php:78
+#: templates/unsubscribed.php:22
+msgid "Unsubscribed"
+msgstr "Nalikwatan ti Subscription"
+
+#: includes/class-subscribe.php:114
+msgid "Please select at least one notification channel (email or text message)."
+msgstr "Mangilaganmo ti kalpas maysa nga channel ti notipikasion (email wenno mensahe ti teksto)."
+
+#: includes/shortcodes.php:34
+msgid "Get alerts when new meetings or agendas are posted for the councils you care about."
+msgstr "Dawaten ti mga alerto no naipaskil ti bagong miting wenno agenda para iti mga konseho nga pakaikamangan mo."
+
+#: includes/shortcodes.php:35
+#: templates/notify.php:316
+#: templates/subscribe.php:340
+msgid "Subscribe"
+msgstr "Mag-subscribe"
+
+#: templates/confirmed.php:30
+msgid "You're all set!"
+msgstr "Nakompleto na!"
+
+#: templates/confirmed.php:31
+msgid "Your subscription is confirmed. You'll receive notifications when new meetings are posted for the councils you follow."
+msgstr "Na-kumpirma ti subscription mo. Dawatenmo ti mga notipikasion no naipaskil ti bagong miting para iti mga konseho nga susuoten mo."
+
+#: templates/confirmed.php:32
+msgid "You can manage your preferences or unsubscribe at any time using the link in any notification email."
+msgstr "Mabalinmo nga pangasiwaen ti kagustuhan mo wenno mag-unsubscribe iti aniaman nga oras babaen ti link iti aniaman nga email a notipikasion."
+
+#: templates/confirmed.php:35
+#: templates/notify.php:105
+#: templates/notify.php:120
+#: templates/subscribe.php:60
+#: templates/unsubscribed.php:37
+msgid "Browse Meetings"
+msgstr "Kitaen Dagiti Miting"
+
+#: templates/confirmed.php:38
+msgid "Explore Councils"
+msgstr "Suroten Dagiti Konseho"
+
+#: templates/manage.php:36
+msgid "Browse meetings"
+msgstr "Kitaen dagiti miting"
+
+#: templates/manage.php:65
+msgid "Your Contact Info"
+msgstr "Impormasion ti Pakikipagan Mo"
+
+#: templates/manage.php:69
+#: templates/manage.php:95
+#: templates/subscribe.php:123
+msgid "Email"
+msgstr "Email"
+
+#: templates/manage.php:75
+msgid "Phone"
+msgstr "Telepono"
+
+#: templates/manage.php:85
+msgid "Notification Channels"
+msgstr "Mga Channel ti Notipikasion"
+
+#: templates/manage.php:105
+#: templates/subscribe.php:134
+msgid "Text Message"
+msgstr "Mensahe ti Teksto"
+
+#: templates/manage.php:112
+#: templates/notify.php:296
+msgid "Notification Frequency"
+msgstr "Dakkel ti Notipikasion"
+
+#: templates/manage.php:116
+#: templates/notify.php:301
+#: templates/subscribe.php:315
+msgid "When new meetings are posted"
+msgstr "No naipaskil ti bagong miting"
+
+#: templates/manage.php:120
+#: templates/notify.php:305
+#: templates/subscribe.php:324
+msgid "Daily digest"
+msgstr "Adlaw-aldaw nga digest"
+
+#: templates/manage.php:124
+#: templates/notify.php:309
+#: templates/subscribe.php:333
+msgid "Weekly digest"
+msgstr "Lingguan nga digest"
+
+#: templates/manage.php:131
+msgid "Councils You Follow"
+msgstr "Mga Konseho nga Susuoten Mo"
+
+#: templates/manage.php:135
+#: templates/subscribe.php:262
+msgid "Search councils"
+msgstr "Bilagen dagiti konseho"
+
+#: templates/manage.php:141
+#: templates/subscribe.php:268
+msgid "Search councils…"
+msgstr "Bilagen dagiti konseho…"
+
+#: templates/manage.php:145
+#: templates/subscribe.php:272
+msgid "Councils"
+msgstr "Mga Konseho"
+
+#: templates/manage.php:170
+msgid "Save Preferences"
+msgstr "I-save Dagiti Kagustuhan"
+
+#: templates/manage.php:177
+msgid "Unsubscribe"
+msgstr "Mag-unsubscribe"
+
+#: templates/manage.php:178
+msgid "You can unsubscribe from all notifications at any time. This will permanently remove your subscription."
+msgstr "Mabalinmo nga mag-unsubscribe iti amin nga notipikasion iti aniaman nga oras. Permanenteng ikkaten daytoy ti subscription mo."
+
+#: templates/manage.php:189
+msgid "Are you sure you want to unsubscribe? You will stop receiving all notifications."
+msgstr "Sigurado ka nga kayatmo nga mag-unsubscribe? Isagsagaanmo ti panangawat iti amin nga notipikasion."
+
+#: templates/manage.php:191
+msgid "Unsubscribe from All Notifications"
+msgstr "Mag-unsubscribe iti Amin nga Notipikasion"
+
+#: templates/notify.php:40
+msgid "Meeting Not Found"
+msgstr "Saan a Nakalap ti Miting"
+
+#: templates/notify.php:47
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "Dimi nakalap ti miting nga daytoy. Mabalin nga nakansela wenno saan nga umiso ti link."
+
+#: templates/notify.php:48
+msgid "Browse All Meetings"
+msgstr "Kitaen Amin nga Miting"
+
+#: templates/notify.php:64
+msgid "Meeting data is temporarily unavailable."
+msgstr "Ti datos ti miting temporaryo nga saan nga maabak."
+
+#: templates/notify.php:65
+msgid "We're having trouble loading meeting details. Please try again in a moment."
+msgstr "Adda galisda iti pag-load ti mga detalye ti miting. Subukan ket manen iti bassit."
+
+#: templates/notify.php:66
+msgid "Back to meetings"
+msgstr "Agsubli iti mga miting"
+
+#: templates/notify.php:73
+msgid "Breadcrumb"
+msgstr "Breadcrumb"
+
+#: templates/notify.php:76
+msgid "Meetings"
+msgstr "Mga Miting"
+
+#: templates/notify.php:98
+#: templates/notify.php:113
+#: templates/subscribe.php:55
+msgid "Check Your Inbox"
+msgstr "Kitaen ti Inbox Mo"
+
+#: templates/notify.php:99
+msgid "We've sent a confirmation email. Click the link to activate your reminder — we'll email you the morning of the meeting."
+msgstr "Nagbalaymi ti email a pagpapasingkedan. I-click ti link tapno ma-aktibo ti pagpapalagip mo — emailanmi ka iti agsapa ti aldaw ti miting."
+
+#: templates/notify.php:102
+#: templates/notify.php:117
+msgid "Back to Meeting"
+msgstr "Agsubli iti Miting"
+
+#: templates/notify.php:114
+msgid "We've sent a confirmation email. Click the link to activate your subscription and start receiving meeting alerts."
+msgstr "Nagbalaymi ti email a pagpapasingkedan. I-click ti link tapno ma-aktibo ti subscription mo ken rumrumanen ti panangawat iti mga alerto ti miting."
+
+#: templates/notify.php:131
+msgid "Remind Me About This Meeting"
+msgstr "Ipaammo Kaniak Maipanggep iti Miting nga Daytoy"
+
+#: templates/notify.php:152
+#: templates/notify.php:233
+#: templates/subscribe.php:74
+msgid "Please fix the following:"
+msgstr "Awngen dagitoy:"
+
+#: templates/notify.php:172
+#: templates/notify.php:253
+#: templates/subscribe.php:106
+msgid "Website"
+msgstr "Website"
+
+#: templates/notify.php:177
+#: templates/notify.php:181
+#: templates/notify.php:262
+#: templates/subscribe.php:146
+msgid "Email Address"
+msgstr "Email Address"
+
+#: templates/notify.php:194
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "Mangibalaymi ti email a pagpapasingkedan, kalpasanna ti pagpapalagip iti agsapa ti aldaw ti miting."
+
+#: templates/notify.php:201
+msgid "Remind Me"
+msgstr "Ipaammo Kaniak"
+
+#. translators: %s: link to privacy policy
+#: templates/notify.php:209
+#: templates/notify.php:324
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "Saankami lagi nga agibahagi ti impormasionmo. Kitaen ti %s mi."
+
+#: templates/notify.php:210
+#: templates/notify.php:325
+#: templates/subscribe.php:349
+msgid "privacy policy"
+msgstr "polisia ti pribasidad"
+
+#: templates/notify.php:220
+msgid "Subscribe to This Council"
+msgstr "Mag-subscribe iti Konseho nga Daytoy"
+
+#: templates/notify.php:258
+msgid "Contact Information"
+msgstr "Impormasion ti Pakikipagan"
+
+#: templates/notify.php:278
+#: templates/subscribe.php:166
+msgid "Phone Number"
+msgstr "Numero ti Telepono"
+
+#: templates/notify.php:290
+msgid "Optional. US numbers only."
+msgstr "Opsional. US nga numero laeng."
+
+#. translators: %s: council name
+#: templates/subscribe.php:24
+#: templates/subscribe.php:39
+#, php-format
+msgid "Subscribe to %s"
+msgstr "Mag-subscribe iti %s"
+
+#: templates/subscribe.php:41
+msgid "Get notified when this council posts new meetings or agendas."
+msgstr "Manotipikaran no maipost ti konseho nga daytoy ti bagong miting wenno agenda."
+
+#: templates/subscribe.php:44
+msgid "Get alerts when councils you follow post new meetings or agendas. Choose your channels, pick your councils, and we'll keep you in the loop."
+msgstr "Dawaten ti mga alerto no maipost ti mga konseho nga susuoten mo ti bagong miting wenno agenda. Piliem dagiti channel mo, piliem dagiti konseho mo, ken itandankami kenka."
+
+#: templates/subscribe.php:56
+msgid "We've sent a confirmation message to verify your contact info. Please click the link in your email (or reply YES to the text) to activate your subscription."
+msgstr "Nagbalaymi ti mensahe a pagpapasingkedan tapno mapasingkedan ti impormasion ti pakikipagan mo. I-click ti link iti email mo (wenno sungbatan ti YES iti teksto) tapno ma-aktibo ti subscription mo."
+
+#: templates/subscribe.php:57
+msgid "If you don't see it within a few minutes, check your spam folder."
+msgstr "No saanmo a makita iti nabiit nga minuto, kitaen ti spam folder mo."
+
+#: templates/subscribe.php:64
+msgid "Follow More Councils"
+msgstr "Sumabot pa ti Ad-adu nga Konseho"
+
+#: templates/subscribe.php:85
+msgid "Council data is temporarily unavailable."
+msgstr "Ti datos ti konseho temporaryo nga saan nga maabak."
+
+#: templates/subscribe.php:86
+msgid "We're having trouble loading the council list. Please try again in a moment."
+msgstr "Adda galisda iti pag-load ti listaan ti konseho. Subukan ket manen iti bassit."
+
+#: templates/subscribe.php:112
+msgid "How should we reach you?"
+msgstr "Kasano ti pannakaabakmi kenka?"
+
+#: templates/subscribe.php:178
+msgid "US numbers only. Standard messaging rates may apply."
+msgstr "US nga numero laeng. Mabalin nga maisaplikar dagiti regular nga rate ti mensahe."
+
+#: templates/subscribe.php:184
+msgid "What do you want to hear about?"
+msgstr "Ania ti kayatmo nga madengngeg?"
+
+#: templates/subscribe.php:196
+msgid "Want to follow more councils?"
+msgstr "Kayatmo nga sumabot ti ad-adu nga konseho?"
+
+#: templates/subscribe.php:232
+msgid "Filter councils by topic"
+msgstr "I-filter dagiti konseho babaen ti topiko"
+
+#: templates/subscribe.php:233
+msgid "What matters to you?"
+msgstr "Ania ti mapateg kenka?"
+
+#: templates/subscribe.php:255
+msgid "Clear all"
+msgstr "Limpiaen amin"
+
+#: templates/subscribe.php:274
+msgid "No councils available."
+msgstr "Awan ti maabak nga konseho."
+
+#: templates/subscribe.php:306
+msgid "How often?"
+msgstr "Kasano kadakkel?"
+
+#. translators: %s: link to privacy policy
+#: templates/subscribe.php:348
+#, php-format
+msgid "We never share your info. Unsubscribe anytime. See our %s."
+msgstr "Saankami lagi nga agibahagi ti impormasionmo. Mag-unsubscribe iti aniaman nga oras. Kitaen ti %s mi."
+
+#: templates/unsubscribed.php:30
+msgid "You've been unsubscribed"
+msgstr "Nalikwatan ti subscription mo"
+
+#: templates/unsubscribed.php:31
+msgid "You won't receive any more meeting notifications from us. If you change your mind, you can subscribe again at any time."
+msgstr "Saan ka lagi nga makatanggap ti ad-adu nga notipikasion ti miting manipud kadakami. No baliwen ti opinyon mo, mabalinmo nga mag-subscribe ket manen iti aniaman nga oras."
+
+#: templates/unsubscribed.php:34
+msgid "Subscribe Again"
+msgstr "Mag-subscribe Ket Manen"

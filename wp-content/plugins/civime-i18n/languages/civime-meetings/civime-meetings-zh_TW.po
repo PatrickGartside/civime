@@ -1,0 +1,664 @@
+# Traditional Chinese (Taiwan) translation for the CiviMe Meetings plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Meetings 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-meetings\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: 繁體中文 <hello@civi.me>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-meetings\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-meetings.php
+msgid "CiviMe Meetings"
+msgstr "CiviMe 會議"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-meetings.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-meetings.php
+msgid "Meeting calendar, detail pages, and council browser — powered by the Access100 API."
+msgstr "會議行事曆、詳細頁面及委員會瀏覽——由 Access100 API 驅動。"
+
+#. Author of the plugin
+#: civime-meetings.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-meetings.php:45
+msgid "CiviMe Meetings requires the CiviMe Core plugin to be installed and activated."
+msgstr "CiviMe 會議需要安裝並啟用 CiviMe Core 外掛。"
+
+#: includes/class-councils-list.php:89
+msgid "Council data is temporarily unavailable. Please check back soon."
+msgstr "委員會資料暫時無法使用。請稍後再試。"
+
+#: includes/class-detail.php:39
+msgid "No meeting ID provided."
+msgstr "未提供會議 ID。"
+
+#: includes/class-detail.php:106
+#: includes/class-list.php:246
+msgid "Meeting data is temporarily unavailable. Please check back soon."
+msgstr "會議資料暫時無法使用。請稍後再試。"
+
+#: includes/class-detail.php:119
+#: includes/class-detail.php:126
+#: includes/class-router.php:83
+#: templates/meeting-detail.php:53
+#: templates/meeting-detail.php:99
+msgid "Meeting Detail"
+msgstr "會議詳情"
+
+#: includes/class-list.php:326
+#, php-format
+msgid "Council: %s"
+msgstr "委員會：%s"
+
+#: includes/class-list.php:327
+#, php-format
+msgid "Council #%d"
+msgstr "委員會 #%d"
+
+#: includes/class-list.php:339
+#: templates/councils-list.php:51
+#: templates/meetings-list.php:343
+msgid "State"
+msgstr "州"
+
+#: includes/class-list.php:340
+#: templates/councils-list.php:52
+#: templates/meetings-list.php:344
+msgid "Honolulu"
+msgstr "Honolulu"
+
+#: includes/class-list.php:341
+#: templates/councils-list.php:53
+#: templates/meetings-list.php:345
+msgid "Maui"
+msgstr "Maui"
+
+#: includes/class-list.php:355
+#, php-format
+msgid "From: %s"
+msgstr "開始：%s"
+
+#: includes/class-list.php:362
+#, php-format
+msgid "To: %s"
+msgstr "結束：%s"
+
+#: includes/class-list.php:393
+#: templates/meeting-detail.php:76
+#: templates/meetings-list.php:62
+msgid "State of Hawaii"
+msgstr "Hawaii 州"
+
+#: includes/class-list.php:394
+#: templates/meeting-detail.php:77
+#: templates/meetings-list.php:63
+msgid "Honolulu Neighborhood Board"
+msgstr "Honolulu 社區委員會"
+
+#: includes/class-list.php:395
+#: templates/meeting-detail.php:78
+#: templates/meetings-list.php:64
+msgid "Honolulu County Committee"
+msgstr "Honolulu 縣委員會"
+
+#: includes/class-list.php:396
+#: templates/meeting-detail.php:79
+#: templates/meetings-list.php:65
+msgid "Maui County Committee"
+msgstr "Maui 縣委員會"
+
+#: includes/class-router.php:82
+#: templates/meeting-detail.php:97
+#: templates/meetings-list.php:40
+msgid "Meetings"
+msgstr "會議"
+
+#: includes/class-router.php:84
+#: templates/council-profile.php:96
+#: templates/meetings-list.php:301
+msgid "Councils"
+msgstr "委員會"
+
+#: includes/class-router.php:85
+msgid "Council Profile"
+msgstr "委員會簡介"
+
+#: templates/council-profile.php:74
+msgid "Council Not Found"
+msgstr "找不到委員會"
+
+#: templates/council-profile.php:80
+msgid "This council could not be found."
+msgstr "找不到此委員會。"
+
+#: templates/council-profile.php:83
+msgid "Browse all councils"
+msgstr "瀏覽所有委員會"
+
+#: templates/council-profile.php:94
+#: templates/meeting-detail.php:94
+msgid "Breadcrumb"
+msgstr "導覽路徑"
+
+#: templates/council-profile.php:128
+msgid "What This Board Does"
+msgstr "此委員會的職能"
+
+#: templates/council-profile.php:139
+msgid "Why You Should Care"
+msgstr "為何您應該關注"
+
+#: templates/council-profile.php:150
+msgid "Legal Authority"
+msgstr "法定職權"
+
+#. translators: %d: number of board members
+#: templates/council-profile.php:179
+#, php-format
+msgid "Board Members (%d)"
+msgstr "委員會成員（%d 人）"
+
+#. translators: %s: term end date
+#: templates/council-profile.php:201
+#, php-format
+msgid "Term ends %s"
+msgstr "任期至 %s"
+
+#: templates/council-profile.php:216
+msgid "Upcoming Meetings"
+msgstr "即將舉行的會議"
+
+#: templates/council-profile.php:251
+msgid "Details"
+msgstr "詳情"
+
+#: templates/council-profile.php:259
+msgid "View all meetings for this council"
+msgstr "查看此委員會的所有會議"
+
+#: templates/council-profile.php:268
+msgid "How to Participate"
+msgstr "如何參與"
+
+#: templates/council-profile.php:277
+msgid "Submit Written Testimony:"
+msgstr "提交書面證詞："
+
+#: templates/council-profile.php:298
+msgid "At a Glance"
+msgstr "快速概覽"
+
+#: templates/council-profile.php:302
+msgid "Type"
+msgstr "類型"
+
+#: templates/council-profile.php:307
+msgid "Jurisdiction"
+msgstr "管轄範圍"
+
+#: templates/council-profile.php:312
+msgid "Members"
+msgstr "成員"
+
+#: templates/council-profile.php:317
+msgid "Appointed By"
+msgstr "由誰任命"
+
+#: templates/council-profile.php:322
+msgid "Term Length"
+msgstr "任期長度"
+
+#: templates/council-profile.php:327
+msgid "Meets"
+msgstr "會議頻率"
+
+#: templates/council-profile.php:332
+#: templates/meeting-detail.php:140
+msgid "Location"
+msgstr "地點"
+
+#: templates/council-profile.php:337
+#: templates/meeting-detail.php:152
+msgid "Virtual"
+msgstr "線上"
+
+#: templates/council-profile.php:338
+msgid "Yes, virtual attendance available"
+msgstr "是，提供線上出席"
+
+#: templates/council-profile.php:345
+msgid "Official Website"
+msgstr "官方網站"
+
+#: templates/council-profile.php:352
+msgid "Contact"
+msgstr "聯絡方式"
+
+#. translators: %d: number of open seats
+#: templates/council-profile.php:377
+#, php-format
+msgid "%d Open Seat"
+msgid_plural "%d Open Seats"
+msgstr[0] "%d 個空缺席位"
+
+#. translators: %s: application deadline date
+#: templates/council-profile.php:392
+#, php-format
+msgid "Deadline: %s"
+msgstr "截止日期：%s"
+
+#: templates/council-profile.php:401
+msgid "Apply"
+msgstr "申請"
+
+#: templates/council-profile.php:412
+#: templates/councils-list.php:149
+#: templates/meeting-detail.php:187
+msgid "Get Notified"
+msgstr "接收通知"
+
+#: templates/council-profile.php:413
+msgid "Sign up to receive alerts when this council schedules new meetings."
+msgstr "訂閱以在此委員會排定新會議時收到通知。"
+
+#: templates/council-profile.php:415
+msgid "Set Up Alerts"
+msgstr "設定通知"
+
+#: templates/councils-list.php:22
+msgid "Councils & Boards"
+msgstr "委員會與董事會"
+
+#: templates/councils-list.php:23
+msgid "Browse government councils, boards, and commissions across Hawaii. Select a council to see its upcoming meetings."
+msgstr "瀏覽 Hawaii 各地的政府委員會、董事會和委員會。選擇一個委員會以查看其即將舉行的會議。"
+
+#: templates/councils-list.php:30
+msgid "Filter councils"
+msgstr "篩選委員會"
+
+#: templates/councils-list.php:34
+#: templates/councils-list.php:60
+#: templates/meetings-list.php:255
+msgid "Search"
+msgstr "搜尋"
+
+#: templates/councils-list.php:41
+msgid "Search councils…"
+msgstr "搜尋委員會…"
+
+#: templates/councils-list.php:47
+#: templates/meetings-list.php:339
+msgid "County"
+msgstr "縣市"
+
+#: templates/councils-list.php:50
+msgid "All"
+msgstr "全部"
+
+#: templates/councils-list.php:64
+#: templates/meetings-list.php:391
+msgid "Clear"
+msgstr "清除"
+
+#: templates/councils-list.php:74
+msgid "Council data is temporarily unavailable."
+msgstr "委員會資料暫時無法使用。"
+
+#: templates/councils-list.php:75
+msgid "We're working on connecting to the database. Check back soon."
+msgstr "我們正在連接資料庫。請稍後再試。"
+
+#: templates/councils-list.php:81
+msgid "No councils found matching your search."
+msgstr "找不到符合您搜尋條件的委員會。"
+
+#: templates/councils-list.php:84
+msgid "View all councils"
+msgstr "查看所有委員會"
+
+#. translators: %d: number of councils
+#: templates/councils-list.php:95
+#, php-format
+msgid "%d councils found"
+msgstr "找到 %d 個委員會"
+
+#. translators: %d: number of upcoming meetings
+#: templates/councils-list.php:125
+#, php-format
+msgid "%d upcoming meeting"
+msgid_plural "%d upcoming meetings"
+msgstr[0] "%d 場即將舉行的會議"
+
+#. translators: %s: formatted date
+#: templates/councils-list.php:136
+#, php-format
+msgid "Next: %s"
+msgstr "下次：%s"
+
+#: templates/councils-list.php:146
+msgid "View Meetings"
+msgstr "查看會議"
+
+#: templates/meeting-detail.php:36
+msgid "Meeting Not Found"
+msgstr "找不到會議"
+
+#: templates/meeting-detail.php:43
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "找不到此會議。會議可能已取消，或連結可能有誤。"
+
+#: templates/meeting-detail.php:44
+msgid "Browse All Meetings"
+msgstr "瀏覽所有會議"
+
+#: templates/meeting-detail.php:60
+#: templates/meetings-list.php:402
+msgid "Meeting data is temporarily unavailable."
+msgstr "會議資料暫時無法使用。"
+
+#: templates/meeting-detail.php:61
+msgid "We're working on connecting to the meeting database. Check back soon."
+msgstr "我們正在連接會議資料庫。請稍後再試。"
+
+#: templates/meeting-detail.php:62
+msgid "Back to meetings"
+msgstr "返回會議列表"
+
+#: templates/meeting-detail.php:107
+msgid "Meeting"
+msgstr "會議"
+
+#: templates/meeting-detail.php:117
+msgid "Meeting information is displayed in English."
+msgstr "會議資訊以英文顯示。"
+
+#: templates/meeting-detail.php:126
+msgid "Date"
+msgstr "日期"
+
+#: templates/meeting-detail.php:133
+msgid "Time"
+msgstr "時間"
+
+#: templates/meeting-detail.php:155
+msgid "Join Online"
+msgstr "線上加入"
+
+#: templates/meeting-detail.php:175
+msgid "View Official Notice"
+msgstr "查看官方公告"
+
+#: templates/meeting-detail.php:181
+msgid "Add to My Calendar"
+msgstr "加入我的行事曆"
+
+#: templates/meeting-detail.php:194
+msgid "Share with a Friend"
+msgstr "與朋友分享"
+
+#: templates/meeting-detail.php:255
+msgid "What This Meeting Is About"
+msgstr "此次會議的內容"
+
+#: templates/meeting-detail.php:260
+msgid "This summary was generated by AI to help you understand the agenda. Always refer to the official documents for complete information."
+msgstr "此摘要由 AI 生成，以幫助您了解議程。完整資訊請以官方文件為準。"
+
+#: templates/meeting-detail.php:276
+msgid "Remind Me About This Meeting"
+msgstr "提醒我關於此次會議"
+
+#: templates/meeting-detail.php:289
+#: templates/meeting-detail.php:357
+msgid "Website"
+msgstr "網站"
+
+#: templates/meeting-detail.php:294
+#: templates/meeting-detail.php:298
+#: templates/meeting-detail.php:366
+msgid "Email Address"
+msgstr "電子郵件地址"
+
+#: templates/meeting-detail.php:310
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "我們將傳送一封確認信，然後在會議當天早上發送提醒。"
+
+#: templates/meeting-detail.php:317
+msgid "Remind Me"
+msgstr "提醒我"
+
+#. translators: %s: link to privacy policy
+#: templates/meeting-detail.php:325
+#: templates/meeting-detail.php:426
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "我們絕不分享您的資訊。請參閱我們的%s。"
+
+#: templates/meeting-detail.php:326
+#: templates/meeting-detail.php:427
+msgid "privacy policy"
+msgstr "隱私權政策"
+
+#: templates/meeting-detail.php:335
+msgid "Subscribe to This Council"
+msgstr "訂閱此委員會"
+
+#: templates/meeting-detail.php:362
+msgid "Contact Information"
+msgstr "聯絡資訊"
+
+#: templates/meeting-detail.php:381
+msgid "Phone Number"
+msgstr "電話號碼"
+
+#: templates/meeting-detail.php:392
+msgid "Optional. US numbers only."
+msgstr "選填。僅限美國號碼。"
+
+#: templates/meeting-detail.php:398
+msgid "Notification Frequency"
+msgstr "通知頻率"
+
+#: templates/meeting-detail.php:403
+msgid "When new meetings are posted"
+msgstr "當新會議公告時"
+
+#: templates/meeting-detail.php:407
+msgid "Daily digest"
+msgstr "每日摘要"
+
+#: templates/meeting-detail.php:411
+msgid "Weekly digest"
+msgstr "每週摘要"
+
+#: templates/meeting-detail.php:418
+msgid "Subscribe"
+msgstr "訂閱"
+
+#: templates/meetings-list.php:41
+msgid "Browse upcoming government meetings across Hawaii. Filter by topic, council, date, or keyword."
+msgstr "瀏覽 Hawaii 各地即將舉行的政府會議。依主題、委員會、日期或關鍵字篩選。"
+
+#: templates/meetings-list.php:50
+#, php-format
+msgid "%d filter active"
+msgid_plural "%d filters active"
+msgstr[0] "%d 個篩選條件已啟用"
+
+#: templates/meetings-list.php:54
+msgid "Filters"
+msgstr "篩選條件"
+
+#: templates/meetings-list.php:89
+msgid "Filter by source"
+msgstr "依來源篩選"
+
+#: templates/meetings-list.php:90
+msgid "Filter by Source"
+msgstr "依來源篩選"
+
+#: templates/meetings-list.php:133
+#, php-format
+msgid "%d source selected"
+msgid_plural "%d sources selected"
+msgstr[0] "已選擇 %d 個來源"
+
+#: templates/meetings-list.php:152
+#: templates/meetings-list.php:232
+msgid "Clear all"
+msgstr "清除全部"
+
+#: templates/meetings-list.php:163
+msgid "Filter by topic"
+msgstr "依主題篩選"
+
+#: templates/meetings-list.php:164
+msgid "What matters to you?"
+msgstr "您關心什麼？"
+
+#: templates/meetings-list.php:213
+#, php-format
+msgid "%d topic selected"
+msgid_plural "%d topics selected"
+msgstr[0] "已選擇 %d 個主題"
+
+#: templates/meetings-list.php:249
+msgid "Filter meetings"
+msgstr "篩選會議"
+
+#: templates/meetings-list.php:262
+msgid "Search meetings…"
+msgstr "搜尋會議…"
+
+#: templates/meetings-list.php:264
+msgid "Search meetings by keyword"
+msgstr "依關鍵字搜尋會議"
+
+#: templates/meetings-list.php:270
+msgid "Council"
+msgstr "委員會"
+
+#: templates/meetings-list.php:282
+msgid "Search councils by name"
+msgstr "依名稱搜尋委員會"
+
+#: templates/meetings-list.php:283
+#: templates/meetings-list.php:305
+msgid "All Councils"
+msgstr "所有委員會"
+
+#: templates/meetings-list.php:311
+msgid "Other"
+msgstr "其他"
+
+#: templates/meetings-list.php:342
+msgid "All Counties"
+msgstr "所有縣市"
+
+#: templates/meetings-list.php:353
+msgid "From"
+msgstr "開始日期"
+
+#: templates/meetings-list.php:366
+msgid "To"
+msgstr "結束日期"
+
+#: templates/meetings-list.php:387
+msgid "Filter"
+msgstr "篩選"
+
+#. translators: %s: link to about page
+#: templates/meetings-list.php:407
+#, php-format
+msgid "We're working on connecting to the meeting database. Check back soon, or browse our %s to learn more about Civi.Me."
+msgstr "我們正在連接會議資料庫。請稍後再試，或瀏覽我們的%s以了解更多關於 Civi.Me 的資訊。"
+
+#: templates/meetings-list.php:408
+msgid "about page"
+msgstr "關於頁面"
+
+#: templates/meetings-list.php:417
+msgid "No meetings found matching your filters."
+msgstr "找不到符合您篩選條件的會議。"
+
+#: templates/meetings-list.php:420
+msgid "View all upcoming meetings"
+msgstr "查看所有即將舉行的會議"
+
+#. translators: 1: first item number, 2: last item number, 3: total count
+#: templates/meetings-list.php:436
+#, php-format
+msgid "Showing %1$d–%2$d of %3$d meetings"
+msgstr "顯示第 %1$d–%2$d 筆，共 %3$d 場會議"
+
+#: templates/meetings-list.php:485
+msgid "Time:"
+msgstr "時間："
+
+#: templates/meetings-list.php:492
+msgid "Location:"
+msgstr "地點："
+
+#: templates/meetings-list.php:498
+msgid "AI-generated summary available"
+msgstr "提供 AI 生成的摘要"
+
+#: templates/meetings-list.php:499
+msgid "AI Summary"
+msgstr "AI 摘要"
+
+#: templates/meetings-list.php:510
+msgid "View Details"
+msgstr "查看詳情"
+
+#. translators: %s: council name
+#: templates/meetings-list.php:514
+#, php-format
+msgid "for %s"
+msgstr "關於 %s"
+
+#: templates/meetings-list.php:537
+msgid "Meeting pages"
+msgstr "會議頁面"
+
+#: templates/meetings-list.php:562
+msgid "Previous"
+msgstr "上一頁"
+
+#: templates/meetings-list.php:578
+msgid "Page 1"
+msgstr "第 1 頁"
+
+#: templates/meetings-list.php:592
+#, php-format
+msgid "Page %d, current page"
+msgstr "第 %d 頁，目前頁面"
+
+#: templates/meetings-list.php:600
+#: templates/meetings-list.php:616
+#, php-format
+msgid "Page %d"
+msgstr "第 %d 頁"
+
+#: templates/meetings-list.php:630
+msgid "Next"
+msgstr "下一頁"

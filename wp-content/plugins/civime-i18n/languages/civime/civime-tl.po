@@ -1,0 +1,524 @@
+# Tagalog translation for the CiviMe theme.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/civime\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Tagalog <hello@civi.me>\n"
+"Language: tl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:14+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "CiviMe"
+msgstr "CiviMe"
+
+#. Theme URI of the theme
+#. Author URI of the theme
+#: style.css
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the theme
+#: style.css
+msgid "Custom theme for Civi.Me — Hawaii civic engagement platform. Mobile-first, WCAG 2.1 AA compliant, light/dark mode."
+msgstr "Custom na tema para sa Civi.Me — plataporma ng sibilikong pakikilahok sa Hawaii. Mobile-first, sumusunod sa WCAG 2.1 AA, light/dark mode."
+
+#. Author of the theme
+#: style.css
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: 404.php:19
+msgid "Page not found"
+msgstr "Hindi nahanap ang pahina"
+
+#: 404.php:23
+msgid "The page you're looking for doesn't exist or has been moved. Try searching below, or head back home."
+msgstr "Ang pahinang hinahanap mo ay wala na o inilipat na. Subukang maghanap sa ibaba, o bumalik sa home."
+
+#: 404.php:34
+msgid "Go back home"
+msgstr "Bumalik sa home"
+
+#: footer.php:11
+msgid "Civic engagement for Hawaii"
+msgstr "Sibilikong pakikilahok para sa Hawaii"
+
+#: footer.php:16
+msgid "Footer navigation"
+msgstr "Navigation sa footer"
+
+#. translators: %s: site name
+#: footer.php:42
+#, php-format
+msgid "%s &mdash; Civic engagement for Hawaii"
+msgstr "%s &mdash; Sibilikong pakikilahok para sa Hawaii"
+
+#: footer.php:52
+msgid "Privacy Policy"
+msgstr "Patakaran sa Privacy"
+
+#: footer.php:63
+msgid "Open source on GitHub (opens in new tab)"
+msgstr "Open source sa GitHub (magbubukas sa bagong tab)"
+
+#: footer.php:68
+msgid "Open source"
+msgstr "Open source"
+
+#: front-page.php:26
+msgid "Built for Hawaii"
+msgstr "Ginawa para sa Hawaii"
+
+#: front-page.php:33
+msgid "Civic Engagement Tools"
+msgstr "Mga Kasangkapan para sa Sibilikong Pakikilahok"
+
+#: front-page.php:33
+msgid "for the People of Hawaii"
+msgstr "para sa mga Taga-Hawaii"
+
+#: front-page.php:43
+msgid "Government information shouldn't require a law degree to navigate. Civi.Me makes it simple to stay informed, show up, and have your voice heard — in plain language, for free."
+msgstr "Hindi dapat kailangan ng degree sa batas para maunawaan ang impormasyon ng gobyerno. Pinasimple ng Civi.Me ang pananatiling may kaalaman, pakikilahok, at pakikinig sa iyong boses — sa simpleng wika, libre."
+
+#: front-page.php:53
+msgid "What matters to you?"
+msgstr "Ano ang mahalaga sa iyo?"
+
+#: front-page.php:56
+msgid "Browse meetings"
+msgstr "Tingnan ang mga miting"
+
+#: front-page.php:167
+msgid "The challenge"
+msgstr "Ang hamon"
+
+#: front-page.php:169
+msgid "Civic participation should be accessible for all residents"
+msgstr "Dapat na accessible ang sibilikong pakikilahok para sa lahat ng residente"
+
+#: front-page.php:172
+msgid "People want to be engaged, but the barriers make it feel impossible. We're removing them."
+msgstr "Gusto ng mga tao na lumahok, pero ang mga hadlang ay nagpapahirap. Inaalis na namin ang mga ito."
+
+#: front-page.php:190
+msgid "Buried information"
+msgstr "Nakabaong impormasyon"
+
+#: front-page.php:191
+msgid "Meeting agendas are buried in PDFs across dozens of county and state websites with no consistent format."
+msgstr "Ang mga agenda ng miting ay nakabaon sa mga PDF sa dose-dosenang mga website ng county at estado nang walang pare-parehong format."
+
+#: front-page.php:203
+msgid "No timely alerts"
+msgstr "Walang napapanahong abiso"
+
+#: front-page.php:204
+msgid "Residents find out about decisions that affect their neighborhoods after the fact — if at all."
+msgstr "Nalaman ng mga residente ang mga desisyong nakakaapekto sa kanilang lugar pagkatapos na mangyari — kung malalaman man nila."
+
+#: front-page.php:219
+msgid "Bureaucratic language"
+msgstr "Wika ng burukrasya"
+
+#: front-page.php:220
+msgid "Government documents are written for lawyers, not residents. Plain-language summaries are rare."
+msgstr "Ang mga dokumentong pang-gobyerno ay isinulat para sa mga abogado, hindi sa mga residente. Bihira ang mga buod sa simpleng wika."
+
+#: front-page.php:234
+msgid "Who are my representatives?"
+msgstr "Sino ang aking mga kinatawan?"
+
+#: front-page.php:235
+msgid "Most residents can't name their city council member, let alone their neighborhood board chair."
+msgstr "Karamihan sa mga residente ay hindi makakilala sa kanilang miyembro ng city council, lalo na sa chair ng kanilang neighborhood board."
+
+#: front-page.php:254
+msgid "Start here"
+msgstr "Magsimula dito"
+
+#: front-page.php:256
+msgid "Tell us what matters to you"
+msgstr "Sabihin mo sa amin kung ano ang mahalaga sa iyo"
+
+#: front-page.php:259
+msgid "Pick the topics you care about — environment, housing, education, health — and we'll show you the government meetings and councils that handle those issues."
+msgstr "Piliin ang mga paksa na pinahahalagahan mo — kapaligiran, pabahay, edukasyon, kalusugan — at ipapakita namin sa iyo ang mga miting at konseho ng gobyerno na nangangasiwa sa mga isyung iyon."
+
+#: front-page.php:270
+msgid "Environment & Land"
+msgstr "Kapaligiran at Lupa"
+
+#: front-page.php:270
+msgid "Leaf"
+msgstr "Dahon"
+
+#: front-page.php:271
+msgid "Housing & Development"
+msgstr "Pabahay at Pagpapaunlad"
+
+#: front-page.php:271
+msgid "House"
+msgstr "Bahay"
+
+#: front-page.php:272
+msgid "Education"
+msgstr "Edukasyon"
+
+#: front-page.php:272
+msgid "Books"
+msgstr "Mga Libro"
+
+#: front-page.php:273
+msgid "Health & Wellness"
+msgstr "Kalusugan at Kagalingan"
+
+#: front-page.php:273
+msgid "Hospital"
+msgstr "Ospital"
+
+#: front-page.php:274
+msgid "Transportation"
+msgstr "Transportasyon"
+
+#: front-page.php:274
+msgid "Bus"
+msgstr "Bus"
+
+#: front-page.php:275
+msgid "Public Safety"
+msgstr "Kaligtasang Pampubliko"
+
+#: front-page.php:275
+msgid "Shield"
+msgstr "Kalasag"
+
+#: front-page.php:276
+msgid "Economy & Labor"
+msgstr "Ekonomiya at Paggawa"
+
+#: front-page.php:276
+msgid "Briefcase"
+msgstr "Briefcase"
+
+#: front-page.php:277
+msgid "Culture & Arts"
+msgstr "Kultura at Sining"
+
+#: front-page.php:277
+msgid "Performing arts"
+msgstr "Sining pampagtatanghal"
+
+#: front-page.php:278
+msgid "Agriculture & Food"
+msgstr "Agrikultura at Pagkain"
+
+#: front-page.php:278
+msgid "Sheaf of rice"
+msgstr "Bungkos ng palay"
+
+#: front-page.php:279
+msgid "Energy & Utilities"
+msgstr "Enerhiya at mga Serbisyo"
+
+#: front-page.php:279
+msgid "Lightning bolt"
+msgstr "Kidlat"
+
+#: front-page.php:280
+msgid "Water & Ocean"
+msgstr "Tubig at Karagatan"
+
+#: front-page.php:280
+msgid "Ocean wave"
+msgstr "Alon ng dagat"
+
+#: front-page.php:281
+msgid "Disability & Access"
+msgstr "Kapansanan at Accessibility"
+
+#: front-page.php:281
+msgid "Wheelchair symbol"
+msgstr "Simbolo ng wheelchair"
+
+#: front-page.php:282
+msgid "Veterans & Military"
+msgstr "mga Beterano at Militar"
+
+#: front-page.php:282
+msgid "Military medal"
+msgstr "Medalya ng militar"
+
+#: front-page.php:283
+msgid "Technology & Innovation"
+msgstr "Teknolohiya at Inobasyon"
+
+#: front-page.php:283
+msgid "Laptop"
+msgstr "Laptop"
+
+#: front-page.php:284
+msgid "Budget & Finance"
+msgstr "Badyet at Pananalapi"
+
+#: front-page.php:284
+msgid "Bar chart"
+msgstr "Bar chart"
+
+#: front-page.php:285
+msgid "Governance & Ethics"
+msgstr "Pamamahala at Etika"
+
+#: front-page.php:285
+msgid "Balance scale"
+msgstr "Timbangan"
+
+#: front-page.php:302
+msgid "Pick Your Topics"
+msgstr "Piliin ang Iyong mga Paksa"
+
+#: front-page.php:305
+msgid "Pick the topics you care about and we'll show you the meetings that matter."
+msgstr "Piliin ang mga paksa na pinahahalagahan mo at ipapakita namin ang mga miting na mahalaga."
+
+#: front-page.php:320
+msgid "Civic tools"
+msgstr "Mga kasangkapang sibiko"
+
+#: front-page.php:322
+msgid "What you can do on Civi.Me"
+msgstr "Ano ang magagawa mo sa Civi.Me"
+
+#: front-page.php:363
+#: front-page.php:403
+#: front-page.php:443
+#: front-page.php:487
+msgid "Live"
+msgstr "Live"
+
+#: front-page.php:365
+msgid "Browse Meetings"
+msgstr "Tingnan ang mga Miting"
+
+#: front-page.php:368
+msgid "All public meetings — boards, commissions, and councils — in one calendar. Filter by topic, council, or date. AI-generated summaries explain what's on the agenda."
+msgstr "Lahat ng pampublikong miting — mga board, komisyon, at konseho — sa isang kalendaryo. I-filter ayon sa paksa, konseho, o petsa. Ipinapaliwanag ng mga buod na ginawa ng AI kung ano ang nasa agenda."
+
+#: front-page.php:405
+msgid "Council Profiles"
+msgstr "Mga Profile ng Konseho"
+
+#: front-page.php:408
+msgid "Learn what each board and commission actually does — in plain language. See who sits on the board, upcoming meetings, open seats, and how to participate."
+msgstr "Alamin kung ano talaga ang ginagawa ng bawat board at komisyon — sa simpleng wika. Tingnan kung sino ang nasa board, mga darating na miting, bakanteng puwesto, at kung paano lumahok."
+
+#: front-page.php:445
+msgid "Get Alerts"
+msgstr "Kumuha ng mga Abiso"
+
+#: front-page.php:448
+msgid "Subscribe to topics or specific councils. Get email alerts when meetings are scheduled — before it's too late to participate."
+msgstr "Mag-subscribe sa mga paksa o sa mga tiyak na konseho. Makatanggap ng mga abiso sa email kapag naka-iskedyul na ang mga miting — bago pa maging huli para lumahok."
+
+#: front-page.php:489
+msgid "Guides & Compliance"
+msgstr "Mga Gabay at Pagsunod"
+
+#: front-page.php:492
+msgid "Step-by-step civic action guides plus compliance tools for agencies — Sunshine Law, public records, accessibility, and public participation best practices."
+msgstr "Mga sunud-sunod na gabay sa sibilikong pagkilos kasama ang mga kasangkapan sa pagsunod para sa mga ahensya — Sunshine Law, pampublikong rekord, accessibility, at pinakamahusay na mga gawi sa pakikilahok ng publiko."
+
+#: front-page.php:511
+msgid "What we believe"
+msgstr "Ang aming paniniwala"
+
+#: front-page.php:513
+msgid "Information access is a community right"
+msgstr "Ang access sa impormasyon ay karapatan ng komunidad"
+
+#: front-page.php:516
+msgid "Every resident deserves to know what decisions are being made that affect their community — in language they can understand, at a time when they can still participate."
+msgstr "Karapat-dapat ang bawat residente na malaman kung anong mga desisyon ang ginagawa na nakakaapekto sa kanilang komunidad — sa wikang naiintindihan nila, sa panahong kaya pa nilang lumahok."
+
+#: front-page.php:534
+msgid "Strictly nonpartisan"
+msgstr "Mahigpit na walang kinikilingan"
+
+#: front-page.php:535
+msgid "Civi.Me does not endorse candidates, parties, or positions on any issue. We present facts: what a bill does, who submitted it, when the hearing is. We provide tools and templates — never talking points."
+msgstr "Hindi sinusuportahan ng Civi.Me ang mga kandidato, partido, o posisyon sa anumang isyu. Nagpapakita kami ng mga katotohanan: ano ang ginagawa ng isang panukalang batas, sino ang nagsumite nito, kailan ang pagdinig. Nagbibigay kami ng mga kasangkapan at template — hindi kailanman mga talking point."
+
+#: front-page.php:549
+msgid "Everyone is included — no exceptions"
+msgstr "Kasama ang lahat — walang pagbubukod"
+
+#: front-page.php:550
+msgid "We use \"residents\" — not \"citizens.\" We support all 15 languages recognized by Hawaii's Office of Language Access. We build for mobile and include a phone line for people who don't have a smartphone at all."
+msgstr "Ginagamit namin ang \"mga residente\" — hindi \"mga mamamayan.\" Sinusuportahan namin ang lahat ng 15 wika na kinikilala ng Office of Language Access ng Hawaii. Ginagawa namin para sa mobile at may kasama kaming linya ng telepono para sa mga taong wala talagang smartphone."
+
+#: front-page.php:561
+msgid "Cultural respect is not optional"
+msgstr "Hindi opsyonal ang paggalang sa kultura"
+
+#: front-page.php:562
+msgid "Native Hawaiian sovereignty is a living issue, not history. We frame civic participation as community engagement — not blind deference to government structures."
+msgstr "Ang soberanya ng mga Native Hawaiian ay isang buhay na isyu, hindi kasaysayan. Tinitingnan namin ang sibilikong pakikilahok bilang pakikisangkot sa komunidad — hindi bulag na pagsunod sa mga istruktura ng gobyerno."
+
+#: front-page.php:573
+msgid "Open source and community-built"
+msgstr "Open source at ginawa ng komunidad"
+
+#: front-page.php:574
+msgid "Civi.Me's code is public on GitHub from day one. Civic infrastructure should be open to inspection, contribution, and community ownership. If we ever make a decision you disagree with, you can see exactly why — and you can help us do better."
+msgstr "Ang code ng Civi.Me ay pampubliko sa GitHub mula sa unang araw. Ang sibilikong imprastraktura ay dapat bukas para sa inspeksyon, kontribusyon, at pagmamay-ari ng komunidad. Kung gumawa kami ng desisyong hindi mo sang-ayon, makikita mo nang eksakto kung bakit — at maaari kang tumulong sa amin na gumawa ng mas mabuti."
+
+#: front-page.php:589
+msgid "Join us"
+msgstr "Sumama sa amin"
+
+#: front-page.php:591
+msgid "Help build civic infrastructure for Hawaii"
+msgstr "Tumulong sa pagtatayo ng sibilikong imprastraktura para sa Hawaii"
+
+#: front-page.php:594
+msgid "Civi.Me is open source and community-driven. Whether you're a developer, a civic advocate, or just someone who cares — there's a place for you."
+msgstr "Ang Civi.Me ay open source at pinapatakbo ng komunidad. Maging developer ka man, tagapagtaguyod ng sibilikong karapatan, o isang taong nagmamalasakit — may lugar para sa iyo."
+
+#: front-page.php:607
+msgid "View on GitHub"
+msgstr "Tingnan sa GitHub"
+
+#: front-page.php:610
+msgid "Get in touch"
+msgstr "Makipag-ugnayan"
+
+#: functions.php:48
+msgid "Ocean Blue"
+msgstr "Asul ng Karagatan"
+
+#: functions.php:53
+msgid "Reef Teal"
+msgstr "Teal ng Coral Reef"
+
+#: functions.php:58
+msgid "Sunset Orange"
+msgstr "Kahel ng Paglubog ng Araw"
+
+#: functions.php:63
+msgid "Near White"
+msgstr "Halos Puti"
+
+#: functions.php:68
+msgid "Near Black"
+msgstr "Halos Itim"
+
+#: functions.php:79
+msgid "Primary Menu"
+msgstr "Pangunahing Menu"
+
+#: functions.php:80
+msgid "Footer Menu"
+msgstr "Menu sa Footer"
+
+#: functions.php:279
+#: functions.php:313
+msgid "Topics"
+msgstr "Mga Paksa"
+
+#: functions.php:280
+#: functions.php:314
+msgid "Meetings"
+msgstr "Mga Miting"
+
+#: functions.php:281
+#: functions.php:315
+msgid "Councils"
+msgstr "Mga Konseho"
+
+#: functions.php:282
+#: functions.php:316
+msgid "Guides"
+msgstr "Mga Gabay"
+
+#: functions.php:283
+#: functions.php:317
+msgid "Alerts"
+msgstr "Mga Abiso"
+
+#: header.php:15
+msgid "Skip to main content"
+msgstr "Lumaktaw sa pangunahing nilalaman"
+
+#: header.php:23
+msgid "Home"
+msgstr "Home"
+
+#: header.php:50
+msgid "Switch to dark mode"
+msgstr "Lumipat sa dark mode"
+
+#: header.php:76
+msgid "Open navigation menu"
+msgstr "Buksan ang navigation menu"
+
+#: header.php:90
+msgid "Primary navigation"
+msgstr "Pangunahing navigation"
+
+#: header.php:112
+msgid "Mobile navigation"
+msgstr "Mobile navigation"
+
+#: header.php:120
+msgid "Close navigation menu"
+msgstr "Isara ang navigation menu"
+
+#: index.php:16
+msgid "Latest Posts"
+msgstr "Mga Pinakabagong Post"
+
+#: index.php:66
+msgid "Previous"
+msgstr "Nakaraan"
+
+#: index.php:67
+msgid "Next"
+msgstr "Susunod"
+
+#: index.php:75
+msgid "No posts found."
+msgstr "Walang nahanap na post."
+
+#. Template Name of the theme
+msgid "Compliance Hub"
+msgstr "Sentro ng Pagsunod"
+
+#: page-compliance-hub.php:103
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] "%d min na pagbabasa"
+msgstr[1] "%d min na pagbabasa"
+
+#: page-compliance-hub.php:109
+msgid "Read Guide"
+msgstr "Basahin ang Gabay"
+
+#: page-compliance-hub.php:124
+msgid "Compliance guides are coming soon. Check back shortly."
+msgstr "Paparating na ang mga gabay sa pagsunod. Bumalik ka sa lalong madaling panahon."
+
+#: page.php:24
+msgid "Page"
+msgstr "Pahina"

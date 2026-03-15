@@ -1,0 +1,664 @@
+# Vietnamese translation for the CiviMe Meetings plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Meetings 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-meetings\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Tiếng Việt <hello@civi.me>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-meetings\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-meetings.php
+msgid "CiviMe Meetings"
+msgstr "CiviMe Meetings"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-meetings.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-meetings.php
+msgid "Meeting calendar, detail pages, and council browser — powered by the Access100 API."
+msgstr "Lịch cuộc họp, trang chi tiết và trình duyệt hội đồng — được hỗ trợ bởi API Access100."
+
+#. Author of the plugin
+#: civime-meetings.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-meetings.php:45
+msgid "CiviMe Meetings requires the CiviMe Core plugin to be installed and activated."
+msgstr "CiviMe Meetings yêu cầu plugin CiviMe Core phải được cài đặt và kích hoạt."
+
+#: includes/class-councils-list.php:89
+msgid "Council data is temporarily unavailable. Please check back soon."
+msgstr "Dữ liệu hội đồng tạm thời không khả dụng. Vui lòng kiểm tra lại sớm."
+
+#: includes/class-detail.php:39
+msgid "No meeting ID provided."
+msgstr "Không có ID cuộc họp được cung cấp."
+
+#: includes/class-detail.php:106
+#: includes/class-list.php:246
+msgid "Meeting data is temporarily unavailable. Please check back soon."
+msgstr "Dữ liệu cuộc họp tạm thời không khả dụng. Vui lòng kiểm tra lại sớm."
+
+#: includes/class-detail.php:119
+#: includes/class-detail.php:126
+#: includes/class-router.php:83
+#: templates/meeting-detail.php:53
+#: templates/meeting-detail.php:99
+msgid "Meeting Detail"
+msgstr "Chi tiết cuộc họp"
+
+#: includes/class-list.php:326
+#, php-format
+msgid "Council: %s"
+msgstr "Hội đồng: %s"
+
+#: includes/class-list.php:327
+#, php-format
+msgid "Council #%d"
+msgstr "Hội đồng số %d"
+
+#: includes/class-list.php:339
+#: templates/councils-list.php:51
+#: templates/meetings-list.php:343
+msgid "State"
+msgstr "Tiểu bang"
+
+#: includes/class-list.php:340
+#: templates/councils-list.php:52
+#: templates/meetings-list.php:344
+msgid "Honolulu"
+msgstr "Honolulu"
+
+#: includes/class-list.php:341
+#: templates/councils-list.php:53
+#: templates/meetings-list.php:345
+msgid "Maui"
+msgstr "Maui"
+
+#: includes/class-list.php:355
+#, php-format
+msgid "From: %s"
+msgstr "Từ: %s"
+
+#: includes/class-list.php:362
+#, php-format
+msgid "To: %s"
+msgstr "Đến: %s"
+
+#: includes/class-list.php:393
+#: templates/meeting-detail.php:76
+#: templates/meetings-list.php:62
+msgid "State of Hawaii"
+msgstr "Tiểu bang Hawaii"
+
+#: includes/class-list.php:394
+#: templates/meeting-detail.php:77
+#: templates/meetings-list.php:63
+msgid "Honolulu Neighborhood Board"
+msgstr "Ban khu dân cư Honolulu"
+
+#: includes/class-list.php:395
+#: templates/meeting-detail.php:78
+#: templates/meetings-list.php:64
+msgid "Honolulu County Committee"
+msgstr "Ủy ban hạt Honolulu"
+
+#: includes/class-list.php:396
+#: templates/meeting-detail.php:79
+#: templates/meetings-list.php:65
+msgid "Maui County Committee"
+msgstr "Ủy ban hạt Maui"
+
+#: includes/class-router.php:82
+#: templates/meeting-detail.php:97
+#: templates/meetings-list.php:40
+msgid "Meetings"
+msgstr "Cuộc họp"
+
+#: includes/class-router.php:84
+#: templates/council-profile.php:96
+#: templates/meetings-list.php:301
+msgid "Councils"
+msgstr "Hội đồng"
+
+#: includes/class-router.php:85
+msgid "Council Profile"
+msgstr "Hồ sơ hội đồng"
+
+#: templates/council-profile.php:74
+msgid "Council Not Found"
+msgstr "Không tìm thấy hội đồng"
+
+#: templates/council-profile.php:80
+msgid "This council could not be found."
+msgstr "Không thể tìm thấy hội đồng này."
+
+#: templates/council-profile.php:83
+msgid "Browse all councils"
+msgstr "Xem tất cả hội đồng"
+
+#: templates/council-profile.php:94
+#: templates/meeting-detail.php:94
+msgid "Breadcrumb"
+msgstr "Đường dẫn điều hướng"
+
+#: templates/council-profile.php:128
+msgid "What This Board Does"
+msgstr "Ban này làm gì"
+
+#: templates/council-profile.php:139
+msgid "Why You Should Care"
+msgstr "Tại sao bạn nên quan tâm"
+
+#: templates/council-profile.php:150
+msgid "Legal Authority"
+msgstr "Thẩm quyền pháp lý"
+
+#. translators: %d: number of board members
+#: templates/council-profile.php:179
+#, php-format
+msgid "Board Members (%d)"
+msgstr "Thành viên ban (%d)"
+
+#. translators: %s: term end date
+#: templates/council-profile.php:201
+#, php-format
+msgid "Term ends %s"
+msgstr "Nhiệm kỳ kết thúc %s"
+
+#: templates/council-profile.php:216
+msgid "Upcoming Meetings"
+msgstr "Cuộc họp sắp tới"
+
+#: templates/council-profile.php:251
+msgid "Details"
+msgstr "Chi tiết"
+
+#: templates/council-profile.php:259
+msgid "View all meetings for this council"
+msgstr "Xem tất cả cuộc họp của hội đồng này"
+
+#: templates/council-profile.php:268
+msgid "How to Participate"
+msgstr "Cách tham gia"
+
+#: templates/council-profile.php:277
+msgid "Submit Written Testimony:"
+msgstr "Nộp lời chứng thực bằng văn bản:"
+
+#: templates/council-profile.php:298
+msgid "At a Glance"
+msgstr "Tổng quan"
+
+#: templates/council-profile.php:302
+msgid "Type"
+msgstr "Loại"
+
+#: templates/council-profile.php:307
+msgid "Jurisdiction"
+msgstr "Phạm vi thẩm quyền"
+
+#: templates/council-profile.php:312
+msgid "Members"
+msgstr "Thành viên"
+
+#: templates/council-profile.php:317
+msgid "Appointed By"
+msgstr "Được bổ nhiệm bởi"
+
+#: templates/council-profile.php:322
+msgid "Term Length"
+msgstr "Thời gian nhiệm kỳ"
+
+#: templates/council-profile.php:327
+msgid "Meets"
+msgstr "Họp"
+
+#: templates/council-profile.php:332
+#: templates/meeting-detail.php:140
+msgid "Location"
+msgstr "Địa điểm"
+
+#: templates/council-profile.php:337
+#: templates/meeting-detail.php:152
+msgid "Virtual"
+msgstr "Trực tuyến"
+
+#: templates/council-profile.php:338
+msgid "Yes, virtual attendance available"
+msgstr "Có, có thể tham dự trực tuyến"
+
+#: templates/council-profile.php:345
+msgid "Official Website"
+msgstr "Trang web chính thức"
+
+#: templates/council-profile.php:352
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. translators: %d: number of open seats
+#: templates/council-profile.php:377
+#, php-format
+msgid "%d Open Seat"
+msgid_plural "%d Open Seats"
+msgstr[0] "%d ghế trống"
+
+#. translators: %s: application deadline date
+#: templates/council-profile.php:392
+#, php-format
+msgid "Deadline: %s"
+msgstr "Hạn chót: %s"
+
+#: templates/council-profile.php:401
+msgid "Apply"
+msgstr "Đăng ký"
+
+#: templates/council-profile.php:412
+#: templates/councils-list.php:149
+#: templates/meeting-detail.php:187
+msgid "Get Notified"
+msgstr "Nhận thông báo"
+
+#: templates/council-profile.php:413
+msgid "Sign up to receive alerts when this council schedules new meetings."
+msgstr "Đăng ký nhận thông báo khi hội đồng này lên lịch các cuộc họp mới."
+
+#: templates/council-profile.php:415
+msgid "Set Up Alerts"
+msgstr "Thiết lập thông báo"
+
+#: templates/councils-list.php:22
+msgid "Councils & Boards"
+msgstr "Hội đồng & Ban"
+
+#: templates/councils-list.php:23
+msgid "Browse government councils, boards, and commissions across Hawaii. Select a council to see its upcoming meetings."
+msgstr "Xem các hội đồng, ban và ủy ban chính phủ trên toàn Hawaii. Chọn một hội đồng để xem các cuộc họp sắp tới."
+
+#: templates/councils-list.php:30
+msgid "Filter councils"
+msgstr "Lọc hội đồng"
+
+#: templates/councils-list.php:34
+#: templates/councils-list.php:60
+#: templates/meetings-list.php:255
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: templates/councils-list.php:41
+msgid "Search councils…"
+msgstr "Tìm kiếm hội đồng…"
+
+#: templates/councils-list.php:47
+#: templates/meetings-list.php:339
+msgid "County"
+msgstr "Hạt"
+
+#: templates/councils-list.php:50
+msgid "All"
+msgstr "Tất cả"
+
+#: templates/councils-list.php:64
+#: templates/meetings-list.php:391
+msgid "Clear"
+msgstr "Xóa"
+
+#: templates/councils-list.php:74
+msgid "Council data is temporarily unavailable."
+msgstr "Dữ liệu hội đồng tạm thời không khả dụng."
+
+#: templates/councils-list.php:75
+msgid "We're working on connecting to the database. Check back soon."
+msgstr "Chúng tôi đang làm việc để kết nối cơ sở dữ liệu. Vui lòng kiểm tra lại sớm."
+
+#: templates/councils-list.php:81
+msgid "No councils found matching your search."
+msgstr "Không tìm thấy hội đồng nào phù hợp với tìm kiếm của bạn."
+
+#: templates/councils-list.php:84
+msgid "View all councils"
+msgstr "Xem tất cả hội đồng"
+
+#. translators: %d: number of councils
+#: templates/councils-list.php:95
+#, php-format
+msgid "%d councils found"
+msgstr "Tìm thấy %d hội đồng"
+
+#. translators: %d: number of upcoming meetings
+#: templates/councils-list.php:125
+#, php-format
+msgid "%d upcoming meeting"
+msgid_plural "%d upcoming meetings"
+msgstr[0] "%d cuộc họp sắp tới"
+
+#. translators: %s: formatted date
+#: templates/councils-list.php:136
+#, php-format
+msgid "Next: %s"
+msgstr "Tiếp theo: %s"
+
+#: templates/councils-list.php:146
+msgid "View Meetings"
+msgstr "Xem cuộc họp"
+
+#: templates/meeting-detail.php:36
+msgid "Meeting Not Found"
+msgstr "Không tìm thấy cuộc họp"
+
+#: templates/meeting-detail.php:43
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "Chúng tôi không thể tìm thấy cuộc họp này. Cuộc họp có thể đã bị hủy hoặc liên kết có thể không chính xác."
+
+#: templates/meeting-detail.php:44
+msgid "Browse All Meetings"
+msgstr "Xem tất cả cuộc họp"
+
+#: templates/meeting-detail.php:60
+#: templates/meetings-list.php:402
+msgid "Meeting data is temporarily unavailable."
+msgstr "Dữ liệu cuộc họp tạm thời không khả dụng."
+
+#: templates/meeting-detail.php:61
+msgid "We're working on connecting to the meeting database. Check back soon."
+msgstr "Chúng tôi đang làm việc để kết nối cơ sở dữ liệu cuộc họp. Vui lòng kiểm tra lại sớm."
+
+#: templates/meeting-detail.php:62
+msgid "Back to meetings"
+msgstr "Quay lại danh sách cuộc họp"
+
+#: templates/meeting-detail.php:107
+msgid "Meeting"
+msgstr "Cuộc họp"
+
+#: templates/meeting-detail.php:117
+msgid "Meeting information is displayed in English."
+msgstr "Thông tin cuộc họp được hiển thị bằng tiếng Anh."
+
+#: templates/meeting-detail.php:126
+msgid "Date"
+msgstr "Ngày"
+
+#: templates/meeting-detail.php:133
+msgid "Time"
+msgstr "Thời gian"
+
+#: templates/meeting-detail.php:155
+msgid "Join Online"
+msgstr "Tham gia trực tuyến"
+
+#: templates/meeting-detail.php:175
+msgid "View Official Notice"
+msgstr "Xem thông báo chính thức"
+
+#: templates/meeting-detail.php:181
+msgid "Add to My Calendar"
+msgstr "Thêm vào lịch của tôi"
+
+#: templates/meeting-detail.php:194
+msgid "Share with a Friend"
+msgstr "Chia sẻ với bạn bè"
+
+#: templates/meeting-detail.php:255
+msgid "What This Meeting Is About"
+msgstr "Cuộc họp này nói về điều gì"
+
+#: templates/meeting-detail.php:260
+msgid "This summary was generated by AI to help you understand the agenda. Always refer to the official documents for complete information."
+msgstr "Bản tóm tắt này được AI tạo ra để giúp bạn hiểu chương trình nghị sự. Luôn tham khảo tài liệu chính thức để có thông tin đầy đủ."
+
+#: templates/meeting-detail.php:276
+msgid "Remind Me About This Meeting"
+msgstr "Nhắc nhở tôi về cuộc họp này"
+
+#: templates/meeting-detail.php:289
+#: templates/meeting-detail.php:357
+msgid "Website"
+msgstr "Trang web"
+
+#: templates/meeting-detail.php:294
+#: templates/meeting-detail.php:298
+#: templates/meeting-detail.php:366
+msgid "Email Address"
+msgstr "Địa chỉ email"
+
+#: templates/meeting-detail.php:310
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "Chúng tôi sẽ gửi email xác nhận, sau đó gửi nhắc nhở vào buổi sáng ngày họp."
+
+#: templates/meeting-detail.php:317
+msgid "Remind Me"
+msgstr "Nhắc nhở tôi"
+
+#. translators: %s: link to privacy policy
+#: templates/meeting-detail.php:325
+#: templates/meeting-detail.php:426
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "Chúng tôi không bao giờ chia sẻ thông tin của bạn. Xem %s của chúng tôi."
+
+#: templates/meeting-detail.php:326
+#: templates/meeting-detail.php:427
+msgid "privacy policy"
+msgstr "chính sách bảo mật"
+
+#: templates/meeting-detail.php:335
+msgid "Subscribe to This Council"
+msgstr "Đăng ký hội đồng này"
+
+#: templates/meeting-detail.php:362
+msgid "Contact Information"
+msgstr "Thông tin liên hệ"
+
+#: templates/meeting-detail.php:381
+msgid "Phone Number"
+msgstr "Số điện thoại"
+
+#: templates/meeting-detail.php:392
+msgid "Optional. US numbers only."
+msgstr "Tùy chọn. Chỉ số điện thoại Hoa Kỳ."
+
+#: templates/meeting-detail.php:398
+msgid "Notification Frequency"
+msgstr "Tần suất thông báo"
+
+#: templates/meeting-detail.php:403
+msgid "When new meetings are posted"
+msgstr "Khi có cuộc họp mới được đăng"
+
+#: templates/meeting-detail.php:407
+msgid "Daily digest"
+msgstr "Tóm tắt hàng ngày"
+
+#: templates/meeting-detail.php:411
+msgid "Weekly digest"
+msgstr "Tóm tắt hàng tuần"
+
+#: templates/meeting-detail.php:418
+msgid "Subscribe"
+msgstr "Đăng ký"
+
+#: templates/meetings-list.php:41
+msgid "Browse upcoming government meetings across Hawaii. Filter by topic, council, date, or keyword."
+msgstr "Xem các cuộc họp chính phủ sắp tới trên toàn Hawaii. Lọc theo chủ đề, hội đồng, ngày hoặc từ khóa."
+
+#: templates/meetings-list.php:50
+#, php-format
+msgid "%d filter active"
+msgid_plural "%d filters active"
+msgstr[0] "%d bộ lọc đang hoạt động"
+
+#: templates/meetings-list.php:54
+msgid "Filters"
+msgstr "Bộ lọc"
+
+#: templates/meetings-list.php:89
+msgid "Filter by source"
+msgstr "Lọc theo nguồn"
+
+#: templates/meetings-list.php:90
+msgid "Filter by Source"
+msgstr "Lọc theo nguồn"
+
+#: templates/meetings-list.php:133
+#, php-format
+msgid "%d source selected"
+msgid_plural "%d sources selected"
+msgstr[0] "%d nguồn được chọn"
+
+#: templates/meetings-list.php:152
+#: templates/meetings-list.php:232
+msgid "Clear all"
+msgstr "Xóa tất cả"
+
+#: templates/meetings-list.php:163
+msgid "Filter by topic"
+msgstr "Lọc theo chủ đề"
+
+#: templates/meetings-list.php:164
+msgid "What matters to you?"
+msgstr "Điều gì quan trọng với bạn?"
+
+#: templates/meetings-list.php:213
+#, php-format
+msgid "%d topic selected"
+msgid_plural "%d topics selected"
+msgstr[0] "%d chủ đề được chọn"
+
+#: templates/meetings-list.php:249
+msgid "Filter meetings"
+msgstr "Lọc cuộc họp"
+
+#: templates/meetings-list.php:262
+msgid "Search meetings…"
+msgstr "Tìm kiếm cuộc họp…"
+
+#: templates/meetings-list.php:264
+msgid "Search meetings by keyword"
+msgstr "Tìm kiếm cuộc họp theo từ khóa"
+
+#: templates/meetings-list.php:270
+msgid "Council"
+msgstr "Hội đồng"
+
+#: templates/meetings-list.php:282
+msgid "Search councils by name"
+msgstr "Tìm kiếm hội đồng theo tên"
+
+#: templates/meetings-list.php:283
+#: templates/meetings-list.php:305
+msgid "All Councils"
+msgstr "Tất cả hội đồng"
+
+#: templates/meetings-list.php:311
+msgid "Other"
+msgstr "Khác"
+
+#: templates/meetings-list.php:342
+msgid "All Counties"
+msgstr "Tất cả các hạt"
+
+#: templates/meetings-list.php:353
+msgid "From"
+msgstr "Từ"
+
+#: templates/meetings-list.php:366
+msgid "To"
+msgstr "Đến"
+
+#: templates/meetings-list.php:387
+msgid "Filter"
+msgstr "Lọc"
+
+#. translators: %s: link to about page
+#: templates/meetings-list.php:407
+#, php-format
+msgid "We're working on connecting to the meeting database. Check back soon, or browse our %s to learn more about Civi.Me."
+msgstr "Chúng tôi đang làm việc để kết nối cơ sở dữ liệu cuộc họp. Vui lòng kiểm tra lại sớm, hoặc xem %s của chúng tôi để tìm hiểu thêm về Civi.Me."
+
+#: templates/meetings-list.php:408
+msgid "about page"
+msgstr "trang giới thiệu"
+
+#: templates/meetings-list.php:417
+msgid "No meetings found matching your filters."
+msgstr "Không tìm thấy cuộc họp nào phù hợp với bộ lọc của bạn."
+
+#: templates/meetings-list.php:420
+msgid "View all upcoming meetings"
+msgstr "Xem tất cả cuộc họp sắp tới"
+
+#. translators: 1: first item number, 2: last item number, 3: total count
+#: templates/meetings-list.php:436
+#, php-format
+msgid "Showing %1$d–%2$d of %3$d meetings"
+msgstr "Đang hiển thị %1$d–%2$d trong số %3$d cuộc họp"
+
+#: templates/meetings-list.php:485
+msgid "Time:"
+msgstr "Thời gian:"
+
+#: templates/meetings-list.php:492
+msgid "Location:"
+msgstr "Địa điểm:"
+
+#: templates/meetings-list.php:498
+msgid "AI-generated summary available"
+msgstr "Có tóm tắt do AI tạo ra"
+
+#: templates/meetings-list.php:499
+msgid "AI Summary"
+msgstr "Tóm tắt AI"
+
+#: templates/meetings-list.php:510
+msgid "View Details"
+msgstr "Xem chi tiết"
+
+#. translators: %s: council name
+#: templates/meetings-list.php:514
+#, php-format
+msgid "for %s"
+msgstr "cho %s"
+
+#: templates/meetings-list.php:537
+msgid "Meeting pages"
+msgstr "Trang cuộc họp"
+
+#: templates/meetings-list.php:562
+msgid "Previous"
+msgstr "Trước"
+
+#: templates/meetings-list.php:578
+msgid "Page 1"
+msgstr "Trang 1"
+
+#: templates/meetings-list.php:592
+#, php-format
+msgid "Page %d, current page"
+msgstr "Trang %d, trang hiện tại"
+
+#: templates/meetings-list.php:600
+#: templates/meetings-list.php:616
+#, php-format
+msgid "Page %d"
+msgstr "Trang %d"
+
+#: templates/meetings-list.php:630
+msgid "Next"
+msgstr "Tiếp theo"

@@ -1,0 +1,469 @@
+# Vietnamese translation for the CiviMe Notifications plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Notifications 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-notifications\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Tiếng Việt <hello@civi.me>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-notifications\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-notifications.php
+msgid "CiviMe Notifications"
+msgstr "CiviMe Notifications"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-notifications.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-notifications.php
+msgid "Subscription UI and preference management for Civi.Me meeting notifications."
+msgstr "Giao diện đăng ký và quản lý tùy chọn cho thông báo cuộc họp Civi.Me."
+
+#. Author of the plugin
+#: civime-notifications.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-notifications.php:45
+msgid "CiviMe Notifications requires the CiviMe Core plugin to be installed and activated."
+msgstr "CiviMe Notifications yêu cầu plugin CiviMe Core phải được cài đặt và kích hoạt."
+
+#: includes/class-manage.php:37
+msgid "This link appears to be incomplete. Please use the manage link from your notification email."
+msgstr "Liên kết này có vẻ không đầy đủ. Vui lòng sử dụng liên kết quản lý từ email thông báo của bạn."
+
+#: includes/class-manage.php:45
+msgid "Your preferences have been updated."
+msgstr "Tùy chọn của bạn đã được cập nhật."
+
+#: includes/class-manage.php:62
+#: includes/class-notify.php:74
+#: includes/class-notify.php:150
+#: includes/class-subscribe.php:74
+msgid "Security check failed. Please try again."
+msgstr "Kiểm tra bảo mật thất bại. Vui lòng thử lại."
+
+#: includes/class-manage.php:85
+#: includes/class-notify.php:107
+#: includes/class-notify.php:218
+#: includes/class-subscribe.php:157
+msgid "Something went wrong. Please try again in a moment."
+msgstr "Có điều gì đó không ổn. Vui lòng thử lại sau một lúc."
+
+#: includes/class-manage.php:115
+msgid "Please select at least one notification channel."
+msgstr "Vui lòng chọn ít nhất một kênh thông báo."
+
+#: includes/class-manage.php:121
+msgid "Please select a notification frequency."
+msgstr "Vui lòng chọn tần suất thông báo."
+
+#: includes/class-manage.php:127
+#: includes/class-subscribe.php:126
+msgid "Please select at least one council to follow."
+msgstr "Vui lòng chọn ít nhất một hội đồng để theo dõi."
+
+#: includes/class-manage.php:145
+msgid "Something went wrong updating your preferences. Please try again."
+msgstr "Có điều gì đó không ổn khi cập nhật tùy chọn của bạn. Vui lòng thử lại."
+
+#: includes/class-manage.php:158
+msgid "Preferences updated, but council list could not be saved. Please try again."
+msgstr "Tùy chọn đã được cập nhật, nhưng danh sách hội đồng không thể được lưu. Vui lòng thử lại."
+
+#: includes/class-manage.php:222
+msgid "We could not load your subscription. The link may have expired or be incorrect. Please use the manage link from your most recent notification email."
+msgstr "Chúng tôi không thể tải đăng ký của bạn. Liên kết có thể đã hết hạn hoặc không chính xác. Vui lòng sử dụng liên kết quản lý từ email thông báo gần đây nhất của bạn."
+
+#: includes/class-notify.php:92
+#: includes/class-notify.php:172
+#: includes/class-subscribe.php:118
+msgid "Please enter a valid email address."
+msgstr "Vui lòng nhập địa chỉ email hợp lệ."
+
+#: includes/class-notify.php:176
+#: includes/class-subscribe.php:122
+msgid "Please enter a valid US phone number (10 digits)."
+msgstr "Vui lòng nhập số điện thoại Hoa Kỳ hợp lệ (10 chữ số)."
+
+#: includes/class-notify.php:180
+#: includes/class-subscribe.php:130
+msgid "Please select how often you want to be notified."
+msgstr "Vui lòng chọn tần suất bạn muốn được thông báo."
+
+#: includes/class-notify.php:193
+msgid "Could not determine the council for this meeting. Please try again."
+msgstr "Không thể xác định hội đồng cho cuộc họp này. Vui lòng thử lại."
+
+#: includes/class-notify.php:364
+#, php-format
+msgid "Get Notified — %s"
+msgstr "Nhận thông báo — %s"
+
+#: includes/class-notify.php:367
+#: includes/class-router.php:74
+#: includes/class-router.php:75
+#: includes/shortcodes.php:33
+#: templates/notify.php:57
+#: templates/notify.php:80
+#: templates/notify.php:87
+#: templates/subscribe.php:43
+msgid "Get Notified"
+msgstr "Nhận thông báo"
+
+#: includes/class-router.php:76
+#: templates/manage.php:23
+msgid "Manage Notifications"
+msgstr "Quản lý thông báo"
+
+#: includes/class-router.php:77
+#: templates/confirmed.php:22
+msgid "Subscription Confirmed"
+msgstr "Đăng ký đã được xác nhận"
+
+#: includes/class-router.php:78
+#: templates/unsubscribed.php:22
+msgid "Unsubscribed"
+msgstr "Đã hủy đăng ký"
+
+#: includes/class-subscribe.php:114
+msgid "Please select at least one notification channel (email or text message)."
+msgstr "Vui lòng chọn ít nhất một kênh thông báo (email hoặc tin nhắn văn bản)."
+
+#: includes/shortcodes.php:34
+msgid "Get alerts when new meetings or agendas are posted for the councils you care about."
+msgstr "Nhận thông báo khi có cuộc họp hoặc chương trình nghị sự mới được đăng cho các hội đồng bạn quan tâm."
+
+#: includes/shortcodes.php:35
+#: templates/notify.php:316
+#: templates/subscribe.php:340
+msgid "Subscribe"
+msgstr "Đăng ký"
+
+#: templates/confirmed.php:30
+msgid "You're all set!"
+msgstr "Bạn đã sẵn sàng!"
+
+#: templates/confirmed.php:31
+msgid "Your subscription is confirmed. You'll receive notifications when new meetings are posted for the councils you follow."
+msgstr "Đăng ký của bạn đã được xác nhận. Bạn sẽ nhận được thông báo khi có cuộc họp mới được đăng cho các hội đồng bạn theo dõi."
+
+#: templates/confirmed.php:32
+msgid "You can manage your preferences or unsubscribe at any time using the link in any notification email."
+msgstr "Bạn có thể quản lý tùy chọn hoặc hủy đăng ký bất cứ lúc nào bằng cách sử dụng liên kết trong bất kỳ email thông báo nào."
+
+#: templates/confirmed.php:35
+#: templates/notify.php:105
+#: templates/notify.php:120
+#: templates/subscribe.php:60
+#: templates/unsubscribed.php:37
+msgid "Browse Meetings"
+msgstr "Xem cuộc họp"
+
+#: templates/confirmed.php:38
+msgid "Explore Councils"
+msgstr "Khám phá hội đồng"
+
+#: templates/manage.php:36
+msgid "Browse meetings"
+msgstr "Xem các cuộc họp"
+
+#: templates/manage.php:65
+msgid "Your Contact Info"
+msgstr "Thông tin liên hệ của bạn"
+
+#: templates/manage.php:69
+#: templates/manage.php:95
+#: templates/subscribe.php:123
+msgid "Email"
+msgstr "Email"
+
+#: templates/manage.php:75
+msgid "Phone"
+msgstr "Điện thoại"
+
+#: templates/manage.php:85
+msgid "Notification Channels"
+msgstr "Kênh thông báo"
+
+#: templates/manage.php:105
+#: templates/subscribe.php:134
+msgid "Text Message"
+msgstr "Tin nhắn văn bản"
+
+#: templates/manage.php:112
+#: templates/notify.php:296
+msgid "Notification Frequency"
+msgstr "Tần suất thông báo"
+
+#: templates/manage.php:116
+#: templates/notify.php:301
+#: templates/subscribe.php:315
+msgid "When new meetings are posted"
+msgstr "Khi có cuộc họp mới được đăng"
+
+#: templates/manage.php:120
+#: templates/notify.php:305
+#: templates/subscribe.php:324
+msgid "Daily digest"
+msgstr "Tóm tắt hàng ngày"
+
+#: templates/manage.php:124
+#: templates/notify.php:309
+#: templates/subscribe.php:333
+msgid "Weekly digest"
+msgstr "Tóm tắt hàng tuần"
+
+#: templates/manage.php:131
+msgid "Councils You Follow"
+msgstr "Hội đồng bạn theo dõi"
+
+#: templates/manage.php:135
+#: templates/subscribe.php:262
+msgid "Search councils"
+msgstr "Tìm kiếm hội đồng"
+
+#: templates/manage.php:141
+#: templates/subscribe.php:268
+msgid "Search councils…"
+msgstr "Tìm kiếm hội đồng…"
+
+#: templates/manage.php:145
+#: templates/subscribe.php:272
+msgid "Councils"
+msgstr "Hội đồng"
+
+#: templates/manage.php:170
+msgid "Save Preferences"
+msgstr "Lưu tùy chọn"
+
+#: templates/manage.php:177
+msgid "Unsubscribe"
+msgstr "Hủy đăng ký"
+
+#: templates/manage.php:178
+msgid "You can unsubscribe from all notifications at any time. This will permanently remove your subscription."
+msgstr "Bạn có thể hủy đăng ký tất cả thông báo bất cứ lúc nào. Điều này sẽ xóa vĩnh viễn đăng ký của bạn."
+
+#: templates/manage.php:189
+msgid "Are you sure you want to unsubscribe? You will stop receiving all notifications."
+msgstr "Bạn có chắc chắn muốn hủy đăng ký không? Bạn sẽ ngừng nhận tất cả thông báo."
+
+#: templates/manage.php:191
+msgid "Unsubscribe from All Notifications"
+msgstr "Hủy đăng ký tất cả thông báo"
+
+#: templates/notify.php:40
+msgid "Meeting Not Found"
+msgstr "Không tìm thấy cuộc họp"
+
+#: templates/notify.php:47
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "Chúng tôi không thể tìm thấy cuộc họp này. Cuộc họp có thể đã bị hủy hoặc liên kết có thể không chính xác."
+
+#: templates/notify.php:48
+msgid "Browse All Meetings"
+msgstr "Xem tất cả cuộc họp"
+
+#: templates/notify.php:64
+msgid "Meeting data is temporarily unavailable."
+msgstr "Dữ liệu cuộc họp tạm thời không khả dụng."
+
+#: templates/notify.php:65
+msgid "We're having trouble loading meeting details. Please try again in a moment."
+msgstr "Chúng tôi đang gặp sự cố khi tải chi tiết cuộc họp. Vui lòng thử lại sau một lúc."
+
+#: templates/notify.php:66
+msgid "Back to meetings"
+msgstr "Quay lại danh sách cuộc họp"
+
+#: templates/notify.php:73
+msgid "Breadcrumb"
+msgstr "Đường dẫn điều hướng"
+
+#: templates/notify.php:76
+msgid "Meetings"
+msgstr "Cuộc họp"
+
+#: templates/notify.php:98
+#: templates/notify.php:113
+#: templates/subscribe.php:55
+msgid "Check Your Inbox"
+msgstr "Kiểm tra hộp thư đến của bạn"
+
+#: templates/notify.php:99
+msgid "We've sent a confirmation email. Click the link to activate your reminder — we'll email you the morning of the meeting."
+msgstr "Chúng tôi đã gửi email xác nhận. Nhấp vào liên kết để kích hoạt nhắc nhở của bạn — chúng tôi sẽ gửi email cho bạn vào buổi sáng ngày họp."
+
+#: templates/notify.php:102
+#: templates/notify.php:117
+msgid "Back to Meeting"
+msgstr "Quay lại cuộc họp"
+
+#: templates/notify.php:114
+msgid "We've sent a confirmation email. Click the link to activate your subscription and start receiving meeting alerts."
+msgstr "Chúng tôi đã gửi email xác nhận. Nhấp vào liên kết để kích hoạt đăng ký và bắt đầu nhận thông báo cuộc họp."
+
+#: templates/notify.php:131
+msgid "Remind Me About This Meeting"
+msgstr "Nhắc nhở tôi về cuộc họp này"
+
+#: templates/notify.php:152
+#: templates/notify.php:233
+#: templates/subscribe.php:74
+msgid "Please fix the following:"
+msgstr "Vui lòng khắc phục những điều sau:"
+
+#: templates/notify.php:172
+#: templates/notify.php:253
+#: templates/subscribe.php:106
+msgid "Website"
+msgstr "Trang web"
+
+#: templates/notify.php:177
+#: templates/notify.php:181
+#: templates/notify.php:262
+#: templates/subscribe.php:146
+msgid "Email Address"
+msgstr "Địa chỉ email"
+
+#: templates/notify.php:194
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "Chúng tôi sẽ gửi email xác nhận, sau đó gửi nhắc nhở vào buổi sáng ngày họp."
+
+#: templates/notify.php:201
+msgid "Remind Me"
+msgstr "Nhắc nhở tôi"
+
+#. translators: %s: link to privacy policy
+#: templates/notify.php:209
+#: templates/notify.php:324
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "Chúng tôi không bao giờ chia sẻ thông tin của bạn. Xem %s của chúng tôi."
+
+#: templates/notify.php:210
+#: templates/notify.php:325
+#: templates/subscribe.php:349
+msgid "privacy policy"
+msgstr "chính sách bảo mật"
+
+#: templates/notify.php:220
+msgid "Subscribe to This Council"
+msgstr "Đăng ký hội đồng này"
+
+#: templates/notify.php:258
+msgid "Contact Information"
+msgstr "Thông tin liên hệ"
+
+#: templates/notify.php:278
+#: templates/subscribe.php:166
+msgid "Phone Number"
+msgstr "Số điện thoại"
+
+#: templates/notify.php:290
+msgid "Optional. US numbers only."
+msgstr "Tùy chọn. Chỉ số điện thoại Hoa Kỳ."
+
+#. translators: %s: council name
+#: templates/subscribe.php:24
+#: templates/subscribe.php:39
+#, php-format
+msgid "Subscribe to %s"
+msgstr "Đăng ký %s"
+
+#: templates/subscribe.php:41
+msgid "Get notified when this council posts new meetings or agendas."
+msgstr "Nhận thông báo khi hội đồng này đăng các cuộc họp hoặc chương trình nghị sự mới."
+
+#: templates/subscribe.php:44
+msgid "Get alerts when councils you follow post new meetings or agendas. Choose your channels, pick your councils, and we'll keep you in the loop."
+msgstr "Nhận thông báo khi các hội đồng bạn theo dõi đăng cuộc họp hoặc chương trình nghị sự mới. Chọn kênh của bạn, chọn hội đồng của bạn và chúng tôi sẽ giữ bạn được cập nhật."
+
+#: templates/subscribe.php:56
+msgid "We've sent a confirmation message to verify your contact info. Please click the link in your email (or reply YES to the text) to activate your subscription."
+msgstr "Chúng tôi đã gửi tin nhắn xác nhận để xác minh thông tin liên hệ của bạn. Vui lòng nhấp vào liên kết trong email của bạn (hoặc trả lời YES cho tin nhắn văn bản) để kích hoạt đăng ký."
+
+#: templates/subscribe.php:57
+msgid "If you don't see it within a few minutes, check your spam folder."
+msgstr "Nếu bạn không thấy trong vài phút, hãy kiểm tra thư mục spam."
+
+#: templates/subscribe.php:64
+msgid "Follow More Councils"
+msgstr "Theo dõi thêm hội đồng"
+
+#: templates/subscribe.php:85
+msgid "Council data is temporarily unavailable."
+msgstr "Dữ liệu hội đồng tạm thời không khả dụng."
+
+#: templates/subscribe.php:86
+msgid "We're having trouble loading the council list. Please try again in a moment."
+msgstr "Chúng tôi đang gặp sự cố khi tải danh sách hội đồng. Vui lòng thử lại sau một lúc."
+
+#: templates/subscribe.php:112
+msgid "How should we reach you?"
+msgstr "Chúng tôi nên liên hệ với bạn như thế nào?"
+
+#: templates/subscribe.php:178
+msgid "US numbers only. Standard messaging rates may apply."
+msgstr "Chỉ số điện thoại Hoa Kỳ. Có thể áp dụng phí nhắn tin tiêu chuẩn."
+
+#: templates/subscribe.php:184
+msgid "What do you want to hear about?"
+msgstr "Bạn muốn nghe về điều gì?"
+
+#: templates/subscribe.php:196
+msgid "Want to follow more councils?"
+msgstr "Muốn theo dõi thêm hội đồng?"
+
+#: templates/subscribe.php:232
+msgid "Filter councils by topic"
+msgstr "Lọc hội đồng theo chủ đề"
+
+#: templates/subscribe.php:233
+msgid "What matters to you?"
+msgstr "Điều gì quan trọng với bạn?"
+
+#: templates/subscribe.php:255
+msgid "Clear all"
+msgstr "Xóa tất cả"
+
+#: templates/subscribe.php:274
+msgid "No councils available."
+msgstr "Không có hội đồng nào khả dụng."
+
+#: templates/subscribe.php:306
+msgid "How often?"
+msgstr "Tần suất bao nhiêu?"
+
+#. translators: %s: link to privacy policy
+#: templates/subscribe.php:348
+#, php-format
+msgid "We never share your info. Unsubscribe anytime. See our %s."
+msgstr "Chúng tôi không bao giờ chia sẻ thông tin của bạn. Hủy đăng ký bất cứ lúc nào. Xem %s của chúng tôi."
+
+#: templates/unsubscribed.php:30
+msgid "You've been unsubscribed"
+msgstr "Bạn đã hủy đăng ký"
+
+#: templates/unsubscribed.php:31
+msgid "You won't receive any more meeting notifications from us. If you change your mind, you can subscribe again at any time."
+msgstr "Bạn sẽ không nhận thêm thông báo cuộc họp từ chúng tôi nữa. Nếu bạn thay đổi ý định, bạn có thể đăng ký lại bất cứ lúc nào."
+
+#: templates/unsubscribed.php:34
+msgid "Subscribe Again"
+msgstr "Đăng ký lại"

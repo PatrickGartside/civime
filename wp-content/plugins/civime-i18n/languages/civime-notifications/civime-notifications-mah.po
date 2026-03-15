@@ -1,0 +1,469 @@
+# Marshallese translation for the CiviMe Notifications plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Notifications 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-notifications\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Kajin M̧ajeļ <hello@civi.me>\n"
+"Language: mah\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-notifications\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-notifications.php
+msgid "CiviMe Notifications"
+msgstr "CiviMe Notifications"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-notifications.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-notifications.php
+msgid "Subscription UI and preference management for Civi.Me meeting notifications."
+msgstr "UI in subscription im kōṃṃan preference ñan notification ko an miting an Civi.Me."
+
+#. Author of the plugin
+#: civime-notifications.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-notifications.php:45
+msgid "CiviMe Notifications requires the CiviMe Core plugin to be installed and activated."
+msgstr "CiviMe Notifications ekōṃṃane CiviMe Core plugin bwe em̧ōj install im kōjparok."
+
+#: includes/class-manage.php:37
+msgid "This link appears to be incomplete. Please use the manage link from your notification email."
+msgstr "Link in ej kajjitōk jab tōtōin. Jokwe jibwi link in manage jen am email in notification."
+
+#: includes/class-manage.php:45
+msgid "Your preferences have been updated."
+msgstr "Am preference ko emouj update."
+
+#: includes/class-manage.php:62
+#: includes/class-notify.php:74
+#: includes/class-notify.php:150
+#: includes/class-subscribe.php:74
+msgid "Security check failed. Please try again."
+msgstr "Jikuul in māloelep ej jab tōpar. Jokwe ri-jikuul innem."
+
+#: includes/class-manage.php:85
+#: includes/class-notify.php:107
+#: includes/class-notify.php:218
+#: includes/class-subscribe.php:157
+msgid "Something went wrong. Please try again in a moment."
+msgstr "Juon ia ej jab tōtōin. Jokwe ri-jikuul ilo iien juon."
+
+#: includes/class-manage.php:115
+msgid "Please select at least one notification channel."
+msgstr "Jokwe kotak juon channel in notification im lōñlọk."
+
+#: includes/class-manage.php:121
+msgid "Please select a notification frequency."
+msgstr "Jokwe kotak roñoul in notification."
+
+#: includes/class-manage.php:127
+#: includes/class-subscribe.php:126
+msgid "Please select at least one council to follow."
+msgstr "Jokwe kotak juon kaunsel im lōñlọk ñan follow."
+
+#: includes/class-manage.php:145
+msgid "Something went wrong updating your preferences. Please try again."
+msgstr "Juon ia ej jab tōtōin ke jej update am preference ko. Jokwe ri-jikuul."
+
+#: includes/class-manage.php:158
+msgid "Preferences updated, but council list could not be saved. Please try again."
+msgstr "Preference ko emouj update, ak list in kaunsel ejab maroñ kōmmet. Jokwe ri-jikuul."
+
+#: includes/class-manage.php:222
+msgid "We could not load your subscription. The link may have expired or be incorrect. Please use the manage link from your most recent notification email."
+msgstr "Jej jab maroñ load am subscription. Link eo bōlen emouj expire ak ej jab tōtōin. Jokwe jibwi link in manage jen am email in notification eo ippān."
+
+#: includes/class-notify.php:92
+#: includes/class-notify.php:172
+#: includes/class-subscribe.php:118
+msgid "Please enter a valid email address."
+msgstr "Jokwe kaktak juon aolepān email tōtōin."
+
+#: includes/class-notify.php:176
+#: includes/class-subscribe.php:122
+msgid "Please enter a valid US phone number (10 digits)."
+msgstr "Jokwe kaktak juon nōmba in telebon in US tōtōin (10 nōmba)."
+
+#: includes/class-notify.php:180
+#: includes/class-subscribe.php:130
+msgid "Please select how often you want to be notified."
+msgstr "Jokwe kotak roñoul eo kwōkōnan bōk notification."
+
+#: includes/class-notify.php:193
+msgid "Could not determine the council for this meeting. Please try again."
+msgstr "Jej jab maroñ jeļā kaunsel eo ñan miting in. Jokwe ri-jikuul."
+
+#: includes/class-notify.php:364
+#, php-format
+msgid "Get Notified — %s"
+msgstr "Bōk Notification — %s"
+
+#: includes/class-notify.php:367
+#: includes/class-router.php:74
+#: includes/class-router.php:75
+#: includes/shortcodes.php:33
+#: templates/notify.php:57
+#: templates/notify.php:80
+#: templates/notify.php:87
+#: templates/subscribe.php:43
+msgid "Get Notified"
+msgstr "Bōk Notification"
+
+#: includes/class-router.php:76
+#: templates/manage.php:23
+msgid "Manage Notifications"
+msgstr "Kōṃṃan Notification Ko"
+
+#: includes/class-router.php:77
+#: templates/confirmed.php:22
+msgid "Subscription Confirmed"
+msgstr "Subscription Emouj Kōnnaanōk"
+
+#: includes/class-router.php:78
+#: templates/unsubscribed.php:22
+msgid "Unsubscribed"
+msgstr "Emouj Unsubscribe"
+
+#: includes/class-subscribe.php:114
+msgid "Please select at least one notification channel (email or text message)."
+msgstr "Jokwe kotak juon channel in notification im lōñlọk (email ak text)."
+
+#: includes/shortcodes.php:34
+msgid "Get alerts when new meetings or agendas are posted for the councils you care about."
+msgstr "Bōk notification ke miting ko ippān ak agenda ko rej post ñan kaunsel ko kwōlōmnak."
+
+#: includes/shortcodes.php:35
+#: templates/notify.php:316
+#: templates/subscribe.php:340
+msgid "Subscribe"
+msgstr "Subscribe"
+
+#: templates/confirmed.php:30
+msgid "You're all set!"
+msgstr "Emouj otemjej!"
+
+#: templates/confirmed.php:31
+msgid "Your subscription is confirmed. You'll receive notifications when new meetings are posted for the councils you follow."
+msgstr "Am subscription emouj kōnnaanōk. Kwōnaaj bōk notification ke miting ko ippān rej post ñan kaunsel ko kwōfollow."
+
+#: templates/confirmed.php:32
+msgid "You can manage your preferences or unsubscribe at any time using the link in any notification email."
+msgstr "Kwōmaroñ kōṃṃan am preference ak unsubscribe ilo jabdewōt iien kōn link eo ilo jabdewōt email in notification."
+
+#: templates/confirmed.php:35
+#: templates/notify.php:105
+#: templates/notify.php:120
+#: templates/subscribe.php:60
+#: templates/unsubscribed.php:37
+msgid "Browse Meetings"
+msgstr "Lale Miting Ko"
+
+#: templates/confirmed.php:38
+msgid "Explore Councils"
+msgstr "Kōjjela Kaunsel Ko"
+
+#: templates/manage.php:36
+msgid "Browse meetings"
+msgstr "Lale miting ko"
+
+#: templates/manage.php:65
+msgid "Your Contact Info"
+msgstr "Am Melele in Bok Kōjerbale"
+
+#: templates/manage.php:69
+#: templates/manage.php:95
+#: templates/subscribe.php:123
+msgid "Email"
+msgstr "Email"
+
+#: templates/manage.php:75
+msgid "Phone"
+msgstr "Telebon"
+
+#: templates/manage.php:85
+msgid "Notification Channels"
+msgstr "Channel Ko in Notification"
+
+#: templates/manage.php:105
+#: templates/subscribe.php:134
+msgid "Text Message"
+msgstr "Text"
+
+#: templates/manage.php:112
+#: templates/notify.php:296
+msgid "Notification Frequency"
+msgstr "Roñoul in Notification"
+
+#: templates/manage.php:116
+#: templates/notify.php:301
+#: templates/subscribe.php:315
+msgid "When new meetings are posted"
+msgstr "Ke miting ko ippān rej post"
+
+#: templates/manage.php:120
+#: templates/notify.php:305
+#: templates/subscribe.php:324
+msgid "Daily digest"
+msgstr "Jiroñ in raan"
+
+#: templates/manage.php:124
+#: templates/notify.php:309
+#: templates/subscribe.php:333
+msgid "Weekly digest"
+msgstr "Jiroñ in wiik"
+
+#: templates/manage.php:131
+msgid "Councils You Follow"
+msgstr "Kaunsel Ko Kwōfollow"
+
+#: templates/manage.php:135
+#: templates/subscribe.php:262
+msgid "Search councils"
+msgstr "Kōjjela kaunsel ko"
+
+#: templates/manage.php:141
+#: templates/subscribe.php:268
+msgid "Search councils…"
+msgstr "Kōjjela kaunsel ko…"
+
+#: templates/manage.php:145
+#: templates/subscribe.php:272
+msgid "Councils"
+msgstr "Kaunsel Ko"
+
+#: templates/manage.php:170
+msgid "Save Preferences"
+msgstr "Kōmmet Preference Ko"
+
+#: templates/manage.php:177
+msgid "Unsubscribe"
+msgstr "Unsubscribe"
+
+#: templates/manage.php:178
+msgid "You can unsubscribe from all notifications at any time. This will permanently remove your subscription."
+msgstr "Kwōmaroñ unsubscribe jen notification ko otemjej ilo jabdewōt iien. Ia in enaaj kūr tōtōin am subscription."
+
+#: templates/manage.php:189
+msgid "Are you sure you want to unsubscribe? You will stop receiving all notifications."
+msgstr "Kwōkōṃṃanṃan unsubscribe? Kwōnaaj jab bōk notification ko otemjej."
+
+#: templates/manage.php:191
+msgid "Unsubscribe from All Notifications"
+msgstr "Unsubscribe jen Notification Ko Otemjej"
+
+#: templates/notify.php:40
+msgid "Meeting Not Found"
+msgstr "Miting Ejjeļọk"
+
+#: templates/notify.php:47
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "Jej jab maroñ lobo miting in. Bōlen emouj cancelled ak link eo ej jab tōtōin."
+
+#: templates/notify.php:48
+msgid "Browse All Meetings"
+msgstr "Lale Miting Ko Otemjej"
+
+#: templates/notify.php:64
+msgid "Meeting data is temporarily unavailable."
+msgstr "Data an miting ejjeļọk kōn iien juon."
+
+#: templates/notify.php:65
+msgid "We're having trouble loading meeting details. Please try again in a moment."
+msgstr "Jej jab tōtōin load wōpij in miting. Jokwe ri-jikuul ilo iien juon."
+
+#: templates/notify.php:66
+msgid "Back to meetings"
+msgstr "Rọọl ñan miting ko"
+
+#: templates/notify.php:73
+msgid "Breadcrumb"
+msgstr "Breadcrumb"
+
+#: templates/notify.php:76
+msgid "Meetings"
+msgstr "Miting Ko"
+
+#: templates/notify.php:98
+#: templates/notify.php:113
+#: templates/subscribe.php:55
+msgid "Check Your Inbox"
+msgstr "Lale Am Inbox"
+
+#: templates/notify.php:99
+msgid "We've sent a confirmation email. Click the link to activate your reminder — we'll email you the morning of the meeting."
+msgstr "Jej lewōj juon email in kōnnaanōk. Kiit link eo ñan kōjparok am reminder — jej naaj email eok ilo jiuṃwe in raan in miting."
+
+#: templates/notify.php:102
+#: templates/notify.php:117
+msgid "Back to Meeting"
+msgstr "Rọọl ñan Miting"
+
+#: templates/notify.php:114
+msgid "We've sent a confirmation email. Click the link to activate your subscription and start receiving meeting alerts."
+msgstr "Jej lewōj juon email in kōnnaanōk. Kiit link eo ñan kōjparok am subscription im jino bōk notification in miting."
+
+#: templates/notify.php:131
+msgid "Remind Me About This Meeting"
+msgstr "Kōjāer Eok Kōn Miting In"
+
+#: templates/notify.php:152
+#: templates/notify.php:233
+#: templates/subscribe.php:74
+msgid "Please fix the following:"
+msgstr "Jokwe kōrrọọl ia in:"
+
+#: templates/notify.php:172
+#: templates/notify.php:253
+#: templates/subscribe.php:106
+msgid "Website"
+msgstr "Website"
+
+#: templates/notify.php:177
+#: templates/notify.php:181
+#: templates/notify.php:262
+#: templates/subscribe.php:146
+msgid "Email Address"
+msgstr "Aolepān Email"
+
+#: templates/notify.php:194
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "Jej lewōj juon email in kōnnaanōk, ālikin juon reminder ilo jiuṃwe in raan in miting."
+
+#: templates/notify.php:201
+msgid "Remind Me"
+msgstr "Kōjāer Eok"
+
+#. translators: %s: link to privacy policy
+#: templates/notify.php:209
+#: templates/notify.php:324
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "Jej jab bōktake am melele. Lale %s ami."
+
+#: templates/notify.php:210
+#: templates/notify.php:325
+#: templates/subscribe.php:349
+msgid "privacy policy"
+msgstr "politij in kinnid"
+
+#: templates/notify.php:220
+msgid "Subscribe to This Council"
+msgstr "Subscribe ñan Kaunsel In"
+
+#: templates/notify.php:258
+msgid "Contact Information"
+msgstr "Melele in Bok Kōjerbale"
+
+#: templates/notify.php:278
+#: templates/subscribe.php:166
+msgid "Phone Number"
+msgstr "Nōmba in Telebon"
+
+#: templates/notify.php:290
+msgid "Optional. US numbers only."
+msgstr "Kotak. Nōmba in US kab."
+
+#. translators: %s: council name
+#: templates/subscribe.php:24
+#: templates/subscribe.php:39
+#, php-format
+msgid "Subscribe to %s"
+msgstr "Subscribe ñan %s"
+
+#: templates/subscribe.php:41
+msgid "Get notified when this council posts new meetings or agendas."
+msgstr "Bōk notification ke kaunsel in ej post miting ko ippān ak agenda ko."
+
+#: templates/subscribe.php:44
+msgid "Get alerts when councils you follow post new meetings or agendas. Choose your channels, pick your councils, and we'll keep you in the loop."
+msgstr "Bōk notification ke kaunsel ko kwōfollow rej post miting ko ippān ak agenda ko. Kotak am channel ko, kotak am kaunsel ko, im jej naaj kōjjeļā eok."
+
+#: templates/subscribe.php:56
+msgid "We've sent a confirmation message to verify your contact info. Please click the link in your email (or reply YES to the text) to activate your subscription."
+msgstr "Jej lewōj juon kallimur in kōnnaanōk ñan jeļā am melele in bok kōjerbale. Jokwe kiit link eo ilo am email (ak reply YES ñan text) ñan kōjparok am subscription."
+
+#: templates/subscribe.php:57
+msgid "If you don't see it within a few minutes, check your spam folder."
+msgstr "Ñe kwōjab lale ilo iien jilu raan, lale am folder in spam."
+
+#: templates/subscribe.php:64
+msgid "Follow More Councils"
+msgstr "Follow Kaunsel Ko Aenōṃṃan"
+
+#: templates/subscribe.php:85
+msgid "Council data is temporarily unavailable."
+msgstr "Data an kaunsel ko ejjeļọk kōn iien juon."
+
+#: templates/subscribe.php:86
+msgid "We're having trouble loading the council list. Please try again in a moment."
+msgstr "Jej jab tōtōin load list in kaunsel ko. Jokwe ri-jikuul ilo iien juon."
+
+#: templates/subscribe.php:112
+msgid "How should we reach you?"
+msgstr "Wāween en jej bok kōjerbale eok?"
+
+#: templates/subscribe.php:178
+msgid "US numbers only. Standard messaging rates may apply."
+msgstr "Nōmba in US kab. Tōprak in messaging ko bōlen naaj itok."
+
+#: templates/subscribe.php:184
+msgid "What do you want to hear about?"
+msgstr "Etke kwōkōnan roñ kōn?"
+
+#: templates/subscribe.php:196
+msgid "Want to follow more councils?"
+msgstr "Kwōkōnan follow kaunsel ko aenōṃṃan?"
+
+#: templates/subscribe.php:232
+msgid "Filter councils by topic"
+msgstr "Filter kaunsel ko kōn topic"
+
+#: templates/subscribe.php:233
+msgid "What matters to you?"
+msgstr "Etke ko remōj ñan eok?"
+
+#: templates/subscribe.php:255
+msgid "Clear all"
+msgstr "Kūr otemjej"
+
+#: templates/subscribe.php:274
+msgid "No councils available."
+msgstr "Ejjeļọk kaunsel ko ewōr."
+
+#: templates/subscribe.php:306
+msgid "How often?"
+msgstr "Roñoul ke?"
+
+#. translators: %s: link to privacy policy
+#: templates/subscribe.php:348
+#, php-format
+msgid "We never share your info. Unsubscribe anytime. See our %s."
+msgstr "Jej jab bōktake am melele. Unsubscribe ilo jabdewōt iien. Lale %s ami."
+
+#: templates/unsubscribed.php:30
+msgid "You've been unsubscribed"
+msgstr "Emouj am unsubscribe"
+
+#: templates/unsubscribed.php:31
+msgid "You won't receive any more meeting notifications from us. If you change your mind, you can subscribe again at any time."
+msgstr "Kwōjab naaj bōk notification ko in miting jen jet. Ñe kwōllọk am lōmnak, kwōmaroñ subscribe innem ilo jabdewōt iien."
+
+#: templates/unsubscribed.php:34
+msgid "Subscribe Again"
+msgstr "Subscribe Innem"

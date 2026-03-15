@@ -1,0 +1,523 @@
+# Tongan translation for the CiviMe theme.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/civime\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Lea Fakatonga <hello@civi.me>\n"
+"Language: to\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:14+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "CiviMe"
+msgstr "CiviMe"
+
+#. Theme URI of the theme
+#. Author URI of the theme
+#: style.css
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the theme
+#: style.css
+msgid "Custom theme for Civi.Me — Hawaii civic engagement platform. Mobile-first, WCAG 2.1 AA compliant, light/dark mode."
+msgstr "Tīma fakaʻutu ki Civi.Me — kautaha fakafonua ʻo Hawaii. Fōkisi ki fōni, WCAG 2.1 AA, ʻaho māmā/pōʻuli."
+
+#. Author of the theme
+#: style.css
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: 404.php:19
+msgid "Page not found"
+msgstr "ʻOua naʻe ʻikai maʻu"
+
+#: 404.php:23
+msgid "The page you're looking for doesn't exist or has been moved. Try searching below, or head back home."
+msgstr "ʻOua ʻoku ke kumi ʻoku ʻikai ʻi ai pe kuo ngāueʻi. Sio hifo ki lalo ke kumi, pe foki ki ʻuta."
+
+#: 404.php:34
+msgid "Go back home"
+msgstr "Foki ki ʻuta"
+
+#: footer.php:11
+msgid "Civic engagement for Hawaii"
+msgstr "Ngāue fakafonua maʻa Hawaii"
+
+#: footer.php:16
+msgid "Footer navigation"
+msgstr "Navigēsoni vaʻe"
+
+#. translators: %s: site name
+#: footer.php:42
+#, php-format
+msgid "%s &mdash; Civic engagement for Hawaii"
+msgstr "%s &mdash; Ngāue fakafonua maʻa Hawaii"
+
+#: footer.php:52
+msgid "Privacy Policy"
+msgstr "Founga Tauhi Fakaʻatākai"
+
+#: footer.php:63
+msgid "Open source on GitHub (opens in new tab)"
+msgstr "Mālohi ʻata ʻi GitHub (toʻo hake ʻi tepi foʻou)"
+
+#: footer.php:68
+msgid "Open source"
+msgstr "Mālohi ʻata"
+
+#: front-page.php:26
+msgid "Built for Hawaii"
+msgstr "Ngāue ʻaki maʻa Hawaii"
+
+#: front-page.php:33
+msgid "Civic Engagement Tools"
+msgstr "Ngāue Fakafonua"
+
+#: front-page.php:33
+msgid "for the People of Hawaii"
+msgstr "maʻa e kakai ʻo Hawaii"
+
+#: front-page.php:43
+msgid "Government information shouldn't require a law degree to navigate. Civi.Me makes it simple to stay informed, show up, and have your voice heard — in plain language, for free."
+msgstr "ʻOua ʻe fie maʻu ha tohi lao ke mahino ʻa e fakamatala puleʻanga. ʻOku fakaʻaongaʻi ʻe Civi.Me ke faingofua ʻa e nofo ʻiloʻi, haʻu, mo e fanongo ki hoʻo leʻo — ʻi lea mahino, ta'etotongi."
+
+#: front-page.php:53
+msgid "What matters to you?"
+msgstr "Ko e hā ʻoku mahuʻinga kiate koe?"
+
+#: front-page.php:56
+msgid "Browse meetings"
+msgstr "Vakai ki he ngaahi fakataha"
+
+#: front-page.php:167
+msgid "The challenge"
+msgstr "Ko e faingataʻa"
+
+#: front-page.php:169
+msgid "Civic participation should be accessible for all residents"
+msgstr "ʻOku totonu ke maʻu ʻe he kakai kotoa pē ha mālohi ki he ngāue fakafonua"
+
+#: front-page.php:172
+msgid "People want to be engaged, but the barriers make it feel impossible. We're removing them."
+msgstr "ʻOku loto ʻa e kakai ke kau, ka ko e ngaahi tapuni ʻoku fakaʻatā ke ʻikai lava. ʻOku mau toʻo ia."
+
+#: front-page.php:190
+msgid "Buried information"
+msgstr "Fakamatala kuo fakahūhū"
+
+#: front-page.php:191
+msgid "Meeting agendas are buried in PDFs across dozens of county and state websites with no consistent format."
+msgstr "Ko e ngaahi lāunga fakataha kuo fakahūhū ʻi he ngaahi PDF ʻi he ngaahi ʻinitaneti fakakaunati mo e puleʻanga ʻo taʻe ha fōma tatau."
+
+#: front-page.php:203
+msgid "No timely alerts"
+msgstr "ʻIkai ha fakalāloa fakatefito"
+
+#: front-page.php:204
+msgid "Residents find out about decisions that affect their neighborhoods after the fact — if at all."
+msgstr "ʻOku ʻilo ʻe he kakai ki he ngaahi fili ʻoku ueʻi honau feituʻu hili ʻa e hoko — kapau ʻoku nau ʻilo."
+
+#: front-page.php:219
+msgid "Bureaucratic language"
+msgstr "Lea fakafakalakalaka"
+
+#: front-page.php:220
+msgid "Government documents are written for lawyers, not residents. Plain-language summaries are rare."
+msgstr "Ko e ngaahi tohi puleʻanga kuo tohi maʻa e kau lōia, ʻikai maʻa e kakai. Ko e ngaahi fakamālohi lea mahino ʻoku tokolahi."
+
+#: front-page.php:234
+msgid "Who are my representatives?"
+msgstr "Ko hai hoku kau fakafofonga?"
+
+#: front-page.php:235
+msgid "Most residents can't name their city council member, let alone their neighborhood board chair."
+msgstr "Ko e kakai tokolahi ʻoku ʻikai te nau lava ke fakahingoa honau kautaha fakasiti, tuku kehe ʻa e ʻeiki nofo ʻo honau vaʻa."
+
+#: front-page.php:254
+msgid "Start here"
+msgstr "Kamata heni"
+
+#: front-page.php:256
+msgid "Tell us what matters to you"
+msgstr "Tala mai ko e hā ʻoku mahuʻinga kiate koe"
+
+#: front-page.php:259
+msgid "Pick the topics you care about — environment, housing, education, health — and we'll show you the government meetings and councils that handle those issues."
+msgstr "Fili ʻa e ngaahi kaveinga ʻoku ke tokanga ki ai — ʻātakai, fale nofo, akoʻanga, moʻui lelei — pea te mau hāʻele koe ki he ngaahi fakataha mo e ngaahi kautaha puleʻanga ʻoku nau fakalelei ʻa e ngaahi meʻa ko ia."
+
+#: front-page.php:270
+msgid "Environment & Land"
+msgstr "ʻĀtakai mo e Fonua"
+
+#: front-page.php:270
+msgid "Leaf"
+msgstr "Lau"
+
+#: front-page.php:271
+msgid "Housing & Development"
+msgstr "Fale Nofo mo e Fakalakalaka"
+
+#: front-page.php:271
+msgid "House"
+msgstr "Fale"
+
+#: front-page.php:272
+msgid "Education"
+msgstr "Akoʻanga"
+
+#: front-page.php:272
+msgid "Books"
+msgstr "Ngaahi tohi"
+
+#: front-page.php:273
+msgid "Health & Wellness"
+msgstr "Moʻui Lelei mo e Mālohi"
+
+#: front-page.php:273
+msgid "Hospital"
+msgstr "Faleʻi"
+
+#: front-page.php:274
+msgid "Transportation"
+msgstr "Fefolauʻaki"
+
+#: front-page.php:274
+msgid "Bus"
+msgstr "Pasi"
+
+#: front-page.php:275
+msgid "Public Safety"
+msgstr "Malu ʻo e Kakai"
+
+#: front-page.php:275
+msgid "Shield"
+msgstr "Pale"
+
+#: front-page.php:276
+msgid "Economy & Labor"
+msgstr "Tuʻunga Paʻanga mo e Ngāue"
+
+#: front-page.php:276
+msgid "Briefcase"
+msgstr "Kato ngāue"
+
+#: front-page.php:277
+msgid "Culture & Arts"
+msgstr "Anga fakafonua mo e Ngāue Fakaʻataʻatā"
+
+#: front-page.php:277
+msgid "Performing arts"
+msgstr "Ngāue fakaʻataʻatā"
+
+#: front-page.php:278
+msgid "Agriculture & Food"
+msgstr "Fakaʻotumotu mo e Meʻakai"
+
+#: front-page.php:278
+msgid "Sheaf of rice"
+msgstr "Faʻa haiʻisi"
+
+#: front-page.php:279
+msgid "Energy & Utilities"
+msgstr "Mālohi ʻuhila mo e Ngāue Kotoa"
+
+#: front-page.php:279
+msgid "Lightning bolt"
+msgstr "ʻuhila"
+
+#: front-page.php:280
+msgid "Water & Ocean"
+msgstr "Vai mo e Tahi"
+
+#: front-page.php:280
+msgid "Ocean wave"
+msgstr "Peau tahi"
+
+#: front-page.php:281
+msgid "Disability & Access"
+msgstr "Māhaki mo e Mālohi Kumi"
+
+#: front-page.php:281
+msgid "Wheelchair symbol"
+msgstr "Fakaʻilonga nofo uili"
+
+#: front-page.php:282
+msgid "Veterans & Military"
+msgstr "Kau Tau Motuʻa mo e Kau Fili"
+
+#: front-page.php:282
+msgid "Military medal"
+msgstr "Mētale tau"
+
+#: front-page.php:283
+msgid "Technology & Innovation"
+msgstr "Tekinolosia mo e Fakafoʻou"
+
+#: front-page.php:283
+msgid "Laptop"
+msgstr "Lāpitōpi"
+
+#: front-page.php:284
+msgid "Budget & Finance"
+msgstr "Paʻanga Fakakaukau mo e Paʻanga"
+
+#: front-page.php:284
+msgid "Bar chart"
+msgstr "Siati tepiʻi"
+
+#: front-page.php:285
+msgid "Governance & Ethics"
+msgstr "Pule mo e Tauʻatāina"
+
+#: front-page.php:285
+msgid "Balance scale"
+msgstr "Akalanga tatau"
+
+#: front-page.php:302
+msgid "Pick Your Topics"
+msgstr "Fili Ho Ngaahi Kaveinga"
+
+#: front-page.php:305
+msgid "Pick the topics you care about and we'll show you the meetings that matter."
+msgstr "Fili ʻa e ngaahi kaveinga ʻoku ke tokanga ki ai pea te mau hāʻele koe ki he ngaahi fakataha ʻoku mahuʻinga."
+
+#: front-page.php:320
+msgid "Civic tools"
+msgstr "Ngāue fakafonua"
+
+#: front-page.php:322
+msgid "What you can do on Civi.Me"
+msgstr "Ko e hā ʻoku ke lava ke fai ʻi Civi.Me"
+
+#: front-page.php:363
+#: front-page.php:403
+#: front-page.php:443
+#: front-page.php:487
+msgid "Live"
+msgstr "Moʻui"
+
+#: front-page.php:365
+msgid "Browse Meetings"
+msgstr "Vakai ki he Ngaahi Fakataha"
+
+#: front-page.php:368
+msgid "All public meetings — boards, commissions, and councils — in one calendar. Filter by topic, council, or date. AI-generated summaries explain what's on the agenda."
+msgstr "Ko e ngaahi fakataha fakasōsaieti kotoa — ngaahi pooti, komisoni, mo e ngaahi kautaha — ʻi he kalena pe taha. Fakalelei ʻaki kaveinga, kautaha, pe ʻaho. Ko e ngaahi hōfanga AI ʻoku fakamatala ko e hā ʻi he lāunga."
+
+#: front-page.php:405
+msgid "Council Profiles"
+msgstr "Ngaahi Fakamatala Kautaha"
+
+#: front-page.php:408
+msgid "Learn what each board and commission actually does — in plain language. See who sits on the board, upcoming meetings, open seats, and how to participate."
+msgstr "Ako ko e hā ʻoku fai ʻe he pooti mo e komisoni kotoa — ʻi lea mahino. Sio ko hai ʻoku nofo ʻi he pooti, ngaahi fakataha ka hoko, ngaahi nofoʻanga tatala, mo e founga ke kau ai."
+
+#: front-page.php:445
+msgid "Get Alerts"
+msgstr "Maʻu Ngaahi Fakalāloa"
+
+#: front-page.php:448
+msgid "Subscribe to topics or specific councils. Get email alerts when meetings are scheduled — before it's too late to participate."
+msgstr "Lēkooti ki he ngaahi kaveinga pe ngaahi kautaha fakaʻutuʻutu. Maʻu ngaahi fakalāloa ʻimeli ʻi he taimi ʻoku fakamālohi ai ʻa e ngaahi fakataha — kimuʻa pea vela ʻa e taimi ke kau ai."
+
+#: front-page.php:489
+msgid "Guides & Compliance"
+msgstr "Ngaahi Hūfanga mo e Tatau"
+
+#: front-page.php:492
+msgid "Step-by-step civic action guides plus compliance tools for agencies — Sunshine Law, public records, accessibility, and public participation best practices."
+msgstr "Ngaahi hūfanga ngāue fakafonua feʻunga mo e ngāue tatau maʻa e ngaahi kautaha — Lao Saʻisinisini, ngaahi lēkooti fakasōsaieti, mālohi kumi, mo e ngaahi founga lelei taha ke kau ai ʻa e kakai."
+
+#: front-page.php:511
+msgid "What we believe"
+msgstr "Ko e meʻa ʻoku mau tui ki ai"
+
+#: front-page.php:513
+msgid "Information access is a community right"
+msgstr "Ko e mālohi kumi fakamatala ko e totonu ʻo e kakai"
+
+#: front-page.php:516
+msgid "Every resident deserves to know what decisions are being made that affect their community — in language they can understand, at a time when they can still participate."
+msgstr "ʻOku totonu ke ʻilo ʻe he kakai kotoa pē ko e hā ngaahi fili ʻoku fai ʻoku ueʻi honau kominiti — ʻi lea ʻoku nau mahino ki ai, ʻi he taimi te nau lava ai ke kau."
+
+#: front-page.php:534
+msgid "Strictly nonpartisan"
+msgstr "Taʻe fakapāti aupito"
+
+#: front-page.php:535
+msgid "Civi.Me does not endorse candidates, parties, or positions on any issue. We present facts: what a bill does, who submitted it, when the hearing is. We provide tools and templates — never talking points."
+msgstr "ʻOku ʻikai fakafaingamālie ʻe Civi.Me ha kau taukaveinga, pāti, pe tuʻunga ki ha meʻa. ʻOku mau hāʻele ʻa e moʻoni: ko e hā ʻoku fai ʻe he tohi lao, ko hai naʻe tukuange, ko ʻenefē ʻa e fanongo. ʻOku mau foaki ngāue mo e ngaahi sipinga — taʻefoki ha ngaahi uenga."
+
+#: front-page.php:549
+msgid "Everyone is included — no exceptions"
+msgstr "Ko e kakai kotoa pē ʻoku kau — ʻikai ha fakakehe"
+
+#: front-page.php:550
+msgid "We use \"residents\" — not \"citizens.\" We support all 15 languages recognized by Hawaii's Office of Language Access. We build for mobile and include a phone line for people who don't have a smartphone at all."
+msgstr "ʻOku mau fakaʻaongaʻi \"kakai nofo\" — ʻikai \"kau pisinisi.\" ʻOku mau poupou ki he ngaahi lea 15 kotoa pē ʻoku ʻiloʻi ʻe he Ofisi Lea ʻo Hawaii. ʻOku mau langa maʻa e fōni mo e laine fōni maʻa e kakai ʻoku ʻikai ha fōni lalafo."
+
+#: front-page.php:561
+msgid "Cultural respect is not optional"
+msgstr "Ko e fakaʻapaʻapa fakaʻikuna ʻoku ʻikai fakaʻatā"
+
+#: front-page.php:562
+msgid "Native Hawaiian sovereignty is a living issue, not history. We frame civic participation as community engagement — not blind deference to government structures."
+msgstr "Ko e māfimafi ʻo e kakai tuʻi ʻo Hawaii ko e meʻa moʻui, ʻikai ko e hisitōlia. ʻOku mau fakaʻaongaʻi ʻa e kau fakafonua ko e ngāue kominiti — ʻikai ko e fai anga taʻeʻilo ki he ngaahi fakatuʻutuʻu puleʻanga."
+
+#: front-page.php:573
+msgid "Open source and community-built"
+msgstr "Mālohi ʻata mo e langa ʻe he kominiti"
+
+#: front-page.php:574
+msgid "Civi.Me's code is public on GitHub from day one. Civic infrastructure should be open to inspection, contribution, and community ownership. If we ever make a decision you disagree with, you can see exactly why — and you can help us do better."
+msgstr "Ko e kōtoa ʻo Civi.Me ʻoku fakasōsaieti ʻi GitHub talu mei he ʻaho ʻuluaki. ʻOku totonu ke tatala ʻa e fakatuʻutuʻu fakafonua ki he sio, tokoni, mo e pule ʻe he kominiti. Kapau ʻoku mau fili ha meʻa ʻoku ke fehangahangai mo ia, ʻoku ke lava ke sio ko e hā ʻaupito — mo e lava ke ke tokoni kiate kimautolu ke fai lelei aʻu ange."
+
+#: front-page.php:589
+msgid "Join us"
+msgstr "Kau mai"
+
+#: front-page.php:591
+msgid "Help build civic infrastructure for Hawaii"
+msgstr "Tokoni ke langa ʻa e fakatuʻutuʻu fakafonua maʻa Hawaii"
+
+#: front-page.php:594
+msgid "Civi.Me is open source and community-driven. Whether you're a developer, a civic advocate, or just someone who cares — there's a place for you."
+msgstr "Ko Civi.Me ʻoku mālohi ʻata mo e tataki ʻe he kominiti. Pe ko e tokotaha ngāue tekinolosia, ko e poupou fakafonua, pe ko e tokotaha ʻoku tokanga — ʻoku ʻi ai ha feituʻu maʻau."
+
+#: front-page.php:607
+msgid "View on GitHub"
+msgstr "Sio ʻi GitHub"
+
+#: front-page.php:610
+msgid "Get in touch"
+msgstr "Feʻofoʻofani"
+
+#: functions.php:48
+msgid "Ocean Blue"
+msgstr "Lanu Tahi"
+
+#: functions.php:53
+msgid "Reef Teal"
+msgstr "Lanu ʻOliva Tahi"
+
+#: functions.php:58
+msgid "Sunset Orange"
+msgstr "Lanu ʻOleni Tō"
+
+#: functions.php:63
+msgid "Near White"
+msgstr "Ofi ki Hinehina"
+
+#: functions.php:68
+msgid "Near Black"
+msgstr "Ofi ki ʻUliʻuli"
+
+#: functions.php:79
+msgid "Primary Menu"
+msgstr "Lāuta Matua"
+
+#: functions.php:80
+msgid "Footer Menu"
+msgstr "Lāuta Vaʻe"
+
+#: functions.php:279
+#: functions.php:313
+msgid "Topics"
+msgstr "Ngaahi Kaveinga"
+
+#: functions.php:280
+#: functions.php:314
+msgid "Meetings"
+msgstr "Ngaahi Fakataha"
+
+#: functions.php:281
+#: functions.php:315
+msgid "Councils"
+msgstr "Ngaahi Kautaha"
+
+#: functions.php:282
+#: functions.php:316
+msgid "Guides"
+msgstr "Ngaahi Hūfanga"
+
+#: functions.php:283
+#: functions.php:317
+msgid "Alerts"
+msgstr "Ngaahi Fakalāloa"
+
+#: header.php:15
+msgid "Skip to main content"
+msgstr "Hanga ki he fakamatala matua"
+
+#: header.php:23
+msgid "Home"
+msgstr "ʻŪtā"
+
+#: header.php:50
+msgid "Switch to dark mode"
+msgstr "Liliu ki he founga pōʻuli"
+
+#: header.php:76
+msgid "Open navigation menu"
+msgstr "Tatala ʻa e lāuta navigēsoni"
+
+#: header.php:90
+msgid "Primary navigation"
+msgstr "Navigēsoni matua"
+
+#: header.php:112
+msgid "Mobile navigation"
+msgstr "Navigēsoni fōni"
+
+#: header.php:120
+msgid "Close navigation menu"
+msgstr "Tāpuni ʻa e lāuta navigēsoni"
+
+#: index.php:16
+msgid "Latest Posts"
+msgstr "Ngaahi Foaki Fakamuimui"
+
+#: index.php:66
+msgid "Previous"
+msgstr "Kimuʻa"
+
+#: index.php:67
+msgid "Next"
+msgstr "Hoko"
+
+#: index.php:75
+msgid "No posts found."
+msgstr "ʻIkai maʻu ha ngaahi foaki."
+
+#. Template Name of the theme
+msgid "Compliance Hub"
+msgstr "Senita Tatau"
+
+#: page-compliance-hub.php:103
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] "Lau %d miniti"
+
+#: page-compliance-hub.php:109
+msgid "Read Guide"
+msgstr "Lau ʻa e Hūfanga"
+
+#: page-compliance-hub.php:124
+msgid "Compliance guides are coming soon. Check back shortly."
+msgstr "Ko e ngaahi hūfanga tatau ʻoku haʻu. Toe keli mai vave."
+
+#: page.php:24
+msgid "Page"
+msgstr "ʻOua"

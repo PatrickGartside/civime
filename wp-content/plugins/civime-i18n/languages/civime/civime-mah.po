@@ -1,0 +1,523 @@
+# Marshallese translation for the CiviMe theme.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/civime\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Kajin M̧ajeļ <hello@civi.me>\n"
+"Language: mah\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:14+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "CiviMe"
+msgstr "CiviMe"
+
+#. Theme URI of the theme
+#. Author URI of the theme
+#: style.css
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the theme
+#: style.css
+msgid "Custom theme for Civi.Me — Hawaii civic engagement platform. Mobile-first, WCAG 2.1 AA compliant, light/dark mode."
+msgstr "Tiim ko ñan Civi.Me — platporm eo an Hawaii ñan kōjparok kien. Mobile-tata, WCAG 2.1 AA mōkaj, mōñā wōt/bōbrae mōd."
+
+#. Author of the theme
+#: style.css
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: 404.php:19
+msgid "Page not found"
+msgstr "Pej ejjeļọk"
+
+#: 404.php:23
+msgid "The page you're looking for doesn't exist or has been moved. Try searching below, or head back home."
+msgstr "Pej eo kwōj kōjjela ejjeļọk ak bōlen emouj ikijjeen. Jikuul lọọt, ak rọọl ñan ioon."
+
+#: 404.php:34
+msgid "Go back home"
+msgstr "Rọọl ñan ioon"
+
+#: footer.php:11
+msgid "Civic engagement for Hawaii"
+msgstr "Kōjparok kien ñan Hawaii"
+
+#: footer.php:16
+msgid "Footer navigation"
+msgstr "Nabbije eo ilo pālle"
+
+#. translators: %s: site name
+#: footer.php:42
+#, php-format
+msgid "%s &mdash; Civic engagement for Hawaii"
+msgstr "%s &mdash; Kōjparok kien ñan Hawaii"
+
+#: footer.php:52
+msgid "Privacy Policy"
+msgstr "Politij in Kinnid"
+
+#: footer.php:63
+msgid "Open source on GitHub (opens in new tab)"
+msgstr "Kōmmelele ilo GitHub (kōjetal ilo tab eo jejjet)"
+
+#: footer.php:68
+msgid "Open source"
+msgstr "Kōmmelele"
+
+#: front-page.php:26
+msgid "Built for Hawaii"
+msgstr "Kōṃṃan ñan Hawaii"
+
+#: front-page.php:33
+msgid "Civic Engagement Tools"
+msgstr "Kein Kōjparok Kien"
+
+#: front-page.php:33
+msgid "for the People of Hawaii"
+msgstr "ñan Ri-Hawaii ro"
+
+#: front-page.php:43
+msgid "Government information shouldn't require a law degree to navigate. Civi.Me makes it simple to stay informed, show up, and have your voice heard — in plain language, for free."
+msgstr "Melele in kien ekwe ejjeļọk an kōjjela lo ilo ilo bōk tiotio in lōñ ñan jeramman. Civi.Me elukkuun aenōmman bwe kwōnaaj jeļā, itok, im roñ am bōd — ilo kajin maroñ, jab tōprak."
+
+#: front-page.php:53
+msgid "What matters to you?"
+msgstr "Etke ko remōj ñan eok?"
+
+#: front-page.php:56
+msgid "Browse meetings"
+msgstr "Lale miting ko"
+
+#: front-page.php:167
+msgid "The challenge"
+msgstr "Buñbūñ eo"
+
+#: front-page.php:169
+msgid "Civic participation should be accessible for all residents"
+msgstr "Ekwe em̧ōj ñan armej ro otemjej bwe ren etal ilo kōjparok kien"
+
+#: front-page.php:172
+msgid "People want to be engaged, but the barriers make it feel impossible. We're removing them."
+msgstr "Armej ro rej kōnan bōk oktak, ak kōt ko rej kōmmane bwe elōñ wōt bwe jeban maroñ. Kiiō jej kūr er."
+
+#: front-page.php:190
+msgid "Buried information"
+msgstr "Melele ko rekōtoọn"
+
+#: front-page.php:191
+msgid "Meeting agendas are buried in PDFs across dozens of county and state websites with no consistent format."
+msgstr "Agenda in miting ko rekōtoọn ilo PDF ko ilo website ko an kaltin im steit ko bwe ejjeļọk format ko rejjela."
+
+#: front-page.php:203
+msgid "No timely alerts"
+msgstr "Ejjeļọk notification ko in mantin"
+
+#: front-page.php:204
+msgid "Residents find out about decisions that affect their neighborhoods after the fact — if at all."
+msgstr "Ri-jikin ro rej jeļā kōn keemem ko rekōñjōñōt ñan aelon̄ ko aer jen ãlikin — bōlen aer jeļā ke."
+
+#: front-page.php:219
+msgid "Bureaucratic language"
+msgstr "Kajin kien pālle"
+
+#: front-page.php:220
+msgid "Government documents are written for lawyers, not residents. Plain-language summaries are rare."
+msgstr "Pepa ko an kien rejjōtake ñan ri-lōñ, jab ri-jikin. Jiroñ ko ilo kajin maroñ elōñlọk eddọ."
+
+#: front-page.php:234
+msgid "Who are my representatives?"
+msgstr "Wōn ri-jokwe ro rōm̧ōj ñan eok?"
+
+#: front-page.php:235
+msgid "Most residents can't name their city council member, let alone their neighborhood board chair."
+msgstr "Elōñlọk ri-jikin ro rejjab maroñ kōnaat etan ri-kaunsel in jikin ko aer, bōlen etan jemedre in board eo an aelon̄ aer."
+
+#: front-page.php:254
+msgid "Start here"
+msgstr "Jino ijin"
+
+#: front-page.php:256
+msgid "Tell us what matters to you"
+msgstr "Lōmnak eok etke ko remōj ñan eok"
+
+#: front-page.php:259
+msgid "Pick the topics you care about — environment, housing, education, health — and we'll show you the government meetings and councils that handle those issues."
+msgstr "Kotak topic ko kwōjjab lọmọọj — environment, jikin mour, edukeiñ, olomiej — im kiiō jen kōjjeļā eok miting ko an kien im kaunsel ko rej kōṃṃan kōn ia."
+
+#: front-page.php:270
+msgid "Environment & Land"
+msgstr "Jikin Mour im Lọjet"
+
+#: front-page.php:270
+msgid "Leaf"
+msgstr "Ri"
+
+#: front-page.php:271
+msgid "Housing & Development"
+msgstr "Jikin Mour im Kōṃṃan"
+
+#: front-page.php:271
+msgid "House"
+msgstr "Jikin mour"
+
+#: front-page.php:272
+msgid "Education"
+msgstr "Edukeiñ"
+
+#: front-page.php:272
+msgid "Books"
+msgstr "Buk ko"
+
+#: front-page.php:273
+msgid "Health & Wellness"
+msgstr "Olomiej im Jeraaṃṃan"
+
+#: front-page.php:273
+msgid "Hospital"
+msgstr "Taubōtōl"
+
+#: front-page.php:274
+msgid "Transportation"
+msgstr "Wāween kōttar"
+
+#: front-page.php:274
+msgid "Bus"
+msgstr "Bas"
+
+#: front-page.php:275
+msgid "Public Safety"
+msgstr "Māloelep in Jikin"
+
+#: front-page.php:275
+msgid "Shield"
+msgstr "Kein māloelep"
+
+#: front-page.php:276
+msgid "Economy & Labor"
+msgstr "Ekonomi im Bōtōktōk"
+
+#: front-page.php:276
+msgid "Briefcase"
+msgstr "Pās in bōtōktōk"
+
+#: front-page.php:277
+msgid "Culture & Arts"
+msgstr "Joñak im Naan"
+
+#: front-page.php:277
+msgid "Performing arts"
+msgstr "Naan in jokwe"
+
+#: front-page.php:278
+msgid "Agriculture & Food"
+msgstr "Kain Kōmour im M̧akōn"
+
+#: front-page.php:278
+msgid "Sheaf of rice"
+msgstr "Wūnlọọn raij"
+
+#: front-page.php:279
+msgid "Energy & Utilities"
+msgstr "Iien im Kōjparok"
+
+#: front-page.php:279
+msgid "Lightning bolt"
+msgstr "Uea"
+
+#: front-page.php:280
+msgid "Water & Ocean"
+msgstr "Dike im Lọjet"
+
+#: front-page.php:280
+msgid "Ocean wave"
+msgstr "Jọọb in lọjet"
+
+#: front-page.php:281
+msgid "Disability & Access"
+msgstr "Buñ im Maroñ Bōk"
+
+#: front-page.php:281
+msgid "Wheelchair symbol"
+msgstr "Tokin juon eo in chair ko an"
+
+#: front-page.php:282
+msgid "Veterans & Military"
+msgstr "Ri-Mili ko Etto im Eoñōd"
+
+#: front-page.php:282
+msgid "Military medal"
+msgstr "Medal in eoñōd"
+
+#: front-page.php:283
+msgid "Technology & Innovation"
+msgstr "Teknoloji im Ippān Kōṃṃan"
+
+#: front-page.php:283
+msgid "Laptop"
+msgstr "Laptop"
+
+#: front-page.php:284
+msgid "Budget & Finance"
+msgstr "Budget im Kāldo"
+
+#: front-page.php:284
+msgid "Bar chart"
+msgstr "Jaat in bar"
+
+#: front-page.php:285
+msgid "Governance & Ethics"
+msgstr "Ri-kien im Tōreik"
+
+#: front-page.php:285
+msgid "Balance scale"
+msgstr "Kein kūrjo eo"
+
+#: front-page.php:302
+msgid "Pick Your Topics"
+msgstr "Kotak Am Topic Ko"
+
+#: front-page.php:305
+msgid "Pick the topics you care about and we'll show you the meetings that matter."
+msgstr "Kotak topic ko kwōjjab lọmọọj im kiiō jen kōjjeļā eok miting ko remōj."
+
+#: front-page.php:320
+msgid "Civic tools"
+msgstr "Kein kōjparok kien"
+
+#: front-page.php:322
+msgid "What you can do on Civi.Me"
+msgstr "Etke kwōmaroñ kōṃṃan ilo Civi.Me"
+
+#: front-page.php:363
+#: front-page.php:403
+#: front-page.php:443
+#: front-page.php:487
+msgid "Live"
+msgstr "Kiiō"
+
+#: front-page.php:365
+msgid "Browse Meetings"
+msgstr "Lale Miting Ko"
+
+#: front-page.php:368
+msgid "All public meetings — boards, commissions, and councils — in one calendar. Filter by topic, council, or date. AI-generated summaries explain what's on the agenda."
+msgstr "Miting in jikin ko otemjej — board ko, komisin ko, im kaunsel ko — ilo juon kaelendar. Filter kōn topic, kaunsel, ak raan. Jiroñ ko an AI rej kōjjeļā etke ko ilo agenda."
+
+#: front-page.php:405
+msgid "Council Profiles"
+msgstr "Wōpij in Kaunsel Ko"
+
+#: front-page.php:408
+msgid "Learn what each board and commission actually does — in plain language. See who sits on the board, upcoming meetings, open seats, and how to participate."
+msgstr "Jeļā etke board im komisin ko otemjej rej kōṃṃan — ilo kajin maroñ. Lale wōn rej jijet ilo board, miting ko rekooñāl, jikin ko jet, im wāween bōk oktak."
+
+#: front-page.php:445
+msgid "Get Alerts"
+msgstr "Bōk Notification Ko"
+
+#: front-page.php:448
+msgid "Subscribe to topics or specific councils. Get email alerts when meetings are scheduled — before it's too late to participate."
+msgstr "Subscribe ñan topic ko ak kaunsel ko kiloñi. Bōk notification in email ke miting ko rej schedule — mokta jen jab maroñ bōk oktak."
+
+#: front-page.php:489
+msgid "Guides & Compliance"
+msgstr "Guide ko im Mōkaj"
+
+#: front-page.php:492
+msgid "Step-by-step civic action guides plus compliance tools for agencies — Sunshine Law, public records, accessibility, and public participation best practices."
+msgstr "Guide ko in kōjparok kien im kein mōkaj ñan ejmour ko — Sunshine Law, rekōd in jikin, maroñ bōk, im wāween jeraaṃṃan in jikin."
+
+#: front-page.php:511
+msgid "What we believe"
+msgstr "Etke jej tōmak"
+
+#: front-page.php:513
+msgid "Information access is a community right"
+msgstr "Maroñ bōk melele ej kien an jikin"
+
+#: front-page.php:516
+msgid "Every resident deserves to know what decisions are being made that affect their community — in language they can understand, at a time when they can still participate."
+msgstr "Armej ro otemjej rej jeraaṃṃan bwe ren jeļā etke ko rej keemem ñan jikin ko aer — ilo kajin rej maroñ jeļā, ilo iien rej bōrọọriik ke wōt bōk oktak."
+
+#: front-page.php:534
+msgid "Strictly nonpartisan"
+msgstr "Jab ñan jabdewōt parti"
+
+#: front-page.php:535
+msgid "Civi.Me does not endorse candidates, parties, or positions on any issue. We present facts: what a bill does, who submitted it, when the hearing is. We provide tools and templates — never talking points."
+msgstr "Civi.Me ejjab kōjparok ri-kotak, parti, ak maroñ ko ilo jabdewōt ia. Jej kwaļọk tōtōin: etke bil eo ej kōṃṃan, wōn ej kaktoke, ak iien eo an roñjake. Jej leļọk kein im jikin kōjbar — jab jabdewōt iien lōmnak ko."
+
+#: front-page.php:549
+msgid "Everyone is included — no exceptions"
+msgstr "Armej ro otemjej rej ilo — ejjeļọk ko im rūttōn"
+
+#: front-page.php:550
+msgid "We use \"residents\" — not \"citizens.\" We support all 15 languages recognized by Hawaii's Office of Language Access. We build for mobile and include a phone line for people who don't have a smartphone at all."
+msgstr "Jej jibwi \"ri-jikin\" — jab \"ri-kien.\" Jej kōjparok kajin 15 ko otemjej rej jeļā kōn Office in Kajin an Hawaii. Jej kōṃṃan ñan mobile im ej bar ñan line in telebon ñan armej ro rejjab aikuj smartphone."
+
+#: front-page.php:561
+msgid "Cultural respect is not optional"
+msgstr "Aenōṃṃan joñak ejjab kotak"
+
+#: front-page.php:562
+msgid "Native Hawaiian sovereignty is a living issue, not history. We frame civic participation as community engagement — not blind deference to government structures."
+msgstr "Mour an ri-Hawaii ej ia eo emōj, jab historia. Jej kōjjeļā bōk oktak kien ej kōjparok in jikin — jab jen jab jeļā ñan kien ko."
+
+#: front-page.php:573
+msgid "Open source and community-built"
+msgstr "Kōmmelele im kōṃṃan kōn jikin"
+
+#: front-page.php:574
+msgid "Civi.Me's code is public on GitHub from day one. Civic infrastructure should be open to inspection, contribution, and community ownership. If we ever make a decision you disagree with, you can see exactly why — and you can help us do better."
+msgstr "Kōd an Civi.Me ej jikin ilo GitHub jen raan eo ṃōttan. Infrastrakta in kien ekwe em̧ōj kōmmelele ñan lale, kōttar, im kien an jikin. Ñe jej kōṃṃan keemem ko kwōjab melele, kwōmaroñ lale bōlen etke — im kwōmaroñ jipañ im kōṃṃan aenōṃṃan."
+
+#: front-page.php:589
+msgid "Join us"
+msgstr "Itok wōt ippām̧"
+
+#: front-page.php:591
+msgid "Help build civic infrastructure for Hawaii"
+msgstr "Jipañ kōṃṃan infrastrakta in kien ñan Hawaii"
+
+#: front-page.php:594
+msgid "Civi.Me is open source and community-driven. Whether you're a developer, a civic advocate, or just someone who cares — there's a place for you."
+msgstr "Civi.Me ej kōmmelele im jikin ej kōṃṃane. Ñe kwōj developer, ri-kōjparok kien, ak armej eo ej kajitōk — ewōr jikin ñan eok."
+
+#: front-page.php:607
+msgid "View on GitHub"
+msgstr "Lale ilo GitHub"
+
+#: front-page.php:610
+msgid "Get in touch"
+msgstr "Bok kōjerbale"
+
+#: functions.php:48
+msgid "Ocean Blue"
+msgstr "Bulū in Lọjet"
+
+#: functions.php:53
+msgid "Reef Teal"
+msgstr "Teel in Jepja"
+
+#: functions.php:58
+msgid "Sunset Orange"
+msgstr "Orrinj in Ilọjet Jọ"
+
+#: functions.php:63
+msgid "Near White"
+msgstr "Kokoke Pein"
+
+#: functions.php:68
+msgid "Near Black"
+msgstr "Kokoke Kijeek"
+
+#: functions.php:79
+msgid "Primary Menu"
+msgstr "Menu Naan"
+
+#: functions.php:80
+msgid "Footer Menu"
+msgstr "Menu Pālle"
+
+#: functions.php:279
+#: functions.php:313
+msgid "Topics"
+msgstr "Topic Ko"
+
+#: functions.php:280
+#: functions.php:314
+msgid "Meetings"
+msgstr "Miting Ko"
+
+#: functions.php:281
+#: functions.php:315
+msgid "Councils"
+msgstr "Kaunsel Ko"
+
+#: functions.php:282
+#: functions.php:316
+msgid "Guides"
+msgstr "Guide Ko"
+
+#: functions.php:283
+#: functions.php:317
+msgid "Alerts"
+msgstr "Notification Ko"
+
+#: header.php:15
+msgid "Skip to main content"
+msgstr "Jitak ñan kōn naan"
+
+#: header.php:23
+msgid "Home"
+msgstr "Home"
+
+#: header.php:50
+msgid "Switch to dark mode"
+msgstr "Kōllọk ñan mōd kijeek"
+
+#: header.php:76
+msgid "Open navigation menu"
+msgstr "Kōjetal menu in nabbije"
+
+#: header.php:90
+msgid "Primary navigation"
+msgstr "Nabbije naan"
+
+#: header.php:112
+msgid "Mobile navigation"
+msgstr "Nabbije mobile"
+
+#: header.php:120
+msgid "Close navigation menu"
+msgstr "Tōprak menu in nabbije"
+
+#: index.php:16
+msgid "Latest Posts"
+msgstr "Kālimur ko Ippān"
+
+#: index.php:66
+msgid "Previous"
+msgstr "Ṃokta"
+
+#: index.php:67
+msgid "Next"
+msgstr "Ālikin"
+
+#: index.php:75
+msgid "No posts found."
+msgstr "Ejjeļọk kālimur ko."
+
+#. Template Name of the theme
+msgid "Compliance Hub"
+msgstr "Kikin Mōkaj"
+
+#: page-compliance-hub.php:103
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] "%d min lale"
+
+#: page-compliance-hub.php:109
+msgid "Read Guide"
+msgstr "Lale Guide"
+
+#: page-compliance-hub.php:124
+msgid "Compliance guides are coming soon. Check back shortly."
+msgstr "Guide ko in mōkaj rekooñāl. Rọọl lale kōn."
+
+#: page.php:24
+msgid "Page"
+msgstr "Pej"

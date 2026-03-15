@@ -1,0 +1,196 @@
+# Spanish (Latin American) translation for the CiviMe Guides plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Guides 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-guides\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Español <hello@civi.me>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-guides\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+#: civime-guides.php
+msgid "CiviMe Guides"
+msgstr "CiviMe Guides"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-guides.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-guides.php
+msgid "How-to guides for civic engagement — testimony, letter writing, advocacy, and more."
+msgstr "Guías de participación cívica — testimonios, redacción de cartas, defensa de derechos y más."
+
+#. Author of the plugin
+#: civime-guides.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: includes/class-post-type.php:27
+#: includes/class-post-type.php:39
+#: templates/archive-guide.php:24
+#: templates/single-guide.php:26
+msgid "Guides"
+msgstr "Guías"
+
+#: includes/class-post-type.php:28
+msgid "Guide"
+msgstr "Guía"
+
+#: includes/class-post-type.php:29
+#: includes/class-post-type.php:30
+msgid "Add New Guide"
+msgstr "Agregar nueva guía"
+
+#: includes/class-post-type.php:31
+msgid "Edit Guide"
+msgstr "Editar guía"
+
+#: includes/class-post-type.php:32
+msgid "New Guide"
+msgstr "Nueva guía"
+
+#: includes/class-post-type.php:33
+msgid "View Guide"
+msgstr "Ver guía"
+
+#: includes/class-post-type.php:34
+msgid "Search Guides"
+msgstr "Buscar guías"
+
+#: includes/class-post-type.php:35
+msgid "No guides found."
+msgstr "No se encontraron guías."
+
+#: includes/class-post-type.php:36
+msgid "No guides found in Trash."
+msgstr "No se encontraron guías en la papelera."
+
+#: includes/class-post-type.php:37
+msgid "All Guides"
+msgstr "Todas las guías"
+
+#: includes/class-post-type.php:38
+msgid "Guide Archives"
+msgstr "Archivo de guías"
+
+#: includes/class-post-type.php:56
+msgid "Guide Categories"
+msgstr "Categorías de guías"
+
+#: includes/class-post-type.php:57
+msgid "Guide Category"
+msgstr "Categoría de guía"
+
+#: includes/class-post-type.php:58
+msgid "Search Categories"
+msgstr "Buscar categorías"
+
+#: includes/class-post-type.php:59
+msgid "All Categories"
+msgstr "Todas las categorías"
+
+#: includes/class-post-type.php:60
+msgid "Parent Category"
+msgstr "Categoría principal"
+
+#: includes/class-post-type.php:61
+msgid "Edit Category"
+msgstr "Editar categoría"
+
+#: includes/class-post-type.php:62
+msgid "Update Category"
+msgstr "Actualizar categoría"
+
+#: includes/class-post-type.php:63
+msgid "Add New Category"
+msgstr "Agregar nueva categoría"
+
+#: includes/class-post-type.php:64
+msgid "New Category Name"
+msgstr "Nombre de la nueva categoría"
+
+#: includes/class-post-type.php:65
+msgid "Categories"
+msgstr "Categorías"
+
+#: templates/archive-guide.php:30
+msgid "Civic Action Guides"
+msgstr "Guías de acción cívica"
+
+#: templates/archive-guide.php:31
+msgid "Step-by-step guides to help you engage with government in Hawaii — from testifying to writing letters to elected officials."
+msgstr "Guías paso a paso para ayudarte a participar con el gobierno en Hawaii — desde dar testimonio hasta escribirles cartas a los funcionarios electos."
+
+#: templates/archive-guide.php:40
+msgid "Filter guides by category"
+msgstr "Filtrar guías por categoría"
+
+#: templates/archive-guide.php:48
+msgid "All"
+msgstr "Todas"
+
+#. translators: %d: number of minutes
+#: templates/archive-guide.php:107
+#: templates/single-guide.php:46
+#: templates/single-guide.php:95
+#: templates/single-guide.php:115
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] "%d min de lectura"
+msgstr[1] "%d min de lectura"
+
+#: templates/archive-guide.php:113
+#: templates/single-guide.php:101
+#: templates/single-guide.php:121
+msgid "Read Guide"
+msgstr "Leer guía"
+
+#: templates/archive-guide.php:129
+msgid "Previous"
+msgstr "Anterior"
+
+#: templates/archive-guide.php:130
+msgid "Next"
+msgstr "Siguiente"
+
+#: templates/archive-guide.php:137
+msgid "No guides found. Check back soon — we're adding new civic action guides regularly."
+msgstr "No se encontraron guías. Vuelve pronto — estamos agregando nuevas guías de acción cívica regularmente."
+
+#: templates/archive-guide.php:141
+msgid "View all guides"
+msgstr "Ver todas las guías"
+
+#: templates/single-guide.php:23
+msgid "Breadcrumb"
+msgstr "Ruta de navegación"
+
+#: templates/single-guide.php:75
+msgid "Related Guides"
+msgstr "Guías relacionadas"
+
+#: templates/single-guide.php:135
+msgid "Get Involved"
+msgstr "Participa"
+
+#: templates/single-guide.php:136
+msgid "Ready to take action? Browse upcoming government meetings and make your voice heard."
+msgstr "¿Listo para actuar? Explora las próximas reuniones gubernamentales y haz escuchar tu voz."
+
+#: templates/single-guide.php:138
+msgid "Browse Meetings"
+msgstr "Ver reuniones"

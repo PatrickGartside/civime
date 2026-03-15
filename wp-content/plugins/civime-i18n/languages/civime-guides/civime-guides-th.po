@@ -1,0 +1,195 @@
+# Thai translation for the CiviMe Guides plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Guides 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-guides\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Thai <hello@civi.me>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-guides\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-guides.php
+msgid "CiviMe Guides"
+msgstr "CiviMe Guides"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-guides.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-guides.php
+msgid "How-to guides for civic engagement — testimony, letter writing, advocacy, and more."
+msgstr "คู่มือวิธีการมีส่วนร่วมทางพลเมือง — การให้การ การเขียนจดหมาย การสนับสนุน และอื่นๆ"
+
+#. Author of the plugin
+#: civime-guides.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: includes/class-post-type.php:27
+#: includes/class-post-type.php:39
+#: templates/archive-guide.php:24
+#: templates/single-guide.php:26
+msgid "Guides"
+msgstr "คู่มือ"
+
+#: includes/class-post-type.php:28
+msgid "Guide"
+msgstr "คู่มือ"
+
+#: includes/class-post-type.php:29
+#: includes/class-post-type.php:30
+msgid "Add New Guide"
+msgstr "เพิ่มคู่มือใหม่"
+
+#: includes/class-post-type.php:31
+msgid "Edit Guide"
+msgstr "แก้ไขคู่มือ"
+
+#: includes/class-post-type.php:32
+msgid "New Guide"
+msgstr "คู่มือใหม่"
+
+#: includes/class-post-type.php:33
+msgid "View Guide"
+msgstr "ดูคู่มือ"
+
+#: includes/class-post-type.php:34
+msgid "Search Guides"
+msgstr "ค้นหาคู่มือ"
+
+#: includes/class-post-type.php:35
+msgid "No guides found."
+msgstr "ไม่พบคู่มือ"
+
+#: includes/class-post-type.php:36
+msgid "No guides found in Trash."
+msgstr "ไม่พบคู่มือในถังขยะ"
+
+#: includes/class-post-type.php:37
+msgid "All Guides"
+msgstr "คู่มือทั้งหมด"
+
+#: includes/class-post-type.php:38
+msgid "Guide Archives"
+msgstr "คลังคู่มือ"
+
+#: includes/class-post-type.php:56
+msgid "Guide Categories"
+msgstr "หมวดหมู่คู่มือ"
+
+#: includes/class-post-type.php:57
+msgid "Guide Category"
+msgstr "หมวดหมู่คู่มือ"
+
+#: includes/class-post-type.php:58
+msgid "Search Categories"
+msgstr "ค้นหาหมวดหมู่"
+
+#: includes/class-post-type.php:59
+msgid "All Categories"
+msgstr "หมวดหมู่ทั้งหมด"
+
+#: includes/class-post-type.php:60
+msgid "Parent Category"
+msgstr "หมวดหมู่หลัก"
+
+#: includes/class-post-type.php:61
+msgid "Edit Category"
+msgstr "แก้ไขหมวดหมู่"
+
+#: includes/class-post-type.php:62
+msgid "Update Category"
+msgstr "อัปเดตหมวดหมู่"
+
+#: includes/class-post-type.php:63
+msgid "Add New Category"
+msgstr "เพิ่มหมวดหมู่ใหม่"
+
+#: includes/class-post-type.php:64
+msgid "New Category Name"
+msgstr "ชื่อหมวดหมู่ใหม่"
+
+#: includes/class-post-type.php:65
+msgid "Categories"
+msgstr "หมวดหมู่"
+
+#: templates/archive-guide.php:30
+msgid "Civic Action Guides"
+msgstr "คู่มือการดำเนินการทางพลเมือง"
+
+#: templates/archive-guide.php:31
+msgid "Step-by-step guides to help you engage with government in Hawaii — from testifying to writing letters to elected officials."
+msgstr "คู่มือทีละขั้นตอนเพื่อช่วยให้คุณมีส่วนร่วมกับรัฐบาลใน Hawaii — ตั้งแต่การให้การไปจนถึงการเขียนจดหมายถึงเจ้าหน้าที่ที่ได้รับการเลือกตั้ง"
+
+#: templates/archive-guide.php:40
+msgid "Filter guides by category"
+msgstr "กรองคู่มือตามหมวดหมู่"
+
+#: templates/archive-guide.php:48
+msgid "All"
+msgstr "ทั้งหมด"
+
+#. translators: %d: number of minutes
+#: templates/archive-guide.php:107
+#: templates/single-guide.php:46
+#: templates/single-guide.php:95
+#: templates/single-guide.php:115
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] "อ่าน %d นาที"
+
+#: templates/archive-guide.php:113
+#: templates/single-guide.php:101
+#: templates/single-guide.php:121
+msgid "Read Guide"
+msgstr "อ่านคู่มือ"
+
+#: templates/archive-guide.php:129
+msgid "Previous"
+msgstr "ก่อนหน้า"
+
+#: templates/archive-guide.php:130
+msgid "Next"
+msgstr "ถัดไป"
+
+#: templates/archive-guide.php:137
+msgid "No guides found. Check back soon — we're adding new civic action guides regularly."
+msgstr "ไม่พบคู่มือ กรุณากลับมาตรวจสอบในไม่ช้า — เรากำลังเพิ่มคู่มือการดำเนินการทางพลเมืองใหม่อยู่เสมอ"
+
+#: templates/archive-guide.php:141
+msgid "View all guides"
+msgstr "ดูคู่มือทั้งหมด"
+
+#: templates/single-guide.php:23
+msgid "Breadcrumb"
+msgstr "เส้นทางนำทาง"
+
+#: templates/single-guide.php:75
+msgid "Related Guides"
+msgstr "คู่มือที่เกี่ยวข้อง"
+
+#: templates/single-guide.php:135
+msgid "Get Involved"
+msgstr "มีส่วนร่วม"
+
+#: templates/single-guide.php:136
+msgid "Ready to take action? Browse upcoming government meetings and make your voice heard."
+msgstr "พร้อมลงมือทำแล้วหรือยัง? เรียกดูการประชุมของรัฐบาลที่จะมาถึงและทำให้เสียงของคุณได้ยิน"
+
+#: templates/single-guide.php:138
+msgid "Browse Meetings"
+msgstr "ดูการประชุม"

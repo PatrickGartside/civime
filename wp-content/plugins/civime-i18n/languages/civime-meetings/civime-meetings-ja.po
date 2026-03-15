@@ -1,0 +1,664 @@
+# Japanese translation for the CiviMe Meetings plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Meetings 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-meetings\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: 日本語 <hello@civi.me>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-meetings\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: civime-meetings.php
+msgid "CiviMe Meetings"
+msgstr "CiviMe Meetings"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-meetings.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-meetings.php
+msgid "Meeting calendar, detail pages, and council browser — powered by the Access100 API."
+msgstr "会議カレンダー、詳細ページ、審議会ブラウザ — Access100 API を使用。"
+
+#. Author of the plugin
+#: civime-meetings.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-meetings.php:45
+msgid "CiviMe Meetings requires the CiviMe Core plugin to be installed and activated."
+msgstr "CiviMe Meetings を使用するには、CiviMe Core プラグインをインストールして有効化する必要があります。"
+
+#: includes/class-councils-list.php:89
+msgid "Council data is temporarily unavailable. Please check back soon."
+msgstr "審議会のデータは一時的に利用できません。しばらくしてからもう一度ご確認ください。"
+
+#: includes/class-detail.php:39
+msgid "No meeting ID provided."
+msgstr "会議IDが指定されていません。"
+
+#: includes/class-detail.php:106
+#: includes/class-list.php:246
+msgid "Meeting data is temporarily unavailable. Please check back soon."
+msgstr "会議のデータは一時的に利用できません。しばらくしてからもう一度ご確認ください。"
+
+#: includes/class-detail.php:119
+#: includes/class-detail.php:126
+#: includes/class-router.php:83
+#: templates/meeting-detail.php:53
+#: templates/meeting-detail.php:99
+msgid "Meeting Detail"
+msgstr "会議の詳細"
+
+#: includes/class-list.php:326
+#, php-format
+msgid "Council: %s"
+msgstr "審議会: %s"
+
+#: includes/class-list.php:327
+#, php-format
+msgid "Council #%d"
+msgstr "審議会 #%d"
+
+#: includes/class-list.php:339
+#: templates/councils-list.php:51
+#: templates/meetings-list.php:343
+msgid "State"
+msgstr "州"
+
+#: includes/class-list.php:340
+#: templates/councils-list.php:52
+#: templates/meetings-list.php:344
+msgid "Honolulu"
+msgstr "Honolulu"
+
+#: includes/class-list.php:341
+#: templates/councils-list.php:53
+#: templates/meetings-list.php:345
+msgid "Maui"
+msgstr "Maui"
+
+#: includes/class-list.php:355
+#, php-format
+msgid "From: %s"
+msgstr "開始: %s"
+
+#: includes/class-list.php:362
+#, php-format
+msgid "To: %s"
+msgstr "終了: %s"
+
+#: includes/class-list.php:393
+#: templates/meeting-detail.php:76
+#: templates/meetings-list.php:62
+msgid "State of Hawaii"
+msgstr "Hawaii 州"
+
+#: includes/class-list.php:394
+#: templates/meeting-detail.php:77
+#: templates/meetings-list.php:63
+msgid "Honolulu Neighborhood Board"
+msgstr "Honolulu 地区委員会"
+
+#: includes/class-list.php:395
+#: templates/meeting-detail.php:78
+#: templates/meetings-list.php:64
+msgid "Honolulu County Committee"
+msgstr "Honolulu 郡委員会"
+
+#: includes/class-list.php:396
+#: templates/meeting-detail.php:79
+#: templates/meetings-list.php:65
+msgid "Maui County Committee"
+msgstr "Maui 郡委員会"
+
+#: includes/class-router.php:82
+#: templates/meeting-detail.php:97
+#: templates/meetings-list.php:40
+msgid "Meetings"
+msgstr "会議"
+
+#: includes/class-router.php:84
+#: templates/council-profile.php:96
+#: templates/meetings-list.php:301
+msgid "Councils"
+msgstr "審議会"
+
+#: includes/class-router.php:85
+msgid "Council Profile"
+msgstr "審議会プロフィール"
+
+#: templates/council-profile.php:74
+msgid "Council Not Found"
+msgstr "審議会が見つかりません"
+
+#: templates/council-profile.php:80
+msgid "This council could not be found."
+msgstr "この審議会は見つかりませんでした。"
+
+#: templates/council-profile.php:83
+msgid "Browse all councils"
+msgstr "すべての審議会を閲覧する"
+
+#: templates/council-profile.php:94
+#: templates/meeting-detail.php:94
+msgid "Breadcrumb"
+msgstr "パンくずリスト"
+
+#: templates/council-profile.php:128
+msgid "What This Board Does"
+msgstr "この委員会の役割"
+
+#: templates/council-profile.php:139
+msgid "Why You Should Care"
+msgstr "なぜ関心を持つべきか"
+
+#: templates/council-profile.php:150
+msgid "Legal Authority"
+msgstr "法的権限"
+
+#. translators: %d: number of board members
+#: templates/council-profile.php:179
+#, php-format
+msgid "Board Members (%d)"
+msgstr "委員 (%d 名)"
+
+#. translators: %s: term end date
+#: templates/council-profile.php:201
+#, php-format
+msgid "Term ends %s"
+msgstr "任期終了: %s"
+
+#: templates/council-profile.php:216
+msgid "Upcoming Meetings"
+msgstr "今後の会議"
+
+#: templates/council-profile.php:251
+msgid "Details"
+msgstr "詳細"
+
+#: templates/council-profile.php:259
+msgid "View all meetings for this council"
+msgstr "この審議会のすべての会議を見る"
+
+#: templates/council-profile.php:268
+msgid "How to Participate"
+msgstr "参加方法"
+
+#: templates/council-profile.php:277
+msgid "Submit Written Testimony:"
+msgstr "書面による証言を提出する："
+
+#: templates/council-profile.php:298
+msgid "At a Glance"
+msgstr "概要"
+
+#: templates/council-profile.php:302
+msgid "Type"
+msgstr "種類"
+
+#: templates/council-profile.php:307
+msgid "Jurisdiction"
+msgstr "管轄"
+
+#: templates/council-profile.php:312
+msgid "Members"
+msgstr "委員"
+
+#: templates/council-profile.php:317
+msgid "Appointed By"
+msgstr "任命者"
+
+#: templates/council-profile.php:322
+msgid "Term Length"
+msgstr "任期の長さ"
+
+#: templates/council-profile.php:327
+msgid "Meets"
+msgstr "開催頻度"
+
+#: templates/council-profile.php:332
+#: templates/meeting-detail.php:140
+msgid "Location"
+msgstr "場所"
+
+#: templates/council-profile.php:337
+#: templates/meeting-detail.php:152
+msgid "Virtual"
+msgstr "オンライン"
+
+#: templates/council-profile.php:338
+msgid "Yes, virtual attendance available"
+msgstr "はい、オンライン参加が可能です"
+
+#: templates/council-profile.php:345
+msgid "Official Website"
+msgstr "公式ウェブサイト"
+
+#: templates/council-profile.php:352
+msgid "Contact"
+msgstr "連絡先"
+
+#. translators: %d: number of open seats
+#: templates/council-profile.php:377
+#, php-format
+msgid "%d Open Seat"
+msgid_plural "%d Open Seats"
+msgstr[0] "%d 件の空席"
+
+#. translators: %s: application deadline date
+#: templates/council-profile.php:392
+#, php-format
+msgid "Deadline: %s"
+msgstr "締切: %s"
+
+#: templates/council-profile.php:401
+msgid "Apply"
+msgstr "応募する"
+
+#: templates/council-profile.php:412
+#: templates/councils-list.php:149
+#: templates/meeting-detail.php:187
+msgid "Get Notified"
+msgstr "通知を受け取る"
+
+#: templates/council-profile.php:413
+msgid "Sign up to receive alerts when this council schedules new meetings."
+msgstr "この審議会が新しい会議を予定したときに通知を受け取るには登録してください。"
+
+#: templates/council-profile.php:415
+msgid "Set Up Alerts"
+msgstr "通知を設定する"
+
+#: templates/councils-list.php:22
+msgid "Councils & Boards"
+msgstr "審議会・委員会"
+
+#: templates/councils-list.php:23
+msgid "Browse government councils, boards, and commissions across Hawaii. Select a council to see its upcoming meetings."
+msgstr "Hawaii 全土の行政審議会、委員会、審査委員会を閲覧できます。審議会を選択すると、今後の会議を確認できます。"
+
+#: templates/councils-list.php:30
+msgid "Filter councils"
+msgstr "審議会を絞り込む"
+
+#: templates/councils-list.php:34
+#: templates/councils-list.php:60
+#: templates/meetings-list.php:255
+msgid "Search"
+msgstr "検索"
+
+#: templates/councils-list.php:41
+msgid "Search councils…"
+msgstr "審議会を検索…"
+
+#: templates/councils-list.php:47
+#: templates/meetings-list.php:339
+msgid "County"
+msgstr "郡"
+
+#: templates/councils-list.php:50
+msgid "All"
+msgstr "すべて"
+
+#: templates/councils-list.php:64
+#: templates/meetings-list.php:391
+msgid "Clear"
+msgstr "クリア"
+
+#: templates/councils-list.php:74
+msgid "Council data is temporarily unavailable."
+msgstr "審議会のデータは一時的に利用できません。"
+
+#: templates/councils-list.php:75
+msgid "We're working on connecting to the database. Check back soon."
+msgstr "データベースへの接続を確認中です。しばらくしてからもう一度ご確認ください。"
+
+#: templates/councils-list.php:81
+msgid "No councils found matching your search."
+msgstr "検索に一致する審議会が見つかりませんでした。"
+
+#: templates/councils-list.php:84
+msgid "View all councils"
+msgstr "すべての審議会を見る"
+
+#. translators: %d: number of councils
+#: templates/councils-list.php:95
+#, php-format
+msgid "%d councils found"
+msgstr "%d 件の審議会が見つかりました"
+
+#. translators: %d: number of upcoming meetings
+#: templates/councils-list.php:125
+#, php-format
+msgid "%d upcoming meeting"
+msgid_plural "%d upcoming meetings"
+msgstr[0] "%d 件の今後の会議"
+
+#. translators: %s: formatted date
+#: templates/councils-list.php:136
+#, php-format
+msgid "Next: %s"
+msgstr "次回: %s"
+
+#: templates/councils-list.php:146
+msgid "View Meetings"
+msgstr "会議を見る"
+
+#: templates/meeting-detail.php:36
+msgid "Meeting Not Found"
+msgstr "会議が見つかりません"
+
+#: templates/meeting-detail.php:43
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "この会議が見つかりませんでした。中止になったか、リンクが正しくない可能性があります。"
+
+#: templates/meeting-detail.php:44
+msgid "Browse All Meetings"
+msgstr "すべての会議を閲覧する"
+
+#: templates/meeting-detail.php:60
+#: templates/meetings-list.php:402
+msgid "Meeting data is temporarily unavailable."
+msgstr "会議のデータは一時的に利用できません。"
+
+#: templates/meeting-detail.php:61
+msgid "We're working on connecting to the meeting database. Check back soon."
+msgstr "会議データベースへの接続を確認中です。しばらくしてからもう一度ご確認ください。"
+
+#: templates/meeting-detail.php:62
+msgid "Back to meetings"
+msgstr "会議一覧に戻る"
+
+#: templates/meeting-detail.php:107
+msgid "Meeting"
+msgstr "会議"
+
+#: templates/meeting-detail.php:117
+msgid "Meeting information is displayed in English."
+msgstr "会議情報は英語で表示されます。"
+
+#: templates/meeting-detail.php:126
+msgid "Date"
+msgstr "日付"
+
+#: templates/meeting-detail.php:133
+msgid "Time"
+msgstr "時間"
+
+#: templates/meeting-detail.php:155
+msgid "Join Online"
+msgstr "オンラインで参加する"
+
+#: templates/meeting-detail.php:175
+msgid "View Official Notice"
+msgstr "公式通知を見る"
+
+#: templates/meeting-detail.php:181
+msgid "Add to My Calendar"
+msgstr "カレンダーに追加する"
+
+#: templates/meeting-detail.php:194
+msgid "Share with a Friend"
+msgstr "友人と共有する"
+
+#: templates/meeting-detail.php:255
+msgid "What This Meeting Is About"
+msgstr "この会議について"
+
+#: templates/meeting-detail.php:260
+msgid "This summary was generated by AI to help you understand the agenda. Always refer to the official documents for complete information."
+msgstr "この要約はAIによって生成されたもので、議題の理解を助けるためのものです。完全な情報は必ず公式文書をご参照ください。"
+
+#: templates/meeting-detail.php:276
+msgid "Remind Me About This Meeting"
+msgstr "この会議のリマインダーを設定する"
+
+#: templates/meeting-detail.php:289
+#: templates/meeting-detail.php:357
+msgid "Website"
+msgstr "ウェブサイト"
+
+#: templates/meeting-detail.php:294
+#: templates/meeting-detail.php:298
+#: templates/meeting-detail.php:366
+msgid "Email Address"
+msgstr "メールアドレス"
+
+#: templates/meeting-detail.php:310
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "確認メールをお送りし、会議当日の朝にリマインダーをお送りします。"
+
+#: templates/meeting-detail.php:317
+msgid "Remind Me"
+msgstr "リマインドする"
+
+#. translators: %s: link to privacy policy
+#: templates/meeting-detail.php:325
+#: templates/meeting-detail.php:426
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "お客様の情報を第三者に提供することはありません。%s をご覧ください。"
+
+#: templates/meeting-detail.php:326
+#: templates/meeting-detail.php:427
+msgid "privacy policy"
+msgstr "プライバシーポリシー"
+
+#: templates/meeting-detail.php:335
+msgid "Subscribe to This Council"
+msgstr "この審議会を購読する"
+
+#: templates/meeting-detail.php:362
+msgid "Contact Information"
+msgstr "連絡先情報"
+
+#: templates/meeting-detail.php:381
+msgid "Phone Number"
+msgstr "電話番号"
+
+#: templates/meeting-detail.php:392
+msgid "Optional. US numbers only."
+msgstr "任意。米国の電話番号のみ。"
+
+#: templates/meeting-detail.php:398
+msgid "Notification Frequency"
+msgstr "通知頻度"
+
+#: templates/meeting-detail.php:403
+msgid "When new meetings are posted"
+msgstr "新しい会議が投稿されたとき"
+
+#: templates/meeting-detail.php:407
+msgid "Daily digest"
+msgstr "毎日のダイジェスト"
+
+#: templates/meeting-detail.php:411
+msgid "Weekly digest"
+msgstr "毎週のダイジェスト"
+
+#: templates/meeting-detail.php:418
+msgid "Subscribe"
+msgstr "購読する"
+
+#: templates/meetings-list.php:41
+msgid "Browse upcoming government meetings across Hawaii. Filter by topic, council, date, or keyword."
+msgstr "Hawaii 全土の今後の行政会議を閲覧できます。トピック、審議会、日付、キーワードで絞り込めます。"
+
+#: templates/meetings-list.php:50
+#, php-format
+msgid "%d filter active"
+msgid_plural "%d filters active"
+msgstr[0] "%d 件のフィルター適用中"
+
+#: templates/meetings-list.php:54
+msgid "Filters"
+msgstr "フィルター"
+
+#: templates/meetings-list.php:89
+msgid "Filter by source"
+msgstr "ソースで絞り込む"
+
+#: templates/meetings-list.php:90
+msgid "Filter by Source"
+msgstr "ソースで絞り込む"
+
+#: templates/meetings-list.php:133
+#, php-format
+msgid "%d source selected"
+msgid_plural "%d sources selected"
+msgstr[0] "%d 件のソースを選択中"
+
+#: templates/meetings-list.php:152
+#: templates/meetings-list.php:232
+msgid "Clear all"
+msgstr "すべてクリア"
+
+#: templates/meetings-list.php:163
+msgid "Filter by topic"
+msgstr "トピックで絞り込む"
+
+#: templates/meetings-list.php:164
+msgid "What matters to you?"
+msgstr "あなたが関心を持つことは何ですか？"
+
+#: templates/meetings-list.php:213
+#, php-format
+msgid "%d topic selected"
+msgid_plural "%d topics selected"
+msgstr[0] "%d 件のトピックを選択中"
+
+#: templates/meetings-list.php:249
+msgid "Filter meetings"
+msgstr "会議を絞り込む"
+
+#: templates/meetings-list.php:262
+msgid "Search meetings…"
+msgstr "会議を検索…"
+
+#: templates/meetings-list.php:264
+msgid "Search meetings by keyword"
+msgstr "キーワードで会議を検索"
+
+#: templates/meetings-list.php:270
+msgid "Council"
+msgstr "審議会"
+
+#: templates/meetings-list.php:282
+msgid "Search councils by name"
+msgstr "審議会名で検索"
+
+#: templates/meetings-list.php:283
+#: templates/meetings-list.php:305
+msgid "All Councils"
+msgstr "すべての審議会"
+
+#: templates/meetings-list.php:311
+msgid "Other"
+msgstr "その他"
+
+#: templates/meetings-list.php:342
+msgid "All Counties"
+msgstr "すべての郡"
+
+#: templates/meetings-list.php:353
+msgid "From"
+msgstr "開始日"
+
+#: templates/meetings-list.php:366
+msgid "To"
+msgstr "終了日"
+
+#: templates/meetings-list.php:387
+msgid "Filter"
+msgstr "絞り込む"
+
+#. translators: %s: link to about page
+#: templates/meetings-list.php:407
+#, php-format
+msgid "We're working on connecting to the meeting database. Check back soon, or browse our %s to learn more about Civi.Me."
+msgstr "会議データベースへの接続を確認中です。しばらくしてからもう一度ご確認ください。または、%s で Civi.Me の詳細をご覧ください。"
+
+#: templates/meetings-list.php:408
+msgid "about page"
+msgstr "概要ページ"
+
+#: templates/meetings-list.php:417
+msgid "No meetings found matching your filters."
+msgstr "フィルターに一致する会議が見つかりませんでした。"
+
+#: templates/meetings-list.php:420
+msgid "View all upcoming meetings"
+msgstr "すべての今後の会議を見る"
+
+#. translators: 1: first item number, 2: last item number, 3: total count
+#: templates/meetings-list.php:436
+#, php-format
+msgid "Showing %1$d–%2$d of %3$d meetings"
+msgstr "%3$d 件中 %1$d–%2$d 件を表示中"
+
+#: templates/meetings-list.php:485
+msgid "Time:"
+msgstr "時間："
+
+#: templates/meetings-list.php:492
+msgid "Location:"
+msgstr "場所："
+
+#: templates/meetings-list.php:498
+msgid "AI-generated summary available"
+msgstr "AI生成の要約あり"
+
+#: templates/meetings-list.php:499
+msgid "AI Summary"
+msgstr "AI要約"
+
+#: templates/meetings-list.php:510
+msgid "View Details"
+msgstr "詳細を見る"
+
+#. translators: %s: council name
+#: templates/meetings-list.php:514
+#, php-format
+msgid "for %s"
+msgstr "%s の"
+
+#: templates/meetings-list.php:537
+msgid "Meeting pages"
+msgstr "会議ページ"
+
+#: templates/meetings-list.php:562
+msgid "Previous"
+msgstr "前へ"
+
+#: templates/meetings-list.php:578
+msgid "Page 1"
+msgstr "1ページ"
+
+#: templates/meetings-list.php:592
+#, php-format
+msgid "Page %d, current page"
+msgstr "%d ページ（現在のページ）"
+
+#: templates/meetings-list.php:600
+#: templates/meetings-list.php:616
+#, php-format
+msgid "Page %d"
+msgstr "%d ページ"
+
+#: templates/meetings-list.php:630
+msgid "Next"
+msgstr "次へ"

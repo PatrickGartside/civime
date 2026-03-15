@@ -1,0 +1,523 @@
+# Vietnamese translation for the CiviMe theme.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/civime\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Tiếng Việt <hello@civi.me>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:14+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "CiviMe"
+msgstr "CiviMe"
+
+#. Theme URI of the theme
+#. Author URI of the theme
+#: style.css
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the theme
+#: style.css
+msgid "Custom theme for Civi.Me — Hawaii civic engagement platform. Mobile-first, WCAG 2.1 AA compliant, light/dark mode."
+msgstr "Giao diện tùy chỉnh cho Civi.Me — nền tảng tham gia công dân tại Hawaii. Ưu tiên di động, tuân thủ WCAG 2.1 AA, chế độ sáng/tối."
+
+#. Author of the theme
+#: style.css
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: 404.php:19
+msgid "Page not found"
+msgstr "Không tìm thấy trang"
+
+#: 404.php:23
+msgid "The page you're looking for doesn't exist or has been moved. Try searching below, or head back home."
+msgstr "Trang bạn đang tìm không tồn tại hoặc đã được chuyển. Thử tìm kiếm bên dưới, hoặc quay về trang chủ."
+
+#: 404.php:34
+msgid "Go back home"
+msgstr "Quay về trang chủ"
+
+#: footer.php:11
+msgid "Civic engagement for Hawaii"
+msgstr "Tham gia công dân cho Hawaii"
+
+#: footer.php:16
+msgid "Footer navigation"
+msgstr "Điều hướng chân trang"
+
+#. translators: %s: site name
+#: footer.php:42
+#, php-format
+msgid "%s &mdash; Civic engagement for Hawaii"
+msgstr "%s &mdash; Tham gia công dân cho Hawaii"
+
+#: footer.php:52
+msgid "Privacy Policy"
+msgstr "Chính sách bảo mật"
+
+#: footer.php:63
+msgid "Open source on GitHub (opens in new tab)"
+msgstr "Mã nguồn mở trên GitHub (mở trong tab mới)"
+
+#: footer.php:68
+msgid "Open source"
+msgstr "Mã nguồn mở"
+
+#: front-page.php:26
+msgid "Built for Hawaii"
+msgstr "Được xây dựng cho Hawaii"
+
+#: front-page.php:33
+msgid "Civic Engagement Tools"
+msgstr "Công cụ tham gia công dân"
+
+#: front-page.php:33
+msgid "for the People of Hawaii"
+msgstr "cho người dân Hawaii"
+
+#: front-page.php:43
+msgid "Government information shouldn't require a law degree to navigate. Civi.Me makes it simple to stay informed, show up, and have your voice heard — in plain language, for free."
+msgstr "Thông tin chính phủ không nên đòi hỏi bằng cấp luật để tìm hiểu. Civi.Me giúp bạn dễ dàng cập nhật thông tin, tham dự và để tiếng nói của bạn được lắng nghe — bằng ngôn ngữ đơn giản, miễn phí."
+
+#: front-page.php:53
+msgid "What matters to you?"
+msgstr "Điều gì quan trọng với bạn?"
+
+#: front-page.php:56
+msgid "Browse meetings"
+msgstr "Xem các cuộc họp"
+
+#: front-page.php:167
+msgid "The challenge"
+msgstr "Thách thức"
+
+#: front-page.php:169
+msgid "Civic participation should be accessible for all residents"
+msgstr "Sự tham gia công dân phải dễ tiếp cận với tất cả cư dân"
+
+#: front-page.php:172
+msgid "People want to be engaged, but the barriers make it feel impossible. We're removing them."
+msgstr "Mọi người muốn tham gia, nhưng các rào cản khiến điều đó có vẻ bất khả thi. Chúng tôi đang dỡ bỏ chúng."
+
+#: front-page.php:190
+msgid "Buried information"
+msgstr "Thông tin bị chôn vùi"
+
+#: front-page.php:191
+msgid "Meeting agendas are buried in PDFs across dozens of county and state websites with no consistent format."
+msgstr "Chương trình nghị sự cuộc họp bị chôn vùi trong các tệp PDF trên hàng chục trang web của hạt và tiểu bang mà không có định dạng nhất quán."
+
+#: front-page.php:203
+msgid "No timely alerts"
+msgstr "Không có thông báo kịp thời"
+
+#: front-page.php:204
+msgid "Residents find out about decisions that affect their neighborhoods after the fact — if at all."
+msgstr "Cư dân tìm hiểu về các quyết định ảnh hưởng đến khu phố của họ sau khi sự việc đã xảy ra — nếu có biết được."
+
+#: front-page.php:219
+msgid "Bureaucratic language"
+msgstr "Ngôn ngữ quan liêu"
+
+#: front-page.php:220
+msgid "Government documents are written for lawyers, not residents. Plain-language summaries are rare."
+msgstr "Các tài liệu chính phủ được viết cho luật sư, không phải cư dân. Tóm tắt ngôn ngữ đơn giản rất hiếm."
+
+#: front-page.php:234
+msgid "Who are my representatives?"
+msgstr "Đại diện của tôi là ai?"
+
+#: front-page.php:235
+msgid "Most residents can't name their city council member, let alone their neighborhood board chair."
+msgstr "Hầu hết cư dân không thể đặt tên thành viên hội đồng thành phố của họ, chứ chưa nói đến chủ tịch hội đồng khu phố."
+
+#: front-page.php:254
+msgid "Start here"
+msgstr "Bắt đầu tại đây"
+
+#: front-page.php:256
+msgid "Tell us what matters to you"
+msgstr "Hãy cho chúng tôi biết điều gì quan trọng với bạn"
+
+#: front-page.php:259
+msgid "Pick the topics you care about — environment, housing, education, health — and we'll show you the government meetings and councils that handle those issues."
+msgstr "Chọn các chủ đề bạn quan tâm — môi trường, nhà ở, giáo dục, y tế — và chúng tôi sẽ hiển thị cho bạn các cuộc họp chính phủ và hội đồng xử lý những vấn đề đó."
+
+#: front-page.php:270
+msgid "Environment & Land"
+msgstr "Môi trường & Đất đai"
+
+#: front-page.php:270
+msgid "Leaf"
+msgstr "Lá cây"
+
+#: front-page.php:271
+msgid "Housing & Development"
+msgstr "Nhà ở & Phát triển"
+
+#: front-page.php:271
+msgid "House"
+msgstr "Ngôi nhà"
+
+#: front-page.php:272
+msgid "Education"
+msgstr "Giáo dục"
+
+#: front-page.php:272
+msgid "Books"
+msgstr "Sách"
+
+#: front-page.php:273
+msgid "Health & Wellness"
+msgstr "Sức khỏe & Phúc lợi"
+
+#: front-page.php:273
+msgid "Hospital"
+msgstr "Bệnh viện"
+
+#: front-page.php:274
+msgid "Transportation"
+msgstr "Giao thông vận tải"
+
+#: front-page.php:274
+msgid "Bus"
+msgstr "Xe buýt"
+
+#: front-page.php:275
+msgid "Public Safety"
+msgstr "An toàn công cộng"
+
+#: front-page.php:275
+msgid "Shield"
+msgstr "Lá chắn"
+
+#: front-page.php:276
+msgid "Economy & Labor"
+msgstr "Kinh tế & Lao động"
+
+#: front-page.php:276
+msgid "Briefcase"
+msgstr "Cặp tài liệu"
+
+#: front-page.php:277
+msgid "Culture & Arts"
+msgstr "Văn hóa & Nghệ thuật"
+
+#: front-page.php:277
+msgid "Performing arts"
+msgstr "Nghệ thuật biểu diễn"
+
+#: front-page.php:278
+msgid "Agriculture & Food"
+msgstr "Nông nghiệp & Thực phẩm"
+
+#: front-page.php:278
+msgid "Sheaf of rice"
+msgstr "Bó lúa"
+
+#: front-page.php:279
+msgid "Energy & Utilities"
+msgstr "Năng lượng & Tiện ích"
+
+#: front-page.php:279
+msgid "Lightning bolt"
+msgstr "Tia sét"
+
+#: front-page.php:280
+msgid "Water & Ocean"
+msgstr "Nước & Đại dương"
+
+#: front-page.php:280
+msgid "Ocean wave"
+msgstr "Sóng biển"
+
+#: front-page.php:281
+msgid "Disability & Access"
+msgstr "Khuyết tật & Khả năng tiếp cận"
+
+#: front-page.php:281
+msgid "Wheelchair symbol"
+msgstr "Biểu tượng xe lăn"
+
+#: front-page.php:282
+msgid "Veterans & Military"
+msgstr "Cựu chiến binh & Quân đội"
+
+#: front-page.php:282
+msgid "Military medal"
+msgstr "Huân chương quân sự"
+
+#: front-page.php:283
+msgid "Technology & Innovation"
+msgstr "Công nghệ & Đổi mới"
+
+#: front-page.php:283
+msgid "Laptop"
+msgstr "Máy tính xách tay"
+
+#: front-page.php:284
+msgid "Budget & Finance"
+msgstr "Ngân sách & Tài chính"
+
+#: front-page.php:284
+msgid "Bar chart"
+msgstr "Biểu đồ cột"
+
+#: front-page.php:285
+msgid "Governance & Ethics"
+msgstr "Quản trị & Đạo đức"
+
+#: front-page.php:285
+msgid "Balance scale"
+msgstr "Cân công lý"
+
+#: front-page.php:302
+msgid "Pick Your Topics"
+msgstr "Chọn chủ đề của bạn"
+
+#: front-page.php:305
+msgid "Pick the topics you care about and we'll show you the meetings that matter."
+msgstr "Chọn các chủ đề bạn quan tâm và chúng tôi sẽ hiển thị cho bạn các cuộc họp quan trọng."
+
+#: front-page.php:320
+msgid "Civic tools"
+msgstr "Công cụ công dân"
+
+#: front-page.php:322
+msgid "What you can do on Civi.Me"
+msgstr "Những gì bạn có thể làm trên Civi.Me"
+
+#: front-page.php:363
+#: front-page.php:403
+#: front-page.php:443
+#: front-page.php:487
+msgid "Live"
+msgstr "Trực tiếp"
+
+#: front-page.php:365
+msgid "Browse Meetings"
+msgstr "Xem các cuộc họp"
+
+#: front-page.php:368
+msgid "All public meetings — boards, commissions, and councils — in one calendar. Filter by topic, council, or date. AI-generated summaries explain what's on the agenda."
+msgstr "Tất cả các cuộc họp công khai — ban, ủy ban và hội đồng — trong một lịch. Lọc theo chủ đề, hội đồng hoặc ngày. Tóm tắt do AI tạo ra giải thích những gì có trong chương trình nghị sự."
+
+#: front-page.php:405
+msgid "Council Profiles"
+msgstr "Hồ sơ hội đồng"
+
+#: front-page.php:408
+msgid "Learn what each board and commission actually does — in plain language. See who sits on the board, upcoming meetings, open seats, and how to participate."
+msgstr "Tìm hiểu mỗi ban và ủy ban thực sự làm gì — bằng ngôn ngữ đơn giản. Xem ai ngồi trong ban, các cuộc họp sắp tới, ghế trống và cách tham gia."
+
+#: front-page.php:445
+msgid "Get Alerts"
+msgstr "Nhận thông báo"
+
+#: front-page.php:448
+msgid "Subscribe to topics or specific councils. Get email alerts when meetings are scheduled — before it's too late to participate."
+msgstr "Đăng ký chủ đề hoặc các hội đồng cụ thể. Nhận thông báo qua email khi các cuộc họp được lên lịch — trước khi quá muộn để tham gia."
+
+#: front-page.php:489
+msgid "Guides & Compliance"
+msgstr "Hướng dẫn & Tuân thủ"
+
+#: front-page.php:492
+msgid "Step-by-step civic action guides plus compliance tools for agencies — Sunshine Law, public records, accessibility, and public participation best practices."
+msgstr "Hướng dẫn hành động công dân từng bước cùng với các công cụ tuân thủ cho các cơ quan — Luật Minh bạch, hồ sơ công khai, khả năng tiếp cận và các phương pháp hay nhất về tham gia công khai."
+
+#: front-page.php:511
+msgid "What we believe"
+msgstr "Những gì chúng tôi tin tưởng"
+
+#: front-page.php:513
+msgid "Information access is a community right"
+msgstr "Quyền tiếp cận thông tin là quyền của cộng đồng"
+
+#: front-page.php:516
+msgid "Every resident deserves to know what decisions are being made that affect their community — in language they can understand, at a time when they can still participate."
+msgstr "Mỗi cư dân xứng đáng được biết những quyết định nào đang được đưa ra ảnh hưởng đến cộng đồng của họ — bằng ngôn ngữ họ có thể hiểu, vào thời điểm họ vẫn có thể tham gia."
+
+#: front-page.php:534
+msgid "Strictly nonpartisan"
+msgstr "Hoàn toàn phi đảng phái"
+
+#: front-page.php:535
+msgid "Civi.Me does not endorse candidates, parties, or positions on any issue. We present facts: what a bill does, who submitted it, when the hearing is. We provide tools and templates — never talking points."
+msgstr "Civi.Me không ủng hộ ứng cử viên, đảng phái hoặc lập trường về bất kỳ vấn đề nào. Chúng tôi trình bày sự kiện: dự luật làm gì, ai đề xuất, khi nào có phiên điều trần. Chúng tôi cung cấp công cụ và mẫu — không bao giờ là luận điểm."
+
+#: front-page.php:549
+msgid "Everyone is included — no exceptions"
+msgstr "Mọi người đều được bao gồm — không có ngoại lệ"
+
+#: front-page.php:550
+msgid "We use \"residents\" — not \"citizens.\" We support all 15 languages recognized by Hawaii's Office of Language Access. We build for mobile and include a phone line for people who don't have a smartphone at all."
+msgstr "Chúng tôi dùng \"cư dân\" — không phải \"công dân.\" Chúng tôi hỗ trợ tất cả 15 ngôn ngữ được công nhận bởi Văn phòng Tiếp cận Ngôn ngữ của Hawaii. Chúng tôi xây dựng cho thiết bị di động và bao gồm đường dây điện thoại cho những người không có điện thoại thông minh."
+
+#: front-page.php:561
+msgid "Cultural respect is not optional"
+msgstr "Tôn trọng văn hóa không phải là tùy chọn"
+
+#: front-page.php:562
+msgid "Native Hawaiian sovereignty is a living issue, not history. We frame civic participation as community engagement — not blind deference to government structures."
+msgstr "Chủ quyền của người Hawaii bản địa là vấn đề đang sống, không phải lịch sử. Chúng tôi định khung sự tham gia công dân như sự gắn kết cộng đồng — không phải sự phục tùng mù quáng đối với các cơ cấu chính phủ."
+
+#: front-page.php:573
+msgid "Open source and community-built"
+msgstr "Mã nguồn mở và được xây dựng bởi cộng đồng"
+
+#: front-page.php:574
+msgid "Civi.Me's code is public on GitHub from day one. Civic infrastructure should be open to inspection, contribution, and community ownership. If we ever make a decision you disagree with, you can see exactly why — and you can help us do better."
+msgstr "Mã của Civi.Me công khai trên GitHub từ ngày đầu tiên. Cơ sở hạ tầng công dân nên mở để kiểm tra, đóng góp và quyền sở hữu cộng đồng. Nếu chúng tôi đưa ra quyết định bạn không đồng ý, bạn có thể thấy chính xác lý do — và bạn có thể giúp chúng tôi làm tốt hơn."
+
+#: front-page.php:589
+msgid "Join us"
+msgstr "Tham gia cùng chúng tôi"
+
+#: front-page.php:591
+msgid "Help build civic infrastructure for Hawaii"
+msgstr "Giúp xây dựng cơ sở hạ tầng công dân cho Hawaii"
+
+#: front-page.php:594
+msgid "Civi.Me is open source and community-driven. Whether you're a developer, a civic advocate, or just someone who cares — there's a place for you."
+msgstr "Civi.Me là mã nguồn mở và được thúc đẩy bởi cộng đồng. Cho dù bạn là nhà phát triển, người ủng hộ công dân, hay chỉ là người quan tâm — đều có chỗ cho bạn."
+
+#: front-page.php:607
+msgid "View on GitHub"
+msgstr "Xem trên GitHub"
+
+#: front-page.php:610
+msgid "Get in touch"
+msgstr "Liên hệ với chúng tôi"
+
+#: functions.php:48
+msgid "Ocean Blue"
+msgstr "Xanh đại dương"
+
+#: functions.php:53
+msgid "Reef Teal"
+msgstr "Xanh ngọc rạn san hô"
+
+#: functions.php:58
+msgid "Sunset Orange"
+msgstr "Cam hoàng hôn"
+
+#: functions.php:63
+msgid "Near White"
+msgstr "Gần trắng"
+
+#: functions.php:68
+msgid "Near Black"
+msgstr "Gần đen"
+
+#: functions.php:79
+msgid "Primary Menu"
+msgstr "Menu chính"
+
+#: functions.php:80
+msgid "Footer Menu"
+msgstr "Menu chân trang"
+
+#: functions.php:279
+#: functions.php:313
+msgid "Topics"
+msgstr "Chủ đề"
+
+#: functions.php:280
+#: functions.php:314
+msgid "Meetings"
+msgstr "Cuộc họp"
+
+#: functions.php:281
+#: functions.php:315
+msgid "Councils"
+msgstr "Hội đồng"
+
+#: functions.php:282
+#: functions.php:316
+msgid "Guides"
+msgstr "Hướng dẫn"
+
+#: functions.php:283
+#: functions.php:317
+msgid "Alerts"
+msgstr "Thông báo"
+
+#: header.php:15
+msgid "Skip to main content"
+msgstr "Chuyển đến nội dung chính"
+
+#: header.php:23
+msgid "Home"
+msgstr "Trang chủ"
+
+#: header.php:50
+msgid "Switch to dark mode"
+msgstr "Chuyển sang chế độ tối"
+
+#: header.php:76
+msgid "Open navigation menu"
+msgstr "Mở menu điều hướng"
+
+#: header.php:90
+msgid "Primary navigation"
+msgstr "Điều hướng chính"
+
+#: header.php:112
+msgid "Mobile navigation"
+msgstr "Điều hướng di động"
+
+#: header.php:120
+msgid "Close navigation menu"
+msgstr "Đóng menu điều hướng"
+
+#: index.php:16
+msgid "Latest Posts"
+msgstr "Bài viết mới nhất"
+
+#: index.php:66
+msgid "Previous"
+msgstr "Trước"
+
+#: index.php:67
+msgid "Next"
+msgstr "Tiếp theo"
+
+#: index.php:75
+msgid "No posts found."
+msgstr "Không tìm thấy bài viết nào."
+
+#. Template Name of the theme
+msgid "Compliance Hub"
+msgstr "Trung tâm tuân thủ"
+
+#: page-compliance-hub.php:103
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] "%d phút đọc"
+
+#: page-compliance-hub.php:109
+msgid "Read Guide"
+msgstr "Đọc hướng dẫn"
+
+#: page-compliance-hub.php:124
+msgid "Compliance guides are coming soon. Check back shortly."
+msgstr "Hướng dẫn tuân thủ sắp có. Vui lòng kiểm tra lại sớm."
+
+#: page.php:24
+msgid "Page"
+msgstr "Trang"

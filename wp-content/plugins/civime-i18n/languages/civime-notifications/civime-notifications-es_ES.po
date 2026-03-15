@@ -1,0 +1,469 @@
+# Spanish (Latin American) translation for the CiviMe Notifications plugin.
+# Copyright (C) 2026 Patrick Gartside
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CiviMe Notifications 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/civime-notifications\n"
+"Last-Translator: CiviMe Team <hello@civi.me>\n"
+"Language-Team: Español <hello@civi.me>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-04T19:08:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 19:08+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civime-notifications\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+#: civime-notifications.php
+msgid "CiviMe Notifications"
+msgstr "CiviMe Notifications"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: civime-notifications.php
+msgid "https://civi.me"
+msgstr "https://civi.me"
+
+#. Description of the plugin
+#: civime-notifications.php
+msgid "Subscription UI and preference management for Civi.Me meeting notifications."
+msgstr "Interfaz de suscripción y gestión de preferencias para las notificaciones de reuniones de Civi.Me."
+
+#. Author of the plugin
+#: civime-notifications.php
+msgid "Patrick Gartside"
+msgstr "Patrick Gartside"
+
+#: civime-notifications.php:45
+msgid "CiviMe Notifications requires the CiviMe Core plugin to be installed and activated."
+msgstr "CiviMe Notifications requiere que el plugin CiviMe Core esté instalado y activado."
+
+#: includes/class-manage.php:37
+msgid "This link appears to be incomplete. Please use the manage link from your notification email."
+msgstr "Este enlace parece estar incompleto. Por favor, usa el enlace de administración que está en tu correo de notificación."
+
+#: includes/class-manage.php:45
+msgid "Your preferences have been updated."
+msgstr "Tus preferencias han sido actualizadas."
+
+#: includes/class-manage.php:62
+#: includes/class-notify.php:74
+#: includes/class-notify.php:150
+#: includes/class-subscribe.php:74
+msgid "Security check failed. Please try again."
+msgstr "La verificación de seguridad falló. Por favor, intenta de nuevo."
+
+#: includes/class-manage.php:85
+#: includes/class-notify.php:107
+#: includes/class-notify.php:218
+#: includes/class-subscribe.php:157
+msgid "Something went wrong. Please try again in a moment."
+msgstr "Algo salió mal. Por favor, intenta de nuevo en un momento."
+
+#: includes/class-manage.php:115
+msgid "Please select at least one notification channel."
+msgstr "Por favor, selecciona al menos un canal de notificación."
+
+#: includes/class-manage.php:121
+msgid "Please select a notification frequency."
+msgstr "Por favor, selecciona una frecuencia de notificación."
+
+#: includes/class-manage.php:127
+#: includes/class-subscribe.php:126
+msgid "Please select at least one council to follow."
+msgstr "Por favor, selecciona al menos un consejo para seguir."
+
+#: includes/class-manage.php:145
+msgid "Something went wrong updating your preferences. Please try again."
+msgstr "Algo salió mal al actualizar tus preferencias. Por favor, intenta de nuevo."
+
+#: includes/class-manage.php:158
+msgid "Preferences updated, but council list could not be saved. Please try again."
+msgstr "Preferencias actualizadas, pero no se pudo guardar la lista de consejos. Por favor, intenta de nuevo."
+
+#: includes/class-manage.php:222
+msgid "We could not load your subscription. The link may have expired or be incorrect. Please use the manage link from your most recent notification email."
+msgstr "No pudimos cargar tu suscripción. El enlace puede haber expirado o ser incorrecto. Por favor, usa el enlace de administración de tu correo de notificación más reciente."
+
+#: includes/class-notify.php:92
+#: includes/class-notify.php:172
+#: includes/class-subscribe.php:118
+msgid "Please enter a valid email address."
+msgstr "Por favor, ingresa una dirección de correo electrónico válida."
+
+#: includes/class-notify.php:176
+#: includes/class-subscribe.php:122
+msgid "Please enter a valid US phone number (10 digits)."
+msgstr "Por favor, ingresa un número de teléfono de EE. UU. válido (10 dígitos)."
+
+#: includes/class-notify.php:180
+#: includes/class-subscribe.php:130
+msgid "Please select how often you want to be notified."
+msgstr "Por favor, selecciona con qué frecuencia quieres recibir notificaciones."
+
+#: includes/class-notify.php:193
+msgid "Could not determine the council for this meeting. Please try again."
+msgstr "No se pudo determinar el consejo para esta reunión. Por favor, intenta de nuevo."
+
+#: includes/class-notify.php:364
+#, php-format
+msgid "Get Notified — %s"
+msgstr "Recibir notificaciones — %s"
+
+#: includes/class-notify.php:367
+#: includes/class-router.php:74
+#: includes/class-router.php:75
+#: includes/shortcodes.php:33
+#: templates/notify.php:57
+#: templates/notify.php:80
+#: templates/notify.php:87
+#: templates/subscribe.php:43
+msgid "Get Notified"
+msgstr "Recibir notificaciones"
+
+#: includes/class-router.php:76
+#: templates/manage.php:23
+msgid "Manage Notifications"
+msgstr "Administrar notificaciones"
+
+#: includes/class-router.php:77
+#: templates/confirmed.php:22
+msgid "Subscription Confirmed"
+msgstr "Suscripción confirmada"
+
+#: includes/class-router.php:78
+#: templates/unsubscribed.php:22
+msgid "Unsubscribed"
+msgstr "Suscripción cancelada"
+
+#: includes/class-subscribe.php:114
+msgid "Please select at least one notification channel (email or text message)."
+msgstr "Por favor, selecciona al menos un canal de notificación (correo electrónico o mensaje de texto)."
+
+#: includes/shortcodes.php:34
+msgid "Get alerts when new meetings or agendas are posted for the councils you care about."
+msgstr "Recibe alertas cuando se publiquen nuevas reuniones o agendas para los consejos que te interesan."
+
+#: includes/shortcodes.php:35
+#: templates/notify.php:316
+#: templates/subscribe.php:340
+msgid "Subscribe"
+msgstr "Suscribirse"
+
+#: templates/confirmed.php:30
+msgid "You're all set!"
+msgstr "¡Ya estás listo!"
+
+#: templates/confirmed.php:31
+msgid "Your subscription is confirmed. You'll receive notifications when new meetings are posted for the councils you follow."
+msgstr "Tu suscripción está confirmada. Recibirás notificaciones cuando se publiquen nuevas reuniones para los consejos que sigues."
+
+#: templates/confirmed.php:32
+msgid "You can manage your preferences or unsubscribe at any time using the link in any notification email."
+msgstr "Puedes administrar tus preferencias o cancelar tu suscripción en cualquier momento usando el enlace en cualquier correo de notificación."
+
+#: templates/confirmed.php:35
+#: templates/notify.php:105
+#: templates/notify.php:120
+#: templates/subscribe.php:60
+#: templates/unsubscribed.php:37
+msgid "Browse Meetings"
+msgstr "Ver reuniones"
+
+#: templates/confirmed.php:38
+msgid "Explore Councils"
+msgstr "Explorar consejos"
+
+#: templates/manage.php:36
+msgid "Browse meetings"
+msgstr "Ver reuniones"
+
+#: templates/manage.php:65
+msgid "Your Contact Info"
+msgstr "Tu información de contacto"
+
+#: templates/manage.php:69
+#: templates/manage.php:95
+#: templates/subscribe.php:123
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: templates/manage.php:75
+msgid "Phone"
+msgstr "Teléfono"
+
+#: templates/manage.php:85
+msgid "Notification Channels"
+msgstr "Canales de notificación"
+
+#: templates/manage.php:105
+#: templates/subscribe.php:134
+msgid "Text Message"
+msgstr "Mensaje de texto"
+
+#: templates/manage.php:112
+#: templates/notify.php:296
+msgid "Notification Frequency"
+msgstr "Frecuencia de notificaciones"
+
+#: templates/manage.php:116
+#: templates/notify.php:301
+#: templates/subscribe.php:315
+msgid "When new meetings are posted"
+msgstr "Cuando se publiquen nuevas reuniones"
+
+#: templates/manage.php:120
+#: templates/notify.php:305
+#: templates/subscribe.php:324
+msgid "Daily digest"
+msgstr "Resumen diario"
+
+#: templates/manage.php:124
+#: templates/notify.php:309
+#: templates/subscribe.php:333
+msgid "Weekly digest"
+msgstr "Resumen semanal"
+
+#: templates/manage.php:131
+msgid "Councils You Follow"
+msgstr "Consejos que sigues"
+
+#: templates/manage.php:135
+#: templates/subscribe.php:262
+msgid "Search councils"
+msgstr "Buscar consejos"
+
+#: templates/manage.php:141
+#: templates/subscribe.php:268
+msgid "Search councils…"
+msgstr "Buscar consejos…"
+
+#: templates/manage.php:145
+#: templates/subscribe.php:272
+msgid "Councils"
+msgstr "Consejos"
+
+#: templates/manage.php:170
+msgid "Save Preferences"
+msgstr "Guardar preferencias"
+
+#: templates/manage.php:177
+msgid "Unsubscribe"
+msgstr "Cancelar suscripción"
+
+#: templates/manage.php:178
+msgid "You can unsubscribe from all notifications at any time. This will permanently remove your subscription."
+msgstr "Puedes cancelar tu suscripción a todas las notificaciones en cualquier momento. Esto eliminará tu suscripción de forma permanente."
+
+#: templates/manage.php:189
+msgid "Are you sure you want to unsubscribe? You will stop receiving all notifications."
+msgstr "¿Estás seguro de que quieres cancelar tu suscripción? Dejarás de recibir todas las notificaciones."
+
+#: templates/manage.php:191
+msgid "Unsubscribe from All Notifications"
+msgstr "Cancelar suscripción a todas las notificaciones"
+
+#: templates/notify.php:40
+msgid "Meeting Not Found"
+msgstr "Reunión no encontrada"
+
+#: templates/notify.php:47
+msgid "We couldn't find this meeting. It may have been cancelled or the link may be incorrect."
+msgstr "No pudimos encontrar esta reunión. Puede que haya sido cancelada o que el enlace sea incorrecto."
+
+#: templates/notify.php:48
+msgid "Browse All Meetings"
+msgstr "Ver todas las reuniones"
+
+#: templates/notify.php:64
+msgid "Meeting data is temporarily unavailable."
+msgstr "Los datos de la reunión no están disponibles en este momento."
+
+#: templates/notify.php:65
+msgid "We're having trouble loading meeting details. Please try again in a moment."
+msgstr "Tuvimos problemas para cargar los detalles de la reunión. Por favor, intenta de nuevo en un momento."
+
+#: templates/notify.php:66
+msgid "Back to meetings"
+msgstr "Volver a reuniones"
+
+#: templates/notify.php:73
+msgid "Breadcrumb"
+msgstr "Ruta de navegación"
+
+#: templates/notify.php:76
+msgid "Meetings"
+msgstr "Reuniones"
+
+#: templates/notify.php:98
+#: templates/notify.php:113
+#: templates/subscribe.php:55
+msgid "Check Your Inbox"
+msgstr "Revisa tu bandeja de entrada"
+
+#: templates/notify.php:99
+msgid "We've sent a confirmation email. Click the link to activate your reminder — we'll email you the morning of the meeting."
+msgstr "Te enviamos un correo de confirmación. Haz clic en el enlace para activar tu recordatorio — te enviaremos un correo la mañana de la reunión."
+
+#: templates/notify.php:102
+#: templates/notify.php:117
+msgid "Back to Meeting"
+msgstr "Volver a la reunión"
+
+#: templates/notify.php:114
+msgid "We've sent a confirmation email. Click the link to activate your subscription and start receiving meeting alerts."
+msgstr "Te enviamos un correo de confirmación. Haz clic en el enlace para activar tu suscripción y empezar a recibir alertas de reuniones."
+
+#: templates/notify.php:131
+msgid "Remind Me About This Meeting"
+msgstr "Recuérdame esta reunión"
+
+#: templates/notify.php:152
+#: templates/notify.php:233
+#: templates/subscribe.php:74
+msgid "Please fix the following:"
+msgstr "Por favor, corrige lo siguiente:"
+
+#: templates/notify.php:172
+#: templates/notify.php:253
+#: templates/subscribe.php:106
+msgid "Website"
+msgstr "Sitio web"
+
+#: templates/notify.php:177
+#: templates/notify.php:181
+#: templates/notify.php:262
+#: templates/subscribe.php:146
+msgid "Email Address"
+msgstr "Correo electrónico"
+
+#: templates/notify.php:194
+msgid "We'll send a confirmation email, then a reminder the morning of the meeting."
+msgstr "Te enviaremos un correo de confirmación y luego un recordatorio la mañana de la reunión."
+
+#: templates/notify.php:201
+msgid "Remind Me"
+msgstr "Recuérdame"
+
+#. translators: %s: link to privacy policy
+#: templates/notify.php:209
+#: templates/notify.php:324
+#, php-format
+msgid "We never share your info. See our %s."
+msgstr "Nunca compartimos tu información. Consulta nuestra %s."
+
+#: templates/notify.php:210
+#: templates/notify.php:325
+#: templates/subscribe.php:349
+msgid "privacy policy"
+msgstr "política de privacidad"
+
+#: templates/notify.php:220
+msgid "Subscribe to This Council"
+msgstr "Suscribirse a este consejo"
+
+#: templates/notify.php:258
+msgid "Contact Information"
+msgstr "Información de contacto"
+
+#: templates/notify.php:278
+#: templates/subscribe.php:166
+msgid "Phone Number"
+msgstr "Número de teléfono"
+
+#: templates/notify.php:290
+msgid "Optional. US numbers only."
+msgstr "Opcional. Solo números de EE. UU."
+
+#. translators: %s: council name
+#: templates/subscribe.php:24
+#: templates/subscribe.php:39
+#, php-format
+msgid "Subscribe to %s"
+msgstr "Suscribirse a %s"
+
+#: templates/subscribe.php:41
+msgid "Get notified when this council posts new meetings or agendas."
+msgstr "Recibe notificaciones cuando este consejo publique nuevas reuniones o agendas."
+
+#: templates/subscribe.php:44
+msgid "Get alerts when councils you follow post new meetings or agendas. Choose your channels, pick your councils, and we'll keep you in the loop."
+msgstr "Recibe alertas cuando los consejos que sigues publiquen nuevas reuniones o agendas. Elige tus canales, selecciona tus consejos y te mantendremos informado."
+
+#: templates/subscribe.php:56
+msgid "We've sent a confirmation message to verify your contact info. Please click the link in your email (or reply YES to the text) to activate your subscription."
+msgstr "Te enviamos un mensaje de confirmación para verificar tu información de contacto. Por favor, haz clic en el enlace de tu correo (o responde SÍ al mensaje de texto) para activar tu suscripción."
+
+#: templates/subscribe.php:57
+msgid "If you don't see it within a few minutes, check your spam folder."
+msgstr "Si no lo ves en unos minutos, revisa tu carpeta de spam."
+
+#: templates/subscribe.php:64
+msgid "Follow More Councils"
+msgstr "Seguir más consejos"
+
+#: templates/subscribe.php:85
+msgid "Council data is temporarily unavailable."
+msgstr "Los datos de los consejos no están disponibles en este momento."
+
+#: templates/subscribe.php:86
+msgid "We're having trouble loading the council list. Please try again in a moment."
+msgstr "Tuvimos problemas para cargar la lista de consejos. Por favor, intenta de nuevo en un momento."
+
+#: templates/subscribe.php:112
+msgid "How should we reach you?"
+msgstr "¿Cómo podemos contactarte?"
+
+#: templates/subscribe.php:178
+msgid "US numbers only. Standard messaging rates may apply."
+msgstr "Solo números de EE. UU. Pueden aplicar tarifas estándar de mensajería."
+
+#: templates/subscribe.php:184
+msgid "What do you want to hear about?"
+msgstr "¿Sobre qué quieres recibir información?"
+
+#: templates/subscribe.php:196
+msgid "Want to follow more councils?"
+msgstr "¿Quieres seguir más consejos?"
+
+#: templates/subscribe.php:232
+msgid "Filter councils by topic"
+msgstr "Filtrar consejos por tema"
+
+#: templates/subscribe.php:233
+msgid "What matters to you?"
+msgstr "¿Qué te importa a ti?"
+
+#: templates/subscribe.php:255
+msgid "Clear all"
+msgstr "Limpiar todo"
+
+#: templates/subscribe.php:274
+msgid "No councils available."
+msgstr "No hay consejos disponibles."
+
+#: templates/subscribe.php:306
+msgid "How often?"
+msgstr "¿Con qué frecuencia?"
+
+#. translators: %s: link to privacy policy
+#: templates/subscribe.php:348
+#, php-format
+msgid "We never share your info. Unsubscribe anytime. See our %s."
+msgstr "Nunca compartimos tu información. Cancela tu suscripción cuando quieras. Consulta nuestra %s."
+
+#: templates/unsubscribed.php:30
+msgid "You've been unsubscribed"
+msgstr "Tu suscripción ha sido cancelada"
+
+#: templates/unsubscribed.php:31
+msgid "You won't receive any more meeting notifications from us. If you change your mind, you can subscribe again at any time."
+msgstr "Ya no recibirás notificaciones de reuniones de nuestra parte. Si cambias de opinión, puedes suscribirte de nuevo en cualquier momento."
+
+#: templates/unsubscribed.php:34
+msgid "Subscribe Again"
+msgstr "Suscribirse de nuevo"
