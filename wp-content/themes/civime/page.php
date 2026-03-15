@@ -12,6 +12,15 @@ get_header();
 
     <?php while ( have_posts() ) : the_post(); ?>
 
+        <header class="page-header">
+            <div class="container">
+                <h1 class="page-header__title"><?php echo civime_page_header_icon(); ?><?php echo esc_html( get_the_title() ); ?></h1>
+                <?php if ( has_excerpt() ) : ?>
+                    <p class="page-header__description"><?php echo esc_html( get_the_excerpt() ); ?></p>
+                <?php endif; ?>
+            </div>
+        </header>
+
         <article id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
 
             <div class="page-content section">

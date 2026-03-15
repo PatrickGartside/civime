@@ -79,17 +79,17 @@
      * that will happen when clicked.
      */
     function updateToggleButtonLabel( theme ) {
-        const btn = document.querySelector( '.dark-mode-toggle' );
-        if ( ! btn ) return;
+        var btns = document.querySelectorAll( '.dark-mode-toggle' );
+        if ( ! btns.length ) return;
 
-        const effectiveDark =
+        var effectiveDark =
             theme === 'dark' ||
             ( ( theme === null || theme === undefined ) && systemPrefersDark() );
 
-        btn.setAttribute(
-            'aria-label',
-            effectiveDark ? 'Switch to light mode' : 'Switch to dark mode'
-        );
+        var label = effectiveDark ? 'Switch to light mode' : 'Switch to dark mode';
+        btns.forEach( function ( btn ) {
+            btn.setAttribute( 'aria-label', label );
+        } );
     }
 
     // Apply stored preference immediately (prevents flash)
@@ -154,13 +154,15 @@
     // =========================================================================
 
     function initDarkModeToggle() {
-        const btn = document.querySelector( '.dark-mode-toggle' );
-        if ( ! btn ) return;
+        var btns = document.querySelectorAll( '.dark-mode-toggle' );
+        if ( ! btns.length ) return;
 
-        btn.addEventListener( 'click', toggleTheme );
+        btns.forEach( function ( btn ) {
+            btn.addEventListener( 'click', toggleTheme );
+        } );
 
         // Keep label in sync with system preference changes
-        const mediaQuery = window.matchMedia( '(prefers-color-scheme: dark)' );
+        var mediaQuery = window.matchMedia( '(prefers-color-scheme: dark)' );
         mediaQuery.addEventListener( 'change', function () {
             if ( ! getStoredTheme() ) {
                 updateToggleButtonLabel( null );

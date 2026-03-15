@@ -9,13 +9,16 @@ get_header();
 ?>
 
 <main id="main" class="site-main" role="main">
-    <div class="container section">
 
-        <?php if ( is_home() && ! is_front_page() ) : ?>
-            <header class="page-header">
+    <?php if ( is_home() && ! is_front_page() ) : ?>
+        <header class="page-header">
+            <div class="container">
                 <h1 class="page-header__title"><?php esc_html_e( 'Latest Posts', 'civime' ); ?></h1>
-            </header>
-        <?php endif; ?>
+            </div>
+        </header>
+    <?php endif; ?>
+
+    <div class="container section">
 
         <?php if ( have_posts() ) : ?>
 
@@ -43,7 +46,7 @@ get_header();
                             <?php endif; ?>
 
                             <h2 class="card__title">
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_title() ); ?></a>
                             </h2>
                         </header>
 
