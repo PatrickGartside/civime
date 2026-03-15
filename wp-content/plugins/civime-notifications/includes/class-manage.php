@@ -27,8 +27,11 @@ class CiviMe_Notifications_Manage {
 	private const VALID_FREQUENCIES = [ 'immediate', 'daily', 'weekly' ];
 
 	public function __construct() {
-		$this->subscription_id = sanitize_text_field( wp_unslash( $_GET['id'] ?? '' ) );
-		$this->token           = sanitize_text_field( wp_unslash( $_GET['token'] ?? '' ) );
+		$raw_id    = sanitize_text_field( wp_unslash( $_GET['id'] ?? '' ) );
+		$raw_token = sanitize_text_field( wp_unslash( $_GET['token'] ?? '' ) );
+
+		$this->subscription_id = ( strlen( $raw_id ) <= 128 ) ? $raw_id : '';
+		$this->token           = ( strlen( $raw_token ) <= 256 ) ? $raw_token : '';
 
 		// Both are required — without them we can't identify the subscription.
 		if ( '' === $this->subscription_id || '' === $this->token ) {
@@ -63,6 +66,16 @@ class CiviMe_Notifications_Manage {
 			$this->message_type = 'error';
 			return;
 		}
+
+		// Rate limiting — 5 attempts per 5 minutes per IP.
+		$rate_key = 'civime_rl_manage_' . md5( $_SERVER['REMOTE_ADDR'] ?? '' );
+		$count    = (int) get_transient( $rate_key );
+		if ( $count >= 5 ) {
+			$this->message      = __( 'Too many requests. Please wait a moment and try again.', 'civime-notifications' );
+			$this->message_type = 'error';
+			return;
+		}
+		set_transient( $rate_key, $count + 1, 300 );
 
 		$action = sanitize_key( $_POST['civime_action'] ?? '' );
 

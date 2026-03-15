@@ -306,6 +306,27 @@
 }
 
 /* ============================================================
+   SUBSCRIBE FORM: SINGLE-COUNCIL BADGE
+   ============================================================ */
+
+.subscribe-form__council-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background-color: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
+  border-radius: var(--border-radius);
+  margin-bottom: var(--space-2);
+}
+
+.subscribe-form__council-badge-name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+}
+
+/* ============================================================
    SUBSCRIBE FORM: SUBMIT & PRIVACY
    ============================================================ */
 
@@ -597,15 +618,38 @@
   gap: var(--space-8);
 }
 
+/* Section cards */
+.notify-section {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-8);
+}
+
+.notify-section__heading {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 var(--space-4);
+}
+
+.notify-section__description {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  margin: 0 0 var(--space-4);
+}
+
 /* Meeting info banner */
 .notify-page__meeting-info {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
   padding: var(--space-4) var(--space-5);
-  border-left: 4px solid var(--color-primary);
   background-color: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--space-6);
 }
 
 .notify-page__council-name {
@@ -615,8 +659,18 @@
   color: var(--color-text);
 }
 
+.notify-page__meeting-title {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
 .notify-page__meeting-date {
   font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.notify-page__meeting-location {
+  font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
 }
 
@@ -635,44 +689,22 @@
   overflow: hidden;
 }
 
-/* "or" divider */
-.notify-page__divider {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
+/* Grid layout — side-by-side on desktop, stacked on mobile */
+.notify-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
 }
 
-.notify-page__divider::before,
-.notify-page__divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background-color: var(--color-border);
+@media (min-width: 768px) {
+  .notify-page__grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-/* Subscribe alternative */
-.notify-page__subscribe {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-lg);
-  padding: var(--space-6);
-  text-align: center;
-}
-
-.notify-page__subscribe h3 {
-  font-family: var(--font-heading);
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  margin: 0 0 var(--space-2);
-}
-
-.notify-page__subscribe p {
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-base);
-  margin: 0 0 var(--space-4);
-  line-height: var(--line-height-body);
+/* Subscribe section — council badge spacing */
+.notify-section .subscribe-form__council-badge {
+  margin-bottom: var(--space-4);
 }
 
 /* ============================================================

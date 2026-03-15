@@ -21,14 +21,24 @@ class CiviMe_Notifications_Subscribe {
 	private array $errors            = [];
 	private array $form_data         = [];
 	private bool $submitted          = false;
+	private bool $is_single_council  = false;
+	private array $single_council    = [];
 
 	private const VALID_CHANNELS    = [ 'email', 'sms' ];
 	private const VALID_FREQUENCIES = [ 'immediate', 'daily', 'weekly' ];
 
 	public function __construct() {
+		$council_id = isset( $_GET['council_id'] ) ? absint( $_GET['council_id'] ) : 0;
+
 		// Check for the post-redirect success flag.
 		if ( '1' === sanitize_key( wp_unslash( $_GET['submitted'] ?? '' ) ) ) {
 			$this->submitted = true;
+
+			// Fetch single council so the success template can show the council name.
+			if ( $council_id > 0 ) {
+				$this->fetch_single_council( $council_id );
+			}
+
 			return;
 		}
 
@@ -40,8 +50,16 @@ class CiviMe_Notifications_Subscribe {
 		}
 
 		$this->set_defaults();
-		$this->fetch_councils();
-		$this->fetch_topics();
+
+		if ( $council_id > 0 ) {
+			$this->fetch_single_council( $council_id );
+		}
+
+		// Fall back to full form if single-council fetch failed or no council_id.
+		if ( ! $this->is_single_council ) {
+			$this->fetch_councils();
+			$this->fetch_topics();
+		}
 	}
 
 	/**
@@ -65,6 +83,16 @@ class CiviMe_Notifications_Subscribe {
 			$this->do_success_redirect();
 			return;
 		}
+
+		// Rate limiting — 5 attempts per 5 minutes per IP.
+		$rate_key = 'civime_rl_subscribe_' . md5( $_SERVER['REMOTE_ADDR'] ?? '' );
+		$count    = (int) get_transient( $rate_key );
+		if ( $count >= 5 ) {
+			$this->errors[] = __( 'Too many requests. Please wait a moment and try again.', 'civime-notifications' );
+			$this->preserve_form_data();
+			return;
+		}
+		set_transient( $rate_key, $count + 1, 300 );
 
 		$this->preserve_form_data();
 
@@ -144,12 +172,43 @@ class CiviMe_Notifications_Subscribe {
 	}
 
 	/**
+	 * Fetch a single council by ID for streamlined single-council mode.
+	 *
+	 * On failure (invalid ID, API down), leaves is_single_council false so
+	 * the constructor falls back to the full form.
+	 */
+	private function fetch_single_council( int $council_id ): void {
+		$response = civime_api()->get_council( $council_id );
+
+		if ( is_wp_error( $response ) ) {
+			return;
+		}
+
+		$this->is_single_council = true;
+		$this->single_council    = $response;
+
+		// Ensure the council is pre-selected in form data.
+		if ( ! in_array( $council_id, $this->form_data['council_ids'] ?? [], true ) ) {
+			$this->form_data['council_ids'][] = $council_id;
+		}
+	}
+
+	/**
 	 * Redirect to the same page with a success flag (POST-redirect-GET).
+	 *
+	 * Preserves council_id so the success page can show contextual messaging.
 	 *
 	 * @return never
 	 */
 	private function do_success_redirect(): void {
-		wp_safe_redirect( add_query_arg( 'submitted', '1', home_url( '/meetings/subscribe/' ) ) );
+		$url = add_query_arg( 'submitted', '1', home_url( '/meetings/subscribe/' ) );
+
+		$council_id = isset( $_GET['council_id'] ) ? absint( $_GET['council_id'] ) : 0;
+		if ( $council_id > 0 ) {
+			$url = add_query_arg( 'council_id', $council_id, $url );
+		}
+
+		wp_safe_redirect( $url );
 		exit;
 	}
 
@@ -205,11 +264,20 @@ class CiviMe_Notifications_Subscribe {
 	/**
 	 * Fetch topics and build a map of topic_slug → council IDs.
 	 *
-	 * Each topic is fetched individually to get its associated councils array.
-	 * The resulting map lets the template attach topic metadata to council items
-	 * so the JS can filter the council picker by topic.
+	 * Uses a composite transient to avoid N+1 API calls on every page load.
+	 * Each topic must be fetched individually to get its associated councils,
+	 * so caching the assembled result saves significant latency.
 	 */
 	private function fetch_topics(): void {
+		$cache_key = 'civime_cache_topic_council_map';
+		$cached    = get_transient( $cache_key );
+
+		if ( false !== $cached && is_array( $cached ) ) {
+			$this->topics           = $cached['topics'] ?? [];
+			$this->topic_council_map = $cached['map'] ?? [];
+			return;
+		}
+
 		$response = civime_api()->get_topics();
 
 		if ( is_wp_error( $response ) ) {
@@ -226,10 +294,15 @@ class CiviMe_Notifications_Subscribe {
 				continue;
 			}
 
-			$councils   = $topic_response['councils'] ?? [];
+			$councils    = $topic_response['councils'] ?? [];
 			$council_ids = array_map( fn( array $c ) => (int) ( $c['id'] ?? 0 ), $councils );
 			$this->topic_council_map[ $slug ] = array_values( array_filter( $council_ids ) );
 		}
+
+		set_transient( $cache_key, [
+			'topics' => $this->topics,
+			'map'    => $this->topic_council_map,
+		], 900 );
 	}
 
 	/**
@@ -305,5 +378,26 @@ class CiviMe_Notifications_Subscribe {
 	 */
 	public function get_topic_council_map(): array {
 		return $this->topic_council_map;
+	}
+
+	/**
+	 * Whether the form is in single-council mode.
+	 */
+	public function is_single_council(): bool {
+		return $this->is_single_council;
+	}
+
+	/**
+	 * Return the single council data array.
+	 */
+	public function get_single_council(): array {
+		return $this->single_council;
+	}
+
+	/**
+	 * Return the full subscribe URL without council_id.
+	 */
+	public function get_full_subscribe_url(): string {
+		return home_url( '/meetings/subscribe/' );
 	}
 }
