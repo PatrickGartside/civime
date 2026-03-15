@@ -27,7 +27,10 @@ get_header();
 					<p class="page-header__description"><?php echo esc_html( $active->description ); ?></p>
 				<?php endif; ?>
 			<?php else : ?>
-				<h1 class="page-header__title"><?php esc_html_e( 'Civic Action Guides', 'civime-guides' ); ?></h1>
+				<h1 class="page-header__title">
+				<svg class="page-header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+				<?php esc_html_e( 'Tools & Guides', 'civime-guides' ); ?>
+			</h1>
 				<p class="page-header__description"><?php esc_html_e( 'Step-by-step guides to help you engage with government in Hawaii — from testifying to writing letters to elected officials.', 'civime-guides' ); ?></p>
 			<?php endif; ?>
 		</div>
@@ -92,7 +95,7 @@ get_header();
 								<?php endif; ?>
 
 								<h2 class="card__title">
-									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+									<a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_title() ); ?></a>
 								</h2>
 
 								<?php if ( has_excerpt() ) : ?>

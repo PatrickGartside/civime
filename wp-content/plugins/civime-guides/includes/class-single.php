@@ -41,6 +41,12 @@ class CiviMe_Guides_Single {
 
 		$term_ids = wp_list_pluck( $this->categories, 'term_id' );
 
+		$locale = apply_filters( 'civime_i18n_active_slug', 'en' );
+
+		$meta_query = ( 'en' === $locale )
+			? [ [ 'key' => '_civime_guide_lang', 'compare' => 'NOT EXISTS' ] ]
+			: [ [ 'key' => '_civime_guide_lang', 'value' => $locale ] ];
+
 		$query = new WP_Query( [
 			'post_type'      => 'civime_guide',
 			'posts_per_page' => 3,
@@ -52,6 +58,7 @@ class CiviMe_Guides_Single {
 					'terms'    => $term_ids,
 				],
 			],
+			'meta_query'     => $meta_query,
 			'orderby'        => 'date',
 			'order'          => 'DESC',
 			'no_found_rows'  => true,

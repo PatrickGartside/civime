@@ -35,6 +35,7 @@ spl_autoload_register( function ( string $class_name ): void {
 } );
 
 add_action( 'init', function (): void {
+	load_plugin_textdomain( 'civime-guides', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	new CiviMe_Guides_Post_Type();
 } );
 
@@ -42,6 +43,18 @@ register_activation_hook( __FILE__, function (): void {
 	// Register CPT + taxonomy before flushing so rules are generated.
 	( new CiviMe_Guides_Post_Type() )->register();
 	CiviMe_Guides_Post_Type::seed_terms();
+
+	// Grant guide capabilities to Administrator and Editor roles.
+	$caps = [ 'edit_guides', 'edit_others_guides', 'publish_guides', 'read_private_guides', 'delete_guides', 'delete_others_guides', 'delete_published_guides', 'edit_published_guides' ];
+	foreach ( [ 'administrator', 'editor' ] as $role_name ) {
+		$role = get_role( $role_name );
+		if ( $role ) {
+			foreach ( $caps as $cap ) {
+				$role->add_cap( $cap );
+			}
+		}
+	}
+
 	flush_rewrite_rules();
 } );
 

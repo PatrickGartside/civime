@@ -20,6 +20,15 @@ get_header();
 
 <main id="main" class="site-main" role="main">
 
+	<header class="page-header">
+		<div class="container">
+			<?php if ( $primary_cat ) : ?>
+				<p class="guides-eyebrow"><?php echo esc_html( $primary_cat->name ); ?></p>
+			<?php endif; ?>
+			<h1 class="page-header__title"><?php echo esc_html( get_the_title() ); ?></h1>
+		</div>
+	</header>
+
 	<nav class="guides-breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'civime-guides' ); ?>">
 		<div class="container">
 			<ol class="guides-breadcrumb__list">
@@ -27,30 +36,10 @@ get_header();
 				<?php if ( $primary_cat ) : ?>
 					<li><a href="<?php echo esc_url( get_term_link( $primary_cat ) ); ?>"><?php echo esc_html( $primary_cat->name ); ?></a></li>
 				<?php endif; ?>
-				<li aria-current="page"><?php the_title(); ?></li>
+				<li aria-current="page"><?php echo esc_html( get_the_title() ); ?></li>
 			</ol>
 		</div>
 	</nav>
-
-	<header class="page-header">
-		<div class="container">
-			<?php if ( $primary_cat ) : ?>
-				<p class="guides-eyebrow"><?php echo esc_html( $primary_cat->name ); ?></p>
-			<?php endif; ?>
-			<h1 class="page-header__title"><?php the_title(); ?></h1>
-			<div class="guides-meta">
-				<span class="guide-card__read-time">
-					<?php
-					printf(
-						/* translators: %d: number of minutes */
-						esc_html( _n( '%d min read', '%d min read', $read_time, 'civime-guides' ) ),
-						$read_time
-					);
-					?>
-				</span>
-			</div>
-		</div>
-	</header>
 
 	<div class="section">
 		<div class="container">

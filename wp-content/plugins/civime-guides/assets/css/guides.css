@@ -9,11 +9,11 @@
 
 .guides-eyebrow {
   font-family: var(--font-body);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   font-weight: 700;
-  color: var(--color-secondary);
+  color: rgba(180, 225, 255, 0.9);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   margin-bottom: var(--space-1);
 }
 

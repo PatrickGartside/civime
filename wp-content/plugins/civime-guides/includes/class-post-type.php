@@ -15,6 +15,7 @@ class CiviMe_Guides_Post_Type {
 		$this->register();
 		add_filter( 'template_include', [ $this, 'load_template' ] );
 		add_filter( 'body_class', [ $this, 'add_body_classes' ] );
+		add_action( 'pre_get_posts', [ $this, 'filter_guides_by_locale' ] );
 	}
 
 	public function register(): void {
@@ -40,14 +41,16 @@ class CiviMe_Guides_Post_Type {
 		];
 
 		register_post_type( 'civime_guide', [
-			'labels'        => $labels,
-			'public'        => true,
-			'has_archive'   => true,
-			'rewrite'       => [ 'slug' => 'guides', 'with_front' => false ],
-			'supports'      => [ 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ],
-			'menu_icon'     => 'dashicons-book-alt',
-			'menu_position' => 25,
-			'show_in_rest'  => true,
+			'labels'          => $labels,
+			'public'          => true,
+			'has_archive'     => true,
+			'rewrite'         => [ 'slug' => 'guides', 'with_front' => false ],
+			'supports'        => [ 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'page-attributes' ],
+			'menu_icon'       => 'dashicons-book-alt',
+			'menu_position'   => 25,
+			'show_in_rest'    => true,
+			'capability_type' => [ 'guide', 'guides' ],
+			'map_meta_cap'    => true,
 		] );
 	}
 
@@ -83,6 +86,7 @@ class CiviMe_Guides_Post_Type {
 			'Voting & Elections',
 			'Advocacy',
 			'Getting Started',
+			'Compliance',
 		];
 
 		foreach ( $defaults as $term ) {
@@ -122,6 +126,40 @@ class CiviMe_Guides_Post_Type {
 		}
 
 		return $classes;
+	}
+
+	/**
+	 * Filter guide archive queries by the active i18n locale.
+	 *
+	 * English (default): show guides without _civime_guide_lang meta.
+	 * Other locales: show guides where _civime_guide_lang matches.
+	 */
+	public function filter_guides_by_locale( \WP_Query $query ): void {
+		if ( is_admin() || ! $query->is_main_query() ) {
+			return;
+		}
+
+		if ( ! $query->is_post_type_archive( 'civime_guide' ) && ! $query->is_tax( 'guide_category' ) ) {
+			return;
+		}
+
+		$locale = apply_filters( 'civime_i18n_active_slug', 'en' );
+
+		if ( 'en' === $locale ) {
+			$query->set( 'meta_query', [
+				[
+					'key'     => '_civime_guide_lang',
+					'compare' => 'NOT EXISTS',
+				],
+			] );
+		} else {
+			$query->set( 'meta_query', [
+				[
+					'key'   => '_civime_guide_lang',
+					'value' => $locale,
+				],
+			] );
+		}
 	}
 
 	/**
