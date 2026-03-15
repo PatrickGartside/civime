@@ -383,6 +383,248 @@ class CiviMe_API_Client {
 		] );
 	}
 
+	/**
+	 * Fetch a paginated list of meeting reminders (admin only).
+	 *
+	 * Never cached — always returns live data.
+	 *
+	 * @param array{
+	 *   q?: string,
+	 *   confirmed?: string,
+	 *   sent?: string,
+	 *   limit?: int,
+	 *   offset?: int,
+	 * } $args
+	 * @return array|WP_Error
+	 */
+	public function get_admin_reminders( array $args = [] ): array|WP_Error {
+		return $this->request( 'GET', '/api/v1/admin/reminders', [ 'query' => $args ] );
+	}
+
+	/**
+	 * Permanently delete a reminder (admin only).
+	 *
+	 * @param int $reminder_id The reminder ID to delete.
+	 * @return array|WP_Error
+	 */
+	public function delete_admin_reminder( int $reminder_id ): array|WP_Error {
+		return $this->request( 'DELETE', '/api/v1/admin/reminders/' . $reminder_id );
+	}
+
+	/**
+	 * Fetch a paginated list of meetings (admin only).
+	 *
+	 * Never cached — always returns live data.
+	 *
+	 * @param array{
+	 *   q?: string,
+	 *   council_id?: int,
+	 *   date_from?: string,
+	 *   date_to?: string,
+	 *   status?: string,
+	 *   limit?: int,
+	 *   offset?: int,
+	 * } $args
+	 * @return array|WP_Error
+	 */
+	public function get_admin_meetings( array $args = [] ): array|WP_Error {
+		return $this->request( 'GET', '/api/v1/admin/meetings', [ 'query' => $args ] );
+	}
+
+	/**
+	 * Check all meeting detail_url links for broken URLs (admin only).
+	 *
+	 * Uses a longer timeout since the API checks many URLs concurrently.
+	 *
+	 * @param array{
+	 *   date_from?: string,
+	 *   date_to?: string,
+	 *   council_id?: int,
+	 * } $args
+	 * @return array|WP_Error
+	 */
+	public function check_admin_meeting_links( array $args = [] ): array|WP_Error {
+		return $this->request( 'GET', '/api/v1/admin/meetings/check-links', [
+			'query'   => $args,
+			'timeout' => 60,
+		] );
+	}
+
+	/**
+	 * Update a meeting's fields (admin only).
+	 *
+	 * @param int   $meeting_id The meeting ID to update.
+	 * @param array $data       Fields to update (state_id, detail_url, status, title).
+	 * @return array|WP_Error
+	 */
+	public function update_admin_meeting( int $meeting_id, array $data ): array|WP_Error {
+		return $this->request( 'PATCH', '/api/v1/admin/meetings/' . $meeting_id, [ 'body' => $data ] );
+	}
+
+	// =========================================================================
+	// Councils (Admin)
+	// =========================================================================
+
+	/**
+	 * Fetch a paginated list of councils for admin management.
+	 *
+	 * Never cached — always returns live data.
+	 *
+	 * @param array{
+	 *   q?: string,
+	 *   is_active?: string,
+	 *   jurisdiction?: string,
+	 *   limit?: int,
+	 *   offset?: int,
+	 * } $args
+	 * @return array|WP_Error
+	 */
+	public function get_admin_councils( array $args = [] ): array|WP_Error {
+		return $this->request( 'GET', '/api/v1/admin/councils', [ 'query' => $args ] );
+	}
+
+	/**
+	 * Fetch full council detail for admin editing.
+	 *
+	 * @param int $id Council ID.
+	 * @return array|WP_Error
+	 */
+	public function get_admin_council( int $id ): array|WP_Error {
+		return $this->request( 'GET', '/api/v1/admin/councils/' . $id );
+	}
+
+	/**
+	 * Update a council's base fields and profile.
+	 *
+	 * @param int   $id   Council ID.
+	 * @param array $data Fields to update.
+	 * @return array|WP_Error
+	 */
+	public function update_admin_council( int $id, array $data ): array|WP_Error {
+		return $this->request( 'PATCH', '/api/v1/admin/councils/' . $id, [ 'body' => $data ] );
+	}
+
+	/**
+	 * Add a member to a council.
+	 *
+	 * @param int   $council_id Council ID.
+	 * @param array $data       Member fields.
+	 * @return array|WP_Error
+	 */
+	public function create_admin_member( int $council_id, array $data ): array|WP_Error {
+		return $this->request( 'POST', '/api/v1/admin/councils/' . $council_id . '/members', [ 'body' => $data ] );
+	}
+
+	/**
+	 * Delete a member from a council.
+	 *
+	 * @param int $council_id Council ID.
+	 * @param int $member_id  Member ID.
+	 * @return array|WP_Error
+	 */
+	public function delete_admin_member( int $council_id, int $member_id ): array|WP_Error {
+		return $this->request( 'DELETE', '/api/v1/admin/councils/' . $council_id . '/members/' . $member_id );
+	}
+
+	/**
+	 * Add a vacancy to a council.
+	 *
+	 * @param int   $council_id Council ID.
+	 * @param array $data       Vacancy fields.
+	 * @return array|WP_Error
+	 */
+	public function create_admin_vacancy( int $council_id, array $data ): array|WP_Error {
+		return $this->request( 'POST', '/api/v1/admin/councils/' . $council_id . '/vacancies', [ 'body' => $data ] );
+	}
+
+	/**
+	 * Delete a vacancy from a council.
+	 *
+	 * @param int $council_id Council ID.
+	 * @param int $vacancy_id Vacancy ID.
+	 * @return array|WP_Error
+	 */
+	public function delete_admin_vacancy( int $council_id, int $vacancy_id ): array|WP_Error {
+		return $this->request( 'DELETE', '/api/v1/admin/councils/' . $council_id . '/vacancies/' . $vacancy_id );
+	}
+
+	/**
+	 * Add a legal authority reference to a council.
+	 *
+	 * @param int   $council_id Council ID.
+	 * @param array $data       Authority fields.
+	 * @return array|WP_Error
+	 */
+	public function create_admin_authority( int $council_id, array $data ): array|WP_Error {
+		return $this->request( 'POST', '/api/v1/admin/councils/' . $council_id . '/authority', [ 'body' => $data ] );
+	}
+
+	/**
+	 * Delete a legal authority reference from a council.
+	 *
+	 * @param int $council_id   Council ID.
+	 * @param int $authority_id Authority ID.
+	 * @return array|WP_Error
+	 */
+	public function delete_admin_authority( int $council_id, int $authority_id ): array|WP_Error {
+		return $this->request( 'DELETE', '/api/v1/admin/councils/' . $council_id . '/authority/' . $authority_id );
+	}
+
+	// =========================================================================
+	// Scraper / Sync
+	// =========================================================================
+
+	/**
+	 * Fetch recent scraper run history (admin only).
+	 *
+	 * Never cached — always returns live data.
+	 *
+	 * @param array{
+	 *   limit?: int,
+	 *   offset?: int,
+	 * } $args
+	 * @return array|WP_Error
+	 */
+	public function get_admin_scraper_runs( array $args = [] ): array|WP_Error {
+		return $this->request( 'GET', '/api/v1/admin/scraper/runs', [ 'query' => $args ] );
+	}
+
+	/**
+	 * Manually trigger a scraper run (admin only).
+	 *
+	 * @return array|WP_Error
+	 */
+	public function trigger_admin_scrape(): array|WP_Error {
+		return $this->request( 'POST', '/api/v1/admin/scraper/trigger' );
+	}
+
+	/**
+	 * Manually trigger an NCO neighborhood board scraper run (admin only).
+	 *
+	 * @return array|WP_Error
+	 */
+	public function trigger_admin_nco_scrape(): array|WP_Error {
+		return $this->request( 'POST', '/api/v1/admin/scraper/trigger-nco' );
+	}
+
+	/**
+	 * Manually trigger a Honolulu boards & commissions scraper run (admin only).
+	 *
+	 * @return array|WP_Error
+	 */
+	public function trigger_admin_honolulu_boards_scrape(): array|WP_Error {
+		return $this->request( 'POST', '/api/v1/admin/scraper/trigger-honolulu-boards' );
+	}
+
+	/**
+	 * Manually trigger a Maui Legistar scraper run (admin only).
+	 *
+	 * @return array|WP_Error
+	 */
+	public function trigger_admin_maui_scrape(): array|WP_Error {
+		return $this->request( 'POST', '/api/v1/admin/scraper/trigger-maui' );
+	}
+
 	// =========================================================================
 	// Health / Stats
 	// =========================================================================
@@ -491,7 +733,7 @@ class CiviMe_API_Client {
 				$normalized[ $key ] = implode( ',', $parts );
 			}
 		}
-		$cache_key = self::CACHE_PREFIX . md5( $endpoint . serialize( $normalized ) );
+		$cache_key = self::CACHE_PREFIX . md5( $endpoint . wp_json_encode( $normalized ) );
 		$cached    = get_transient( $cache_key );
 
 		if ( false !== $cached ) {
@@ -528,9 +770,10 @@ class CiviMe_API_Client {
 		}
 
 		$request_args = [
-			'method'  => strtoupper( $method ),
-			'timeout' => self::REQUEST_TIMEOUT,
-			'headers' => [
+			'method'    => strtoupper( $method ),
+			'timeout'   => $args['timeout'] ?? self::REQUEST_TIMEOUT,
+			'sslverify' => true,
+			'headers'   => [
 				'X-API-Key'  => $this->api_key,
 				'Accept'     => 'application/json',
 				'User-Agent' => 'CiviMe-WordPress/' . CIVIME_CORE_VERSION,
@@ -564,7 +807,7 @@ class CiviMe_API_Client {
 			// On 429, set a circuit breaker so subsequent requests are skipped
 			// for RATE_LIMIT_TTL seconds. Respects the Retry-After header if present.
 			if ( 429 === $status_code ) {
-				$retry_after = (int) wp_remote_retrieve_header( $http_response, 'retry-after' );
+				$retry_after = min( (int) wp_remote_retrieve_header( $http_response, 'retry-after' ), 3600 );
 				$breaker_ttl = max( self::RATE_LIMIT_TTL, $retry_after );
 				set_transient( self::CACHE_PREFIX . 'rate_limited', true, $breaker_ttl );
 			}

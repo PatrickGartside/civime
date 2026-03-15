@@ -46,9 +46,15 @@ spl_autoload_register( function ( string $class_name ): void {
 add_action( 'plugins_loaded', 'civime_core_init' );
 
 function civime_core_init(): void {
-	// Admin Subscribers registers the top-level CiviMe menu — must come first
-	// so that Settings can attach its submenu page to the parent.
+	load_plugin_textdomain( 'civime-core', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
+	// Subscribers registers the top-level CiviMe menu — must come first.
+	// Sync uses the parent slug so it becomes the default landing page.
 	new CiviMe_Admin_Subscribers();
+	new CiviMe_Admin_Sync();
+	new CiviMe_Admin_Meetings();
+	new CiviMe_Admin_Reminders();
+	new CiviMe_Admin_Councils();
 	new CiviMe_Settings();
 }
 

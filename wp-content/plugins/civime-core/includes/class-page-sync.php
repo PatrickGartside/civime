@@ -65,6 +65,12 @@ class CiviMe_Page_Sync {
 			}
 
 			$new_content = file_get_contents( $file_path );
+			if ( false === $new_content ) {
+				if ( defined( 'WP_CLI' ) ) {
+					WP_CLI::warning( "Failed to read: {$file_path}" );
+				}
+				continue;
+			}
 			$old_content = $page->post_content;
 
 			if ( trim( $new_content ) === trim( $old_content ) ) {

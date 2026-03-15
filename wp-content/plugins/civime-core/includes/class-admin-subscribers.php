@@ -14,7 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class CiviMe_Admin_Subscribers {
 
-	private const MENU_SLUG = 'civime';
+	private const MENU_SLUG   = 'civime-subscribers';
+	private const PARENT_SLUG = 'civime';
 
 	public function __construct() {
 		add_action( 'admin_menu', [ $this, 'register_admin_menu' ] );
@@ -25,21 +26,21 @@ class CiviMe_Admin_Subscribers {
 	}
 
 	/**
-	 * Register the top-level CiviMe menu with Subscribers as the first submenu.
+	 * Register the top-level CiviMe menu and the Subscribers submenu.
 	 */
 	public function register_admin_menu(): void {
 		add_menu_page(
 			__( 'CiviMe', 'civime-core' ),
 			__( 'CiviMe', 'civime-core' ),
 			'manage_options',
-			self::MENU_SLUG,
-			[ $this, 'render_page' ],
+			self::PARENT_SLUG,
+			'__return_null',
 			'dashicons-megaphone',
 			30
 		);
 
 		add_submenu_page(
-			self::MENU_SLUG,
+			self::PARENT_SLUG,
 			__( 'Subscribers', 'civime-core' ),
 			__( 'Subscribers', 'civime-core' ),
 			'manage_options',
