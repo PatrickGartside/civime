@@ -21,3 +21,12 @@ Thumbs.db
 
 # Docker data (lives in /home/patrickgartside/docker/civime-wordpress/)
 # Not in this repo — only theme + plugins are tracked here
+.planning/
+
+# Generated reports (not project artifacts)
+audit-report.html
+security-report.html
+security-prevention.html
+
+# Binary brand assets (not part of codebase)
+logo/
