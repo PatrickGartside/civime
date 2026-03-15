@@ -28,6 +28,7 @@ class CiviMe_Meetings_Data_Mapper {
 		$item['council_id']   = $item['council']['id'] ?? ( $item['council_id'] ?? 0 );
 		$item['council_name'] = $item['council']['name'] ?? ( $item['council_name'] ?? '' );
 		$item['has_summary']  = ! empty( $item['summary_text'] );
+		$item['source']       = $item['source'] ?? '';
 
 		return $item;
 	}
@@ -70,6 +71,9 @@ class CiviMe_Meetings_Data_Mapper {
 
 		// Pass through topics data from API response.
 		$item['topics'] = $item['topics'] ?? [ 'direct' => [], 'inherited' => [] ];
+
+		// Pass through summary translations from API response.
+		$item['summary_translations'] = $item['summary_translations'] ?? null;
 
 		return $item;
 	}

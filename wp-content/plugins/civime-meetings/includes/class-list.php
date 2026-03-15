@@ -22,6 +22,7 @@ class CiviMe_Meetings_List {
 	private int $total           = 0;
 
 	private const VALID_COUNTIES = [ 'state', 'honolulu', 'maui', 'hawaii', 'kauai' ];
+	private const VALID_SOURCES  = [ 'ehawaii', 'nco', 'honolulu_boards', 'maui_legistar' ];
 
 	public function __construct() {
 		$this->parse_filters();
@@ -54,6 +55,18 @@ class CiviMe_Meetings_List {
 			}
 		}
 
+		// Parse source keys from comma-separated query param.
+		$source_keys = [];
+		if ( ! empty( $_GET['source'] ) ) {
+			$raw_sources = explode( ',', sanitize_text_field( wp_unslash( $_GET['source'] ) ) );
+			foreach ( $raw_sources as $sk ) {
+				$sk = trim( $sk );
+				if ( in_array( $sk, self::VALID_SOURCES, true ) ) {
+					$source_keys[] = $sk;
+				}
+			}
+		}
+
 		$this->filters = [
 			'q'          => isset( $_GET['q'] ) ? sanitize_text_field( wp_unslash( $_GET['q'] ) ) : '',
 			'council_id' => isset( $_GET['council_id'] ) ? absint( $_GET['council_id'] ) : 0,
@@ -61,6 +74,7 @@ class CiviMe_Meetings_List {
 			'date_to'    => $this->validate_date_string( $date_to ),
 			'county'     => in_array( $raw_county, self::VALID_COUNTIES, true ) ? $raw_county : '',
 			'topics'     => $topic_slugs,
+			'source'     => $source_keys,
 		];
 	}
 
@@ -113,6 +127,10 @@ class CiviMe_Meetings_List {
 
 		if ( ! empty( $this->filters['topics'] ) ) {
 			$args['topics'] = implode( ',', $this->filters['topics'] );
+		}
+
+		if ( ! empty( $this->filters['source'] ) ) {
+			$args['source'] = implode( ',', $this->filters['source'] );
 		}
 
 		$meetings_response = civime_api()->get_meetings( $args );
@@ -226,6 +244,171 @@ class CiviMe_Meetings_List {
 		error_log( 'CiviMe Meetings API error: ' . $this->meetings->get_error_message() );
 
 		return __( 'Meeting data is temporarily unavailable. Please check back soon.', 'civime-meetings' );
+	}
+
+	/**
+	 * Count the number of active (non-empty) filter values.
+	 */
+	public function get_active_filter_count(): int {
+		$count = 0;
+
+		if ( '' !== $this->filters['q'] ) {
+			$count++;
+		}
+		if ( $this->filters['council_id'] > 0 ) {
+			$count++;
+		}
+		if ( '' !== $this->filters['county'] ) {
+			$count++;
+		}
+		if ( '' !== $this->filters['date_from'] ) {
+			$count++;
+		}
+		if ( '' !== $this->filters['date_to'] ) {
+			$count++;
+		}
+
+		$count += count( $this->filters['topics'] );
+		$count += count( $this->filters['source'] );
+
+		return $count;
+	}
+
+	/**
+	 * Build an array of active filter tags with labels and removal URLs.
+	 *
+	 * Each tag includes a URL that preserves all other filters but removes
+	 * just that one value — used for the active-filter summary bar.
+	 *
+	 * @return array<int, array{label: string, remove_url: string, type: string}>
+	 */
+	public function get_active_filter_tags(): array {
+		$tags     = [];
+		$base_url = home_url( '/meetings/' );
+
+		// Helper: build query args from current filters, with overrides.
+		$build_url = function ( array $overrides ) use ( $base_url ): string {
+			$merged = array_merge( $this->filters, $overrides );
+
+			$args = array_filter( [
+				'q'          => $merged['q'],
+				'council_id' => $merged['council_id'] > 0 ? $merged['council_id'] : null,
+				'date_from'  => $merged['date_from'],
+				'date_to'    => $merged['date_to'],
+				'county'     => $merged['county'],
+				'topics'     => ! empty( $merged['topics'] ) ? implode( ',', $merged['topics'] ) : null,
+				'source'     => ! empty( $merged['source'] ) ? implode( ',', $merged['source'] ) : null,
+			] );
+
+			return ! empty( $args ) ? add_query_arg( $args, $base_url ) : $base_url;
+		};
+
+		// Keyword.
+		if ( '' !== $this->filters['q'] ) {
+			$tags[] = [
+				'label'      => '"' . $this->filters['q'] . '"',
+				'remove_url' => $build_url( [ 'q' => '' ] ),
+				'type'       => 'keyword',
+			];
+		}
+
+		// Council.
+		if ( $this->filters['council_id'] > 0 ) {
+			$council_name = '';
+			$councils     = $this->get_councils();
+			foreach ( $councils as $c ) {
+				if ( (int) ( $c['id'] ?? 0 ) === $this->filters['council_id'] ) {
+					$council_name = $c['name'] ?? '';
+					break;
+				}
+			}
+			$label = '' !== $council_name
+				? sprintf( __( 'Council: %s', 'civime-meetings' ), $council_name )
+				: sprintf( __( 'Council #%d', 'civime-meetings' ), $this->filters['council_id'] );
+
+			$tags[] = [
+				'label'      => $label,
+				'remove_url' => $build_url( [ 'council_id' => 0 ] ),
+				'type'       => 'council',
+			];
+		}
+
+		// County.
+		if ( '' !== $this->filters['county'] ) {
+			$county_labels = [
+				'state'    => __( 'State', 'civime-meetings' ),
+				'honolulu' => __( 'Honolulu', 'civime-meetings' ),
+				'maui'     => __( 'Maui', 'civime-meetings' ),
+				'hawaii'   => "Hawai\xCA\xBBi",
+				'kauai'    => "Kaua\xCA\xBBi",
+			];
+			$tags[] = [
+				'label'      => $county_labels[ $this->filters['county'] ] ?? ucfirst( $this->filters['county'] ),
+				'remove_url' => $build_url( [ 'county' => '' ] ),
+				'type'       => 'county',
+			];
+		}
+
+		// Dates.
+		if ( '' !== $this->filters['date_from'] ) {
+			$tags[] = [
+				'label'      => sprintf( __( 'From: %s', 'civime-meetings' ), wp_date( 'M j, Y', strtotime( $this->filters['date_from'] ) ) ),
+				'remove_url' => $build_url( [ 'date_from' => '' ] ),
+				'type'       => 'date',
+			];
+		}
+		if ( '' !== $this->filters['date_to'] ) {
+			$tags[] = [
+				'label'      => sprintf( __( 'To: %s', 'civime-meetings' ), wp_date( 'M j, Y', strtotime( $this->filters['date_to'] ) ) ),
+				'remove_url' => $build_url( [ 'date_to' => '' ] ),
+				'type'       => 'date',
+			];
+		}
+
+		// Topics (one tag per active topic).
+		foreach ( $this->filters['topics'] as $slug ) {
+			$topic_name = $slug;
+			foreach ( $this->all_topics as $t ) {
+				if ( ( $t['slug'] ?? '' ) === $slug ) {
+					$topic_name = class_exists( 'CiviMe_I18n_Topic_Names' )
+						? CiviMe_I18n_Topic_Names::get( $slug )
+						: ( $t['name'] ?? $slug );
+					break;
+				}
+			}
+
+			$remaining = array_values( array_filter( $this->filters['topics'], function ( $s ) use ( $slug ) {
+				return $s !== $slug;
+			} ) );
+
+			$tags[] = [
+				'label'      => $topic_name,
+				'remove_url' => $build_url( [ 'topics' => $remaining ] ),
+				'type'       => 'topic',
+			];
+		}
+
+		// Sources (one tag per active source).
+		$source_labels = [
+			'ehawaii'         => __( 'State of Hawaii', 'civime-meetings' ),
+			'nco'             => __( 'Honolulu Neighborhood Board', 'civime-meetings' ),
+			'honolulu_boards' => __( 'Honolulu County Committee', 'civime-meetings' ),
+			'maui_legistar'   => __( 'Maui County Committee', 'civime-meetings' ),
+		];
+
+		foreach ( $this->filters['source'] as $key ) {
+			$remaining = array_values( array_filter( $this->filters['source'], function ( $s ) use ( $key ) {
+				return $s !== $key;
+			} ) );
+
+			$tags[] = [
+				'label'      => $source_labels[ $key ] ?? $key,
+				'remove_url' => $build_url( [ 'source' => $remaining ] ),
+				'type'       => 'source',
+			];
+		}
+
+		return $tags;
 	}
 
 	/**

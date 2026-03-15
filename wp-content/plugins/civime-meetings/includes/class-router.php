@@ -125,9 +125,24 @@ class CiviMe_Meetings_Router {
 
 		$body = wp_remote_retrieve_body( $response );
 
+		if ( ! str_starts_with( trim( $body ), 'BEGIN:VCALENDAR' ) ) {
+			status_header( 502 );
+			echo 'Invalid calendar response.';
+			return;
+		}
+
+		if ( strlen( $body ) > 1_000_000 ) {
+			status_header( 502 );
+			echo 'Calendar file too large.';
+			return;
+		}
+
+		$safe_id = preg_replace( '/[^a-zA-Z0-9_-]/', '', $state_id );
+
 		header( 'Content-Type: text/calendar; charset=utf-8' );
-		header( 'Content-Disposition: attachment; filename="meeting-' . $state_id . '.ics"' );
-		header( 'Content-Length: ' . strlen( $body ) );
+		header( 'Content-Disposition: attachment; filename="meeting-' . $safe_id . '.ics"' );
+		header( 'Content-Length: ' . mb_strlen( $body, '8bit' ) );
+		header( 'X-Content-Type-Options: nosniff' );
 		echo $body;
 	}
 

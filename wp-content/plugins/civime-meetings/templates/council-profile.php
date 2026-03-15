@@ -12,7 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$council_slug = get_query_var( 'civime_council_slug' );
+$raw_slug     = get_query_var( 'civime_council_slug', '' );
+$council_slug = preg_match( '/^[a-zA-Z0-9_-]{1,80}$/', $raw_slug ) ? $raw_slug : '';
 $api          = civime_api();
 
 // Lookup council by slug
@@ -218,7 +219,7 @@ get_header();
 								<?php foreach ( $meetings as $meeting ) : ?>
 									<?php
 									$state_id    = $meeting['state_id'] ?? '';
-									$meeting_url = home_url( '/meetings/' . $state_id );
+									$meeting_url = home_url( '/meetings/' . rawurlencode( $state_id ) );
 									$time_raw    = $meeting['meeting_time'] ?? '';
 									$time_label  = '' !== $time_raw ? wp_date( 'g:i A', strtotime( $time_raw ) ) : '';
 									$date_label  = ! empty( $meeting['meeting_date'] )

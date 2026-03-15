@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CIVIME_MEETINGS_VERSION', '0.1.0' );
+define( 'CIVIME_MEETINGS_VERSION', '0.2.0' );
 define( 'CIVIME_MEETINGS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'CIVIME_MEETINGS_URL', plugin_dir_url( __FILE__ ) );
 
@@ -37,6 +37,8 @@ spl_autoload_register( function ( string $class_name ): void {
 add_action( 'plugins_loaded', 'civime_meetings_init' );
 
 function civime_meetings_init(): void {
+	load_plugin_textdomain( 'civime-meetings', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
 	if ( ! function_exists( 'civime_api' ) ) {
 		add_action( 'admin_notices', function (): void {
 			echo '<div class="notice notice-error"><p>'
