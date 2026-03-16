@@ -79,7 +79,11 @@ Plans:
   3. The plugin architecture pattern guide (Router → Controller → Template, autoloader, naming conventions) is documented with enough detail that a contributor could scaffold a new plugin correctly
   4. The admin dashboard documentation covers all 5 controllers (Sync, Meetings, Reminders, Councils, Subscribers) and explains what each admin page does and how to navigate it
   5. The transient cache behavior is documented in civime-core with clear callouts in every plugin that uses cached API responses
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Write plugin architecture overview, civime-core (API client + admin dashboard), civime-meetings, civime-notifications, civime-topics
+- [ ] 04-02-PLAN.md — Write civime-guides, civime-events, civime-i18n, theme reference, scaffolding guide, and CSS/JS architecture
 
 ### Phase 5: Infrastructure Documentation
 **Goal**: A contributor can set up a local development environment and understand the production infrastructure from documentation alone — without asking the original developer
@@ -122,8 +126,8 @@ Note: Phase 5 depends only on Phase 2 and can run in parallel with Phases 3 and 
 |-------|----------------|--------|-----------|
 | 1. Baseline Commit | 1/1 | Complete    | 2026-03-15 |
 | 2. Architecture Overview | 3/3 | Complete    | 2026-03-16 |
-| 3. API and Data Model | 3/3 | Complete   | 2026-03-16 |
-| 4. WordPress Plugin Documentation | 0/TBD | Not started | - |
+| 3. API and Data Model | 3/3 | Complete    | 2026-03-16 |
+| 4. WordPress Plugin Documentation | 0/2 | Not started | - |
 | 5. Infrastructure Documentation | 0/TBD | Not started | - |
 | 6. Contributor Artifacts | 0/TBD | Not started | - |
 | 7. Feature Roadmap and Phase Plans | 0/TBD | Not started | - |
