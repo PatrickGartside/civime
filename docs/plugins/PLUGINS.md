@@ -517,3 +517,180 @@ See [ENDPOINTS.md](../api/ENDPOINTS.md#4-topics) for schemas.
 - `assets/js/topics.js` — deferred; loaded on topic routes **and** on `civime_route=meetings-list`
 
 The topics JS integrates with the meeting list's filter bar to enable topic-based filtering from the main meetings page. Both plugins must be active for the filter to appear.
+
+---
+
+## civime-guides
+
+**Entry file:** `wp-content/plugins/civime-guides/civime-guides.php`
+**Autoloader prefix:** `CiviMe_Guides_`
+**Bootstrap hook:** `init`
+**No civime-core dependency** — standalone plugin
+**Status:** Active (in development)
+
+### Purpose
+
+WordPress Custom Post Type for civic participation guides — how to give testimony, write letters, understand the legislative process, and more. Content is authored directly in WordPress; the plugin does not call the Access100 API. Guides can be organized into categories and filtered by locale.
+
+### CPT: civime_guide
+
+- **Slug:** `civime_guide`
+- **Public archive:** `/guides/` (rewrite slug: `guides`, no front)
+- **Supports:** `title`, `editor`, `excerpt`, `thumbnail`, `revisions`, `page-attributes`
+- **Capability type:** `guide` / `guides` (custom capabilities — not the default `post`)
+- **Map meta cap:** `true` — WordPress maps primitive capabilities automatically
+- **Custom capabilities granted on activation:** `edit_guides`, `edit_others_guides`, `publish_guides`, `read_private_guides`, `delete_guides`, `delete_others_guides`, `delete_published_guides`, `edit_published_guides` — granted to **Administrator** and **Editor** roles
+
+### Taxonomy: guide_category
+
+Hierarchical taxonomy attached to `civime_guide`. Category terms are seeded on plugin activation via `CiviMe_Guides_Post_Type::seed_terms()`. Term names are translated for the active locale by civime-i18n's `CiviMe_I18n_Locale::translate_term()` filter.
+
+Default seeded categories: Testimony, Advocacy, Getting Started, Voting & Elections, Compliance.
+
+### Classes
+
+| Class | File | Purpose |
+|---|---|---|
+| `CiviMe_Guides_Post_Type` | `includes/class-post-type.php` | CPT + taxonomy registration; `template_include` override; `body_class` filter; locale-based `pre_get_posts` filter |
+| `CiviMe_Guides_Archive` | `includes/class-archive.php` | Archive page controller |
+| `CiviMe_Guides_Single` | `includes/class-single.php` | Single guide controller |
+| `CiviMe_Guides_Seeder` | `includes/class-seeder.php` | Seeds initial guide content on plugin activation |
+
+### Templates
+
+| File | When Used |
+|---|---|
+| `templates/archive-guide.php` | `is_post_type_archive('civime_guide')` or `is_tax('guide_category')` |
+| `templates/single-guide.php` | `is_singular('civime_guide')` |
+
+Template dispatch is handled by the `template_include` filter in `CiviMe_Guides_Post_Type`. The filter checks `is_post_type_archive()` and `is_singular()` before returning the custom template path.
+
+### Assets
+
+- `assets/css/guides.css` — depends on `civime-theme` stylesheet
+
+Enqueued only on guide archive, guide category taxonomy, and single guide pages (checked via `is_post_type_archive()`, `is_tax()`, `is_singular()`).
+
+---
+
+## civime-events
+
+**Entry file:** `wp-content/plugins/civime-events/civime-events.php`
+**Autoloader prefix:** `CiviMe_Events_`
+**Bootstrap hooks:** `init` (post type registration) + `plugins_loaded` (meta box)
+**No civime-core dependency** — standalone plugin
+**Status:** Active (in development)
+
+### Purpose
+
+WordPress Custom Post Type for civic community events — letter writing parties, info sessions, ambassador meetups, and more. Content is authored directly in WordPress; the plugin does not call the Access100 API. Events include custom meta fields for date, location, and related details.
+
+### CPT: civime_event
+
+- **Slug:** `civime_event`
+- **Public archive:** `/events/` (rewrite slug: `events`, no front)
+- **Supports:** `title`, `editor`, `excerpt`, `thumbnail`, `revisions`
+- **Capability type:** default (`post`) — no custom capability type
+
+### Taxonomy: event_type
+
+Hierarchical taxonomy attached to `civime_event`. Terms are seeded on plugin activation via `CiviMe_Events_Post_Type::seed_terms()`. Archive queries are modified via `pre_get_posts` to control ordering (upcoming events sorted by event date).
+
+### Classes
+
+| Class | File | Purpose |
+|---|---|---|
+| `CiviMe_Events_Post_Type` | `includes/class-post-type.php` | CPT + taxonomy registration; `template_include` override; `body_class` filter; `pre_get_posts` for archive ordering |
+| `CiviMe_Events_Meta_Box` | `includes/class-meta-box.php` | Custom meta fields: event date, location, and additional details (registered via `plugins_loaded`) |
+| `CiviMe_Events_Archive` | `includes/class-archive.php` | Archive page controller |
+| `CiviMe_Events_Single` | `includes/class-single.php` | Single event controller |
+
+### Templates
+
+| File | When Used |
+|---|---|
+| `templates/archive-event.php` | `is_post_type_archive('civime_event')` or `is_tax('event_type')` |
+| `templates/single-event.php` | `is_singular('civime_event')` |
+
+Template dispatch is handled by the `template_include` filter in `CiviMe_Events_Post_Type`.
+
+### Assets
+
+- `assets/css/events.css` — depends on `civime-theme` stylesheet
+
+Enqueued only on event archive, event type taxonomy, and single event pages.
+
+---
+
+## civime-i18n
+
+**Entry file:** `wp-content/plugins/civime-i18n/civime-i18n.php`
+**Autoloader prefix:** `CiviMe_I18n_`
+**Bootstrap hook:** `plugins_loaded` at **priority 5**
+**No civime-core dependency** — standalone plugin
+**Status:** Active (in development)
+
+### Purpose
+
+Internationalization plugin supporting Hawaii's 15 OLA (Official Languages Act) languages plus English (16 locales total). Detects the active locale from a `?lang=` URL parameter or `civime_lang` cookie, switches the WordPress locale, loads text domains centrally, provides a language picker widget/shortcode, and outputs `<link rel="alternate" hreflang>` tags for SEO. Menu items and taxonomy terms are translated in place via WordPress filters.
+
+### Languages Supported
+
+16 locales (English + 15 OLA languages):
+
+| Slug | Language | Native Name | WP Locale | WP Language Pack |
+|---|---|---|---|---|
+| `en` | English | English | `en_US` | Yes |
+| `haw` | Hawaiian | ʻŌlelo Hawaiʻi | `haw` | No |
+| `tl` | Tagalog | Tagalog | `tl` | Yes |
+| `ja` | Japanese | 日本語 | `ja` | Yes |
+| `ilo` | Ilokano | Ilokano | `ilo` | No |
+| `zh-hans` | Simplified Chinese | 简体中文 | `zh_CN` | Yes |
+| `zh-hant` | Traditional Chinese | 繁體中文 | `zh_TW` | Yes |
+| `ko` | Korean | 한국어 | `ko_KR` | Yes |
+| `es` | Spanish | Español | `es_ES` | Yes |
+| `vi` | Vietnamese | Tiếng Việt | `vi` | Yes |
+| `sm` | Samoan | Gagana Sāmoa | `sm` | No |
+| `to` | Tongan | Lea Fakatonga | `to` | No |
+| `mah` | Marshallese | Marshallese | `mah` | No |
+| `chk` | Chuukese | Chuukese | `chk` | No |
+| `th` | Thai | ไทย | `th` | Yes |
+| `ceb` | Cebuano | Cebuano | `ceb` | No |
+
+For languages without a WordPress language pack, `CiviMe_I18n_Wp_Locale_Compat` applies custom month and weekday name overrides after `switch_to_locale()`.
+
+### Init Priority
+
+> **WARNING — Bootstrap at priority 5:** `civime_i18n_init` is registered on `plugins_loaded` at **priority 5**, not the default priority 10. This is critical: it ensures the locale is detected and switched before any other plugin loads its text domain at default priority 10. If civime-i18n ran at priority 10 or later, plugins that call `load_plugin_textdomain()` early would load the wrong locale's strings.
+>
+> **Implication for new plugins:** Any civime plugin that loads its own text domain at `plugins_loaded` (default priority 10) will correctly pick up the locale that civime-i18n has already set. Do not bootstrap new plugins at priority 5 or lower — leave that slot for civime-i18n.
+
+### Locale Detection Order
+
+1. `?lang=` URL query parameter (validated against LOCALES registry)
+2. `civime_lang` cookie (set for 7 days when a `?lang=` param is processed)
+3. Falls back to `en` if neither is present or valid
+
+### Classes Reference
+
+| Class | File | Purpose |
+|---|---|---|
+| `CiviMe_I18n_Locale` | `includes/class-locale.php` | Detects and switches WordPress locale; loads all CiviMe text domains centrally; translates nav menu items, tagline, and taxonomy terms via filters |
+| `CiviMe_I18n_Page_Content` | `includes/class-page-content.php` | Serves translated static page content |
+| `CiviMe_I18n_Hreflang` | `includes/class-hreflang.php` | Outputs `<link rel="alternate" hreflang="...">` tags in `<head>` for all 16 locales (SEO) |
+| `CiviMe_I18n_Switcher` | `includes/class-switcher.php` | Language picker rendered as a widget or shortcode |
+| `CiviMe_I18n_Topic_Names` | `includes/class-topic-names.php` | Translated topic label strings for Access100 topic slugs |
+| `CiviMe_I18n_Url_Helper` | `includes/class-url-helper.php` | URL construction for language-variant links (adds `?lang=` param) |
+| `CiviMe_I18n_Pot_Parser` | `includes/class-pot-parser.php` | Parses POT files for string extraction during translation workflow |
+| `CiviMe_I18n_Wp_Locale_Compat` | `includes/class-wp-locale-compat.php` | Maps OLA language codes to WP locale identifiers; applies custom month/weekday names for languages without WP packs |
+| `CiviMe_I18n_Admin_Languages` | `includes/class-admin-languages.php` | Admin page for language settings configuration |
+
+### Admin Page
+
+`admin/languages-page.php` — rendered by `CiviMe_I18n_Admin_Languages` when `is_admin()` is true. Instantiated inside `civime_i18n_init()` only on admin requests.
+
+### Assets
+
+- `assets/css/i18n.css` — depends on `civime-theme` stylesheet
+
+Enqueued unconditionally on **all front-end pages** (no query var check). The language picker is always available in the site header regardless of which page the user is viewing.
