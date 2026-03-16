@@ -37,10 +37,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### WordPress Frontend
 
-- [ ] **WP-01**: Per-plugin documentation for all plugins (purpose, routes, classes, templates)
+- [x] **WP-01**: Per-plugin documentation for all plugins (purpose, routes, classes, templates)
 - [ ] **WP-02**: Theme documentation (Lexend + Source Sans 3, CSS custom properties, light/dark mode, responsive approach)
 - [ ] **WP-03**: Plugin architecture pattern guide (Router → Controller → Template, autoloader, naming conventions)
-- [ ] **WP-04**: Admin dashboard documentation (5 controllers: Sync, Meetings, Reminders, Councils, Subscribers)
+- [x] **WP-04**: Admin dashboard documentation (5 controllers: Sync, Meetings, Reminders, Councils, Subscribers)
 - [ ] **WP-05**: CSS/JS architecture guide (BEM naming, custom properties, IIFE pattern, progressive enhancement)
 
 ### Infrastructure
@@ -104,10 +104,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DATA-01 | Phase 3 | Complete |
 | DATA-02 | Phase 3 | Complete |
 | DATA-03 | Phase 3 | Complete |
-| WP-01 | Phase 4 | Pending |
+| WP-01 | Phase 4 | Complete |
 | WP-02 | Phase 4 | Pending |
 | WP-03 | Phase 4 | Pending |
-| WP-04 | Phase 4 | Pending |
+| WP-04 | Phase 4 | Complete |
 | WP-05 | Phase 4 | Pending |
 | INFRA-01 | Phase 5 | Pending |
 | INFRA-02 | Phase 5 | Pending |
