@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 05-infrastructure-documentation-01-PLAN.md
-last_updated: "2026-03-16T02:46:03.123Z"
+stopped_at: Completed 05-infrastructure-documentation-02-PLAN.md
+last_updated: "2026-03-16T02:50:56.499Z"
 last_activity: 2026-03-15 — Completed Phase 03 Plan 01 (OpenAPI spec and Redoc HTML reference)
 progress:
   total_phases: 7
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 11
-  completed_plans: 10
+  completed_plans: 11
   percent: 0
 ---
 
@@ -61,6 +61,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 04-wordpress-plugin-documentation P01 | 18min | 2 tasks | 1 files |
 | Phase 04-wordpress-plugin-documentation P02 | 4min | 2 tasks | 1 files |
 | Phase 05-infrastructure-documentation P01 | 6min | 1 tasks | 3 files |
+| Phase 05-infrastructure-documentation P02 | 2min | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -92,6 +93,8 @@ Recent decisions affecting current work:
 - [Phase 04-wordpress-plugin-documentation]: Scaffolding guide omits civime_api() guard for CPT-only plugins — explicit deviation from router pattern noted in guide
 - [Phase 05-infrastructure-documentation]: apache-wordpress.conf committed to repo root and bind-mounted — required for WordPress pretty permalinks on all custom plugin routes
 - [Phase 05-infrastructure-documentation]: civime_api_url/api_key excluded from .env.example — they are WP Admin settings, not Docker environment variables
+- [Phase 05-infrastructure-documentation]: Quick Start uses bash comment numbering to keep all 4 steps in a single copyable code block
+- [Phase 05-infrastructure-documentation]: Production Architecture section uses comparison table (local vs production) for scannability
 
 ### Pending Todos
 
@@ -105,6 +108,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-16T02:46:03.121Z
-Stopped at: Completed 05-infrastructure-documentation-01-PLAN.md
+Last session: 2026-03-16T02:50:56.495Z
+Stopped at: Completed 05-infrastructure-documentation-02-PLAN.md
 Resume file: None

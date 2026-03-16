@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Architecture Overview** - Document the two-system boundary, routing map, data flows, and ADRs for key past decisions (completed 2026-03-16)
 - [x] **Phase 3: API and Data Model** - Document all Access100 API endpoints, author the OpenAPI 3.1 spec, and produce the full data model with ER diagrams (completed 2026-03-16)
 - [ ] **Phase 4: WordPress Plugin Documentation** - Document all plugins and the theme with per-plugin reference covering routes, controllers, templates, and patterns
-- [ ] **Phase 5: Infrastructure Documentation** - Document Docker setup, environment configuration, and local development workflow
+- [x] **Phase 5: Infrastructure Documentation** - Document Docker setup, environment configuration, and local development workflow (completed 2026-03-16)
 - [ ] **Phase 6: Contributor Artifacts** - Produce the public-facing README, CONTRIBUTING.md, civic.json, MkDocs site, and tech debt log
 - [ ] **Phase 7: Feature Roadmap and Phase Plans** - Identify next features, produce the feature roadmap, and write detailed phase plans for execution
 
@@ -132,6 +132,6 @@ Note: Phase 5 depends only on Phase 2 and can run in parallel with Phases 3 and 
 | 2. Architecture Overview | 3/3 | Complete    | 2026-03-16 |
 | 3. API and Data Model | 3/3 | Complete    | 2026-03-16 |
 | 4. WordPress Plugin Documentation | 1/2 | In Progress|  |
-| 5. Infrastructure Documentation | 0/2 | Not started | - |
+| 5. Infrastructure Documentation | 2/2 | Complete   | 2026-03-16 |
 | 6. Contributor Artifacts | 0/TBD | Not started | - |
 | 7. Feature Roadmap and Phase Plans | 0/TBD | Not started | - |
