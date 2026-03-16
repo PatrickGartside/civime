@@ -270,7 +270,7 @@ Stores subscriber identity, contact info, and authentication tokens. One row per
 | phone | varchar(20) | Optional, E.164 format |
 | confirmed_email | tinyint(1) DEFAULT 0 | Set to 1 on confirm link click |
 | confirmed_phone | tinyint(1) DEFAULT 0 | Set to 1 on SMS YES reply |
-| confirm_token | varchar(64) | One-time token, cleared after use |
+| confirm_token | varchar(64) | Not cleared after use — confirmed_email=1 is authoritative |
 | manage_token | varchar(64) | Permanent until regenerated |
 | created_at | datetime DEFAULT CURRENT_TIMESTAMP | |
 | updated_at | datetime ON UPDATE CURRENT_TIMESTAMP | |
