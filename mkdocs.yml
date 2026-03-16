@@ -1,0 +1,64 @@
+site_name: civi.me Documentation
+site_description: Civic engagement platform for Hawaii — making government information accessible
+repo_url: https://github.com/civime/civi.me
+repo_name: civime/civi.me
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: blue
+      accent: blue
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+      primary: blue
+      accent: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.instant
+    - search.highlight
+    - search.suggest
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Architecture:
+    - Overview: architecture/OVERVIEW.md
+    - URL Routing: architecture/ROUTING.md
+    - Data Flow: architecture/DATA-FLOW.md
+    - Caching: architecture/CACHING.md
+  - API:
+    - Endpoints: api/ENDPOINTS.md
+    - Subscription Lifecycle: api/SUBSCRIPTION-LIFECYCLE.md
+    - API Reference: api/api-reference.md
+  - Data Model:
+    - Schema: data-model/SCHEMA.md
+  - Decisions:
+    - ADR-001 Plugin Architecture: decisions/ADR-001-plugin-per-feature.md
+    - ADR-002 Token Auth: decisions/ADR-002-token-based-auth.md
+  - Infrastructure:
+    - Setup Guide: infrastructure/INFRASTRUCTURE.md
+  - Plugins:
+    - Plugin Reference: plugins/PLUGINS.md
