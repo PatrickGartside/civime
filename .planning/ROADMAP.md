@@ -18,7 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 4: WordPress Plugin Documentation** - Document all plugins and the theme with per-plugin reference covering routes, controllers, templates, and patterns
 - [x] **Phase 5: Infrastructure Documentation** - Document Docker setup, environment configuration, and local development workflow (completed 2026-03-16)
 - [x] **Phase 6: Contributor Artifacts** - Produce the public-facing README, CONTRIBUTING.md, civic.json, MkDocs site, and tech debt log (completed 2026-03-16)
-- [ ] **Phase 7: Feature Roadmap and Phase Plans** - Identify next features, produce the feature roadmap, and write detailed phase plans for execution
+- [x] **Phase 7: Feature Roadmap and Phase Plans** - Identify next features, produce the feature roadmap, and write detailed phase plans for execution (completed 2026-03-16)
 
 ## Phase Details
 
@@ -122,7 +122,10 @@ Plans:
   1. A feature roadmap exists identifying what to build next, with items grouped into coherent phases and prioritized against the project's core value
   2. Detailed phase plans exist for the highest-priority next items, with success criteria clear enough to verify completion
   3. A tech debt log exists capturing known issues surfaced during documentation phases, with each item assessed for impact and rough priority
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [ ] 07-01-PLAN.md — Write feature roadmap (docs/planning/ROADMAP.md) with Tier 0/1/2 structure, tech debt log (docs/planning/TECH-DEBT.md), and update mkdocs.yml nav
 
 ## Progress
 
@@ -138,4 +141,4 @@ Note: Phase 5 depends only on Phase 2 and can run in parallel with Phases 3 and 
 | 4. WordPress Plugin Documentation | 1/2 | In Progress|  |
 | 5. Infrastructure Documentation | 2/2 | Complete   | 2026-03-16 |
 | 6. Contributor Artifacts | 2/2 | Complete   | 2026-03-16 |
-| 7. Feature Roadmap and Phase Plans | 0/TBD | Not started | - |
+| 7. Feature Roadmap and Phase Plans | 1/1 | Complete   | 2026-03-16 |

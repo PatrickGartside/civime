@@ -58,9 +58,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Planning
 
-- [ ] **PLAN-01**: Feature roadmap identifying and prioritizing what to build next
-- [ ] **PLAN-02**: Detailed phase plans ready for execution on identified next features
-- [ ] **PLAN-03**: Tech debt log of known issues surfaced during documentation
+- [x] **PLAN-01**: Feature roadmap identifying and prioritizing what to build next
+- [x] **PLAN-02**: Detailed phase plans ready for execution on identified next features
+- [x] **PLAN-03**: Tech debt log of known issues surfaced during documentation
 
 ## v2 Requirements
 
@@ -116,9 +116,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONTRIB-02 | Phase 6 | Complete |
 | CONTRIB-03 | Phase 6 | Complete |
 | CONTRIB-04 | Phase 6 | Complete |
-| PLAN-01 | Phase 7 | Pending |
-| PLAN-02 | Phase 7 | Pending |
-| PLAN-03 | Phase 7 | Pending |
+| PLAN-01 | Phase 7 | Complete |
+| PLAN-02 | Phase 7 | Complete |
+| PLAN-03 | Phase 7 | Complete |
 
 **Coverage:**
 - v1 requirements: 31 total
