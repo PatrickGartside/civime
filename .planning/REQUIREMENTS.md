@@ -23,9 +23,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### API Documentation
 
-- [ ] **API-01**: All Access100 API endpoint routes documented with request/response formats
-- [ ] **API-02**: Authentication flow documentation (X-API-Key server-to-server, token-based subscription auth)
-- [ ] **API-03**: Subscription lifecycle documented end-to-end (subscribe → email confirm → manage → unsubscribe)
+- [x] **API-01**: All Access100 API endpoint routes documented with request/response formats
+- [x] **API-02**: Authentication flow documentation (X-API-Key server-to-server, token-based subscription auth)
+- [x] **API-03**: Subscription lifecycle documented end-to-end (subscribe → email confirm → manage → unsubscribe)
 - [ ] **API-04**: OpenAPI 3.1 specification authored for all endpoints
 - [ ] **API-05**: Redoc-rendered API reference from the OpenAPI spec
 
@@ -96,9 +96,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ARCH-04 | Phase 2 | Complete |
 | ARCH-05 | Phase 2 | Complete |
 | ARCH-06 | Phase 2 | Complete |
-| API-01 | Phase 3 | Pending |
-| API-02 | Phase 3 | Pending |
-| API-03 | Phase 3 | Pending |
+| API-01 | Phase 3 | Complete |
+| API-02 | Phase 3 | Complete |
+| API-03 | Phase 3 | Complete |
 | API-04 | Phase 3 | Pending |
 | API-05 | Phase 3 | Pending |
 | DATA-01 | Phase 3 | Complete |

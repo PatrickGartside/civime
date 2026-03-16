@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 03-api-and-data-model 03-03-PLAN.md
-last_updated: "2026-03-16T01:23:54.164Z"
+stopped_at: Completed 03-02-PLAN.md
+last_updated: "2026-03-16T01:24:25.957Z"
 last_activity: 2026-03-16 — Completed Phase 02 Plan 02 (DATA-FLOW.md and CACHING.md)
 progress:
   total_phases: 7
   completed_phases: 2
   total_plans: 7
-  completed_plans: 5
+  completed_plans: 6
   percent: 0
 ---
 
@@ -56,6 +56,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-architecture-overview P01 | 2 | 2 tasks | 2 files |
 | Phase 02-architecture-overview P01 | 2 | 3 tasks | 2 files |
 | Phase 03-api-and-data-model P03 | 10min | 1 tasks | 1 files |
+| Phase 03-api-and-data-model P02 | 8 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -77,6 +78,8 @@ Recent decisions affecting current work:
 - [Phase 02-architecture-overview]: C4Context Mermaid syntax confirmed rendering in GitHub via human-verify checkpoint
 - [Phase 03-api-and-data-model]: Two-diagram ER approach: core domain (9 tables) separate from support/operations (9 tables) — keeps diagrams readable
 - [Phase 03-api-and-data-model]: Legacy users columns documented in prose only, excluded from ER diagrams (name, is_verified, verification_token, notification_email, notification_sms, notification_frequency)
+- [Phase 03-api-and-data-model]: Admin routes documented in ENDPOINTS.md only — excluded from public OpenAPI spec (internal-only, API Key required, no third-party use case)
+- [Phase 03-api-and-data-model]: reminders.confirm_token documented as separate from users.confirm_token — important distinction for plugin developers
 
 ### Pending Todos
 
@@ -90,6 +93,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-16T01:23:54.162Z
-Stopped at: Completed 03-api-and-data-model 03-03-PLAN.md
+Last session: 2026-03-16T01:24:25.955Z
+Stopped at: Completed 03-02-PLAN.md
 Resume file: None
