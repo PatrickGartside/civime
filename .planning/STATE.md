@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 03-02-PLAN.md
-last_updated: "2026-03-16T01:24:25.957Z"
-last_activity: 2026-03-16 — Completed Phase 02 Plan 02 (DATA-FLOW.md and CACHING.md)
+stopped_at: Completed 03-01-PLAN.md
+last_updated: "2026-03-15T00:35:00.000Z"
+last_activity: 2026-03-15 — Completed Phase 03 Plan 01 (OpenAPI spec and Redoc HTML reference)
 progress:
   total_phases: 7
   completed_phases: 2
@@ -25,10 +25,10 @@ See: .planning/PROJECT.md (updated 2026-03-15)
 
 ## Current Position
 
-Phase: 2 of 7 (Architecture Overview)
-Plan: 2 of 4 in current phase
+Phase: 3 of 7 (API and Data Model)
+Plan: 1 of N in current phase (03-01 complete)
 Status: In progress
-Last activity: 2026-03-16 — Completed Phase 02 Plan 02 (DATA-FLOW.md and CACHING.md)
+Last activity: 2026-03-15 — Completed Phase 03 Plan 01 (OpenAPI spec and Redoc HTML reference)
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -55,6 +55,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-architecture-overview P02 | 2 | 2 tasks | 2 files |
 | Phase 02-architecture-overview P01 | 2 | 2 tasks | 2 files |
 | Phase 02-architecture-overview P01 | 2 | 3 tasks | 2 files |
+| Phase 03-api-and-data-model P01 | 35min | 2 tasks | 3 files |
 | Phase 03-api-and-data-model P03 | 10min | 1 tasks | 1 files |
 | Phase 03-api-and-data-model P02 | 8 | 2 tasks | 2 files |
 
@@ -80,6 +81,9 @@ Recent decisions affecting current work:
 - [Phase 03-api-and-data-model]: Legacy users columns documented in prose only, excluded from ER diagrams (name, is_verified, verification_token, notification_email, notification_sms, notification_frequency)
 - [Phase 03-api-and-data-model]: Admin routes documented in ENDPOINTS.md only — excluded from public OpenAPI spec (internal-only, API Key required, no third-party use case)
 - [Phase 03-api-and-data-model]: reminders.confirm_token documented as separate from users.confirm_token — important distinction for plugin developers
+- [Phase 03-01]: meetings.status enum corrected from description-only text to formal enum [active, cancelled, updated] matching live DB; "scheduled" was only in free-text, not an enum value
+- [Phase 03-01]: Redocly struct rule disabled in .redocly.yaml — nullable: true (OAS 3.0 pattern) produces false positives in 3.1 spec; canonical fix is config suppression not structural rewrite
+- [Phase 03-01]: npx blocked in sandbox; ran @redocly/cli via node from ~/.npm/_npx cache path as workaround
 
 ### Pending Todos
 
@@ -93,6 +97,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-16T01:24:25.955Z
-Stopped at: Completed 03-02-PLAN.md
+Last session: 2026-03-15T00:35:00.000Z
+Stopped at: Completed 03-01-PLAN.md
 Resume file: None

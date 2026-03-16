@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Baseline Commit** - Commit all uncommitted work and assess plugin inventory to establish a stable, clonable baseline (completed 2026-03-15)
 - [x] **Phase 2: Architecture Overview** - Document the two-system boundary, routing map, data flows, and ADRs for key past decisions (completed 2026-03-16)
-- [ ] **Phase 3: API and Data Model** - Document all Access100 API endpoints, author the OpenAPI 3.1 spec, and produce the full data model with ER diagrams
+- [x] **Phase 3: API and Data Model** - Document all Access100 API endpoints, author the OpenAPI 3.1 spec, and produce the full data model with ER diagrams (completed 2026-03-16)
 - [ ] **Phase 4: WordPress Plugin Documentation** - Document all plugins and the theme with per-plugin reference covering routes, controllers, templates, and patterns
 - [ ] **Phase 5: Infrastructure Documentation** - Document Docker setup, environment configuration, and local development workflow
 - [ ] **Phase 6: Contributor Artifacts** - Produce the public-facing README, CONTRIBUTING.md, civic.json, MkDocs site, and tech debt log
@@ -122,7 +122,7 @@ Note: Phase 5 depends only on Phase 2 and can run in parallel with Phases 3 and 
 |-------|----------------|--------|-----------|
 | 1. Baseline Commit | 1/1 | Complete    | 2026-03-15 |
 | 2. Architecture Overview | 3/3 | Complete    | 2026-03-16 |
-| 3. API and Data Model | 2/3 | In Progress|  |
+| 3. API and Data Model | 3/3 | Complete   | 2026-03-16 |
 | 4. WordPress Plugin Documentation | 0/TBD | Not started | - |
 | 5. Infrastructure Documentation | 0/TBD | Not started | - |
 | 6. Contributor Artifacts | 0/TBD | Not started | - |
