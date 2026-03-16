@@ -1,0 +1,30 @@
+{
+  "status": "Beta",
+  "type": "Web App",
+  "name": "civi.me",
+  "description": "Civic engagement platform for Hawaii — making government information functionally accessible",
+  "geography": "Hawaii",
+  "politicalEntity": "State of Hawaii",
+  "categories": [
+    { "category": "Government Transparency" },
+    { "category": "Civic Engagement" },
+    { "category": "Open Data" }
+  ],
+  "contact": {
+    "name": "civi.me",
+    "URL": "https://civi.me"
+  },
+  "languages": ["PHP", "JavaScript", "CSS"],
+  "license": "GPL-2.0",
+  "tags": [
+    "civic-tech",
+    "hawaii",
+    "government",
+    "transparency",
+    "wordpress",
+    "open-source"
+  ],
+  "needs": [],
+  "bornAt": "Code for Hawaii",
+  "thumbnailUrl": ""
+}
