@@ -694,3 +694,545 @@ For languages without a WordPress language pack, `CiviMe_I18n_Wp_Locale_Compat` 
 - `assets/css/i18n.css` — depends on `civime-theme` stylesheet
 
 Enqueued unconditionally on **all front-end pages** (no query var check). The language picker is always available in the site header regardless of which page the user is viewing.
+
+---
+
+## Theme: civime
+
+**Entry file:** `wp-content/themes/civime/style.css` (header only)
+**Functions:** `wp-content/themes/civime/functions.php`
+**Status:** Complete
+
+### Purpose
+
+The WordPress theme providing the shell (header, footer, primary nav, mobile nav, footer nav), design system (CSS custom properties), dark mode with flash prevention, icon system, security headers, and editor integration. All plugins inherit these tokens and layout primitives — plugin stylesheets declare `civime-theme` as a dependency to ensure the design system loads before any plugin CSS.
+
+### Design System
+
+#### Color Tokens (Light + Dark)
+
+All colors are defined as CSS custom properties on `:root`. Dark mode overrides are applied via `@media (prefers-color-scheme: dark)` with `:root:not([data-theme="light"])` selector, and can be manually overridden via the `data-theme` attribute on `<html>`.
+
+| Property | Light | Dark | Purpose |
+|---|---|---|---|
+| `--color-primary` | `#1a5276` | `#5dade2` | Ocean Blue — links, buttons |
+| `--color-primary-hover` | `#154360` | `#7ec8e3` | Hover state for primary elements |
+| `--color-secondary` | `#148f77` | `#48c9b0` | Reef Teal — secondary actions |
+| `--color-accent` | `#d4721a` | `#f0a04b` | Sunset Orange — highlights, CTAs |
+| `--color-bg` | `#fafbfc` | `#0f1419` | Page background |
+| `--color-surface` | `#ffffff` | `#1a2332` | Card/panel background |
+| `--color-text` | `#1a1a2e` | `#e8edf2` | Body text |
+| `--color-text-secondary` | `#4a5568` | `#94a3b8` | Muted/supporting text |
+| `--color-border` | `#e2e8f0` | `#2d3748` | Borders and dividers |
+| `--color-success` | `#27ae60` | `#27ae60` | Success states |
+| `--color-warning` | `#f39c12` | `#f39c12` | Warning states |
+| `--color-error` | `#c0392b` | `#c0392b` | Error states |
+
+#### Typography
+
+| Property | Value | Purpose |
+|---|---|---|
+| `--font-heading` | `'Lexend', system-ui, sans-serif` | All headings (h1–h6) |
+| `--font-body` | `'Source Sans 3', system-ui, sans-serif` | Body text |
+| `--font-size-base` | `1.125rem` (18px) | Base font size |
+| `--line-height-body` | `1.6` | Body text line height |
+| `--line-height-heading` | `1.2` | Heading line height |
+
+**Font size scale:**
+
+| Token | Size |
+|---|---|
+| `--font-size-xs` | 12px |
+| `--font-size-sm` | 14px |
+| `--font-size-base` | 18px |
+| `--font-size-lg` | 20px |
+| `--font-size-xl` | 24px |
+| `--font-size-2xl` | 30px |
+| `--font-size-3xl` | 36px |
+| `--font-size-4xl` | 48px |
+| `--font-size-5xl` | 60px |
+
+**Font loading:** Google Fonts via `fonts.googleapis.com` with `preconnect` to `fonts.gstatic.com` and `display=swap` for performance.
+
+#### Spacing Scale
+
+8px grid. `--space-1` (4px) through `--space-24` (96px). Use these tokens in plugin CSS rather than hardcoded pixel values.
+
+#### Layout Tokens
+
+| Property | Value | Purpose |
+|---|---|---|
+| `--content-max-width` | `820px` | Prose/content container width |
+| `--wide-max-width` | `1200px` | Wide/full-bleed sections |
+| `--nav-height` | `64px` | Fixed nav bar height |
+
+### Dark Mode Implementation
+
+Dark mode works in two layers:
+
+**System preference (CSS):**
+```css
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        /* dark token overrides */
+    }
+}
+```
+
+**Manual override (JS):**
+```javascript
+document.documentElement.setAttribute('data-theme', 'light'); // or 'dark'
+localStorage.setItem('civime-color-scheme', 'light'); // persisted
+```
+
+**Flash prevention:** An inline script is injected via `wp_head` at priority 1 (before any stylesheets render) that reads `localStorage['civime-color-scheme']` and sets the `data-theme` attribute before the first paint. This prevents the flash of unstyled content when a user has manually overridden the system preference.
+
+```javascript
+// Injected in <head> at wp_head priority 1, protected by CSP nonce
+(function(){
+    try {
+        var t = localStorage.getItem('civime-color-scheme');
+        if (t === 'dark' || t === 'light') {
+            document.documentElement.setAttribute('data-theme', t);
+        }
+    } catch(e){}
+})();
+```
+
+The inline script is nonce-protected via the theme's Content-Security-Policy header (see Security Headers below).
+
+### Adding a New Page
+
+To add a new page to the site without breaking the layout:
+
+1. **Create the page in WordPress admin** — go to Pages → Add New. The standard `page.php` template automatically includes `get_header()` and `get_footer()`, inheriting the full nav and footer. For a fully custom layout, create a template file named `page-{slug}.php` in the theme root.
+
+2. **Use theme CSS custom properties** — never hardcode colors, spacing, or typography values. Use `var(--color-primary)`, `var(--space-4)`, `var(--font-heading)`, etc. This ensures your page respects dark mode and any future design system changes automatically.
+
+3. **Respect the layout containers** — wrap prose content in a container with `max-width: var(--content-max-width)` (820px). For wider sections, use `var(--wide-max-width)` (1200px). Center with `margin-inline: auto`.
+
+4. **Add to navigation** — in WordPress admin, go to Appearance → Menus. Add the page to the Primary or Footer menu. Nav walkers will automatically apply BEM classes (`primary-nav__link`, `footer-nav__link`) and resolve the correct Lucide icon (by URL path matching or `_civime_nav_icon` post meta).
+
+5. **For custom post types** — override templates via the `template_include` filter (check `is_singular()`, `is_post_type_archive()`, `is_tax()`). See the civime-guides and civime-events sections above for the exact pattern.
+
+### Nav Walkers
+
+Three walker classes extend `Walker_Nav_Menu` to add BEM class names, `aria-current="page"` attributes, and inline Lucide SVG icons to nav menu items:
+
+| Class | Used For | Link Class |
+|---|---|---|
+| `CiviMe_Nav_Walker` | Primary nav (`primary` menu location) | `primary-nav__link` |
+| `CiviMe_Mobile_Nav_Walker` | Mobile nav drawer | `mobile-nav__link` |
+| `CiviMe_Footer_Nav_Walker` | Footer nav (`footer` menu location) | `footer-nav__link` |
+
+All three walkers resolve icons via `civime_nav_icon(string $url, string $title, int $menu_item_id): string`.
+
+### Icon System
+
+- **Registry:** `civime_icon_registry()` returns a slug → `{label, svg}` associative array of all available icons
+- **Library:** ~20 Lucide icons (MIT licensed, 24×24 viewBox, 2px stroke, no fill)
+- **Resolution priority:**
+  1. Post meta `_civime_nav_icon` (explicit icon slug set on the menu item's associated post)
+  2. URL path matching (e.g., `/meetings/` resolves to the calendar icon)
+  3. Title matching (item title compared against icon labels)
+- **Page headers:** Icons also appear in page `<h1>` elements via `civime_page_header_icon(): string` — the same resolution logic, applied to the current URL
+
+### Security Headers
+
+The theme hooks into `send_headers` to set response headers on every page load:
+
+| Header | Value | Purpose |
+|---|---|---|
+| `Content-Security-Policy` | `default-src 'self'; script-src 'self' 'nonce-{nonce}'; ...` | Prevents XSS; inline scripts require the per-request nonce |
+| `X-Content-Type-Options` | `nosniff` | Prevents MIME-sniffing attacks |
+| `Referrer-Policy` | `strict-origin-when-cross-origin` | Controls referrer information leakage |
+| `Permissions-Policy` | `camera=(), microphone=(), geolocation=()` | Disables sensitive browser APIs |
+
+The nonce is generated once per request via `civime_csp_nonce(): string` (static function — same nonce used for both the CSP header and the dark mode inline script tag).
+
+### WordPress Features
+
+Features declared via `add_theme_support()`:
+
+| Feature | Notes |
+|---|---|
+| `title-tag` | WordPress manages the `<title>` element |
+| `post-thumbnails` | Featured images on all post types |
+| `responsive-embeds` | Gutenberg embed blocks are responsive |
+| `editor-styles` | Block editor respects theme styles |
+| `wp-block-styles` | Core block styles included |
+| `align-wide` | Wide/full alignment in block editor |
+| `custom-logo` | 200×80px, flex dimensions |
+| `html5` | search-form, comment-form, gallery, caption, style, script, navigation-widgets |
+| `editor-color-palette` | 5 colors matching design system tokens (Ocean Blue, Reef Teal, Sunset Orange, Near White, Near Black) |
+| `custom-line-height` | Block editor line height control |
+| `custom-spacing` | Block editor spacing control |
+| `appearance-tools` | Block editor appearance tools |
+
+**Custom nav menus:** `primary` (header), `footer` (footer)
+
+**Custom image sizes:**
+- `civime-card` — 600×400, hard crop
+- `civime-hero` — 1400×700, hard crop
+
+**Theme templates:**
+
+| File | Purpose |
+|---|---|
+| `header.php` | Site header, primary nav, mobile nav |
+| `footer.php` | Site footer, footer nav |
+| `front-page.php` | Homepage template |
+| `page.php` | Standard page template |
+| `404.php` | 404 error page |
+| `index.php` | Fallback template |
+| `page-compliance-hub.php` | Custom template for compliance hub page |
+
+---
+
+## Scaffolding a New Plugin
+
+Follow these steps to create a new civime plugin using the Router → Controller → Template pattern. Use civime-meetings as the real-world reference implementation.
+
+### Step 1: File Structure
+
+```
+wp-content/plugins/civime-{name}/
+├── civime-{name}.php           Entry file — constants, autoloader, bootstrap, hooks
+├── includes/
+│   ├── class-router.php        CiviMe_{Name}_Router — rewrite rules + template dispatch
+│   ├── class-{page}.php        CiviMe_{Name}_{Page} — one controller per page
+│   └── ...
+├── templates/
+│   ├── {page}.php              One template file per page/route
+│   └── ...
+└── assets/
+    ├── css/{name}.css          Plugin stylesheet (depends on civime-theme)
+    └── js/{name}.js            Plugin JS (IIFE, deferred)
+```
+
+**Naming conventions:**
+- Plugin slug: `civime-{name}` (hyphenated, lowercase)
+- Class prefix: `CiviMe_{Name}_` (StudlyCaps, underscore separator)
+- Class-to-file mapping: `CiviMe_{Name}_Foo_Bar` → `includes/class-foo-bar.php`
+- Constants: `CIVIME_{NAME}_VERSION`, `CIVIME_{NAME}_PATH`, `CIVIME_{NAME}_URL`
+
+### Step 2: Entry File
+
+The entry file has five responsibilities: define constants, register the autoloader, bootstrap on `plugins_loaded`, register activation/deactivation hooks, and conditionally enqueue assets.
+
+```php
+<?php
+/**
+ * Plugin Name: CiviMe {Name}
+ * Plugin URI: https://civi.me
+ * Description: {Description}
+ * Version: 0.1.0
+ * Requires at least: 6.0
+ * Requires PHP: 8.2
+ * Author: Patrick Gartside
+ * License: GPL-2.0-or-later
+ * Text Domain: civime-{name}
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+// 1. Constants
+define( 'CIVIME_{NAME}_VERSION', '0.1.0' );
+define( 'CIVIME_{NAME}_PATH', plugin_dir_path( __FILE__ ) );
+define( 'CIVIME_{NAME}_URL', plugin_dir_url( __FILE__ ) );
+
+// 2. Autoloader — maps CiviMe_{Name}_Foo_Bar → includes/class-foo-bar.php
+spl_autoload_register( function ( string $class_name ): void {
+    if ( ! str_starts_with( $class_name, 'CiviMe_{Name}_' ) ) {
+        return;
+    }
+    $suffix    = substr( $class_name, strlen( 'CiviMe_{Name}_' ) );
+    $file_name = 'class-' . strtolower( str_replace( '_', '-', $suffix ) ) . '.php';
+    $file_path = CIVIME_{NAME}_PATH . 'includes/' . $file_name;
+    if ( file_exists( $file_path ) ) {
+        require_once $file_path;
+    }
+} );
+
+// 3. Bootstrap — wait until all plugins are loaded so civime_api() exists
+add_action( 'plugins_loaded', 'civime_{name}_init' );
+
+function civime_{name}_init(): void {
+    load_plugin_textdomain( 'civime-{name}', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
+    if ( ! function_exists( 'civime_api' ) ) {
+        add_action( 'admin_notices', function (): void {
+            echo '<div class="notice notice-error"><p>'
+                . esc_html__( 'CiviMe {Name} requires the CiviMe Core plugin.', 'civime-{name}' )
+                . '</p></div>';
+        } );
+        return;
+    }
+
+    new CiviMe_{Name}_Router();
+}
+
+// 4. Flush rewrite rules on activate/deactivate
+register_activation_hook( __FILE__, function (): void { flush_rewrite_rules(); } );
+register_deactivation_hook( __FILE__, function (): void { flush_rewrite_rules(); } );
+
+// 5. Conditionally enqueue assets — only on this plugin's pages
+add_action( 'wp_enqueue_scripts', function (): void {
+    if ( ! get_query_var( 'civime_{name}_route' ) ) {
+        return;
+    }
+    wp_enqueue_style(
+        'civime-{name}-css',
+        CIVIME_{NAME}_URL . 'assets/css/{name}.css',
+        [ 'civime-theme' ],
+        CIVIME_{NAME}_VERSION
+    );
+    wp_enqueue_script(
+        'civime-{name}-js',
+        CIVIME_{NAME}_URL . 'assets/js/{name}.js',
+        [],
+        CIVIME_{NAME}_VERSION,
+        [ 'strategy' => 'defer', 'in_footer' => true ]
+    );
+} );
+```
+
+> **Omit the civime_api() check** if your plugin has no civime-core dependency (e.g., a CPT-only plugin like civime-guides). In that case, bootstrap on `init` instead and skip the `function_exists` guard entirely.
+
+### Step 3: Router
+
+The router class registers rewrite rules, adds query vars, dispatches templates, and forces a 200 status on virtual URLs.
+
+```php
+class CiviMe_{Name}_Router {
+
+    public function __construct() {
+        add_action( 'init',                  [ $this, 'register_rewrite_rules' ] );
+        add_filter( 'query_vars',            [ $this, 'add_query_vars' ] );
+        add_filter( 'template_include',      [ $this, 'load_template' ] );
+        add_action( 'wp',                    [ $this, 'set_200_status' ] );
+        add_filter( 'document_title_parts',  [ $this, 'set_title' ] );
+        add_filter( 'body_class',            [ $this, 'add_body_classes' ] );
+    }
+
+    public function register_rewrite_rules(): void {
+        // Register specific literal patterns BEFORE catch-all wildcards.
+        // add_rewrite_rule(..., 'top') prepends rules — last registered matches first.
+        add_rewrite_rule( '^{name}/([^/]+)/?$', 'index.php?civime_{name}_route=detail&civime_{name}_id=$matches[1]', 'top' );
+        add_rewrite_rule( '^{name}/?$',         'index.php?civime_{name}_route=list', 'top' );
+    }
+
+    public function add_query_vars( array $vars ): array {
+        $vars[] = 'civime_{name}_route';
+        $vars[] = 'civime_{name}_id';
+        return $vars;
+    }
+
+    public function load_template( string $template ): string {
+        $route = get_query_var( 'civime_{name}_route' );
+        $map   = [
+            'list'   => CIVIME_{NAME}_PATH . 'templates/list.php',
+            'detail' => CIVIME_{NAME}_PATH . 'templates/detail.php',
+        ];
+        return $map[ $route ] ?? $template;
+    }
+
+    public function set_200_status(): void {
+        if ( ! get_query_var( 'civime_{name}_route' ) ) {
+            return;
+        }
+        status_header( 200 );
+        global $wp_query;
+        $wp_query->is_404 = false;
+    }
+}
+```
+
+**Rule ordering is critical.** Always register specific literal patterns before catch-all wildcards. Because `add_rewrite_rule('top')` prepends to the rewrite array, the last-registered rule appears first and matches first. Register your most specific patterns last.
+
+### Step 4: Controller
+
+Controllers fetch data in their constructor and expose it via public getters. Templates instantiate controllers — they do not fetch data themselves.
+
+```php
+class CiviMe_{Name}_List {
+
+    /** @var array[]|WP_Error */
+    private array|WP_Error $items;
+
+    public function __construct() {
+        $this->items = civime_api()->get_{name}s();
+    }
+
+    /** @return array[]|WP_Error */
+    public function get_items(): array|WP_Error {
+        return $this->items;
+    }
+
+    public function has_error(): bool {
+        return is_wp_error( $this->items );
+    }
+}
+```
+
+**Error handling:** Never let `WP_Error` reach the template as raw output. Check `is_wp_error()` and render a user-friendly error state. Controllers return `array|WP_Error` union types — the template decides how to handle each case.
+
+### Step 5: Template
+
+Templates are thin: instantiate the controller, call `get_header()`, render HTML using controller getters, call `get_footer()`.
+
+```php
+<?php
+$controller = new CiviMe_{Name}_List();
+get_header();
+?>
+<main class="{name}-list" id="main-content">
+    <?php if ( $controller->has_error() ) : ?>
+        <p class="error-message"><?php esc_html_e( 'Could not load data.', 'civime-{name}' ); ?></p>
+    <?php else : ?>
+        <?php foreach ( $controller->get_items() as $item ) : ?>
+            <!-- render $item -->
+        <?php endforeach; ?>
+    <?php endif; ?>
+</main>
+<?php
+get_footer();
+```
+
+No business logic belongs in templates. All data comes from the controller via typed getters. Use WordPress escaping functions (`esc_html()`, `esc_url()`, `esc_attr()`) on all output.
+
+### Step 6: Register & Flush
+
+Always call `flush_rewrite_rules()` in **both** the activation and deactivation hooks:
+
+```php
+register_activation_hook( __FILE__, function (): void { flush_rewrite_rules(); } );
+register_deactivation_hook( __FILE__, function (): void { flush_rewrite_rules(); } );
+```
+
+> **Why both?** Without flushing on activation, your plugin's rewrite rules are registered in PHP but not yet written to the database. WordPress will serve 404 for every URL your plugin handles until the admin visits Settings → Permalinks and clicks Save. Flushing on deactivation removes your rules cleanly when the plugin is disabled.
+>
+> Internally, `flush_rewrite_rules()` calls `generate_rewrite_rules()` and writes the result to `get_option('rewrite_rules')`. It is safe to call on activation — it runs once, not on every request.
+
+---
+
+## CSS & JS Architecture
+
+### BEM Naming Convention
+
+All CSS classes in the civime codebase use the Block__Element--Modifier convention:
+
+- **Block** — a standalone component: `primary-nav`, `meeting-card`, `subscribe-form`
+- **Element** — a part of a block, separated by `__`: `primary-nav__link`, `meeting-card__title`
+- **Modifier** — a variant or state, separated by `--`: `meeting-card--cancelled`, `button--secondary`
+
+**Examples from the codebase:**
+- `primary-nav__link` — link element inside the primary nav block
+- `mobile-nav__link` — link element inside the mobile nav block
+- `footer-nav__link` — link element inside the footer nav block
+- `meeting-card__date` — date element inside a meeting card
+
+BEM keeps specificity flat (all class selectors, no nesting required) and makes component ownership clear at a glance.
+
+### CSS Custom Properties Usage
+
+Plugin stylesheets never hardcode color, spacing, or typography values. They always reference theme tokens:
+
+```css
+/* Good — uses theme tokens */
+.subscribe-form__button {
+    background-color: var(--color-primary);
+    padding: var(--space-3) var(--space-6);
+    font-family: var(--font-heading);
+}
+
+/* Bad — hardcoded values break dark mode */
+.subscribe-form__button {
+    background-color: #1a5276;
+    padding: 12px 24px;
+}
+```
+
+Using tokens ensures dark mode works automatically — the theme swaps the token values, and all plugin styles update without any plugin-specific dark mode CSS.
+
+### Plugin Stylesheet Dependencies
+
+All plugin CSS files declare `['civime-theme']` as the dependency array in `wp_enqueue_style()`:
+
+```php
+wp_enqueue_style(
+    'civime-meetings-css',
+    CIVIME_MEETINGS_URL . 'assets/css/meetings.css',
+    [ 'civime-theme' ],   // Ensures theme tokens load before plugin CSS
+    CIVIME_MEETINGS_VERSION
+);
+```
+
+This guarantees the theme's CSS custom properties are defined before any plugin stylesheet attempts to use them. WordPress's dependency resolution handles the load order automatically.
+
+**Exception:** civime-i18n enqueues its stylesheet on all pages (no query var check) because the language picker is always available. All other plugins enqueue only when their query var is active.
+
+### IIFE Pattern
+
+All plugin JavaScript files use the Immediately Invoked Function Expression pattern to avoid polluting the global scope:
+
+```javascript
+(function() {
+    'use strict';
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Plugin logic here — only runs after DOM is ready
+        var filterBar = document.getElementById('meeting-filter');
+        if (!filterBar) { return; } // Guard: exit if element not present
+    });
+
+})();
+```
+
+The IIFE creates a private function scope. Variables declared inside do not leak to `window`. The `DOMContentLoaded` guard ensures DOM elements are available before querying them.
+
+### Progressive Enhancement
+
+JavaScript adds behavior to HTML that works without it. Core content and navigation are fully functional with JavaScript disabled.
+
+**Pattern:**
+1. Server renders complete, accessible HTML (all content visible)
+2. JS adds interactivity if its target element is present (guard with `getElementById` or `querySelector`)
+3. No content is JS-required for basic reading or navigation
+
+**Examples in the codebase:**
+- Meeting list filter bar: meetings render in full without JS; topics JS enhances the filter bar with dynamic filtering
+- Language picker dropdown: falls back to a basic link if JS is disabled
+- Subscribe form: form submits via standard POST-redirect-GET; JS adds client-side validation only
+
+### Asset Enqueue Pattern
+
+Conditional enqueue — check for the plugin's query var before loading CSS and JS. Assets load only on the plugin's own pages:
+
+```php
+add_action( 'wp_enqueue_scripts', function (): void {
+    // Only enqueue on this plugin's pages
+    if ( ! get_query_var( 'civime_{name}_route' ) ) {
+        return;
+    }
+    wp_enqueue_style( 'civime-{name}-css', ..., [ 'civime-theme' ], ... );
+    wp_enqueue_script( 'civime-{name}-js', ..., [], ..., [ 'strategy' => 'defer', 'in_footer' => true ] );
+} );
+```
+
+**JS loading strategy:** `'strategy' => 'defer'` with `'in_footer' => true` — scripts are deferred (non-blocking) and positioned in the footer. This is the correct modern approach for non-critical page scripts.
+
+**Exception:** civime-i18n enqueues `i18n.css` unconditionally — no query var check — because the language picker is rendered on every page.
+
+### WCAG Compliance Notes
+
+The design system and all plugin templates follow WCAG 2.1 AA:
+
+- **Touch targets:** 44px minimum height/width for all interactive elements (buttons, links, form controls)
+- **Print styles:** Each plugin stylesheet includes `@media print` rules that hide nav, fix colors to black/white, and ensure content is readable when printed
+- **Semantic HTML:** `<main id="main-content">` on every page template, `<nav aria-label="...">` for nav regions, `<h1>` on every page
+- **Active page indicator:** `aria-current="page"` set by nav walkers on the currently active nav item
+- **Color contrast:** All color token combinations meet WCAG AA contrast ratios (verified against the token table values above)
+- **Focus management:** Focus styles are not suppressed — the theme's global CSS includes visible `:focus-visible` outlines
