@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 05-infrastructure-documentation-02-PLAN.md
-last_updated: "2026-03-16T02:50:56.499Z"
+stopped_at: Completed 06-01-PLAN.md (MkDocs Material site + civic.json)
+last_updated: "2026-03-16T03:33:42.516Z"
 last_activity: 2026-03-15 — Completed Phase 03 Plan 01 (OpenAPI spec and Redoc HTML reference)
 progress:
   total_phases: 7
   completed_phases: 5
-  total_plans: 11
-  completed_plans: 11
+  total_plans: 13
+  completed_plans: 12
   percent: 0
 ---
 
@@ -62,6 +62,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 04-wordpress-plugin-documentation P02 | 4min | 2 tasks | 1 files |
 | Phase 05-infrastructure-documentation P01 | 6min | 1 tasks | 3 files |
 | Phase 05-infrastructure-documentation P02 | 2min | 1 tasks | 1 files |
+| Phase 06-contributor-artifacts P01 | 1min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -95,6 +96,7 @@ Recent decisions affecting current work:
 - [Phase 05-infrastructure-documentation]: civime_api_url/api_key excluded from .env.example — they are WP Admin settings, not Docker environment variables
 - [Phase 05-infrastructure-documentation]: Quick Start uses bash comment numbering to keep all 4 steps in a single copyable code block
 - [Phase 05-infrastructure-documentation]: Production Architecture section uses comparison table (local vs production) for scannability
+- [Phase 06-contributor-artifacts]: mkdocs-material 9.7.5 installed via pip; Redoc iframe uses src=redoc.html (same-directory); civic.json validation = valid JSON only (no BetaNYC CLI validator); CONTRIBUTING.md linked from index.md not in nav (outside docs_dir)
 
 ### Pending Todos
 
@@ -108,6 +110,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-16T02:50:56.495Z
-Stopped at: Completed 05-infrastructure-documentation-02-PLAN.md
+Last session: 2026-03-16T03:33:42.514Z
+Stopped at: Completed 06-01-PLAN.md (MkDocs Material site + civic.json)
 Resume file: None

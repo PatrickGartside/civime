@@ -108,7 +108,11 @@ Plans:
   2. A developer who wants to contribute can follow CONTRIBUTING.md to set up their environment, understand the coding standards, and submit a pull request without additional guidance
   3. The MkDocs Material docs site builds and deploys with a single command, contains all documentation from phases 2-5, and has working search
   4. The civic.json file exists at the repo root and passes validation against the Code for America standard
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — Create MkDocs Material site (mkdocs.yml, docs/index.md, Redoc iframe page) and civic.json metadata
+- [ ] 06-02-PLAN.md — Write root README.md and rewrite CONTRIBUTING.md with contribution workflow and coding standards
 
 ### Phase 7: Feature Roadmap and Phase Plans
 **Goal**: The next set of features and improvements are identified, prioritized, and planned with enough detail to execute — so the project can move from documentation into the next build phase
@@ -133,5 +137,5 @@ Note: Phase 5 depends only on Phase 2 and can run in parallel with Phases 3 and 
 | 3. API and Data Model | 3/3 | Complete    | 2026-03-16 |
 | 4. WordPress Plugin Documentation | 1/2 | In Progress|  |
 | 5. Infrastructure Documentation | 2/2 | Complete   | 2026-03-16 |
-| 6. Contributor Artifacts | 0/TBD | Not started | - |
+| 6. Contributor Artifacts | 0/2 | Not started | - |
 | 7. Feature Roadmap and Phase Plans | 0/TBD | Not started | - |
