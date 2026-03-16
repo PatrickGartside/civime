@@ -14,11 +14,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Architecture
 
-- [ ] **ARCH-01**: Two-system architecture overview documenting WordPress frontend ↔ Access100 API boundary
-- [ ] **ARCH-02**: Cross-plugin routing map with priority system and namespace ownership
+- [x] **ARCH-01**: Two-system architecture overview documenting WordPress frontend ↔ Access100 API boundary
+- [x] **ARCH-02**: Cross-plugin routing map with priority system and namespace ownership
 - [x] **ARCH-03**: Data flow diagrams showing how information moves between systems (Mermaid)
 - [x] **ARCH-04**: Caching layer documentation (transient cache for public, bypass for admin)
-- [ ] **ARCH-05**: C4 Context and Container diagrams for the full system
+- [x] **ARCH-05**: C4 Context and Container diagrams for the full system
 - [x] **ARCH-06**: Architecture Decision Records (MADR) capturing rationale for key past decisions
 
 ### API Documentation
@@ -90,11 +90,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | BASE-01 | Phase 1 | Complete |
 | BASE-02 | Phase 1 | Complete |
-| ARCH-01 | Phase 2 | Pending |
-| ARCH-02 | Phase 2 | Pending |
+| ARCH-01 | Phase 2 | Complete |
+| ARCH-02 | Phase 2 | Complete |
 | ARCH-03 | Phase 2 | Complete |
 | ARCH-04 | Phase 2 | Complete |
-| ARCH-05 | Phase 2 | Pending |
+| ARCH-05 | Phase 2 | Complete |
 | ARCH-06 | Phase 2 | Complete |
 | API-01 | Phase 3 | Pending |
 | API-02 | Phase 3 | Pending |
