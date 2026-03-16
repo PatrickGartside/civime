@@ -45,9 +45,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Infrastructure
 
-- [ ] **INFRA-01**: Docker Compose setup documented (wordpress:latest, mariadb:10.11, networking)
+- [x] **INFRA-01**: Docker Compose setup documented (wordpress:latest, mariadb:10.11, networking)
 - [ ] **INFRA-02**: Local development setup guide (clone → running site)
-- [ ] **INFRA-03**: Environment configuration documented (env vars, NPM proxy, SSL, bind mounts)
+- [x] **INFRA-03**: Environment configuration documented (env vars, NPM proxy, SSL, bind mounts)
 
 ### Contributor Artifacts
 
@@ -109,9 +109,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | WP-03 | Phase 4 | Complete |
 | WP-04 | Phase 4 | Complete |
 | WP-05 | Phase 4 | Complete |
-| INFRA-01 | Phase 5 | Pending |
+| INFRA-01 | Phase 5 | Complete |
 | INFRA-02 | Phase 5 | Pending |
-| INFRA-03 | Phase 5 | Pending |
+| INFRA-03 | Phase 5 | Complete |
 | CONTRIB-01 | Phase 6 | Pending |
 | CONTRIB-02 | Phase 6 | Pending |
 | CONTRIB-03 | Phase 6 | Pending |

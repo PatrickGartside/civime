@@ -93,7 +93,11 @@ Plans:
   1. Following the local dev setup guide step-by-step produces a running WordPress site with both the civi.me theme and all plugins active
   2. Every environment variable required by both systems is documented with its purpose, where to find the value, and what breaks if it is missing
   3. The Docker Compose architecture (bind mounts, network, container roles) is documented clearly enough that a contributor can diagnose a container networking issue without asking for help
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 05-01-PLAN.md — Create contributor docker-compose.yml, .env.example, and apache-wordpress.conf config files
+- [ ] 05-02-PLAN.md — Write INFRASTRUCTURE.md with setup guide, env var reference, Docker architecture, and troubleshooting
 
 ### Phase 6: Contributor Artifacts
 **Goal**: The project is publicly contributor-ready — a developer who finds the repo on GitHub can orient themselves, understand how to contribute, and discover the project through civic tech channels
@@ -128,6 +132,6 @@ Note: Phase 5 depends only on Phase 2 and can run in parallel with Phases 3 and 
 | 2. Architecture Overview | 3/3 | Complete    | 2026-03-16 |
 | 3. API and Data Model | 3/3 | Complete    | 2026-03-16 |
 | 4. WordPress Plugin Documentation | 1/2 | In Progress|  |
-| 5. Infrastructure Documentation | 0/TBD | Not started | - |
+| 5. Infrastructure Documentation | 0/2 | Not started | - |
 | 6. Contributor Artifacts | 0/TBD | Not started | - |
 | 7. Feature Roadmap and Phase Plans | 0/TBD | Not started | - |
