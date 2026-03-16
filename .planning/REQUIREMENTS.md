@@ -51,8 +51,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Contributor Artifacts
 
-- [ ] **CONTRIB-01**: Root README with project overview, architecture summary, and getting started
-- [ ] **CONTRIB-02**: CONTRIBUTING.md with development workflow, coding standards, PR process
+- [x] **CONTRIB-01**: Root README with project overview, architecture summary, and getting started
+- [x] **CONTRIB-02**: CONTRIBUTING.md with development workflow, coding standards, PR process
 - [x] **CONTRIB-03**: civic.json metadata file for civic tech discoverability
 - [x] **CONTRIB-04**: MkDocs Material docs site with all documentation consolidated
 
@@ -112,8 +112,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INFRA-01 | Phase 5 | Complete |
 | INFRA-02 | Phase 5 | Complete |
 | INFRA-03 | Phase 5 | Complete |
-| CONTRIB-01 | Phase 6 | Pending |
-| CONTRIB-02 | Phase 6 | Pending |
+| CONTRIB-01 | Phase 6 | Complete |
+| CONTRIB-02 | Phase 6 | Complete |
 | CONTRIB-03 | Phase 6 | Complete |
 | CONTRIB-04 | Phase 6 | Complete |
 | PLAN-01 | Phase 7 | Pending |
