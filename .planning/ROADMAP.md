@@ -62,7 +62,12 @@ Plans:
   3. The subscription lifecycle (subscribe → email confirm → manage → unsubscribe) is documented as an end-to-end flow with token behavior at each step
   4. A Mermaid ER diagram exists for all database tables with relationships, and token auth fields (confirm_token, manage_token) are explained in context
   5. A rendered Redoc API reference is accessible from the docs site with three-panel layout showing all endpoints
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Copy OpenAPI spec, fill reminders gaps, add admin exclusion note, generate Redoc HTML
+- [ ] 03-02-PLAN.md — Write ENDPOINTS.md (47+ routes with admin section) and SUBSCRIPTION-LIFECYCLE.md (7-step flow with token detail)
+- [ ] 03-03-PLAN.md — Write SCHEMA.md (all 18 tables, two ER diagrams, token auth model section)
 
 ### Phase 4: WordPress Plugin Documentation
 **Goal**: Every plugin and the theme has reference documentation that a contributor can read to understand what it does, how to extend it, and how it connects to the API — without reading source code first
@@ -116,8 +121,8 @@ Note: Phase 5 depends only on Phase 2 and can run in parallel with Phases 3 and 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Baseline Commit | 1/1 | Complete    | 2026-03-15 |
-| 2. Architecture Overview | 3/3 | Complete   | 2026-03-16 |
-| 3. API and Data Model | 0/TBD | Not started | - |
+| 2. Architecture Overview | 3/3 | Complete    | 2026-03-16 |
+| 3. API and Data Model | 0/3 | Not started | - |
 | 4. WordPress Plugin Documentation | 0/TBD | Not started | - |
 | 5. Infrastructure Documentation | 0/TBD | Not started | - |
 | 6. Contributor Artifacts | 0/TBD | Not started | - |
