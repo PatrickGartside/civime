@@ -31,9 +31,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Data Model
 
-- [ ] **DATA-01**: Database schema documentation for all tables (users, subscriptions, meetings, councils, etc.)
-- [ ] **DATA-02**: Entity-relationship diagrams rendered in Mermaid
-- [ ] **DATA-03**: Token auth model documented (confirm_token, manage_token, session handling)
+- [x] **DATA-01**: Database schema documentation for all tables (users, subscriptions, meetings, councils, etc.)
+- [x] **DATA-02**: Entity-relationship diagrams rendered in Mermaid
+- [x] **DATA-03**: Token auth model documented (confirm_token, manage_token, session handling)
 
 ### WordPress Frontend
 
@@ -101,9 +101,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | API-03 | Phase 3 | Pending |
 | API-04 | Phase 3 | Pending |
 | API-05 | Phase 3 | Pending |
-| DATA-01 | Phase 3 | Pending |
-| DATA-02 | Phase 3 | Pending |
-| DATA-03 | Phase 3 | Pending |
+| DATA-01 | Phase 3 | Complete |
+| DATA-02 | Phase 3 | Complete |
+| DATA-03 | Phase 3 | Complete |
 | WP-01 | Phase 4 | Pending |
 | WP-02 | Phase 4 | Pending |
 | WP-03 | Phase 4 | Pending |
