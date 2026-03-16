@@ -62,3 +62,6 @@ nav:
     - Setup Guide: infrastructure/INFRASTRUCTURE.md
   - Plugins:
     - Plugin Reference: plugins/PLUGINS.md
+  - Planning:
+    - Roadmap: planning/ROADMAP.md
+    - Tech Debt: planning/TECH-DEBT.md
