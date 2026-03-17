@@ -59,4 +59,12 @@ add_action( 'wp_enqueue_scripts', function (): void {
 		[ 'civime-theme' ],
 		CIVIME_I18N_VERSION
 	);
+
+	wp_enqueue_script(
+		'civime-i18n-js',
+		CIVIME_I18N_URL . 'assets/js/i18n.js',
+		[],
+		CIVIME_I18N_VERSION,
+		true
+	);
 } );

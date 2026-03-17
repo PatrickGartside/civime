@@ -74,7 +74,6 @@ class CiviMe_I18n_Switcher {
 				id="lang-select-<?php echo $modifier; ?>"
 				name="lang"
 				class="lang-switcher__select"
-				onchange="this.form.submit()"
 			>
 				<?php foreach ( $available as $slug ) : ?>
 					<option
