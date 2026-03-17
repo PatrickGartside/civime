@@ -141,8 +141,8 @@ function civime_scripts(): void {
 add_action( 'wp_enqueue_scripts', 'civime_scripts' );
 
 /**
- * Inline the theme-application script in <head> before any paint to
- * prevent a flash of the wrong color scheme.
+ * Generate a per-request CSP nonce for inline scripts allowed by
+ * the Content-Security-Policy header.
  */
 function civime_csp_nonce(): string {
     static $nonce = null;
@@ -151,23 +151,6 @@ function civime_csp_nonce(): string {
     }
     return $nonce;
 }
-
-function civime_inline_theme_script(): void {
-    $nonce = civime_csp_nonce();
-    ?>
-    <script nonce="<?php echo esc_attr( $nonce ); ?>">
-    (function(){
-        try {
-            var t = localStorage.getItem('civime-color-scheme');
-            if (t === 'dark' || t === 'light') {
-                document.documentElement.setAttribute('data-theme', t);
-            }
-        } catch(e){}
-    })();
-    </script>
-    <?php
-}
-add_action( 'wp_head', 'civime_inline_theme_script', 1 );
 
 /**
  * Add preconnect link for Google Fonts origin.
