@@ -83,10 +83,13 @@ get_header();
 
 	$time_formatted = '';
 	if ( ! empty( $m['time'] ) ) {
-		$time_formatted = wp_date( 'g:i A', strtotime( $m['time'] ) );
+		// Times from the API are already in local Hawaii time — use UTC timezone
+		// with wp_date() to prevent double-converting from the site's gmt_offset.
+		$utc = new DateTimeZone( 'UTC' );
+		$time_formatted = wp_date( 'g:i A', strtotime( $m['time'] ), $utc );
 
 		if ( ! empty( $m['end_time'] ) ) {
-			$time_formatted .= " \u{2013} " . wp_date( 'g:i A', strtotime( $m['end_time'] ) );
+			$time_formatted .= " \u{2013} " . wp_date( 'g:i A', strtotime( $m['end_time'] ), $utc );
 		}
 	}
 	?>

@@ -514,7 +514,7 @@ get_header();
 							$meeting_url = home_url( '/meetings/' . rawurlencode( $state_id ) );
 							$has_summary = ! empty( $meeting['has_summary'] );
 							$time_raw    = $meeting['time'] ?? '';
-							$time_label  = '' !== $time_raw ? wp_date( 'g:i A', strtotime( $time_raw ) ) : '';
+							$time_label  = '' !== $time_raw ? wp_date( 'g:i A', strtotime( $time_raw ), new DateTimeZone( 'UTC' ) ) : '';
 							?>
 
 							<article class="meeting-card" aria-label="<?php echo esc_attr( $meeting['council_name'] ?? '' ); ?>">

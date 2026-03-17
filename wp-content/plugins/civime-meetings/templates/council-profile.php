@@ -221,7 +221,7 @@ get_header();
 									$state_id    = $meeting['state_id'] ?? '';
 									$meeting_url = home_url( '/meetings/' . rawurlencode( $state_id ) );
 									$time_raw    = $meeting['meeting_time'] ?? '';
-									$time_label  = '' !== $time_raw ? wp_date( 'g:i A', strtotime( $time_raw ) ) : '';
+									$time_label  = '' !== $time_raw ? wp_date( 'g:i A', strtotime( $time_raw ), new DateTimeZone( 'UTC' ) ) : '';
 									$date_label  = ! empty( $meeting['meeting_date'] )
 										? wp_date( 'l, F j, Y', strtotime( $meeting['meeting_date'] ) )
 										: '';
