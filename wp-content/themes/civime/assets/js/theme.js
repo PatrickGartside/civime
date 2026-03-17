@@ -2,101 +2,12 @@
  * CiviMe Theme — Main JavaScript
  *
  * Handles:
- * - Dark mode toggle (localStorage + system preference)
  * - Mobile menu toggle
  * - Skip to content smooth scroll
  */
 
 ( function () {
     'use strict';
-
-    // =========================================================================
-    // Dark Mode
-    // =========================================================================
-
-    const THEME_STORAGE_KEY = 'civime-color-scheme';
-    const documentRoot = document.documentElement;
-
-    /**
-     * Reads the stored preference or falls back to null (system will decide via CSS).
-     */
-    function getStoredTheme() {
-        try {
-            return localStorage.getItem( THEME_STORAGE_KEY );
-        } catch {
-            return null;
-        }
-    }
-
-    /**
-     * Persists the user's explicit theme choice.
-     */
-    function storeTheme( theme ) {
-        try {
-            localStorage.setItem( THEME_STORAGE_KEY, theme );
-        } catch {
-            // localStorage unavailable — degrade silently
-        }
-    }
-
-    /**
-     * Applies a theme ('light' | 'dark') or removes the attribute to let the
-     * CSS media query take over.
-     */
-    function applyTheme( theme ) {
-        if ( theme === 'light' || theme === 'dark' ) {
-            documentRoot.setAttribute( 'data-theme', theme );
-        } else {
-            documentRoot.removeAttribute( 'data-theme' );
-        }
-        updateToggleButtonLabel( theme );
-    }
-
-    /**
-     * Determines whether the system currently prefers dark mode.
-     */
-    function systemPrefersDark() {
-        return window.matchMedia( '(prefers-color-scheme: dark)' ).matches;
-    }
-
-    /**
-     * Toggles between light and dark, taking the current effective theme into
-     * account so the button always switches to the opposite of what is visible.
-     */
-    function toggleTheme() {
-        const stored = getStoredTheme();
-        const currentlyDark =
-            stored === 'dark' ||
-            ( stored === null && systemPrefersDark() );
-
-        const nextTheme = currentlyDark ? 'light' : 'dark';
-        storeTheme( nextTheme );
-        applyTheme( nextTheme );
-    }
-
-    /**
-     * Updates the aria-label on the dark mode toggle to reflect the action
-     * that will happen when clicked.
-     */
-    function updateToggleButtonLabel( theme ) {
-        var btns = document.querySelectorAll( '.dark-mode-toggle' );
-        if ( ! btns.length ) return;
-
-        var effectiveDark =
-            theme === 'dark' ||
-            ( ( theme === null || theme === undefined ) && systemPrefersDark() );
-
-        var label = effectiveDark ? 'Switch to light mode' : 'Switch to dark mode';
-        btns.forEach( function ( btn ) {
-            btn.setAttribute( 'aria-label', label );
-        } );
-    }
-
-    // Apply stored preference immediately (prevents flash)
-    const initialTheme = getStoredTheme();
-    if ( initialTheme ) {
-        applyTheme( initialTheme );
-    }
 
     // =========================================================================
     // Mobile Menu
@@ -150,27 +61,6 @@
     }
 
     // =========================================================================
-    // Dark Mode Toggle Button Wiring
-    // =========================================================================
-
-    function initDarkModeToggle() {
-        var btns = document.querySelectorAll( '.dark-mode-toggle' );
-        if ( ! btns.length ) return;
-
-        btns.forEach( function ( btn ) {
-            btn.addEventListener( 'click', toggleTheme );
-        } );
-
-        // Keep label in sync with system preference changes
-        var mediaQuery = window.matchMedia( '(prefers-color-scheme: dark)' );
-        mediaQuery.addEventListener( 'change', function () {
-            if ( ! getStoredTheme() ) {
-                updateToggleButtonLabel( null );
-            }
-        } );
-    }
-
-    // =========================================================================
     // Skip to Content
     // =========================================================================
 
@@ -201,12 +91,8 @@
     // =========================================================================
 
     document.addEventListener( 'DOMContentLoaded', function () {
-        initDarkModeToggle();
         initMobileMenu();
         initSkipLink();
-
-        // Set initial button label now that DOM is ready
-        updateToggleButtonLabel( getStoredTheme() );
     } );
 
 } )();

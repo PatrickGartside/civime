@@ -97,7 +97,13 @@
 .subscribe-form {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .subscribe-form {
+    gap: var(--space-8);
+  }
 }
 
 /* Honeypot — completely hidden from humans and assistive tech */
@@ -242,7 +248,7 @@
 }
 
 .council-picker__list {
-  max-height: 320px;
+  max-height: min(320px, 50vh);
   overflow-y: auto;
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);

@@ -23,6 +23,9 @@ Thumbs.db
 # Not in this repo — only theme + plugins are tracked here
 .planning/
 
+# MkDocs build output
+site/
+
 # Generated reports (not project artifacts)
 audit-report.html
 security-report.html

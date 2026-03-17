@@ -13,7 +13,15 @@
                             <line x1="18" y1="18" x2="18" y2="11"/>
                             <polygon points="12 2 20 7 4 7"/>
                         </svg>
-                        <span class="site-title"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></span>
+                        <span class="site-title"><?php
+                            $name = esc_html( get_bloginfo( 'name' ) );
+                            $pos  = strrpos( $name, '.' );
+                            if ( false !== $pos ) {
+                                echo substr( $name, 0, $pos ) . '<span class="site-title-dot">.</span>' . substr( $name, $pos + 1 );
+                            } else {
+                                echo $name;
+                            }
+                        ?></span>
                     </a>
                     <p class="site-description">
                         <?php esc_html_e( 'Civic engagement for Hawaii', 'civime' ); ?>
