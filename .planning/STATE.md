@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: milestone
 status: executing
-stopped_at: "Completed 01-01-PLAN.md"
-last_updated: "2026-03-17T05:09:11Z"
-last_activity: 2026-03-17 — Completed 01-fix-i18n-system plan 01
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-03-17T05:16:29Z"
+last_activity: 2026-03-17 — Completed 02-cleanup plan 01
 progress:
   total_phases: 3
   completed_phases: 1
   total_plans: 5
-  completed_plans: 1
-  percent: 20
+  completed_plans: 2
+  percent: 40
 ---
 
 # Project State
@@ -25,25 +25,26 @@ See: .planning/PROJECT.md (updated 2026-03-16)
 
 ## Current Position
 
-Phase: 01-fix-i18n-system
+Phase: 02-cleanup
 Plan: 01 (complete)
 Status: Executing
-Last activity: 2026-03-17 — Completed 01-fix-i18n-system plan 01
+Last activity: 2026-03-17 — Completed 02-cleanup plan 01
 
-Progress: [██░░░░░░░░] 20%
+Progress: [████░░░░░░] 40%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 2min
-- Total execution time: 0.03 hours
+- Total plans completed: 2
+- Average duration: 1.5min
+- Total execution time: 0.05 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-fix-i18n-system | 1 | 2min | 2min |
+| 02-cleanup | 1 | 1min | 1min |
 
 *Updated after each plan completion*
 
@@ -60,6 +61,8 @@ Recent decisions affecting current work:
 - External JS with addEventListener for CSP compliance instead of inline onchange
 - home_url filter guarded against admin/REST/cron/XMLRPC contexts
 - Scraper date/time fix deferred to separate Access100 repo milestone
+- Preserved civime_csp_nonce() when removing dead dark mode code -- still used by CSP headers
+- SCHEMA.md confirm_token label changed from Cleared to Retained for accuracy
 
 ### Pending Todos
 
@@ -73,5 +76,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-17
-Stopped at: Completed 01-01-PLAN.md
+Stopped at: Completed 02-01-PLAN.md
 Resume file: None

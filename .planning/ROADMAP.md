@@ -7,7 +7,7 @@ This milestone fixes confirmed live failures in the WordPress frontend that acti
 ## Phases
 
 - [ ] **Phase 1: Fix i18n System** - Fix the language switcher CSP block and add URL-based language persistence across all navigation and plugin links
-- [ ] **Phase 2: Cleanup** - Remove dead dark mode code and fix SCHEMA.md documentation error
+- [x] **Phase 2: Cleanup** - Remove dead dark mode code and fix SCHEMA.md documentation error (completed 2026-03-17)
 
 ## Phase Details
 
@@ -47,4 +47,4 @@ Phases execute in numeric order: 1 → 2
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Fix i18n System | 0/1 | Not Started | |
-| 2. Cleanup | 0/1 | Not Started | |
+| 2. Cleanup | 3/3 | Complete   | 2026-03-17 |

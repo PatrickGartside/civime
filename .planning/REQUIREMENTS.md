@@ -19,8 +19,8 @@ Requirements for this bug-fix milestone. Each maps to roadmap phases.
 
 ### Cleanup
 
-- [ ] **CLN-01**: Dark mode flash prevention inline script removed from wp_head (disabled feature, dead code)
-- [ ] **CLN-02**: SCHEMA.md confirm_token note corrected to reflect that token is retained after confirmation (not cleared)
+- [x] **CLN-01**: Dark mode flash prevention inline script removed from wp_head (disabled feature, dead code)
+- [x] **CLN-02**: SCHEMA.md confirm_token note corrected to reflect that token is retained after confirmation (not cleared)
 
 ## v2 Requirements
 
@@ -55,8 +55,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | I18N-05 | Phase 1 | Complete |
 | I18N-06 | Phase 1 | Complete |
 | I18N-07 | Phase 1 | Complete |
-| CLN-01 | Phase 2 | Pending |
-| CLN-02 | Phase 2 | Pending |
+| CLN-01 | Phase 2 | Complete |
+| CLN-02 | Phase 2 | Complete |
 
 **Coverage:**
 - v1.1 requirements: 9 total
