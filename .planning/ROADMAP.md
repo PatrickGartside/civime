@@ -1,144 +1,50 @@
-# Roadmap: civi.me Documentation & Roadmap
+# Roadmap: civi.me v1.1 — Fix What's Broken
 
 ## Overview
 
-This milestone documents a complete, live civic engagement platform so that a new contributor can understand, extend, and maintain both systems without the original developer present. The work proceeds from a clean git baseline through architecture, API, WordPress, infrastructure, and contributor-facing documentation — culminating in a feature roadmap for what to build next. Each phase depends on the prior one having established the vocabulary, contracts, and patterns that subsequent documentation references.
+This milestone fixes confirmed live failures in the WordPress frontend that actively undermine the civic accessibility mission. The language switcher is blocked by CSP, URLs don't carry language state across navigation, and dead code from the disabled dark mode remains. These ship before any new feature work.
 
 ## Phases
 
-**Phase Numbering:**
-- Integer phases (1, 2, 3): Planned milestone work
-- Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
-
-Decimal phases appear between their surrounding integers in numeric order.
-
-- [x] **Phase 1: Baseline Commit** - Commit all uncommitted work and assess plugin inventory to establish a stable, clonable baseline (completed 2026-03-15)
-- [x] **Phase 2: Architecture Overview** - Document the two-system boundary, routing map, data flows, and ADRs for key past decisions (completed 2026-03-16)
-- [x] **Phase 3: API and Data Model** - Document all Access100 API endpoints, author the OpenAPI 3.1 spec, and produce the full data model with ER diagrams (completed 2026-03-16)
-- [ ] **Phase 4: WordPress Plugin Documentation** - Document all plugins and the theme with per-plugin reference covering routes, controllers, templates, and patterns
-- [x] **Phase 5: Infrastructure Documentation** - Document Docker setup, environment configuration, and local development workflow (completed 2026-03-16)
-- [x] **Phase 6: Contributor Artifacts** - Produce the public-facing README, CONTRIBUTING.md, civic.json, MkDocs site, and tech debt log (completed 2026-03-16)
-- [x] **Phase 7: Feature Roadmap and Phase Plans** - Identify next features, produce the feature roadmap, and write detailed phase plans for execution (completed 2026-03-16)
+- [ ] **Phase 1: Fix i18n System** - Fix the language switcher CSP block and add URL-based language persistence across all navigation and plugin links
+- [ ] **Phase 2: Cleanup** - Remove dead dark mode code and fix SCHEMA.md documentation error
 
 ## Phase Details
 
-### Phase 1: Baseline Commit
-**Goal**: The codebase is in a clean, committed state that contributors can clone and get the system that documentation describes
+### Phase 1: Fix i18n System
+**Goal**: A user can select any of the 15 OLA languages and navigate the entire site without losing their language choice — the switcher works, nav links carry `?lang=`, plugin URLs carry `?lang=`, and the cookie persists the choice across sessions.
 **Depends on**: Nothing (first phase)
-**Requirements**: BASE-01, BASE-02
+**Requirements**: I18N-01, I18N-02, I18N-03, I18N-04, I18N-05, I18N-06, I18N-07
 **Success Criteria** (what must be TRUE):
-  1. `git status` returns clean with no modified or untracked files (or all remaining untracked files are intentionally gitignored)
-  2. A contributor can clone the repo and find code that matches what the documentation will describe — no undocumented uncommitted changes exist
-  3. Every plugin in the wp-content/plugins directory has a documented status: active/complete, active/stub, or out-of-scope
+  1. Selecting a language from the dropdown immediately submits the form and the page reloads in the selected language (CSP no longer blocks the auto-submit)
+  2. Every nav menu link (desktop, mobile, footer) includes `?lang={slug}` when a non-English language is active
+  3. Every plugin-generated URL (meetings filters, pagination, notification links, subscribe forms) includes `?lang={slug}` when a non-English language is active
+  4. Switching languages on the meetings page with active filters preserves those filters
+  5. The `civime_lang` cookie is set on language selection and restores the language on return visits without `?lang=` in the URL
+  6. WP admin pages and REST API requests do not have `?lang=` injected into their URLs
 **Plans**: 1 plan
 
 Plans:
-- [ ] 01-01-PLAN.md — Update .gitignore, commit all uncommitted code in 13 logical groups, and create PLUGIN-STATUS.md
+- [ ] 01-01-PLAN.md — Fix CSP-blocked switcher (move onchange to JS file), add home_url filter + nav menu URL filter for language persistence, expand switcher allowed params
 
-### Phase 2: Architecture Overview
-**Goal**: The mental model for both systems is written down — a new contributor understands the two-system boundary, how data flows, and why key decisions were made, before reading any plugin-level docs
+### Phase 2: Cleanup
+**Goal**: Dead code from the disabled dark mode feature is removed and the SCHEMA.md confirm_token documentation is corrected.
 **Depends on**: Phase 1
-**Requirements**: ARCH-01, ARCH-02, ARCH-03, ARCH-04, ARCH-05, ARCH-06
+**Requirements**: CLN-01, CLN-02
 **Success Criteria** (what must be TRUE):
-  1. A contributor can read one document and understand that WordPress never holds canonical data — all data lives in Access100 API and is fetched server-to-server via X-API-Key
-  2. A contributor can look up any URL pattern and identify which plugin handles it, in what priority order, without reading source code
-  3. Mermaid diagrams in the docs show how a public page request moves from browser through WordPress to the API and back, including the transient cache layer
-  4. C4 Context and Container diagrams exist that place both systems in the full infrastructure picture
-  5. Architecture Decision Records exist for at least the key past decisions (plugin-per-feature, token auth, server-side-only API calls, honeypot anti-spam)
-**Plans**: 3 plans
-
-Plans:
-- [ ] 02-01-PLAN.md — Write OVERVIEW.md (two-system boundary + C4 context diagram) and ROUTING.md (URL-to-plugin routing table + priority explanation)
-- [ ] 02-02-PLAN.md — Write DATA-FLOW.md (three Mermaid sequence diagrams) and CACHING.md (caching behavior reference)
-- [ ] 02-03-PLAN.md — Write ADR-001-plugin-per-feature.md and ADR-002-token-based-auth.md in MADR format
-
-### Phase 3: API and Data Model
-**Goal**: The Access100 API is fully documented with a machine-readable OpenAPI 3.1 spec, a rendered reference, and a complete data model — so WordPress plugin docs can reference specific endpoints and schema fields without ambiguity
-**Depends on**: Phase 2
-**Requirements**: API-01, API-02, API-03, API-04, API-05, DATA-01, DATA-02, DATA-03
-**Success Criteria** (what must be TRUE):
-  1. Every Access100 API route has documented request parameters, response shape, auth requirements, and a real example response captured from the live system
-  2. A contributor can import the OpenAPI 3.1 YAML into Postman and make authenticated calls to all endpoints without additional documentation
-  3. The subscription lifecycle (subscribe → email confirm → manage → unsubscribe) is documented as an end-to-end flow with token behavior at each step
-  4. A Mermaid ER diagram exists for all database tables with relationships, and token auth fields (confirm_token, manage_token) are explained in context
-  5. A rendered Redoc API reference is accessible from the docs site with three-panel layout showing all endpoints
-**Plans**: 3 plans
-
-Plans:
-- [ ] 03-01-PLAN.md — Copy OpenAPI spec, fill reminders gaps, add admin exclusion note, generate Redoc HTML
-- [ ] 03-02-PLAN.md — Write ENDPOINTS.md (47+ routes with admin section) and SUBSCRIPTION-LIFECYCLE.md (7-step flow with token detail)
-- [ ] 03-03-PLAN.md — Write SCHEMA.md (all 18 tables, two ER diagrams, token auth model section)
-
-### Phase 4: WordPress Plugin Documentation
-**Goal**: Every plugin and the theme has reference documentation that a contributor can read to understand what it does, how to extend it, and how it connects to the API — without reading source code first
-**Depends on**: Phase 3
-**Requirements**: WP-01, WP-02, WP-03, WP-04, WP-05
-**Success Criteria** (what must be TRUE):
-  1. For each plugin, a contributor can find: the plugin's purpose, its URL routes, its controller classes, its templates, and which API endpoints it calls
-  2. The theme documentation covers the design system (CSS custom properties, Lexend/Source Sans 3, light/dark mode) and explains how to add a new page without breaking the layout
-  3. The plugin architecture pattern guide (Router → Controller → Template, autoloader, naming conventions) is documented with enough detail that a contributor could scaffold a new plugin correctly
-  4. The admin dashboard documentation covers all 5 controllers (Sync, Meetings, Reminders, Councils, Subscribers) and explains what each admin page does and how to navigate it
-  5. The transient cache behavior is documented in civime-core with clear callouts in every plugin that uses cached API responses
-**Plans**: 2 plans
-
-Plans:
-- [ ] 04-01-PLAN.md — Write plugin architecture overview, civime-core (API client + admin dashboard), civime-meetings, civime-notifications, civime-topics
-- [ ] 04-02-PLAN.md — Write civime-guides, civime-events, civime-i18n, theme reference, scaffolding guide, and CSS/JS architecture
-
-### Phase 5: Infrastructure Documentation
-**Goal**: A contributor can set up a local development environment and understand the production infrastructure from documentation alone — without asking the original developer
-**Depends on**: Phase 2
-**Requirements**: INFRA-01, INFRA-02, INFRA-03
-**Success Criteria** (what must be TRUE):
-  1. Following the local dev setup guide step-by-step produces a running WordPress site with both the civi.me theme and all plugins active
-  2. Every environment variable required by both systems is documented with its purpose, where to find the value, and what breaks if it is missing
-  3. The Docker Compose architecture (bind mounts, network, container roles) is documented clearly enough that a contributor can diagnose a container networking issue without asking for help
-**Plans**: 2 plans
-
-Plans:
-- [ ] 05-01-PLAN.md — Create contributor docker-compose.yml, .env.example, and apache-wordpress.conf config files
-- [ ] 05-02-PLAN.md — Write INFRASTRUCTURE.md with setup guide, env var reference, Docker architecture, and troubleshooting
-
-### Phase 6: Contributor Artifacts
-**Goal**: The project is publicly contributor-ready — a developer who finds the repo on GitHub can orient themselves, understand how to contribute, and discover the project through civic tech channels
-**Depends on**: Phase 4, Phase 5
-**Requirements**: CONTRIB-01, CONTRIB-02, CONTRIB-03, CONTRIB-04
-**Success Criteria** (what must be TRUE):
-  1. The root README gives a new visitor a complete mental model in one read: what the project does, how the two systems relate, and where to go next (docs site, local setup, contributing)
-  2. A developer who wants to contribute can follow CONTRIBUTING.md to set up their environment, understand the coding standards, and submit a pull request without additional guidance
-  3. The MkDocs Material docs site builds and deploys with a single command, contains all documentation from phases 2-5, and has working search
-  4. The civic.json file exists at the repo root and passes validation against the Code for America standard
-**Plans**: 2 plans
-
-Plans:
-- [ ] 06-01-PLAN.md — Create MkDocs Material site (mkdocs.yml, docs/index.md, Redoc iframe page) and civic.json metadata
-- [ ] 06-02-PLAN.md — Write root README.md and rewrite CONTRIBUTING.md with contribution workflow and coding standards
-
-### Phase 7: Feature Roadmap and Phase Plans
-**Goal**: The next set of features and improvements are identified, prioritized, and planned with enough detail to execute — so the project can move from documentation into the next build phase
-**Depends on**: Phase 6
-**Requirements**: PLAN-01, PLAN-02, PLAN-03
-**Success Criteria** (what must be TRUE):
-  1. A feature roadmap exists identifying what to build next, with items grouped into coherent phases and prioritized against the project's core value
-  2. Detailed phase plans exist for the highest-priority next items, with success criteria clear enough to verify completion
-  3. A tech debt log exists capturing known issues surfaced during documentation phases, with each item assessed for impact and rough priority
+  1. The `civime_inline_theme_script()` function and its `wp_head` hook are removed from `functions.php` — no inline script is injected into `<head>` for dark mode flash prevention
+  2. SCHEMA.md `confirm_token` note no longer states "cleared after use" — reflects that `confirmed_email=1` is the authoritative confirmation state and the token is retained
 **Plans**: 1 plan
 
 Plans:
-- [ ] 07-01-PLAN.md — Write feature roadmap (docs/planning/ROADMAP.md) with Tier 0/1/2 structure, tech debt log (docs/planning/TECH-DEBT.md), and update mkdocs.yml nav
+- [ ] 02-01-PLAN.md — Remove dead dark mode inline script from functions.php, fix SCHEMA.md confirm_token note
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
-Note: Phase 5 depends only on Phase 2 and can run in parallel with Phases 3 and 4 if desired, but is sequenced here for simplicity.
+Phases execute in numeric order: 1 → 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Baseline Commit | 1/1 | Complete    | 2026-03-15 |
-| 2. Architecture Overview | 3/3 | Complete    | 2026-03-16 |
-| 3. API and Data Model | 3/3 | Complete    | 2026-03-16 |
-| 4. WordPress Plugin Documentation | 1/2 | In Progress|  |
-| 5. Infrastructure Documentation | 2/2 | Complete   | 2026-03-16 |
-| 6. Contributor Artifacts | 2/2 | Complete   | 2026-03-16 |
-| 7. Feature Roadmap and Phase Plans | 1/1 | Complete   | 2026-03-16 |
+| 1. Fix i18n System | 0/1 | Not Started | |
+| 2. Cleanup | 0/1 | Not Started | |

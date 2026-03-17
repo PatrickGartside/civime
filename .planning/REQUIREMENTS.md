@@ -1,86 +1,46 @@
-# Requirements: civi.me Documentation & Roadmap
+# Requirements: civi.me v1.1 — Fix What's Broken
 
-**Defined:** 2026-03-15
-**Core Value:** A new contributor can read the docs and fully understand both systems — what exists, how it works, and what's planned next.
+**Defined:** 2026-03-16
+**Core Value:** Hawaii residents can find, follow, and participate in their government's public meetings regardless of language or technical skill.
 
-## v1 Requirements
+## v1.1 Requirements
 
-Requirements for initial release. Each maps to roadmap phases.
+Requirements for this bug-fix milestone. Each maps to roadmap phases.
 
-### Baseline
+### i18n Language Switching
 
-- [x] **BASE-01**: All uncommitted work is committed to establish a clean, stable baseline
-- [x] **BASE-02**: Status of all plugins assessed and documented (civime-core, civime-meetings, civime-notifications, civime-guides, civime-i18n, civime-events, civime-topics)
+- [x] **I18N-01**: User can select a language from the dropdown and the page content changes to that language
+- [x] **I18N-02**: Language switcher auto-submits without being blocked by Content Security Policy
+- [x] **I18N-03**: Nav menu links carry `?lang=` parameter for non-English locales so language persists across navigation
+- [x] **I18N-04**: Plugin-generated URLs (meetings filters, pagination, notification links) carry `?lang=` parameter
+- [x] **I18N-05**: Language choice persists via cookie so returning visitors see their preferred language
+- [x] **I18N-06**: WP admin URLs and REST API calls are not affected by language URL filtering
+- [x] **I18N-07**: Language switcher preserves active meetings filter params (q, council_id, date_from, date_to, county, topics, source) when switching languages
 
-### Architecture
+### Cleanup
 
-- [x] **ARCH-01**: Two-system architecture overview documenting WordPress frontend ↔ Access100 API boundary
-- [x] **ARCH-02**: Cross-plugin routing map with priority system and namespace ownership
-- [x] **ARCH-03**: Data flow diagrams showing how information moves between systems (Mermaid)
-- [x] **ARCH-04**: Caching layer documentation (transient cache for public, bypass for admin)
-- [x] **ARCH-05**: C4 Context and Container diagrams for the full system
-- [x] **ARCH-06**: Architecture Decision Records (MADR) capturing rationale for key past decisions
-
-### API Documentation
-
-- [x] **API-01**: All Access100 API endpoint routes documented with request/response formats
-- [x] **API-02**: Authentication flow documentation (X-API-Key server-to-server, token-based subscription auth)
-- [x] **API-03**: Subscription lifecycle documented end-to-end (subscribe → email confirm → manage → unsubscribe)
-- [x] **API-04**: OpenAPI 3.1 specification authored for all endpoints
-- [x] **API-05**: Redoc-rendered API reference from the OpenAPI spec
-
-### Data Model
-
-- [x] **DATA-01**: Database schema documentation for all tables (users, subscriptions, meetings, councils, etc.)
-- [x] **DATA-02**: Entity-relationship diagrams rendered in Mermaid
-- [x] **DATA-03**: Token auth model documented (confirm_token, manage_token, session handling)
-
-### WordPress Frontend
-
-- [x] **WP-01**: Per-plugin documentation for all plugins (purpose, routes, classes, templates)
-- [x] **WP-02**: Theme documentation (Lexend + Source Sans 3, CSS custom properties, light/dark mode, responsive approach)
-- [x] **WP-03**: Plugin architecture pattern guide (Router → Controller → Template, autoloader, naming conventions)
-- [x] **WP-04**: Admin dashboard documentation (5 controllers: Sync, Meetings, Reminders, Councils, Subscribers)
-- [x] **WP-05**: CSS/JS architecture guide (BEM naming, custom properties, IIFE pattern, progressive enhancement)
-
-### Infrastructure
-
-- [x] **INFRA-01**: Docker Compose setup documented (wordpress:latest, mariadb:10.11, networking)
-- [x] **INFRA-02**: Local development setup guide (clone → running site)
-- [x] **INFRA-03**: Environment configuration documented (env vars, NPM proxy, SSL, bind mounts)
-
-### Contributor Artifacts
-
-- [x] **CONTRIB-01**: Root README with project overview, architecture summary, and getting started
-- [x] **CONTRIB-02**: CONTRIBUTING.md with development workflow, coding standards, PR process
-- [x] **CONTRIB-03**: civic.json metadata file for civic tech discoverability
-- [x] **CONTRIB-04**: MkDocs Material docs site with all documentation consolidated
-
-### Planning
-
-- [x] **PLAN-01**: Feature roadmap identifying and prioritizing what to build next
-- [x] **PLAN-02**: Detailed phase plans ready for execution on identified next features
-- [x] **PLAN-03**: Tech debt log of known issues surfaced during documentation
+- [ ] **CLN-01**: Dark mode flash prevention inline script removed from wp_head (disabled feature, dead code)
+- [ ] **CLN-02**: SCHEMA.md confirm_token note corrected to reflect that token is retained after confirmation (not cleared)
 
 ## v2 Requirements
 
-Deferred to future release. Tracked but not in current roadmap.
+Deferred to future milestones. Tracked but not in current roadmap.
 
-### Documentation Enhancements
+### i18n Enhancements
 
-- **DOC-01**: Error response catalog for all API error codes
-- **DOC-02**: Changelog with version history
-- **DOC-03**: Automated API spec validation in CI
+- **I18N-F1**: Language selection persists via URL path prefix (/ja/meetings/) instead of query param
+- **I18N-F2**: hreflang tags reflect all available translations for SEO
+- **I18N-F3**: Translation completeness indicator showing which content is available in each language
 
 ## Out of Scope
 
 | Feature | Reason |
 |---------|--------|
-| Building new features | This milestone is documentation and planning only |
-| Code refactoring | Document current state; flag issues for future phases |
-| API changes | Document as-is; changes come after planning |
-| Automated testing | Separate concern; may emerge as a planning output |
-| Deployment automation | Current manual process is documented, not changed |
+| Access100 API scraper date fix | Separate repo, separate milestone |
+| New feature development (Tier 1/2) | Fix What's Broken first |
+| Dark mode re-implementation | Disabled intentionally, not a bug |
+| Mobile layout beyond committed fixes | Already fixed in pre-milestone commit |
+| URL path-based language routing (/ja/) | Larger architectural change, defer to v2 |
 
 ## Traceability
 
@@ -88,43 +48,21 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| BASE-01 | Phase 1 | Complete |
-| BASE-02 | Phase 1 | Complete |
-| ARCH-01 | Phase 2 | Complete |
-| ARCH-02 | Phase 2 | Complete |
-| ARCH-03 | Phase 2 | Complete |
-| ARCH-04 | Phase 2 | Complete |
-| ARCH-05 | Phase 2 | Complete |
-| ARCH-06 | Phase 2 | Complete |
-| API-01 | Phase 3 | Complete |
-| API-02 | Phase 3 | Complete |
-| API-03 | Phase 3 | Complete |
-| API-04 | Phase 3 | Complete |
-| API-05 | Phase 3 | Complete |
-| DATA-01 | Phase 3 | Complete |
-| DATA-02 | Phase 3 | Complete |
-| DATA-03 | Phase 3 | Complete |
-| WP-01 | Phase 4 | Complete |
-| WP-02 | Phase 4 | Complete |
-| WP-03 | Phase 4 | Complete |
-| WP-04 | Phase 4 | Complete |
-| WP-05 | Phase 4 | Complete |
-| INFRA-01 | Phase 5 | Complete |
-| INFRA-02 | Phase 5 | Complete |
-| INFRA-03 | Phase 5 | Complete |
-| CONTRIB-01 | Phase 6 | Complete |
-| CONTRIB-02 | Phase 6 | Complete |
-| CONTRIB-03 | Phase 6 | Complete |
-| CONTRIB-04 | Phase 6 | Complete |
-| PLAN-01 | Phase 7 | Complete |
-| PLAN-02 | Phase 7 | Complete |
-| PLAN-03 | Phase 7 | Complete |
+| I18N-01 | Phase 1 | Complete |
+| I18N-02 | Phase 1 | Complete |
+| I18N-03 | Phase 1 | Complete |
+| I18N-04 | Phase 1 | Complete |
+| I18N-05 | Phase 1 | Complete |
+| I18N-06 | Phase 1 | Complete |
+| I18N-07 | Phase 1 | Complete |
+| CLN-01 | Phase 2 | Pending |
+| CLN-02 | Phase 2 | Pending |
 
 **Coverage:**
-- v1 requirements: 31 total
-- Mapped to phases: 31
-- Unmapped: 0 ✓
+- v1.1 requirements: 9 total
+- Mapped to phases: 9
+- Unmapped: 0
 
 ---
-*Requirements defined: 2026-03-15*
-*Last updated: 2026-03-15 after roadmap creation — all requirements mapped*
+*Requirements defined: 2026-03-16*
+*Last updated: 2026-03-16 after initial definition*
