@@ -270,7 +270,7 @@ Stores subscriber identity, contact info, and authentication tokens. One row per
 | phone | varchar(20) | Optional, E.164 format |
 | confirmed_email | tinyint(1) DEFAULT 0 | Set to 1 on confirm link click |
 | confirmed_phone | tinyint(1) DEFAULT 0 | Set to 1 on SMS YES reply |
-| confirm_token | varchar(64) | Not cleared after use — confirmed_email=1 is authoritative |
+| confirm_token | varchar(64) | Retained after confirmation — confirmed_email=1 is authoritative |
 | manage_token | varchar(64) | Permanent until regenerated |
 | created_at | datetime DEFAULT CURRENT_TIMESTAMP | |
 | updated_at | datetime ON UPDATE CURRENT_TIMESTAMP | |
@@ -610,7 +610,7 @@ Sent in the opt-in confirmation email when a user subscribes. Clicking the link 
 - **Generated:** At subscription creation time
 - **Delivered:** In confirmation email as `?token=` URL parameter
 - **Validated:** `GET /subscriptions/confirm` looks up the token in the indexed column (`idx_users_confirm_token`)
-- **Cleared:** Not explicitly cleared after use — `users.confirmed_email = 1` is the authoritative confirmed state
+- **Retained:** Token is retained after confirmation — `users.confirmed_email = 1` is the authoritative confirmed state
 - **Expiry:** None — tokens do not expire; they remain valid indefinitely
 
 ### users.manage_token
