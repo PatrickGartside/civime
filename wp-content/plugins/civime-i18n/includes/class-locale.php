@@ -144,6 +144,11 @@ class CiviMe_I18n_Locale {
 			return $url;
 		}
 
+		// Skip REST API, feed, and xmlrpc URLs rendered in frontend HTML.
+		if ( str_contains( $url, '/wp-json' ) || str_contains( $url, '/feed' ) || str_contains( $url, 'xmlrpc.php' ) ) {
+			return $url;
+		}
+
 		// Skip if URL already has lang= parameter.
 		if ( str_contains( $url, 'lang=' ) ) {
 			return $url;
