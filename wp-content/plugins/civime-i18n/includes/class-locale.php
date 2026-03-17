@@ -93,10 +93,12 @@ class CiviMe_I18n_Locale {
 		$this->load_text_domains();
 
 		// Translate nav menu items, site tagline, and taxonomy terms for non-English locales.
+		// Also add home_url filter for URL-based language persistence.
 		if ( 'en' !== $this->active_slug ) {
 			add_filter( 'wp_nav_menu_objects', [ $this, 'translate_menu_items' ] );
 			add_filter( 'bloginfo', [ $this, 'translate_tagline' ], 10, 2 );
 			add_filter( 'get_term', [ $this, 'translate_term' ] );
+			add_filter( 'home_url', [ $this, 'localize_home_url' ], 10, 2 );
 		}
 
 		// Expose the active slug to other classes/templates.
@@ -118,6 +120,39 @@ class CiviMe_I18n_Locale {
 	}
 
 	/**
+	 * Append ?lang= to frontend home_url() calls.
+	 *
+	 * Skips admin, REST, cron, and XMLRPC contexts.
+	 * Skips URLs that already contain a lang= parameter.
+	 *
+	 * @param string $url  The complete home URL.
+	 * @param string $path The requested path relative to home.
+	 * @return string
+	 */
+	public function localize_home_url( string $url, string $path ): string {
+		// Never modify URLs in admin, REST, cron, or XMLRPC contexts.
+		if ( is_admin() ) {
+			return $url;
+		}
+		if ( defined( 'REST_REQUEST' ) && REST_REQUEST ) {
+			return $url;
+		}
+		if ( defined( 'DOING_CRON' ) && DOING_CRON ) {
+			return $url;
+		}
+		if ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST ) {
+			return $url;
+		}
+
+		// Skip if URL already has lang= parameter.
+		if ( str_contains( $url, 'lang=' ) ) {
+			return $url;
+		}
+
+		return add_query_arg( 'lang', $this->active_slug, $url );
+	}
+
+	/**
 	 * Translate nav menu item titles for the active locale.
 	 *
 	 * @param WP_Post[] $items Menu item objects.
@@ -126,13 +161,15 @@ class CiviMe_I18n_Locale {
 	public function translate_menu_items( array $items ): array {
 		$translations = self::get_menu_translations( $this->active_slug );
 
-		if ( empty( $translations ) ) {
-			return $items;
-		}
-
 		foreach ( $items as $item ) {
-			if ( isset( $translations[ $item->title ] ) ) {
+			// Translate title.
+			if ( ! empty( $translations ) && isset( $translations[ $item->title ] ) ) {
 				$item->title = $translations[ $item->title ];
+			}
+
+			// Append ?lang= to menu item URL if not already present.
+			if ( ! str_contains( $item->url, 'lang=' ) ) {
+				$item->url = add_query_arg( 'lang', $this->active_slug, $item->url );
 			}
 		}
 

@@ -44,7 +44,10 @@ class CiviMe_I18n_Switcher {
 		<form class="lang-switcher lang-switcher--<?php echo $modifier; ?>" method="get" action="">
 			<?php
 			// Preserve existing query params (except 'lang') so filters etc. survive.
-			$allowed_params = [ 'topic', 'council', 'search', 'page', 'paged', 's', 'category', 'guide_category' ];
+			$allowed_params = [
+				'topic', 'council', 'search', 'page', 'paged', 's', 'category', 'guide_category',
+				'q', 'council_id', 'date_from', 'date_to', 'county', 'topics', 'source',
+			];
 			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			foreach ( $_GET as $key => $value ) {
 				if ( 'lang' === $key ) {
