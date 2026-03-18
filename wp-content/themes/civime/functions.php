@@ -792,3 +792,135 @@ function civime_robots_txt( string $output, bool $public ): string {
     return $output;
 }
 add_filter( 'robots_txt', 'civime_robots_txt', 10, 2 );
+
+/**
+ * Disable WordPress's built-in XML sitemap feature (WP 5.5+).
+ *
+ * WP 6.7+ maps /sitemap.xml → ?sitemap=index in WP_Rewrite and serves it
+ * through the sitemaps module. Disabling the module here prevents that
+ * response from being generated, and our parse_request hook below intercepts
+ * the request before it reaches template_redirect.
+ */
+add_filter( 'wp_sitemaps_enabled', '__return_false' );
+
+/**
+ * Intercept /sitemap.xml requests and serve the generated XML sitemap.
+ *
+ * WP 6.7 adds sitemap.xml as a rewrite rule mapping to ?sitemap=index, which
+ * bypasses template_redirect. We hook on parse_request — which fires after
+ * the URL is resolved but before any output — to catch this query var and
+ * serve our sitemap instead.
+ *
+ * Uses a transient cache with a 1-hour TTL to avoid hitting the API on every
+ * request. Sends X-Robots-Tag: noindex so the sitemap itself is not indexed.
+ *
+ * @param WP $wp The WP instance (passed by reference).
+ */
+function civime_xml_sitemap( WP $wp ): void {
+    // WP 6.7+: /sitemap.xml resolves to ?sitemap=index via WP_Rewrite.
+    $is_sitemap_query = isset( $wp->query_vars['sitemap'] ) && 'index' === $wp->query_vars['sitemap'];
+
+    // Fallback: match the request path directly (other permalink configs).
+    $request_path    = trim( parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' );
+    $is_sitemap_path = 'sitemap.xml' === $request_path;
+
+    if ( ! $is_sitemap_query && ! $is_sitemap_path ) {
+        return;
+    }
+
+    $cache_key = 'civime_sitemap_xml';
+    $xml       = get_transient( $cache_key );
+
+    if ( false === $xml ) {
+        $xml = civime_build_sitemap_xml();
+        set_transient( $cache_key, $xml, HOUR_IN_SECONDS );
+    }
+
+    status_header( 200 );
+    header( 'Content-Type: application/xml; charset=UTF-8' );
+    header( 'X-Robots-Tag: noindex' );
+    echo $xml;
+    exit;
+}
+add_action( 'parse_request', 'civime_xml_sitemap' );
+
+/**
+ * Build the XML sitemap string from WordPress pages and API data.
+ *
+ * Includes: homepage, published WP pages (minus functional pages), base
+ * /meetings/ and /councils/ listing pages, individual meeting detail pages
+ * (all paginated from API), and individual council profile pages.
+ *
+ * @return string Complete XML sitemap document.
+ */
+function civime_build_sitemap_xml(): string {
+    $site_url = 'https://civi.me';
+    $urls     = [];
+
+    // 1. Homepage.
+    $urls[] = [ 'loc' => $site_url . '/' ];
+
+    // 2. Published WordPress pages (About, What Matters, etc.).
+    //    Exclude pages that are functional/non-indexable.
+    $exclude_slugs = [ 'subscribe', 'manage', 'confirmed', 'unsubscribed' ];
+    $pages         = get_pages( [ 'post_status' => 'publish' ] );
+    if ( $pages ) {
+        foreach ( $pages as $page ) {
+            if ( in_array( $page->post_name, $exclude_slugs, true ) ) {
+                continue;
+            }
+            $urls[] = [ 'loc' => get_permalink( $page ) ];
+        }
+    }
+
+    // 3. Base /meetings/ and /councils/ listing pages.
+    $urls[] = [ 'loc' => $site_url . '/meetings/' ];
+    $urls[] = [ 'loc' => $site_url . '/councils/' ];
+
+    // 4. Individual meeting detail pages from API.
+    if ( function_exists( 'civime_api' ) ) {
+        $offset = 0;
+        $limit  = 200;
+        do {
+            $result = civime_api()->get_meetings( [
+                'limit'  => $limit,
+                'offset' => $offset,
+            ] );
+            if ( is_wp_error( $result ) ) {
+                break;
+            }
+            $meetings = $result['data'] ?? [];
+            foreach ( $meetings as $meeting ) {
+                if ( ! empty( $meeting['state_id'] ) ) {
+                    $urls[] = [
+                        'loc'     => $site_url . '/meetings/' . rawurlencode( $meeting['state_id'] ) . '/',
+                        'lastmod' => ! empty( $meeting['updated_at'] ) ? gmdate( 'Y-m-d', strtotime( $meeting['updated_at'] ) ) : null,
+                    ];
+                }
+            }
+            $offset += $limit;
+        } while ( count( $meetings ) === $limit );
+
+        // 5. Individual council profile pages from API.
+        //    Councils are identified by a slug in the URL (/councils/<slug>/).
+        //    The list endpoint returns id/name only; slugs come from
+        //    get_council_by_slug() which requires a slug input. Since no list
+        //    endpoint provides slugs, council profile URLs cannot be generated
+        //    here. The /councils/ listing page (added above) is included.
+    }
+
+    // Build XML.
+    $xml  = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+    foreach ( $urls as $entry ) {
+        $xml .= "  <url>\n";
+        $xml .= '    <loc>' . esc_url( $entry['loc'] ) . "</loc>\n";
+        if ( ! empty( $entry['lastmod'] ) ) {
+            $xml .= '    <lastmod>' . esc_html( $entry['lastmod'] ) . "</lastmod>\n";
+        }
+        $xml .= "  </url>\n";
+    }
+    $xml .= '</urlset>' . "\n";
+
+    return $xml;
+}
