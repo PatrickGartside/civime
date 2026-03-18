@@ -21,6 +21,11 @@ class CiviMe_I18n_Hreflang {
 	 * Output hreflang link elements.
 	 */
 	public function output_tags(): void {
+		// Suppress hreflang on noindex pages — contradictory signals for search engines.
+		if ( function_exists( 'civime_is_noindex_page' ) && civime_is_noindex_page() ) {
+			return;
+		}
+
 		$available = CiviMe_I18n_Locale::get_available_slugs();
 
 		if ( count( $available ) < 2 ) {
