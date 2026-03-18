@@ -66,10 +66,10 @@ Plans:
   2. Viewing `/meetings/?council=1` shows a `<meta name="robots" content="noindex,follow">` tag in `<head>`
   3. Viewing a meeting detail page (e.g., `/meetings/12345/`) shows a self-referencing canonical tag pointing to that exact URL
   4. Viewing any `/meetings/subscribe/` page shows a `<meta name="robots" content="noindex,nofollow">` tag in `<head>`
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 04-01-PLAN.md — Add canonical and noindex/nofollow meta output to civime-meetings and civime-notifications plugin head hooks
+- [x] 04-01-PLAN.md — Add canonical/noindex meta tags to functions.php and suppress hreflang on noindex pages in class-hreflang.php
 
 #### Phase 5: XML Sitemap
 **Goal**: An XML sitemap exists that contains only real, indexable content pages — homepage, base meetings listing, individual meeting detail pages, and static pages — with no parameterized or subscribe URLs.
@@ -94,6 +94,6 @@ Phases execute in numeric order: 3 → 4 → 5
 |-------|-----------|----------------|--------|-----------|
 | 1. Fix i18n System | v1.1 | 1/1 | Complete | 2026-03-17 |
 | 2. Cleanup | v1.1 | 1/1 | Complete | 2026-03-17 |
-| 3. Crawl Control | v1.2 | 1/1 | Complete | 2026-03-17 |
-| 4. Meta Tags | v1.2 | 0/1 | Not started | - |
+| 3. Crawl Control | v1.2 | 1/1 | Complete | 2026-03-18 |
+| 4. Meta Tags | v1.2 | 1/1 | Complete | 2026-03-18 |
 | 5. XML Sitemap | v1.2 | 0/1 | Not started | - |
