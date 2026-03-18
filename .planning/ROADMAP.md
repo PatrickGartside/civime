@@ -3,7 +3,7 @@
 ## Milestones
 
 - ✅ **v1.1 Fix What's Broken** - Phases 1-2 (shipped 2026-03-17)
-- 🚧 **v1.2 Fix Search Indexing** - Phases 3-5 (in progress)
+- ✅ **v1.2 Fix Search Indexing** - Phases 3-5 (shipped 2026-03-18)
 
 ## Phases
 
@@ -40,7 +40,7 @@ Plans:
 
 </details>
 
-### 🚧 v1.2 Fix Search Indexing (In Progress)
+### ✅ v1.2 Fix Search Indexing (SHIPPED 2026-03-18)
 
 **Milestone Goal:** Stop Google from wasting crawl budget on parameterized filter URLs and get real content pages indexed properly — via robots.txt rules, canonical + noindex meta tags, and a clean XML sitemap.
 
@@ -80,10 +80,10 @@ Plans:
   2. The sitemap includes the homepage, `/meetings/`, and individual meeting detail page URLs
   3. The sitemap contains no URLs with query parameters
   4. The sitemap contains no `/meetings/subscribe/` URLs
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 05-01-PLAN.md — Generate XML sitemap via WordPress hook, include only canonical content pages
+- [x] 05-01-PLAN.md — Generate XML sitemap via WordPress hook, include only canonical content pages
 
 ## Progress
 
@@ -96,4 +96,4 @@ Phases execute in numeric order: 3 → 4 → 5
 | 2. Cleanup | v1.1 | 1/1 | Complete | 2026-03-17 |
 | 3. Crawl Control | v1.2 | 1/1 | Complete | 2026-03-18 |
 | 4. Meta Tags | v1.2 | 1/1 | Complete | 2026-03-18 |
-| 5. XML Sitemap | v1.2 | 0/1 | Not started | - |
+| 5. XML Sitemap | v1.2 | 1/1 | Complete | 2026-03-18 |

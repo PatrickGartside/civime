@@ -21,8 +21,8 @@ Requirements for Fix Search Indexing milestone. Each maps to roadmap phases.
 
 ### Sitemap
 
-- [ ] **SMAP-01**: XML sitemap includes only real content pages (homepage, base /meetings/, individual meeting detail pages, static pages)
-- [ ] **SMAP-02**: XML sitemap excludes all parameterized URLs and /meetings/subscribe/
+- [x] **SMAP-01**: XML sitemap includes only real content pages (homepage, base /meetings/, individual meeting detail pages, static pages)
+- [x] **SMAP-02**: XML sitemap excludes all parameterized URLs and /meetings/subscribe/
 
 ## v1.1 Requirements (Complete)
 
@@ -70,8 +70,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | META-02 | Phase 4 | Complete |
 | META-03 | Phase 4 | Complete |
 | META-04 | Phase 4 | Complete |
-| SMAP-01 | Phase 5 | Pending |
-| SMAP-02 | Phase 5 | Pending |
+| SMAP-01 | Phase 5 | Complete |
+| SMAP-02 | Phase 5 | Complete |
 
 **Coverage:**
 - v1.2 requirements: 8 total
