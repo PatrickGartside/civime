@@ -682,3 +682,32 @@ function civime_title_case_brand( string $text ): string {
 }
 add_filter( 'the_content', 'civime_title_case_brand' );
 add_filter( 'the_title', 'civime_title_case_brand' );
+
+/**
+ * Add CiviMe-specific Disallow rules and Sitemap directive to WordPress's virtual robots.txt.
+ *
+ * Blocks crawlers from:
+ * - Parameterized meeting filter URLs (e.g. /meetings/?council=1, /meetings/?page=2)
+ * - Functional subscription and notification pages that should never be indexed
+ *
+ * Preserves crawlability of:
+ * - Base /meetings/ listing (no query string)
+ * - Individual meeting detail pages (/meetings/<id>/)
+ * - Council pages (/councils/)
+ *
+ * @param string $output The current robots.txt output.
+ * @param bool   $public Whether the site is set to public.
+ * @return string
+ */
+function civime_robots_txt( string $output, bool $public ): string {
+    $output .= "\n# CiviMe: Block parameterized meeting filter URLs\n";
+    $output .= "User-agent: *\n";
+    $output .= "Disallow: /meetings/*?\n";
+    $output .= "Disallow: /meetings/subscribe/\n";
+    $output .= "Disallow: /notifications/manage/\n";
+    $output .= "Disallow: /notifications/confirmed/\n";
+    $output .= "Disallow: /notifications/unsubscribed/\n";
+    $output .= "\nSitemap: https://civi.me/sitemap.xml\n";
+    return $output;
+}
+add_filter( 'robots_txt', 'civime_robots_txt', 10, 2 );
