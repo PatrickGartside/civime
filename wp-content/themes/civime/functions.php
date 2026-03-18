@@ -684,6 +684,87 @@ add_filter( 'the_content', 'civime_title_case_brand' );
 add_filter( 'the_title', 'civime_title_case_brand' );
 
 /**
+ * Returns true when the current page should get a noindex robots tag.
+ *
+ * Used by civime_meta_tags() and class-hreflang.php to suppress contradictory
+ * SEO signals on filtered/functional pages.
+ */
+function civime_is_noindex_page(): bool {
+    $meeting_route = get_query_var( 'civime_route', '' );
+    $notif_route   = get_query_var( 'civime_notif_route', '' );
+
+    // Filtered meetings list (has query params beyond route vars).
+    if ( 'meetings-list' === $meeting_route && ! empty( $_SERVER['QUERY_STRING'] ) ) {
+        return true;
+    }
+
+    // Subscribe page (registered via notifications router as civime_notif_route=subscribe).
+    if ( 'subscribe' === $notif_route ) {
+        return true;
+    }
+
+    // Notification functional pages.
+    if ( in_array( $notif_route, [ 'manage', 'confirmed', 'unsubscribed' ], true ) ) {
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Output canonical and robots meta tags for virtual CiviMe pages.
+ *
+ * Priority 5: after hreflang (1) and preconnect (2), before WP core rel_canonical (10).
+ */
+function civime_meta_tags(): void {
+    $meeting_route = get_query_var( 'civime_route', '' );
+    $notif_route   = get_query_var( 'civime_notif_route', '' );
+    $site_url      = 'https://civi.me';
+
+    // --- Canonical tags ---
+
+    if ( 'meetings-list' === $meeting_route ) {
+        // All meetings list views (filtered or not) canonicalize to base /meetings/.
+        echo '<link rel="canonical" href="' . esc_url( $site_url . '/meetings/' ) . '" />' . "\n";
+    } elseif ( 'meeting-detail' === $meeting_route ) {
+        // Self-referencing canonical for detail pages.
+        $meeting_id = get_query_var( 'civime_meeting_id', '' );
+        if ( '' !== $meeting_id ) {
+            echo '<link rel="canonical" href="' . esc_url( $site_url . '/meetings/' . $meeting_id . '/' ) . '" />' . "\n";
+        }
+    }
+
+    // --- Robots meta tags ---
+
+    if ( 'meetings-list' === $meeting_route && ! empty( $_SERVER['QUERY_STRING'] ) ) {
+        // Filtered meetings: noindex but follow links.
+        echo '<meta name="robots" content="noindex,follow" />' . "\n";
+    } elseif ( 'subscribe' === $notif_route ) {
+        echo '<meta name="robots" content="noindex,nofollow" />' . "\n";
+    } elseif ( in_array( $notif_route, [ 'manage', 'confirmed', 'unsubscribed' ], true ) ) {
+        echo '<meta name="robots" content="noindex,nofollow" />' . "\n";
+    }
+}
+add_action( 'wp_head', 'civime_meta_tags', 5 );
+
+/**
+ * Remove WordPress core rel_canonical() on virtual CiviMe pages.
+ *
+ * WP's built-in rel_canonical() (priority 10 on wp_head) outputs incorrect
+ * canonicals on virtual pages because there is no real WP post object.
+ * Hooks on 'wp' (not 'wp_head') so it runs before wp_head fires.
+ */
+function civime_remove_default_canonical(): void {
+    $meeting_route = get_query_var( 'civime_route', '' );
+    $notif_route   = get_query_var( 'civime_notif_route', '' );
+
+    if ( '' !== $meeting_route || '' !== $notif_route ) {
+        remove_action( 'wp_head', 'rel_canonical' );
+    }
+}
+add_action( 'wp', 'civime_remove_default_canonical' );
+
+/**
  * Add CiviMe-specific Disallow rules and Sitemap directive to WordPress's virtual robots.txt.
  *
  * Blocks crawlers from:
