@@ -1,15 +1,14 @@
-# Roadmap: civi.me v1.1 — Fix What's Broken
+# Roadmap: civi.me
 
-## Overview
+## Milestones
 
-This milestone fixes confirmed live failures in the WordPress frontend that actively undermine the civic accessibility mission. The language switcher is blocked by CSP, URLs don't carry language state across navigation, and dead code from the disabled dark mode remains. These ship before any new feature work.
+- ✅ **v1.1 Fix What's Broken** - Phases 1-2 (shipped 2026-03-17)
+- 🚧 **v1.2 Fix Search Indexing** - Phases 3-5 (in progress)
 
 ## Phases
 
-- [ ] **Phase 1: Fix i18n System** - Fix the language switcher CSP block and add URL-based language persistence across all navigation and plugin links
-- [x] **Phase 2: Cleanup** - Remove dead dark mode code and fix SCHEMA.md documentation error (completed 2026-03-17)
-
-## Phase Details
+<details>
+<summary>✅ v1.1 Fix What's Broken (Phases 1-2) - SHIPPED 2026-03-17</summary>
 
 ### Phase 1: Fix i18n System
 **Goal**: A user can select any of the 15 OLA languages and navigate the entire site without losing their language choice — the switcher works, nav links carry `?lang=`, plugin URLs carry `?lang=`, and the cookie persists the choice across sessions.
@@ -25,7 +24,7 @@ This milestone fixes confirmed live failures in the WordPress frontend that acti
 **Plans**: 1 plan
 
 Plans:
-- [ ] 01-01-PLAN.md — Fix CSP-blocked switcher (move onchange to JS file), add home_url filter + nav menu URL filter for language persistence, expand switcher allowed params
+- [x] 01-01-PLAN.md — Fix CSP-blocked switcher (move onchange to JS file), add home_url filter + nav menu URL filter for language persistence, expand switcher allowed params
 
 ### Phase 2: Cleanup
 **Goal**: Dead code from the disabled dark mode feature is removed and the SCHEMA.md confirm_token documentation is corrected.
@@ -37,14 +36,64 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 02-01-PLAN.md — Remove dead dark mode inline script from functions.php, fix SCHEMA.md confirm_token note
+- [x] 02-01-PLAN.md — Remove dead dark mode inline script from functions.php, fix SCHEMA.md confirm_token note
+
+</details>
+
+### 🚧 v1.2 Fix Search Indexing (In Progress)
+
+**Milestone Goal:** Stop Google from wasting crawl budget on parameterized filter URLs and get real content pages indexed properly — via robots.txt rules, canonical + noindex meta tags, and a clean XML sitemap.
+
+#### Phase 3: Crawl Control
+**Goal**: Googlebot and other crawlers are blocked from indexing parameterized meeting filter URLs and subscribe pages via robots.txt rules.
+**Depends on**: Phase 2
+**Requirements**: CRAWL-01, CRAWL-02
+**Success Criteria** (what must be TRUE):
+  1. `GET /robots.txt` returns rules that disallow crawling of `/meetings/` URLs with any query parameters
+  2. `GET /robots.txt` returns a rule that disallows crawling of `/meetings/subscribe/` and any URL under it
+  3. The robots.txt rules do not block the base `/meetings/` or individual meeting detail pages
+**Plans**: 1 plan
+
+Plans:
+- [x] 03-01-PLAN.md — Add Disallow rules to robots.txt for parameterized /meetings/ and /meetings/subscribe/ URLs
+
+#### Phase 4: Meta Tags
+**Goal**: Search engines receive correct canonical and noindex signals on every meetings-related page so filtered views are consolidated under the base URL and subscribe pages are excluded from indexing entirely.
+**Depends on**: Phase 3
+**Requirements**: META-01, META-02, META-03, META-04
+**Success Criteria** (what must be TRUE):
+  1. Viewing `/meetings/?council=1` (or any filtered URL) shows a `<link rel="canonical" href="https://civi.me/meetings/">` tag in `<head>`
+  2. Viewing `/meetings/?council=1` shows a `<meta name="robots" content="noindex,follow">` tag in `<head>`
+  3. Viewing a meeting detail page (e.g., `/meetings/12345/`) shows a self-referencing canonical tag pointing to that exact URL
+  4. Viewing any `/meetings/subscribe/` page shows a `<meta name="robots" content="noindex,nofollow">` tag in `<head>`
+**Plans**: TBD
+
+Plans:
+- [ ] 04-01-PLAN.md — Add canonical and noindex/nofollow meta output to civime-meetings and civime-notifications plugin head hooks
+
+#### Phase 5: XML Sitemap
+**Goal**: An XML sitemap exists that contains only real, indexable content pages — homepage, base meetings listing, individual meeting detail pages, and static pages — with no parameterized or subscribe URLs.
+**Depends on**: Phase 4
+**Requirements**: SMAP-01, SMAP-02
+**Success Criteria** (what must be TRUE):
+  1. `GET /sitemap.xml` returns a valid XML sitemap document
+  2. The sitemap includes the homepage, `/meetings/`, and individual meeting detail page URLs
+  3. The sitemap contains no URLs with query parameters
+  4. The sitemap contains no `/meetings/subscribe/` URLs
+**Plans**: TBD
+
+Plans:
+- [ ] 05-01-PLAN.md — Generate XML sitemap via WordPress hook, include only canonical content pages
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2
+Phases execute in numeric order: 3 → 4 → 5
 
-| Phase | Plans Complete | Status | Completed |
-|-------|----------------|--------|-----------|
-| 1. Fix i18n System | 0/1 | Not Started | |
-| 2. Cleanup | 3/3 | Complete   | 2026-03-17 |
+| Phase | Milestone | Plans Complete | Status | Completed |
+|-------|-----------|----------------|--------|-----------|
+| 1. Fix i18n System | v1.1 | 1/1 | Complete | 2026-03-17 |
+| 2. Cleanup | v1.1 | 1/1 | Complete | 2026-03-17 |
+| 3. Crawl Control | v1.2 | 1/1 | Complete | 2026-03-17 |
+| 4. Meta Tags | v1.2 | 0/1 | Not started | - |
+| 5. XML Sitemap | v1.2 | 0/1 | Not started | - |

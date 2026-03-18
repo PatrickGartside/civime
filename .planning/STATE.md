@@ -1,52 +1,52 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.1
-milestone_name: milestone
-status: executing
-stopped_at: Completed 02-01-PLAN.md
-last_updated: "2026-03-17T05:16:29Z"
-last_activity: 2026-03-17 — Completed 02-cleanup plan 01
+milestone: v1.2
+milestone_name: Fix Search Indexing
+status: planning
+stopped_at: Completed 03-01-PLAN.md
+last_updated: "2026-03-18T04:13:09.574Z"
+last_activity: 2026-03-17 — Roadmap created, ready to plan Phase 3
 progress:
-  total_phases: 3
-  completed_phases: 1
-  total_plans: 5
-  completed_plans: 2
-  percent: 40
+  total_phases: 4
+  completed_phases: 4
+  total_plans: 8
+  completed_plans: 8
+  percent: 0
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-16)
+See: .planning/PROJECT.md (updated 2026-03-17)
 
 **Core value:** Hawaii residents can find, follow, and participate in their government's public meetings regardless of language or technical skill.
-**Current focus:** Executing v1.1 — Fix What's Broken
+**Current focus:** v1.2 Phase 3 — Crawl Control
 
 ## Current Position
 
-Phase: 02-cleanup
-Plan: 01 (complete)
-Status: Executing
-Last activity: 2026-03-17 — Completed 02-cleanup plan 01
+Phase: 3 of 5 (Crawl Control)
+Plan: 0 of 1 in current phase
+Status: Ready to plan
+Last activity: 2026-03-17 — Roadmap created, ready to plan Phase 3
 
-Progress: [████░░░░░░] 40%
+Progress: [░░░░░░░░░░] 0% (v1.2 phases)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 1.5min
-- Total execution time: 0.05 hours
+- Total plans completed: 0 (v1.2)
+- Average duration: —
+- Total execution time: 0
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-fix-i18n-system | 1 | 2min | 2min |
-| 02-cleanup | 1 | 1min | 1min |
+| - | - | - | - |
 
 *Updated after each plan completion*
+| Phase 03-crawl-control P01 | 5 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -55,14 +55,10 @@ Progress: [████░░░░░░] 40%
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
-- v1.0 milestone complete: 7 phases, 14 plans, all documentation shipped
-- Dark mode disabled and mobile layout improved in pre-milestone commits
-- i18n fix approach: home_url filter + wp_nav_menu_objects filter extension (validated and implemented)
-- External JS with addEventListener for CSP compliance instead of inline onchange
-- home_url filter guarded against admin/REST/cron/XMLRPC contexts
-- Scraper date/time fix deferred to separate Access100 repo milestone
-- Preserved civime_csp_nonce() when removing dead dark mode code -- still used by CSP headers
-- SCHEMA.md confirm_token label changed from Cleared to Retained for accuracy
+- v1.1 complete: i18n fix + cleanup shipped 2026-03-17
+- Lang param is UI toggle — canonicalize to base URL, no hreflang needed
+- Google Search Console re-crawl is manual post-deploy step (out of scope)
+- [Phase 03-crawl-control]: Used robots_txt filter (not do_robots action) to inject crawl rules cleanly from theme functions.php
 
 ### Pending Todos
 
@@ -70,11 +66,10 @@ None yet.
 
 ### Blockers/Concerns
 
-- home_url filter guards implemented (is_admin, REST_REQUEST, DOING_CRON, XMLRPC_REQUEST) -- blocker resolved
-- Cookie persistence depends on HTTPS (is_ssl() check in set_cookie)
+None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-17
-Stopped at: Completed 02-01-PLAN.md
+Last session: 2026-03-18T04:13:09.572Z
+Stopped at: Completed 03-01-PLAN.md
 Resume file: None
