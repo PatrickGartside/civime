@@ -49,10 +49,7 @@ $front_page = get_option( 'page_on_front' ) ? get_post( get_option( 'page_on_fro
                 </p>
 
                 <div class="hero__actions">
-                    <a href="<?php echo esc_url( home_url( '/what-matters/' ) ); ?>" class="btn btn--primary btn--lg">
-                        <?php esc_html_e( 'What matters to you?', 'civime' ); ?>
-                    </a>
-                    <a href="<?php echo esc_url( home_url( '/meetings/' ) ); ?>" class="btn btn--secondary btn--lg">
+                    <a href="<?php echo esc_url( home_url( '/meetings/' ) ); ?>" class="btn btn--primary btn--lg">
                         <?php esc_html_e( 'Browse meetings', 'civime' ); ?>
                     </a>
                 </div>

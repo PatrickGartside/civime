@@ -57,7 +57,7 @@
 
     /* Layout */
     --content-max-width:      820px;
-    --container-max-width:    60ch;
+    --container-max-width:    820px;
     --wide-max-width:         1200px;
     --container-padding:      var(--space-4);
 
@@ -106,7 +106,6 @@ body {
     line-height: var(--line-height-body);
     color: var(--color-text);
     background-color: var(--color-bg);
-    border-top: 5px solid var(--color-accent);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -301,7 +300,6 @@ p:last-child {
 
 /* Prose — readable content areas */
 .prose {
-    max-width: var(--container-max-width);
     margin-inline: auto;
 }
 
@@ -467,6 +465,7 @@ p:last-child {
     top: 0;
     z-index: 100;
     background: var(--color-surface);
+    border-top: 5px solid var(--color-accent);
     border-block-end: 1px solid var(--color-border);
     box-shadow: var(--shadow-sm);
     transition: background-color var(--transition), border-color var(--transition);
